@@ -10,6 +10,7 @@
 #include "mirf.h"
 #include <stdbool.h>
 #include "servo.h"
+#include "arm_fsm.h"
 
 #define CONFIG_RECEIVER 0
 #define CONFIG_SENDER 0
@@ -63,28 +64,29 @@ void slave(void *pvParameters){
 
     //main loop
     while(1){
-        if(nrf_flag){
-            if (Nrf24_dataReady(&dev)) {
-			Nrf24_getData(&dev, buf);
-            buf[31]='\0';
-            if (strcmp((char*)buf, "PING") == 0) {  // Check if it's a "PING"
-            uint8_t response[] = "PING";
-            Nrf24_send(&dev, response);  // Send back "OK"
-            }
-            while(Nrf24_isSending(&dev)){
-                DELAY_milliseconds(1);  
+        arm_fsm_update();
+       if(nrf_flag){
+           if (Nrf24_dataReady(&dev)) {
+		Nrf24_getData(&dev, buf);
+//            buf[31]='\0';
+//            if (strcmp((char*)buf, "PING") == 0) {  // Check if it's a "PING"
+//            uint8_t response[] = "PING";
+//            Nrf24_send(&dev, response);  // Send back "OK"
+//            }
+//            while(Nrf24_isSending(&dev)){
+//                DELAY_milliseconds(1);  
             }
             nrf_flag=false;
 		}
-        }
-        uint8_t buf[32] = "PING";
-        
-            Nrf24_send(&dev, buf);
-            Nrf24_isSend(&dev, 1000);
-//            DELAY_milliseconds(1);
-        
-        
-        __delay_ms(200);  // Delay for 1 second
+//        }
+//        uint8_t buf[32] = "PING";
+//        
+//            Nrf24_send(&dev, buf);
+//            Nrf24_isSend(&dev, 1000);
+////            DELAY_milliseconds(1);
+//        
+//        
+//        __delay_ms(200);  // Delay for 1 second
 //        //servos[0].nextAngle = calculateAngle(100); //mid angle P6
 //        servos[1].nextAngle = calculateAngle(90); //wrist P5
 //        servos[2].nextAngle = calculateAngle(100); //bot rotate P8

@@ -21,6 +21,7 @@ typedef struct {
 } GridPosition;
 
 extern const GridPosition grid_angles[GRID_SIZE][GRID_SIZE];
+extern uint8_t angles[NUM_SERVOS];
 
 const uint8_t* get_grid_servo_angles(uint8_t x, uint8_t y);
 uint8_t get_dependent_servo_angle(uint8_t x, uint8_t y, uint8_t is_vertical);

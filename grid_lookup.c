@@ -14,9 +14,16 @@ const GridPosition grid_angles[GRID_SIZE][GRID_SIZE] = {
 
     { { {88, 48, 33, 63}, 38, 43 }, { {83, 53, 38, 58}, 43, 48 },
       { {78, 58, 43, 53}, 48, 53 }, { {73, 63, 48, 48}, 53, 58 },
-      { {68, 68, 53, 43}, 58, 63 } }
+      { {68, 68, 53, 43}, 58,const GridPosition grid_angles[GRID_SIZE][GRID_SIZE] = {
+ 63 } }
     // Add rows 2, 3, and 4...
 };
+
+//void set_servo_angles(uint8_t x, uint8_t y, uint8_t is_vertical) {
+//    if (x < GRID_SIZE && y < GRID_SIZE) {
+//        return is_vertical ? grid_angles[x][y].angle_v : grid_angles[x][y].angle_h;
+//    }
+//}
 
 const uint8_t* get_grid_servo_angles(uint8_t x, uint8_t y) {
     if (x < GRID_SIZE && y < GRID_SIZE) {
