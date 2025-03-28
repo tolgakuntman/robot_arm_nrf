@@ -34,6 +34,9 @@
       </logicalFolder>
       <itemPath>mirf.h</itemPath>
       <itemPath>servo.h</itemPath>
+      <itemPath>arm_fsm.h</itemPath>
+      <itemPath>boat_control.h</itemPath>
+      <itemPath>grid_lookup.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -83,6 +86,9 @@
       <itemPath>main.c</itemPath>
       <itemPath>mirf.c</itemPath>
       <itemPath>servo.c</itemPath>
+      <itemPath>arm_fsm.c</itemPath>
+      <itemPath>boat_control.c</itemPath>
+      <itemPath>grid_lookup.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
