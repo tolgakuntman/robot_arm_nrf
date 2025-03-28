@@ -11,6 +11,7 @@
 #include <stdbool.h>
 #include "servo.h"
 #include "arm_fsm.h"
+#include "message_parser.h"
 
 #define CONFIG_RECEIVER 0
 #define CONFIG_SENDER 0
@@ -67,46 +68,14 @@ void slave(void *pvParameters){
         arm_fsm_update();
        if(nrf_flag){
            if (Nrf24_dataReady(&dev)) {
-		Nrf24_getData(&dev, buf);
-//            buf[31]='\0';
-//            if (strcmp((char*)buf, "PING") == 0) {  // Check if it's a "PING"
-//            uint8_t response[] = "PING";
-//            Nrf24_send(&dev, response);  // Send back "OK"
-//            }
-//            while(Nrf24_isSending(&dev)){
-//                DELAY_milliseconds(1);  
+            Nrf24_getData(&dev, buf);
+            robot_command_t rob;
+            parse_robot_message(buf, &rob);
+            arm_set_target(rob.ship_id,rob.row,rob.col,rob.horizontal,PLACE);
+            
             }
             nrf_flag=false;
 		}
-//        }
-//        uint8_t buf[32] = "PING";
-//        
-//            Nrf24_send(&dev, buf);
-//            Nrf24_isSend(&dev, 1000);
-////            DELAY_milliseconds(1);
-//        
-//        
-//        __delay_ms(200);  // Delay for 1 second
-//        //servos[0].nextAngle = calculateAngle(100); //mid angle P6
-//        servos[1].nextAngle = calculateAngle(90); //wrist P5
-//        servos[2].nextAngle = calculateAngle(100); //bot rotate P8
-//        servos[3].nextAngle = calculateAngle(80); //bot angle P7
-//        //enableMagnet();
-//        __delay_ms(200);  // Delay for 1 second
-//        __delay_ms(200);  // Delay for 1 second
-//        servos[0].nextAngle = calculateAngle(70); //mid angle
-//        servos[1].nextAngle = calculateAngle(90); //wrist
-//        servos[2].nextAngle = calculateAngle(120); //bot rotate
-//        servos[3].nextAngle = calculateAngle(20); //bot angle
-//        //disableMagnet();
-//        __delay_ms(200);  // Delay for 1 second
-//        servos[0].nextAngle = calculateAngle(45); //mid angle
-//        servos[1].nextAngle = calculateAngle(0); //wrist
-//        servos[2].nextAngle = calculateAngle(140); //bot rotate
-//        servos[3].nextAngle = calculateAngle(10); //bot angle
-//        //disableMagnet();
-//        __delay_ms(200);  // Delay for 1 second
-//        Nrf24_configRegister(NRF_STATUS, (1 << RX_DR) | (1 << TX_DS) | (1 << MAX_RT));
 
 		DELAY_milliseconds(1);
         }

@@ -16,4 +16,6 @@ mcc_generated_files/system/../timer/tmr0.h  \
 mcc_generated_files/system/../timer/tmr0_deprecated.h  \
 mcc_generated_files/timer/delay.h  \
 mirf.h  \
-servo.h 
+servo.h  \
+arm_fsm.h  \
+message_parser.h 

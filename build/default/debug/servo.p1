@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"16 ./servo.h
-[; ;./servo.h: 16: typedef struct {
+"17 ./servo.h
+[; ;./servo.h: 17: typedef struct {
 [s S1 `us 1 `us 1 ]
 [n S1 . currAngle nextAngle ]
 "83 ./mcc_generated_files/system/../pwm/pwm2_16bit.h
@@ -27,17 +27,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "67
 [; ;./mcc_generated_files/system/../pwm/pwm1_16bit.h: 67: void PWM1_16BIT_Disable(void);
 [v _PWM1_16BIT_Disable `(v ~T0 @X0 0 ef ]
-"414 ./mcc_generated_files/system/../timer/tmr2.h
-[; ;./mcc_generated_files/system/../timer/tmr2.h: 414: void TMR2_Start(void);
-[v _TMR2_Start `(v ~T0 @X0 0 ef ]
 "58 ./mcc_generated_files/system/../pwm/pwm2_16bit.h
 [; ;./mcc_generated_files/system/../pwm/pwm2_16bit.h: 58: void PWM2_16BIT_Enable(void);
 [v _PWM2_16BIT_Enable `(v ~T0 @X0 0 ef ]
-[v F17387 `(v ~T0 @X0 0 tf ]
-"466 ./mcc_generated_files/system/../timer/tmr2.h
-[; ;./mcc_generated_files/system/../timer/tmr2.h: 466: void TMR2_OverflowCallbackRegister(void (* InterruptHandler)(void));
-[v _TMR2_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F17387 ]
-[v F17428 `(v ~T0 @X0 0 tf ]
+[v F52 `(v ~T0 @X0 0 tf ]
+"280 ./mcc_generated_files/system/../timer/tmr0.h
+[v _TMR0_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F52 ]
+[v F17452 `(v ~T0 @X0 0 tf ]
 "328 /Users/tolgakuntman/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h
 [; ;/Users/tolgakuntman/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h: 328: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2609,184 +2605,181 @@ Version 4.0 HI-TECH Software Intermediate Code
 "51171
 [; ;/Users/tolgakuntman/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h: 51171: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-"4 servo.c
-[; ;servo.c: 4: servoMotor servos[4];
+"5 servo.c
+[; ;servo.c: 5: servoMotor servos[4];
 [v _servos `S1 ~T0 @X0 -> 4 `i e ]
-"6
-[; ;servo.c: 6: void isrTim0() {
+"7
+[; ;servo.c: 7: void isrTim0() {
 [v _isrTim0 `(v ~T0 @X0 1 ef ]
 {
 [e :U _isrTim0 ]
 [f ]
-"7
-[; ;servo.c: 7:     for (int i = 0; i < 4; i++) {
+"8
+[; ;servo.c: 8:     for (int i = 0; i < 4; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 4 `i 2417  ]
-[e $U 2418  ]
-[e :U 2417 ]
-{
-"8
-[; ;servo.c: 8:         if (servos[i].currAngle < servos[i].nextAngle) {
-[e $ ! < -> . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 `ui -> . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 1 `ui 2420  ]
+[e $ < _i -> 4 `i 2419  ]
+[e $U 2420  ]
+[e :U 2419 ]
 {
 "9
-[; ;servo.c: 9:             servos[i].currAngle++;
-[e ++ . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 -> -> 1 `i `us ]
+[; ;servo.c: 9:         if (servos[i].currAngle < servos[i].nextAngle) {
+[e $ ! < -> . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 `ui -> . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 1 `ui 2422  ]
+{
 "10
-[; ;servo.c: 10:         } else if (servos[i].currAngle > servos[i].nextAngle) {
-}
-[e $U 2421  ]
-[e :U 2420 ]
-[e $ ! > -> . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 `ui -> . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 1 `ui 2422  ]
-{
+[; ;servo.c: 10:             servos[i].currAngle++;
+[e ++ . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 -> -> 1 `i `us ]
 "11
-[; ;servo.c: 11:             servos[i].currAngle--;
-[e -- . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 -> -> 1 `i `us ]
-"12
-[; ;servo.c: 12:         }
+[; ;servo.c: 11:         } else if (servos[i].currAngle > servos[i].nextAngle) {
 }
+[e $U 2423  ]
 [e :U 2422 ]
-[e :U 2421 ]
-"15
-[; ;servo.c: 15:         if (i == 0) {
-[e $ ! == _i -> 0 `i 2423  ]
+[e $ ! > -> . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 `ui -> . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 1 `ui 2424  ]
 {
-"16
-[; ;servo.c: 16:             PWM2_16BIT_SetSlice1Output1DutyCycleRegister(servos[i].currAngle);
-[e ( _PWM2_16BIT_SetSlice1Output1DutyCycleRegister (1 . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 ]
-"17
-[; ;servo.c: 17:         } else if (i == 1) {
+"12
+[; ;servo.c: 12:             servos[i].currAngle--;
+[e -- . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 -> -> 1 `i `us ]
+"13
+[; ;servo.c: 13:         }
 }
-[e $U 2424  ]
+[e :U 2424 ]
 [e :U 2423 ]
-[e $ ! == _i -> 1 `i 2425  ]
+"16
+[; ;servo.c: 16:         if (i == 0) {
+[e $ ! == _i -> 0 `i 2425  ]
 {
+"17
+[; ;servo.c: 17:             PWM2_16BIT_SetSlice1Output1DutyCycleRegister(servos[i].currAngle);
+[e ( _PWM2_16BIT_SetSlice1Output1DutyCycleRegister (1 . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 ]
 "18
-[; ;servo.c: 18:             PWM2_16BIT_SetSlice1Output2DutyCycleRegister(servos[i].currAngle);
-[e ( _PWM2_16BIT_SetSlice1Output2DutyCycleRegister (1 . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 ]
-"19
-[; ;servo.c: 19:         } else if (i == 2) {
+[; ;servo.c: 18:         } else if (i == 1) {
 }
 [e $U 2426  ]
 [e :U 2425 ]
-[e $ ! == _i -> 2 `i 2427  ]
+[e $ ! == _i -> 1 `i 2427  ]
 {
+"19
+[; ;servo.c: 19:             PWM2_16BIT_SetSlice1Output2DutyCycleRegister(servos[i].currAngle);
+[e ( _PWM2_16BIT_SetSlice1Output2DutyCycleRegister (1 . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 ]
 "20
-[; ;servo.c: 20:             PWM3_16BIT_SetSlice1Output1DutyCycleRegister(servos[i].currAngle);
-[e ( _PWM3_16BIT_SetSlice1Output1DutyCycleRegister (1 . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 ]
-"21
-[; ;servo.c: 21:         } else if (i == 3) {
+[; ;servo.c: 20:         } else if (i == 2) {
 }
 [e $U 2428  ]
 [e :U 2427 ]
-[e $ ! == _i -> 3 `i 2429  ]
+[e $ ! == _i -> 2 `i 2429  ]
 {
+"21
+[; ;servo.c: 21:             PWM3_16BIT_SetSlice1Output1DutyCycleRegister(servos[i].currAngle);
+[e ( _PWM3_16BIT_SetSlice1Output1DutyCycleRegister (1 . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 ]
 "22
-[; ;servo.c: 22:             PWM3_16BIT_SetSlice1Output2DutyCycleRegister(servos[i].currAngle);
-[e ( _PWM3_16BIT_SetSlice1Output2DutyCycleRegister (1 . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 ]
-"23
-[; ;servo.c: 23:         }
+[; ;servo.c: 22:         } else if (i == 3) {
 }
+[e $U 2430  ]
 [e :U 2429 ]
+[e $ ! == _i -> 3 `i 2431  ]
+{
+"23
+[; ;servo.c: 23:             PWM3_16BIT_SetSlice1Output2DutyCycleRegister(servos[i].currAngle);
+[e ( _PWM3_16BIT_SetSlice1Output2DutyCycleRegister (1 . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 ]
+"24
+[; ;servo.c: 24:         }
+}
+[e :U 2431 ]
+[e :U 2430 ]
 [e :U 2428 ]
 [e :U 2426 ]
-[e :U 2424 ]
-"24
-[; ;servo.c: 24:     }
+"25
+[; ;servo.c: 25:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 4 `i 2417  ]
-[e :U 2418 ]
+[e $ < _i -> 4 `i 2419  ]
+[e :U 2420 ]
 }
-"25
-[; ;servo.c: 25:     PWM2_16BIT_LoadBufferRegisters();
-[e ( _PWM2_16BIT_LoadBufferRegisters ..  ]
 "26
-[; ;servo.c: 26:     PWM3_16BIT_LoadBufferRegisters();
-[e ( _PWM3_16BIT_LoadBufferRegisters ..  ]
+[; ;servo.c: 26:     PWM2_16BIT_LoadBufferRegisters();
+[e ( _PWM2_16BIT_LoadBufferRegisters ..  ]
 "27
-[; ;servo.c: 27: }
-[e :UE 2416 ]
+[; ;servo.c: 27:     PWM3_16BIT_LoadBufferRegisters();
+[e ( _PWM3_16BIT_LoadBufferRegisters ..  ]
+"28
+[; ;servo.c: 28: }
+[e :UE 2418 ]
 }
-"29
-[; ;servo.c: 29: void enableMagnet() {
+"30
+[; ;servo.c: 30: void enableMagnet() {
 [v _enableMagnet `(v ~T0 @X0 1 ef ]
 {
 [e :U _enableMagnet ]
 [f ]
-"30
-[; ;servo.c: 30:     PWM1_16BIT_Enable();
+"31
+[; ;servo.c: 31:     PWM1_16BIT_Enable();
 [e ( _PWM1_16BIT_Enable ..  ]
-"32
-[; ;servo.c: 32: }
-[e :UE 2430 ]
+"33
+[; ;servo.c: 33: }
+[e :UE 2432 ]
 }
-"34
-[; ;servo.c: 34: void disableMagnet() {
+"35
+[; ;servo.c: 35: void disableMagnet() {
 [v _disableMagnet `(v ~T0 @X0 1 ef ]
 {
 [e :U _disableMagnet ]
 [f ]
-"35
-[; ;servo.c: 35:     PWM1_16BIT_Disable();
+"36
+[; ;servo.c: 36:     PWM1_16BIT_Disable();
 [e ( _PWM1_16BIT_Disable ..  ]
-"37
-[; ;servo.c: 37: }
-[e :UE 2431 ]
+"38
+[; ;servo.c: 38: }
+[e :UE 2433 ]
 }
-"39
-[; ;servo.c: 39: uint16_t calculateAngle(int angleDeg) {
-[v _calculateAngle `(us ~T0 @X0 1 ef1`i ]
+"40
+[; ;servo.c: 40: uint16_t calculateAngle(uint8_t angleDeg) {
+[v _calculateAngle `(us ~T0 @X0 1 ef1`uc ]
 {
 [e :U _calculateAngle ]
-[v _angleDeg `i ~T0 @X0 1 r1 ]
+[v _angleDeg `uc ~T0 @X0 1 r1 ]
 [f ]
-"40
-[; ;servo.c: 40:     return (1760+(angleDeg*33));
-[e ) -> + -> 1760 `i * _angleDeg -> 33 `i `us ]
-[e $UE 2432  ]
 "41
-[; ;servo.c: 41: }
-[e :UE 2432 ]
+[; ;servo.c: 41:     return (1760+(angleDeg*33));
+[e ) -> + -> 1760 `i * -> _angleDeg `i -> 33 `i `us ]
+[e $UE 2434  ]
+"42
+[; ;servo.c: 42: }
+[e :UE 2434 ]
 }
-"43
-[; ;servo.c: 43: void initServo() {
+"44
+[; ;servo.c: 44: void initServo() {
 [v _initServo `(v ~T0 @X0 1 ef ]
 {
 [e :U _initServo ]
 [f ]
-"45
-[; ;servo.c: 45:     servos[0].currAngle = calculateAngle(45);
-[e = . *U + &U _servos * -> -> -> 0 `i `ui `ux -> -> # *U &U _servos `ui `ux 0 ( _calculateAngle (1 -> 45 `i ]
 "46
-[; ;servo.c: 46:     servos[0].nextAngle = calculateAngle(45);
-[e = . *U + &U _servos * -> -> -> 0 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> 45 `i ]
-"49
-[; ;servo.c: 49:     servos[1].currAngle = calculateAngle(90);
-[e = . *U + &U _servos * -> -> -> 1 `i `ui `ux -> -> # *U &U _servos `ui `ux 0 ( _calculateAngle (1 -> 90 `i ]
+[; ;servo.c: 46:     servos[0].currAngle = calculateAngle(50);
+[e = . *U + &U _servos * -> -> -> 0 `i `ui `ux -> -> # *U &U _servos `ui `ux 0 ( _calculateAngle (1 -> -> 50 `i `uc ]
+"47
+[; ;servo.c: 47:     servos[0].nextAngle = calculateAngle(50);
+[e = . *U + &U _servos * -> -> -> 0 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 50 `i `uc ]
 "50
-[; ;servo.c: 50:     servos[1].nextAngle = calculateAngle(90);
-[e = . *U + &U _servos * -> -> -> 1 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> 90 `i ]
-"53
-[; ;servo.c: 53:     servos[2].currAngle = calculateAngle(140);
-[e = . *U + &U _servos * -> -> -> 2 `i `ui `ux -> -> # *U &U _servos `ui `ux 0 ( _calculateAngle (1 -> 140 `i ]
+[; ;servo.c: 50:     servos[1].currAngle = calculateAngle(90);
+[e = . *U + &U _servos * -> -> -> 1 `i `ui `ux -> -> # *U &U _servos `ui `ux 0 ( _calculateAngle (1 -> -> 90 `i `uc ]
+"51
+[; ;servo.c: 51:     servos[1].nextAngle = calculateAngle(90);
+[e = . *U + &U _servos * -> -> -> 1 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 90 `i `uc ]
 "54
-[; ;servo.c: 54:     servos[2].nextAngle = calculateAngle(140);
-[e = . *U + &U _servos * -> -> -> 2 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> 140 `i ]
-"57
-[; ;servo.c: 57:     servos[3].currAngle = calculateAngle(10);
-[e = . *U + &U _servos * -> -> -> 3 `i `ui `ux -> -> # *U &U _servos `ui `ux 0 ( _calculateAngle (1 -> 10 `i ]
+[; ;servo.c: 54:     servos[2].currAngle = calculateAngle(25);
+[e = . *U + &U _servos * -> -> -> 2 `i `ui `ux -> -> # *U &U _servos `ui `ux 0 ( _calculateAngle (1 -> -> 25 `i `uc ]
+"55
+[; ;servo.c: 55:     servos[2].nextAngle = calculateAngle(25);
+[e = . *U + &U _servos * -> -> -> 2 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 25 `i `uc ]
 "58
-[; ;servo.c: 58:     servos[3].nextAngle = calculateAngle(10);
-[e = . *U + &U _servos * -> -> -> 3 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> 10 `i ]
+[; ;servo.c: 58:     servos[3].currAngle = calculateAngle(40);
+[e = . *U + &U _servos * -> -> -> 3 `i `ui `ux -> -> # *U &U _servos `ui `ux 0 ( _calculateAngle (1 -> -> 40 `i `uc ]
 "59
-[; ;servo.c: 59:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
+[; ;servo.c: 59:     servos[3].nextAngle = calculateAngle(40);
+[e = . *U + &U _servos * -> -> -> 3 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 40 `i `uc ]
 "60
 [; ;servo.c: 60: }
-[e :UE 2433 ]
+[e :UE 2435 ]
 }
 "62
 [; ;servo.c: 62: void enablePWM() {
@@ -2801,9 +2794,89 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;servo.c: 64:     PWM2_16BIT_Enable();
 [e ( _PWM2_16BIT_Enable ..  ]
 "66
-[; ;servo.c: 66:     TMR2_OverflowCallbackRegister(isrTim0);
-[e ( _TMR2_OverflowCallbackRegister (1 -> &U _isrTim0 `*F17428 ]
+[; ;servo.c: 66:     TMR0_OverflowCallbackRegister(isrTim0);
+[e ( _TMR0_OverflowCallbackRegister (1 -> &U _isrTim0 `*F17452 ]
 "67
 [; ;servo.c: 67: }
-[e :UE 2434 ]
+[e :UE 2436 ]
+}
+"69
+[; ;servo.c: 69: void move_servo_to_angles(const uint8_t* angles) {
+[v _move_servo_to_angles `(v ~T0 @X0 1 ef1`*Cuc ]
+{
+[e :U _move_servo_to_angles ]
+[v _angles `*Cuc ~T0 @X0 1 r1 ]
+[f ]
+"70
+[; ;servo.c: 70:     if (angles) {
+[e $ ! != _angles -> -> 0 `i `*Cuc 2438  ]
+{
+"71
+[; ;servo.c: 71:         for (uint8_t i = 0; i < 4; i++) {
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 4 `i 2439  ]
+[e $U 2440  ]
+[e :U 2439 ]
+{
+"72
+[; ;servo.c: 72:             servos[i].nextAngle = calculateAngle(angles[i]);
+[e = . *U + &U _servos * -> _i `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 *U + _angles * -> _i `ux -> -> # *U _angles `ui `ux ]
+"73
+[; ;servo.c: 73:         }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 4 `i 2439  ]
+[e :U 2440 ]
+}
+"74
+[; ;servo.c: 74:     }
+}
+[e :U 2438 ]
+"75
+[; ;servo.c: 75: }
+[e :UE 2437 ]
+}
+"77
+[; ;servo.c: 77: _Bool servoMovement() {
+[v _servoMovement `(a ~T0 @X0 1 ef ]
+{
+[e :U _servoMovement ]
+[f ]
+"78
+[; ;servo.c: 78:     for (int i = 0; i < 4; i++) {
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 4 `i 2443  ]
+[e $U 2444  ]
+[e :U 2443 ]
+{
+"79
+[; ;servo.c: 79:         if (servos[i].currAngle != servos[i].nextAngle) {
+[e $ ! != -> . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 0 `ui -> . *U + &U _servos * -> -> _i `ui `ux -> -> # *U &U _servos `ui `ux 1 `ui 2446  ]
+{
+"80
+[; ;servo.c: 80:             return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 2442  ]
+"81
+[; ;servo.c: 81:         }
+}
+[e :U 2446 ]
+"82
+[; ;servo.c: 82:     }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 4 `i 2443  ]
+[e :U 2444 ]
+}
+"83
+[; ;servo.c: 83:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 2442  ]
+"84
+[; ;servo.c: 84: }
+[e :UE 2442 ]
 }

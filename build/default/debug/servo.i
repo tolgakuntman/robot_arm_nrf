@@ -115,11 +115,10 @@ typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 149 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 2 3
 # 14 "./servo.h" 2
-# 1 "./mcc_generated_files/timer/tmr0.h" 1
-# 39 "./mcc_generated_files/timer/tmr0.h"
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdbool.h" 1 3
-# 39 "./mcc_generated_files/timer/tmr0.h" 2
-
+# 15 "./servo.h" 2
+# 1 "./mcc_generated_files/timer/tmr0.h" 1
+# 40 "./mcc_generated_files/timer/tmr0.h"
 # 1 "./mcc_generated_files/timer/tmr0_deprecated.h" 1
 # 40 "./mcc_generated_files/timer/tmr0.h" 2
 # 169 "./mcc_generated_files/timer/tmr0.h"
@@ -186,22 +185,24 @@ void TMR0_ISR(void);
 
 
 void TMR0_OverflowCallbackRegister(void (* CallbackHandler)(void));
-# 15 "./servo.h" 2
+# 16 "./servo.h" 2
 
 typedef struct {
 
     uint16_t currAngle;
     uint16_t nextAngle;
 } servoMotor;
-# 29 "./servo.h"
+# 30 "./servo.h"
 extern servoMotor servos[4];
 
 void isrTim0();
 void enableMagnet();
 void disableMagnet();
-uint16_t calculateAngle(int angleDeg);
+uint16_t calculateAngle(uint8_t angleDeg);
 void initServo();
 void enablePWM();
+void move_servo_to_angles(const uint8_t* angles);
+_Bool servoMovement();
 # 2 "servo.c" 2
 # 1 "./mcc_generated_files/system/system.h" 1
 # 39 "./mcc_generated_files/system/system.h"
@@ -30095,6 +30096,27 @@ void INT2_DefaultInterruptHandler(void);
 # 60 "./mcc_generated_files/system/system.h"
 void SYSTEM_Initialize(void);
 # 3 "servo.c" 2
+# 1 "./boat_control.h" 1
+# 17 "./boat_control.h"
+typedef struct {
+    uint8_t angles[4];
+} DockingPosition;
+
+typedef struct {
+    uint8_t x;
+    uint8_t y;
+    uint8_t is_vertical;
+    uint8_t is_docked;
+} BoatState;
+
+extern const DockingPosition docking_positions[4];
+extern BoatState boats[4];
+
+void init_boats();
+void move_boat(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical);
+void return_boat_to_dock(uint8_t boat_id);
+const uint8_t* get_docking_servo_angles(uint8_t boat_id);
+# 4 "servo.c" 2
 
 servoMotor servos[4];
 
@@ -30131,32 +30153,48 @@ void disableMagnet() {
 
 }
 
-uint16_t calculateAngle(int angleDeg) {
+uint16_t calculateAngle(uint8_t angleDeg) {
     return (1760+(angleDeg*33));
 }
 
 void initServo() {
 
-    servos[0].currAngle = calculateAngle(45);
-    servos[0].nextAngle = calculateAngle(45);
+    servos[0].currAngle = calculateAngle(50);
+    servos[0].nextAngle = calculateAngle(50);
 
 
     servos[1].currAngle = calculateAngle(90);
     servos[1].nextAngle = calculateAngle(90);
 
 
-    servos[2].currAngle = calculateAngle(140);
-    servos[2].nextAngle = calculateAngle(140);
+    servos[2].currAngle = calculateAngle(25);
+    servos[2].nextAngle = calculateAngle(25);
 
 
-    servos[3].currAngle = calculateAngle(10);
-    servos[3].nextAngle = calculateAngle(10);
-    TMR2_Start();
+    servos[3].currAngle = calculateAngle(40);
+    servos[3].nextAngle = calculateAngle(40);
 }
 
 void enablePWM() {
     PWM1_16BIT_Enable();
     PWM2_16BIT_Enable();
 
-    TMR2_OverflowCallbackRegister(isrTim0);
+    TMR0_OverflowCallbackRegister(isrTim0);
+}
+
+void move_servo_to_angles(const uint8_t* angles) {
+    if (angles) {
+        for (uint8_t i = 0; i < 4; i++) {
+            servos[i].nextAngle = calculateAngle(angles[i]);
+        }
+    }
+}
+
+_Bool servoMovement() {
+    for (int i = 0; i < 4; i++) {
+        if (servos[i].currAngle != servos[i].nextAngle) {
+            return 1;
+        }
+    }
+    return 0;
 }

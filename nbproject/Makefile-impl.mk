@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=robot_arm_nrf
+PROJECTNAME=robot_arm.X
 
 # Active Configuration
 DEFAULTCONF=default

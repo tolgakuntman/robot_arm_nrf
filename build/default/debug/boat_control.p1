@@ -1,0 +1,163 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"17 ./boat_control.h
+[; ;./boat_control.h: 17: typedef struct {
+[s S1 `uc -> 4 `i ]
+[n S1 . angles ]
+"21
+[; ;./boat_control.h: 21: typedef struct {
+[s S2 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S2 . x y is_vertical is_docked ]
+"38 ./servo.h
+[; ;./servo.h: 38: void move_servo_to_angles(const uint8_t* angles);
+[v _move_servo_to_angles `(v ~T0 @X0 0 ef1`*Cuc ]
+"26 ./grid_lookup.h
+[; ;./grid_lookup.h: 26: const uint8_t* get_grid_servo_angles(uint8_t x, uint8_t y);
+[v _get_grid_servo_angles `(*Cuc ~T0 @X0 0 ef2`uc`uc ]
+"13 boat_control.c
+[; ;boat_control.c: 13: const DockingPosition docking_positions[4] = {
+[v _docking_positions `CS1 ~T0 @X0 -> 4 `i e ]
+[i _docking_positions
+:U ..
+:U ..
+:U ..
+-> -> 22 `i `uc
+-> -> 90 `i `uc
+-> -> 25 `i `uc
+-> -> 41 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 85 `i `uc
+-> -> 50 `i `uc
+-> -> 35 `i `uc
+-> -> 55 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 80 `i `uc
+-> -> 55 `i `uc
+-> -> 40 `i `uc
+-> -> 50 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 75 `i `uc
+-> -> 60 `i `uc
+-> -> 45 `i `uc
+-> -> 45 `i `uc
+..
+..
+..
+]
+"21
+[; ;boat_control.c: 21: BoatState boats[4];
+[v _boats `S2 ~T0 @X0 -> 4 `i e ]
+"23
+[; ;boat_control.c: 23: void init_boats() {
+[v _init_boats `(v ~T0 @X0 1 ef ]
+{
+[e :U _init_boats ]
+[f ]
+"24
+[; ;boat_control.c: 24:     for (uint8_t i = 0; i < 4; i++) {
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 4 `i 6  ]
+[e $U 7  ]
+[e :U 6 ]
+{
+"25
+[; ;boat_control.c: 25:         boats[i].is_docked = 1;
+[e = . *U + &U _boats * -> _i `ux -> -> # *U &U _boats `ui `ux 3 -> -> 1 `i `uc ]
+"26
+[; ;boat_control.c: 26:         boats[i].is_vertical = 0;
+[e = . *U + &U _boats * -> _i `ux -> -> # *U &U _boats `ui `ux 2 -> -> 0 `i `uc ]
+"27
+[; ;boat_control.c: 27:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 4 `i 6  ]
+[e :U 7 ]
+}
+"28
+[; ;boat_control.c: 28: }
+[e :UE 5 ]
+}
+"29
+[; ;boat_control.c: 29: void move_boat(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical) {
+[v _move_boat `(v ~T0 @X0 1 ef4`uc`uc`uc`uc ]
+{
+[e :U _move_boat ]
+[v _boat_id `uc ~T0 @X0 1 r1 ]
+[v _x `uc ~T0 @X0 1 r2 ]
+[v _y `uc ~T0 @X0 1 r3 ]
+[v _is_vertical `uc ~T0 @X0 1 r4 ]
+[f ]
+"30
+[; ;boat_control.c: 30:     if (boat_id < 4 && x < 5 && y < 5) {
+[e $ ! && && < -> _boat_id `i -> 4 `i < -> _x `i -> 5 `i < -> _y `i -> 5 `i 10  ]
+{
+"31
+[; ;boat_control.c: 31:         boats[boat_id].x = x;
+[e = . *U + &U _boats * -> _boat_id `ux -> -> # *U &U _boats `ui `ux 0 _x ]
+"32
+[; ;boat_control.c: 32:         boats[boat_id].y = y;
+[e = . *U + &U _boats * -> _boat_id `ux -> -> # *U &U _boats `ui `ux 1 _y ]
+"33
+[; ;boat_control.c: 33:         boats[boat_id].is_vertical = is_vertical;
+[e = . *U + &U _boats * -> _boat_id `ux -> -> # *U &U _boats `ui `ux 2 _is_vertical ]
+"34
+[; ;boat_control.c: 34:         move_servo_to_angles(get_grid_servo_angles(x, y));
+[e ( _move_servo_to_angles (1 ( _get_grid_servo_angles (2 , _x _y ]
+"35
+[; ;boat_control.c: 35:         boats[boat_id].is_docked = 0;
+[e = . *U + &U _boats * -> _boat_id `ux -> -> # *U &U _boats `ui `ux 3 -> -> 0 `i `uc ]
+"36
+[; ;boat_control.c: 36:     }
+}
+[e :U 10 ]
+"37
+[; ;boat_control.c: 37: }
+[e :UE 9 ]
+}
+"39
+[; ;boat_control.c: 39: void return_boat_to_dock(uint8_t boat_id) {
+[v _return_boat_to_dock `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _return_boat_to_dock ]
+[v _boat_id `uc ~T0 @X0 1 r1 ]
+[f ]
+"40
+[; ;boat_control.c: 40:     if (boat_id < 4) {
+[e $ ! < -> _boat_id `i -> 4 `i 12  ]
+{
+"41
+[; ;boat_control.c: 41:         boats[boat_id].is_docked = 1;
+[e = . *U + &U _boats * -> _boat_id `ux -> -> # *U &U _boats `ui `ux 3 -> -> 1 `i `uc ]
+"42
+[; ;boat_control.c: 42:     }
+}
+[e :U 12 ]
+"43
+[; ;boat_control.c: 43: }
+[e :UE 11 ]
+}
+"45
+[; ;boat_control.c: 45: const uint8_t* get_docking_servo_angles(uint8_t boat_id) {
+[v _get_docking_servo_angles `(*Cuc ~T0 @X0 1 ef1`uc ]
+{
+[e :U _get_docking_servo_angles ]
+[v _boat_id `uc ~T0 @X0 1 r1 ]
+[f ]
+"46
+[; ;boat_control.c: 46:     return docking_positions[boat_id].angles;
+[e ) &U . *U + &U _docking_positions * -> _boat_id `ux -> -> # *U &U _docking_positions `ui `ux 0 ]
+[e $UE 13  ]
+"47
+[; ;boat_control.c: 47: }
+[e :UE 13 ]
+}

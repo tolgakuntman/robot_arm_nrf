@@ -14,8 +14,7 @@ const GridPosition grid_angles[GRID_SIZE][GRID_SIZE] = {
 
     { { {88, 48, 33, 63}, 38, 43 }, { {83, 53, 38, 58}, 43, 48 },
       { {78, 58, 43, 53}, 48, 53 }, { {73, 63, 48, 48}, 53, 58 },
-      { {68, 68, 53, 43}, 58,const GridPosition grid_angles[GRID_SIZE][GRID_SIZE] = {
- 63 } }
+      { {68, 68, 53, 43}, 58, 63 } }
     // Add rows 2, 3, and 4...
 };
 

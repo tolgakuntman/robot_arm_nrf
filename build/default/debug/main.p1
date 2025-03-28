@@ -24,41 +24,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 "187
 [; ;./mirf.h: 187: void Nrf24_configRegister(uint8_t reg, uint8_t value);
 [v _Nrf24_configRegister `(v ~T0 @X0 0 ef2`uc`uc ]
-"179
+"33 ./arm_fsm.h
+[; ;./arm_fsm.h: 33: void arm_fsm_update();
+[v _arm_fsm_update `(v ~T0 @X0 0 e? ]
+"179 ./mirf.h
 [; ;./mirf.h: 179: _Bool Nrf24_dataReady(NRF24_t * dev);
 [v _Nrf24_dataReady `(a ~T0 @X0 0 ef1`*S2419 ]
 "185
 [; ;./mirf.h: 185: void Nrf24_getData(NRF24_t * dev, uint8_t * data);
 [v _Nrf24_getData `(v ~T0 @X0 0 ef2`*S2419`*uc ]
-"39 /Applications/microchip/xc8/v2.50/pic/include/c99/string.h
-[; ;/Applications/microchip/xc8/v2.50/pic/include/c99/string.h: 39: int strcmp (const char *, const char *);
-[v _strcmp `(i ~T0 @X0 0 ef2`*Cuc`*Cuc ]
-"175 ./mirf.h
-[; ;./mirf.h: 175: void Nrf24_send(NRF24_t * dev, uint8_t *value);
-[v _Nrf24_send `(v ~T0 @X0 0 ef2`*S2419`*uc ]
+"6 ./message_parser.h
+[; ;./message_parser.h: 6: typedef struct {
+[s S2421 `uc -> 8 `i `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S2421 . message_type ship_id row col horizontal ]
+"14
+[; ;./message_parser.h: 14: _Bool parse_robot_message(const char *raw_data, robot_command_t *out);
+[v _parse_robot_message `(a ~T0 @X0 0 ef2`*Cuc`*S2421 ]
 "44 ./mcc_generated_files/timer/delay.h
 [; ;./mcc_generated_files/timer/delay.h: 44: void DELAY_milliseconds(uint16_t milliseconds);
 [v _DELAY_milliseconds `(v ~T0 @X0 0 ef1`us ]
-"181 ./mirf.h
-[; ;./mirf.h: 181: _Bool Nrf24_isSending(NRF24_t * dev);
-[v _Nrf24_isSending `(a ~T0 @X0 0 ef1`*S2419 ]
-"182
-[; ;./mirf.h: 182: _Bool Nrf24_isSend(NRF24_t * dev, int timeout);
-[v _Nrf24_isSend `(a ~T0 @X0 0 ef2`*S2419`i ]
-[v F718 `(v ~T0 @X0 1 tf1`ul ]
-"20 /Applications/microchip/xc8/v2.50/pic/include/builtins.h
-[v __delay `JF718 ~T0 @X0 0 e ]
-[p i __delay ]
-"16 ./servo.h
-[; ;./servo.h: 16: typedef struct {
+"17 ./servo.h
+[; ;./servo.h: 17: typedef struct {
 [s S2420 `us 1 `us 1 ]
 [n S2420 . currAngle nextAngle ]
-"29
-[; ;./servo.h: 29: extern servoMotor servos[4];
+"30
+[; ;./servo.h: 30: extern servoMotor servos[4];
 [v _servos `S2420 ~T0 @X0 -> 0 `x e ]
-"34
-[; ;./servo.h: 34: uint16_t calculateAngle(int angleDeg);
-[v _calculateAngle `(us ~T0 @X0 0 ef1`i ]
+"35
+[; ;./servo.h: 35: uint16_t calculateAngle(uint8_t angleDeg);
+[v _calculateAngle `(us ~T0 @X0 0 ef1`uc ]
 [p mainexit ]
 "60 ./mcc_generated_files/system/system.h
 [; ;./mcc_generated_files/system/system.h: 60: void SYSTEM_Initialize(void);
@@ -85,14 +79,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "305 ./mcc_generated_files/system/../system/pins.h
 [; ;./mcc_generated_files/system/../system/pins.h: 305: void nRF24_IRQ_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _nRF24_IRQ_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F17633 ]
-[v F18073 `(v ~T0 @X0 0 tf ]
+[v F18108 `(v ~T0 @X0 0 tf ]
 "195 ./mcc_generated_files/timer/tmr0.h
 [v _TMR0_Stop `(v ~T0 @X0 0 ef ]
 "423 ./mcc_generated_files/system/../timer/tmr2.h
 [; ;./mcc_generated_files/system/../timer/tmr2.h: 423: void TMR2_Stop(void);
 [v _TMR2_Stop `(v ~T0 @X0 0 ef ]
-"36 ./servo.h
-[; ;./servo.h: 36: void enablePWM();
+"37 ./servo.h
+[; ;./servo.h: 37: void enablePWM();
 [v _enablePWM `(v ~T0 @X0 0 e? ]
 "67 ./mcc_generated_files/system/../pwm/pwm1_16bit.h
 [; ;./mcc_generated_files/system/../pwm/pwm1_16bit.h: 67: void PWM1_16BIT_Disable(void);
@@ -2668,354 +2662,292 @@ Version 4.0 HI-TECH Software Intermediate Code
 "51171
 [; ;/Users/tolgakuntman/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h: 51171: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-"22 main.c
-[; ;main.c: 22: uint8_t buf[32];
+"24 main.c
+[; ;main.c: 24: uint8_t buf[32];
 [v _buf `uc ~T0 @X0 -> 32 `i e ]
-"23
-[; ;main.c: 23: _Bool nrf_flag=0;
+"25
+[; ;main.c: 25: _Bool nrf_flag=0;
 [v _nrf_flag `a ~T0 @X0 1 e ]
 [i _nrf_flag
 -> -> 0 `i `a
 ]
-"25
-[; ;main.c: 25: void AdvancedSettings(NRF24_t * dev)
+"27
+[; ;main.c: 27: void AdvancedSettings(NRF24_t * dev)
 [v _AdvancedSettings `(v ~T0 @X0 1 ef1`*S2419 ]
-"26
-[; ;main.c: 26: {
+"28
+[; ;main.c: 28: {
 {
 [e :U _AdvancedSettings ]
-"25
-[; ;main.c: 25: void AdvancedSettings(NRF24_t * dev)
+"27
+[; ;main.c: 27: void AdvancedSettings(NRF24_t * dev)
 [v _dev `*S2419 ~T0 @X0 1 r1 ]
-"26
-[; ;main.c: 26: {
+"28
+[; ;main.c: 28: {
 [f ]
-"32
-[; ;main.c: 32:  Nrf24_SetSpeedDataRates(dev, 0);
+"34
+[; ;main.c: 34:  Nrf24_SetSpeedDataRates(dev, 0);
 [e ( _Nrf24_SetSpeedDataRates (2 , _dev -> -> 0 `i `uc ]
-"38
-[; ;main.c: 38:  Nrf24_setRetransmitDelay(dev, 100);
+"40
+[; ;main.c: 40:  Nrf24_setRetransmitDelay(dev, 100);
 [e ( _Nrf24_setRetransmitDelay (2 , _dev -> -> 100 `i `uc ]
-"39
-[; ;main.c: 39: }
-[e :UE 2421 ]
+"41
+[; ;main.c: 41: }
+[e :UE 2422 ]
 }
-"43
-[; ;main.c: 43: void slave(void *pvParameters){
+"45
+[; ;main.c: 45: void slave(void *pvParameters){
 [v _slave `(v ~T0 @X0 1 ef1`*v ]
 {
 [e :U _slave ]
 [v _pvParameters `*v ~T0 @X0 1 r1 ]
 [f ]
-"44
-[; ;main.c: 44:     NRF24_t dev;
-[v _dev `S2419 ~T0 @X0 1 a ]
-"45
-[; ;main.c: 45:  Nrf24_init(&dev);
-[e ( _Nrf24_init (1 &U _dev ]
 "46
-[; ;main.c: 46:  uint8_t payload = 32;
+[; ;main.c: 46:     NRF24_t dev;
+[v _dev `S2419 ~T0 @X0 1 a ]
+"47
+[; ;main.c: 47:  Nrf24_init(&dev);
+[e ( _Nrf24_init (1 &U _dev ]
+"48
+[; ;main.c: 48:  uint8_t payload = 32;
 [v _payload `uc ~T0 @X0 1 a ]
 [e = _payload -> -> 32 `i `uc ]
-"47
-[; ;main.c: 47:  uint8_t channel = 112;
+"49
+[; ;main.c: 49:  uint8_t channel = 112;
 [v _channel `uc ~T0 @X0 1 a ]
 [e = _channel -> -> 112 `i `uc ]
-"48
-[; ;main.c: 48:  Nrf24_config(&dev, channel, payload);
+"50
+[; ;main.c: 50:  Nrf24_config(&dev, channel, payload);
 [e ( _Nrf24_config (3 , , &U _dev _channel _payload ]
-"49
-[; ;main.c: 49:     int ret = Nrf24_setRADDR(&dev, (uint8_t *)"1RECV");
+"51
+[; ;main.c: 51:     int ret = Nrf24_setRADDR(&dev, (uint8_t *)"2RECV");
 [v _ret `i ~T0 @X0 1 a ]
 [e = _ret ( _Nrf24_setRADDR (2 , &U _dev -> :s 1C `*uc ]
-"50
-[; ;main.c: 50:  while (ret != 0) {
-[e $U 2423  ]
-[e :U 2424 ]
-{
-"51
-[; ;main.c: 51:   ret = Nrf24_setRADDR(&dev, (uint8_t *)"1RECV");
-[e = _ret ( _Nrf24_setRADDR (2 , &U _dev -> :s 2C `*uc ]
 "52
-[; ;main.c: 52:  }
-}
-[e :U 2423 ]
-"50
-[; ;main.c: 50:  while (ret != 0) {
-[e $ != _ret -> 0 `i 2424  ]
+[; ;main.c: 52:  while (ret != 0) {
+[e $U 2424  ]
 [e :U 2425 ]
-"55
-[; ;main.c: 55:  ret = Nrf24_setTADDR(&dev, (uint8_t *)"1RECV");
-[e = _ret ( _Nrf24_setTADDR (2 , &U _dev -> :s 3C `*uc ]
-"56
-[; ;main.c: 56:  while (ret != 0) {
-[e $U 2426  ]
-[e :U 2427 ]
 {
-"57
-[; ;main.c: 57:   ret = Nrf24_setTADDR(&dev, (uint8_t *)"1RECV");
-[e = _ret ( _Nrf24_setTADDR (2 , &U _dev -> :s 4C `*uc ]
-"58
-[; ;main.c: 58:  }
+"53
+[; ;main.c: 53:   ret = Nrf24_setRADDR(&dev, (uint8_t *)"2RECV");
+[e = _ret ( _Nrf24_setRADDR (2 , &U _dev -> :s 2C `*uc ]
+"54
+[; ;main.c: 54:  }
 }
+[e :U 2424 ]
+"52
+[; ;main.c: 52:  while (ret != 0) {
+[e $ != _ret -> 0 `i 2425  ]
 [e :U 2426 ]
-"56
-[; ;main.c: 56:  while (ret != 0) {
-[e $ != _ret -> 0 `i 2427  ]
+"57
+[; ;main.c: 57:  ret = Nrf24_setTADDR(&dev, (uint8_t *)"2RECV");
+[e = _ret ( _Nrf24_setTADDR (2 , &U _dev -> :s 3C `*uc ]
+"58
+[; ;main.c: 58:  while (ret != 0) {
+[e $U 2427  ]
 [e :U 2428 ]
+{
+"59
+[; ;main.c: 59:   ret = Nrf24_setTADDR(&dev, (uint8_t *)"2RECV");
+[e = _ret ( _Nrf24_setTADDR (2 , &U _dev -> :s 4C `*uc ]
 "60
-[; ;main.c: 60:  AdvancedSettings(&dev);
-[e ( _AdvancedSettings (1 &U _dev ]
+[; ;main.c: 60:  }
+}
+[e :U 2427 ]
+"58
+[; ;main.c: 58:  while (ret != 0) {
+[e $ != _ret -> 0 `i 2428  ]
+[e :U 2429 ]
 "62
-[; ;main.c: 62:     Nrf24_configRegister(0x07, (1 << 6) | (1 << 5) | (1 << 4));
+[; ;main.c: 62:  AdvancedSettings(&dev);
+[e ( _AdvancedSettings (1 &U _dev ]
+"64
+[; ;main.c: 64:     Nrf24_configRegister(0x07, (1 << 6) | (1 << 5) | (1 << 4));
 [e ( _Nrf24_configRegister (2 , -> -> 7 `i `uc -> | | << -> 1 `i -> 6 `i << -> 1 `i -> 5 `i << -> 1 `i -> 4 `i `uc ]
-"65
-[; ;main.c: 65:     while(1){
-[e :U 2430 ]
-{
-"66
-[; ;main.c: 66:         if(nrf_flag){
-[e $ ! != -> _nrf_flag `i -> 0 `i 2432  ]
-{
 "67
-[; ;main.c: 67:             if (Nrf24_dataReady(&dev)) {
-[e $ ! != -> ( _Nrf24_dataReady (1 &U _dev `i -> 0 `i 2433  ]
+[; ;main.c: 67:     while(1){
+[e :U 2431 ]
 {
 "68
-[; ;main.c: 68:    Nrf24_getData(&dev, buf);
-[e ( _Nrf24_getData (2 , &U _dev &U _buf ]
+[; ;main.c: 68:         arm_fsm_update();
+[e ( _arm_fsm_update ..  ]
 "69
-[; ;main.c: 69:             buf[31]='\0';
-[e = *U + &U _buf * -> -> -> 31 `i `ui `ux -> -> # *U &U _buf `ui `ux -> -> 0 `ui `uc ]
-"70
-[; ;main.c: 70:             if (strcmp((char*)buf, "PING") == 0) {
-[e $ ! == ( _strcmp (2 , -> -> &U _buf `*uc `*Cuc :s 5C -> 0 `i 2434  ]
+[; ;main.c: 69:        if(nrf_flag){
+[e $ ! != -> _nrf_flag `i -> 0 `i 2433  ]
 {
-[v F18065 `uc ~T0 @X0 -> 5 `i s ]
-[i F18065
-:U ..
+"70
+[; ;main.c: 70:            if (Nrf24_dataReady(&dev)) {
+[e $ ! != -> ( _Nrf24_dataReady (1 &U _dev `i -> 0 `i 2434  ]
+{
 "71
-[; ;main.c: 71:             uint8_t response[] = "PING";
--> 80 `c
--> 73 `c
--> 78 `c
--> 71 `c
--> 0 `c
-..
-]
-[v _response `uc ~T0 @X0 -> 5 `i a ]
-[e = _response F18065 ]
+[; ;main.c: 71:             Nrf24_getData(&dev, buf);
+[e ( _Nrf24_getData (2 , &U _dev &U _buf ]
 "72
-[; ;main.c: 72:             Nrf24_send(&dev, response);
-[e ( _Nrf24_send (2 , &U _dev &U _response ]
+[; ;main.c: 72:             robot_command_t rob;
+[v _rob `S2421 ~T0 @X0 1 a ]
 "73
-[; ;main.c: 73:             }
+[; ;main.c: 73:             parse_robot_message(buf, &rob);
+[e ( _parse_robot_message (2 , -> &U _buf `*Cuc &U _rob ]
+"75
+[; ;main.c: 75:             }
 }
 [e :U 2434 ]
-"74
-[; ;main.c: 74:             while(Nrf24_isSending(&dev)){
-[e $U 2435  ]
-[e :U 2436 ]
-{
-"75
-[; ;main.c: 75:                 DELAY_milliseconds(1);
-[e ( _DELAY_milliseconds (1 -> -> 1 `i `us ]
 "76
-[; ;main.c: 76:             }
-}
-[e :U 2435 ]
-"74
-[; ;main.c: 74:             while(Nrf24_isSending(&dev)){
-[e $ != -> ( _Nrf24_isSending (1 &U _dev `i -> 0 `i 2436  ]
-[e :U 2437 ]
-"77
-[; ;main.c: 77:             nrf_flag=0;
+[; ;main.c: 76:             nrf_flag=0;
 [e = _nrf_flag -> -> 0 `i `a ]
-"78
-[; ;main.c: 78:   }
+"77
+[; ;main.c: 77:   }
 }
 [e :U 2433 ]
 "79
-[; ;main.c: 79:         }
-}
-[e :U 2432 ]
-[v F18067 `uc ~T0 @X0 -> 32 `i s ]
-[i F18067
-:U ..
+[; ;main.c: 79:   DELAY_milliseconds(1);
+[e ( _DELAY_milliseconds (1 -> -> 1 `i `us ]
 "80
-[; ;main.c: 80:         uint8_t buf[32] = "PING";
--> 80 `c
--> 73 `c
--> 78 `c
--> 71 `c
--> 0 `c
-..
-]
-[v _buf `uc ~T0 @X0 -> 32 `i a ]
-[e = _buf F18067 ]
-"82
-[; ;main.c: 82:             Nrf24_send(&dev, buf);
-[e ( _Nrf24_send (2 , &U _dev &U _buf ]
-"83
-[; ;main.c: 83:             Nrf24_isSend(&dev, 1000);
-[e ( _Nrf24_isSend (2 , &U _dev -> 1000 `i ]
-"84
-[; ;main.c: 84:             DELAY_milliseconds(1);
-[e ( _DELAY_milliseconds (1 -> -> 1 `i `us ]
-"87
-[; ;main.c: 87:         _delay((unsigned long)((200)*(64000000U/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 64000000 `ul `d .4000.0 `ul ]
-"109
-[; ;main.c: 109:   DELAY_milliseconds(1);
-[e ( _DELAY_milliseconds (1 -> -> 1 `i `us ]
-"110
-[; ;main.c: 110:         }
+[; ;main.c: 80:         }
 }
-[e :U 2429 ]
-[e $U 2430  ]
-[e :U 2431 ]
-"111
-[; ;main.c: 111:     }
-[e :UE 2422 ]
+[e :U 2430 ]
+[e $U 2431  ]
+[e :U 2432 ]
+"81
+[; ;main.c: 81:     }
+[e :UE 2423 ]
 }
-"189
-[; ;main.c: 189: void nrf_irq(){
+"159
+[; ;main.c: 159: void nrf_irq(){
 [v _nrf_irq `(v ~T0 @X0 1 ef ]
 {
 [e :U _nrf_irq ]
 [f ]
-"190
-[; ;main.c: 190:     nrf_flag=1;
+"160
+[; ;main.c: 160:     nrf_flag=1;
 [e = _nrf_flag -> -> 1 `i `a ]
-"191
-[; ;main.c: 191: }
-[e :UE 2438 ]
+"161
+[; ;main.c: 161: }
+[e :UE 2435 ]
 }
-"192
-[; ;main.c: 192: uint8_t counter=0;
+"162
+[; ;main.c: 162: uint8_t counter=0;
 [v _counter `uc ~T0 @X0 1 e ]
 [i _counter
 -> -> 0 `i `uc
 ]
-"193
-[; ;main.c: 193: void servo_steps(){
+"163
+[; ;main.c: 163: void servo_steps(){
 [v _servo_steps `(v ~T0 @X0 1 ef ]
 {
 [e :U _servo_steps ]
 [f ]
-"194
-[; ;main.c: 194:     if(counter==0){
-[e $ ! == -> _counter `i -> 0 `i 2440  ]
+"164
+[; ;main.c: 164:     if(counter==0){
+[e $ ! == -> _counter `i -> 0 `i 2437  ]
 {
-"195
-[; ;main.c: 195:         counter++;
+"165
+[; ;main.c: 165:         counter++;
 [e ++ _counter -> -> 1 `i `uc ]
-"196
-[; ;main.c: 196:         servos[0].nextAngle = calculateAngle(100);
-[e = . *U + &U _servos * -> -> -> 0 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> 100 `i ]
-"197
-[; ;main.c: 197:         servos[1].nextAngle = calculateAngle(90);
-[e = . *U + &U _servos * -> -> -> 1 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> 90 `i ]
-"198
-[; ;main.c: 198:         servos[2].nextAngle = calculateAngle(100);
-[e = . *U + &U _servos * -> -> -> 2 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> 100 `i ]
-"199
-[; ;main.c: 199:         servos[3].nextAngle = calculateAngle(80);
-[e = . *U + &U _servos * -> -> -> 3 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> 80 `i ]
-"200
-[; ;main.c: 200:     }else if(counter==1){
+"166
+[; ;main.c: 166:         servos[0].nextAngle = calculateAngle(100);
+[e = . *U + &U _servos * -> -> -> 0 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 100 `i `uc ]
+"167
+[; ;main.c: 167:         servos[1].nextAngle = calculateAngle(90);
+[e = . *U + &U _servos * -> -> -> 1 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 90 `i `uc ]
+"168
+[; ;main.c: 168:         servos[2].nextAngle = calculateAngle(100);
+[e = . *U + &U _servos * -> -> -> 2 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 100 `i `uc ]
+"169
+[; ;main.c: 169:         servos[3].nextAngle = calculateAngle(80);
+[e = . *U + &U _servos * -> -> -> 3 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 80 `i `uc ]
+"170
+[; ;main.c: 170:     }else if(counter==1){
 }
-[e $U 2441  ]
-[e :U 2440 ]
-[e $ ! == -> _counter `i -> 1 `i 2442  ]
+[e $U 2438  ]
+[e :U 2437 ]
+[e $ ! == -> _counter `i -> 1 `i 2439  ]
 {
-"201
-[; ;main.c: 201:         counter++;
+"171
+[; ;main.c: 171:         counter++;
 [e ++ _counter -> -> 1 `i `uc ]
-"202
-[; ;main.c: 202:         servos[0].nextAngle = calculateAngle(70);
-[e = . *U + &U _servos * -> -> -> 0 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> 70 `i ]
-"203
-[; ;main.c: 203:         servos[1].nextAngle = calculateAngle(90);
-[e = . *U + &U _servos * -> -> -> 1 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> 90 `i ]
-"204
-[; ;main.c: 204:         servos[2].nextAngle = calculateAngle(120);
-[e = . *U + &U _servos * -> -> -> 2 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> 120 `i ]
-"205
-[; ;main.c: 205:         servos[3].nextAngle = calculateAngle(20);
-[e = . *U + &U _servos * -> -> -> 3 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> 20 `i ]
-"206
-[; ;main.c: 206:     }else{
+"172
+[; ;main.c: 172:         servos[0].nextAngle = calculateAngle(70);
+[e = . *U + &U _servos * -> -> -> 0 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 70 `i `uc ]
+"173
+[; ;main.c: 173:         servos[1].nextAngle = calculateAngle(90);
+[e = . *U + &U _servos * -> -> -> 1 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 90 `i `uc ]
+"174
+[; ;main.c: 174:         servos[2].nextAngle = calculateAngle(120);
+[e = . *U + &U _servos * -> -> -> 2 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 120 `i `uc ]
+"175
+[; ;main.c: 175:         servos[3].nextAngle = calculateAngle(20);
+[e = . *U + &U _servos * -> -> -> 3 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 20 `i `uc ]
+"176
+[; ;main.c: 176:     }else{
 }
-[e $U 2443  ]
-[e :U 2442 ]
+[e $U 2440  ]
+[e :U 2439 ]
 {
-"207
-[; ;main.c: 207:         counter=0;
+"177
+[; ;main.c: 177:         counter=0;
 [e = _counter -> -> 0 `i `uc ]
-"208
-[; ;main.c: 208:         servos[0].nextAngle = calculateAngle(45);
-[e = . *U + &U _servos * -> -> -> 0 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> 45 `i ]
-"209
-[; ;main.c: 209:         servos[1].nextAngle = calculateAngle(0);
-[e = . *U + &U _servos * -> -> -> 1 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> 0 `i ]
-"210
-[; ;main.c: 210:         servos[2].nextAngle = calculateAngle(140);
-[e = . *U + &U _servos * -> -> -> 2 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> 140 `i ]
-"211
-[; ;main.c: 211:         servos[3].nextAngle = calculateAngle(10);
-[e = . *U + &U _servos * -> -> -> 3 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> 10 `i ]
-"212
-[; ;main.c: 212:     }
+"178
+[; ;main.c: 178:         servos[0].nextAngle = calculateAngle(45);
+[e = . *U + &U _servos * -> -> -> 0 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 45 `i `uc ]
+"179
+[; ;main.c: 179:         servos[1].nextAngle = calculateAngle(0);
+[e = . *U + &U _servos * -> -> -> 1 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 0 `i `uc ]
+"180
+[; ;main.c: 180:         servos[2].nextAngle = calculateAngle(140);
+[e = . *U + &U _servos * -> -> -> 2 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 140 `i `uc ]
+"181
+[; ;main.c: 181:         servos[3].nextAngle = calculateAngle(10);
+[e = . *U + &U _servos * -> -> -> 3 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 10 `i `uc ]
+"182
+[; ;main.c: 182:     }
 }
-[e :U 2443 ]
-[e :U 2441 ]
-"213
-[; ;main.c: 213: }
-[e :UE 2439 ]
+[e :U 2440 ]
+[e :U 2438 ]
+"183
+[; ;main.c: 183: }
+[e :UE 2436 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"214
-[; ;main.c: 214: void main(void)
+"184
+[; ;main.c: 184: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"215
-[; ;main.c: 215: {
+"185
+[; ;main.c: 185: {
 {
 [e :U _main ]
 [f ]
-"216
-[; ;main.c: 216:     SYSTEM_Initialize();
+"186
+[; ;main.c: 186:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"217
-[; ;main.c: 217:     (INTCON0bits.GIE = 1);
+"187
+[; ;main.c: 187:     (INTCON0bits.GIE = 1);
 [e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
-"219
-[; ;main.c: 219:     TMR2_Start();
+"189
+[; ;main.c: 189:     TMR2_Start();
 [e ( _TMR2_Start ..  ]
-"220
-[; ;main.c: 220:     nRF24_IRQ_SetInterruptHandler(nrf_irq);
-[e ( _nRF24_IRQ_SetInterruptHandler (1 -> &U _nrf_irq `*F18073 ]
-"221
-[; ;main.c: 221:     TMR0_Stop();
+"190
+[; ;main.c: 190:     nRF24_IRQ_SetInterruptHandler(nrf_irq);
+[e ( _nRF24_IRQ_SetInterruptHandler (1 -> &U _nrf_irq `*F18108 ]
+"191
+[; ;main.c: 191:     TMR0_Stop();
 [e ( _TMR0_Stop ..  ]
-"222
-[; ;main.c: 222:         TMR2_Stop();
+"192
+[; ;main.c: 192:         TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
-"223
-[; ;main.c: 223:     enablePWM();
+"193
+[; ;main.c: 193:     enablePWM();
 [e ( _enablePWM ..  ]
-"224
-[; ;main.c: 224:     PWM1_16BIT_Disable();
+"194
+[; ;main.c: 194:     PWM1_16BIT_Disable();
 [e ( _PWM1_16BIT_Disable ..  ]
-"229
-[; ;main.c: 229:  slave(((void*)0));
+"199
+[; ;main.c: 199:  slave(((void*)0));
 [e ( _slave (1 -> -> 0 `i `*v ]
-"240
-[; ;main.c: 240: }
-[e :UE 2444 ]
+"210
+[; ;main.c: 210: }
+[e :UE 2441 ]
 }
-[a 1C 49 82 69 67 86 0 ]
-[a 2C 49 82 69 67 86 0 ]
-[a 3C 49 82 69 67 86 0 ]
-[a 4C 49 82 69 67 86 0 ]
-[a 5C 80 73 78 71 0 ]
+[a 1C 50 82 69 67 86 0 ]
+[a 2C 50 82 69 67 86 0 ]
+[a 3C 50 82 69 67 86 0 ]
+[a 4C 50 82 69 67 86 0 ]

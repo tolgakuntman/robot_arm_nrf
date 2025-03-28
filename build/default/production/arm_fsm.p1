@@ -1,0 +1,404 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"12 arm_fsm.c
+[; ;arm_fsm.c: 12: static ArmState current_state, next_state = IDLE;
+[c E36 0 1 2 3 4 5 6 7 8 9 .. ]
+[n E36 . IDLE PICKUP MAGNET_ON MIDDLE1 MIDDLE2 BOAT_ROTATE PLACEMENT MAGNET_OFF MIDDLE3 RETURN  ]
+"13
+[; ;arm_fsm.c: 13: static ArmMode arm_mode = PLACE;
+[c E48 0 1 .. ]
+[n E48 . PLACE REMOVE  ]
+"31 ./boat_control.h
+[; ;./boat_control.h: 31: void init_boats();
+[v _init_boats `(v ~T0 @X0 0 e? ]
+"39 ./servo.h
+[; ;./servo.h: 39: _Bool servoMovement();
+[v _servoMovement `(a ~T0 @X0 0 e? ]
+"34 ./boat_control.h
+[; ;./boat_control.h: 34: const uint8_t* get_docking_servo_angles(uint8_t boat_id);
+[v _get_docking_servo_angles `(*Cuc ~T0 @X0 0 ef1`uc ]
+"38 ./servo.h
+[; ;./servo.h: 38: void move_servo_to_angles(const uint8_t* angles);
+[v _move_servo_to_angles `(v ~T0 @X0 0 ef1`*Cuc ]
+"33
+[; ;./servo.h: 33: void enableMagnet();
+[v _enableMagnet `(v ~T0 @X0 0 e? ]
+"32 ./boat_control.h
+[; ;./boat_control.h: 32: void move_boat(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical);
+[v _move_boat `(v ~T0 @X0 0 ef4`uc`uc`uc`uc ]
+"34 ./servo.h
+[; ;./servo.h: 34: void disableMagnet();
+[v _disableMagnet `(v ~T0 @X0 0 e? ]
+"33 ./boat_control.h
+[; ;./boat_control.h: 33: void return_boat_to_dock(uint8_t boat_id);
+[v _return_boat_to_dock `(v ~T0 @X0 0 ef1`uc ]
+"12 arm_fsm.c
+[; ;arm_fsm.c: 12: static ArmState current_state, next_state = IDLE;
+[v _current_state `E36 ~T0 @X0 1 s ]
+[v _next_state `E36 ~T0 @X0 1 s ]
+[i _next_state
+. `E36 0
+]
+"13
+[; ;arm_fsm.c: 13: static ArmMode arm_mode = PLACE;
+[v _arm_mode `E48 ~T0 @X0 1 s ]
+[i _arm_mode
+. `E48 0
+]
+"14
+[; ;arm_fsm.c: 14: static uint8_t target_boat;
+[v _target_boat `uc ~T0 @X0 1 s ]
+"15
+[; ;arm_fsm.c: 15: static uint8_t target_x, target_y;
+[v _target_x `uc ~T0 @X0 1 s ]
+[v _target_y `uc ~T0 @X0 1 s ]
+"16
+[; ;arm_fsm.c: 16: static uint8_t target_orientation;
+[v _target_orientation `uc ~T0 @X0 1 s ]
+"17
+[; ;arm_fsm.c: 17: static volatile _Bool process_fsm = 0;
+[v _process_fsm `Va ~T0 @X0 1 s ]
+[i _process_fsm
+-> -> 0 `i `a
+]
+"18
+[; ;arm_fsm.c: 18: static volatile _Bool state_done = 1;
+[v _state_done `Va ~T0 @X0 1 s ]
+[i _state_done
+-> -> 1 `i `a
+]
+"20
+[; ;arm_fsm.c: 20: void arm_fsm_init() {
+[v _arm_fsm_init `(v ~T0 @X0 1 ef ]
+{
+[e :U _arm_fsm_init ]
+[f ]
+"21
+[; ;arm_fsm.c: 21:     current_state = next_state = IDLE;
+[e = _current_state = _next_state . `E36 0 ]
+"22
+[; ;arm_fsm.c: 22:     process_fsm = 0;
+[e = _process_fsm -> -> 0 `i `a ]
+"23
+[; ;arm_fsm.c: 23:     state_done = 1;
+[e = _state_done -> -> 1 `i `a ]
+"24
+[; ;arm_fsm.c: 24:     init_boats();
+[e ( _init_boats ..  ]
+"25
+[; ;arm_fsm.c: 25: }
+[e :UE 4 ]
+}
+"27
+[; ;arm_fsm.c: 27: void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, ArmMode mode) {
+[v _arm_set_target `(v ~T0 @X0 1 ef5`uc`uc`uc`uc`E48 ]
+{
+[e :U _arm_set_target ]
+[v _boat_id `uc ~T0 @X0 1 r1 ]
+[v _x `uc ~T0 @X0 1 r2 ]
+[v _y `uc ~T0 @X0 1 r3 ]
+[v _is_vertical `uc ~T0 @X0 1 r4 ]
+[v _mode `E48 ~T0 @X0 1 r5 ]
+[f ]
+"28
+[; ;arm_fsm.c: 28:     if (current_state == IDLE) {
+[e $ ! == -> _current_state `ui -> . `E36 0 `ui 6  ]
+{
+"29
+[; ;arm_fsm.c: 29:         target_boat = boat_id;
+[e = _target_boat _boat_id ]
+"30
+[; ;arm_fsm.c: 30:         target_x = x;
+[e = _target_x _x ]
+"31
+[; ;arm_fsm.c: 31:         target_y = y;
+[e = _target_y _y ]
+"32
+[; ;arm_fsm.c: 32:         target_orientation = is_vertical;
+[e = _target_orientation _is_vertical ]
+"33
+[; ;arm_fsm.c: 33:         arm_mode = mode;
+[e = _arm_mode _mode ]
+"34
+[; ;arm_fsm.c: 34:         current_state = (mode == PLACE) ? PICKUP : MIDDLE3;
+[e = _current_state -> ? == -> _mode `ui -> . `E48 0 `ui : . `E36 1 . `E36 8 `E36 ]
+"35
+[; ;arm_fsm.c: 35:         process_fsm = 1;
+[e = _process_fsm -> -> 1 `i `a ]
+"36
+[; ;arm_fsm.c: 36:     }
+}
+[e :U 6 ]
+"37
+[; ;arm_fsm.c: 37: }
+[e :UE 5 ]
+}
+"39
+[; ;arm_fsm.c: 39: _Bool arm_is_busy() {
+[v _arm_is_busy `(a ~T0 @X0 1 ef ]
+{
+[e :U _arm_is_busy ]
+[f ]
+"40
+[; ;arm_fsm.c: 40:     return process_fsm;
+[e ) _process_fsm ]
+[e $UE 7  ]
+"41
+[; ;arm_fsm.c: 41: }
+[e :UE 7 ]
+}
+"43
+[; ;arm_fsm.c: 43: void arm_fsm_update() {
+[v _arm_fsm_update `(v ~T0 @X0 1 ef ]
+{
+[e :U _arm_fsm_update ]
+[f ]
+"44
+[; ;arm_fsm.c: 44:     if (!process_fsm || servoMovement()) return;
+[e $ ! || ! != -> _process_fsm `i -> 0 `i != -> ( _servoMovement ..  `i -> 0 `i 9  ]
+[e $UE 8  ]
+[e :U 9 ]
+"46
+[; ;arm_fsm.c: 46:     switch (current_state) {
+[e $U 11  ]
+{
+"47
+[; ;arm_fsm.c: 47:         case PICKUP: {
+[e :U 12 ]
+{
+"48
+[; ;arm_fsm.c: 48:             const uint8_t* angles = get_docking_servo_angles(target_boat);
+[v _angles `*Cuc ~T0 @X0 1 a ]
+[e = _angles ( _get_docking_servo_angles (1 _target_boat ]
+"49
+[; ;arm_fsm.c: 49:             move_servo_to_angles(angles);
+[e ( _move_servo_to_angles (1 _angles ]
+"50
+[; ;arm_fsm.c: 50:             next_state = (arm_mode == PLACE) ? MAGNET_ON : MAGNET_OFF;
+[e = _next_state -> ? == -> _arm_mode `ui -> . `E48 0 `ui : . `E36 2 . `E36 7 `E36 ]
+"51
+[; ;arm_fsm.c: 51:             break;
+[e $U 10  ]
+"52
+[; ;arm_fsm.c: 52:         }
+}
+"54
+[; ;arm_fsm.c: 54:         case MAGNET_ON: {
+[e :U 13 ]
+{
+"55
+[; ;arm_fsm.c: 55:             enableMagnet();
+[e ( _enableMagnet ..  ]
+"56
+[; ;arm_fsm.c: 56:             next_state = (arm_mode == PLACE) ? MIDDLE1 : MIDDLE2;
+[e = _next_state -> ? == -> _arm_mode `ui -> . `E48 0 `ui : . `E36 3 . `E36 4 `E36 ]
+"57
+[; ;arm_fsm.c: 57:             break;
+[e $U 10  ]
+"58
+[; ;arm_fsm.c: 58:         }
+}
+"60
+[; ;arm_fsm.c: 60:         case MIDDLE1:{
+[e :U 14 ]
+{
+[v F135 `uc ~T0 @X0 -> 4 `i s ]
+[i F135
+:U ..
+"61
+[; ;arm_fsm.c: 61:             uint8_t middle1_angles[4] = {43, 90, 25, 45};
+-> -> 43 `i `uc
+-> -> 90 `i `uc
+-> -> 25 `i `uc
+-> -> 45 `i `uc
+..
+]
+[v _middle1_angles `uc ~T0 @X0 -> 4 `i a ]
+[e = _middle1_angles F135 ]
+"62
+[; ;arm_fsm.c: 62:             move_servo_to_angles(middle1_angles);
+[e ( _move_servo_to_angles (1 -> &U _middle1_angles `*Cuc ]
+"63
+[; ;arm_fsm.c: 63:             next_state = (arm_mode == PLACE) ? MIDDLE2 : PICKUP;
+[e = _next_state -> ? == -> _arm_mode `ui -> . `E48 0 `ui : . `E36 4 . `E36 1 `E36 ]
+"64
+[; ;arm_fsm.c: 64:             break;
+[e $U 10  ]
+"65
+[; ;arm_fsm.c: 65:         }
+}
+"67
+[; ;arm_fsm.c: 67:         case MIDDLE2: {
+[e :U 15 ]
+{
+[v F137 `uc ~T0 @X0 -> 4 `i s ]
+[i F137
+:U ..
+"68
+[; ;arm_fsm.c: 68:             uint8_t middle2_angles[4] = {43, 90, 115, 45};
+-> -> 43 `i `uc
+-> -> 90 `i `uc
+-> -> 115 `i `uc
+-> -> 45 `i `uc
+..
+]
+[v _middle2_angles `uc ~T0 @X0 -> 4 `i a ]
+[e = _middle2_angles F137 ]
+"69
+[; ;arm_fsm.c: 69:             move_servo_to_angles(middle2_angles);
+[e ( _move_servo_to_angles (1 -> &U _middle2_angles `*Cuc ]
+"70
+[; ;arm_fsm.c: 70:             next_state = (arm_mode == PLACE) ? PLACEMENT : MIDDLE1;
+[e = _next_state -> ? == -> _arm_mode `ui -> . `E48 0 `ui : . `E36 6 . `E36 3 `E36 ]
+"71
+[; ;arm_fsm.c: 71:             break;
+[e $U 10  ]
+"72
+[; ;arm_fsm.c: 72:         }
+}
+"74
+[; ;arm_fsm.c: 74:         case BOAT_ROTATE: {
+[e :U 16 ]
+{
+"76
+[; ;arm_fsm.c: 76:             break;
+[e $U 10  ]
+"77
+[; ;arm_fsm.c: 77:         }
+}
+"79
+[; ;arm_fsm.c: 79:         case PLACEMENT: {
+[e :U 17 ]
+{
+"80
+[; ;arm_fsm.c: 80:             move_boat(target_boat, target_x, target_y, target_orientation);
+[e ( _move_boat (4 , , , _target_boat _target_x _target_y _target_orientation ]
+"81
+[; ;arm_fsm.c: 81:             next_state = (arm_mode == PLACE) ? MAGNET_OFF : MAGNET_ON;
+[e = _next_state -> ? == -> _arm_mode `ui -> . `E48 0 `ui : . `E36 7 . `E36 2 `E36 ]
+"82
+[; ;arm_fsm.c: 82:             break;
+[e $U 10  ]
+"83
+[; ;arm_fsm.c: 83:         }
+}
+"85
+[; ;arm_fsm.c: 85:         case MAGNET_OFF: {
+[e :U 18 ]
+{
+"86
+[; ;arm_fsm.c: 86:             disableMagnet();
+[e ( _disableMagnet ..  ]
+"87
+[; ;arm_fsm.c: 87:             if (arm_mode == REMOVE) {
+[e $ ! == -> _arm_mode `ui -> . `E48 1 `ui 19  ]
+{
+"88
+[; ;arm_fsm.c: 88:                 return_boat_to_dock(target_boat);
+[e ( _return_boat_to_dock (1 _target_boat ]
+"89
+[; ;arm_fsm.c: 89:             }
+}
+[e :U 19 ]
+"90
+[; ;arm_fsm.c: 90:             next_state = (arm_mode == PLACE) ? MIDDLE3 : RETURN;
+[e = _next_state -> ? == -> _arm_mode `ui -> . `E48 0 `ui : . `E36 8 . `E36 9 `E36 ]
+"91
+[; ;arm_fsm.c: 91:             break;
+[e $U 10  ]
+"92
+[; ;arm_fsm.c: 92:         }
+}
+"94
+[; ;arm_fsm.c: 94:         case MIDDLE3: {
+[e :U 20 ]
+{
+[v F139 `uc ~T0 @X0 -> 4 `i s ]
+[i F139
+:U ..
+"95
+[; ;arm_fsm.c: 95:             uint8_t middle2_angles[4] = {43, 90, 115, 45};
+-> -> 43 `i `uc
+-> -> 90 `i `uc
+-> -> 115 `i `uc
+-> -> 45 `i `uc
+..
+]
+[v _middle2_angles `uc ~T0 @X0 -> 4 `i a ]
+[e = _middle2_angles F139 ]
+"96
+[; ;arm_fsm.c: 96:             move_servo_to_angles(middle2_angles);
+[e ( _move_servo_to_angles (1 -> &U _middle2_angles `*Cuc ]
+"97
+[; ;arm_fsm.c: 97:             next_state = (arm_mode == PLACE) ? RETURN : PLACEMENT;
+[e = _next_state -> ? == -> _arm_mode `ui -> . `E48 0 `ui : . `E36 9 . `E36 6 `E36 ]
+"98
+[; ;arm_fsm.c: 98:             break;
+[e $U 10  ]
+"99
+[; ;arm_fsm.c: 99:         }
+}
+"101
+[; ;arm_fsm.c: 101:         case RETURN: {
+[e :U 21 ]
+{
+[v F141 `uc ~T0 @X0 -> 4 `i s ]
+[i F141
+:U ..
+"102
+[; ;arm_fsm.c: 102:             uint8_t idle_angles[4] = {43, 90, 25, 45};
+-> -> 43 `i `uc
+-> -> 90 `i `uc
+-> -> 25 `i `uc
+-> -> 45 `i `uc
+..
+]
+[v _idle_angles `uc ~T0 @X0 -> 4 `i a ]
+[e = _idle_angles F141 ]
+"103
+[; ;arm_fsm.c: 103:             move_servo_to_angles(idle_angles);
+[e ( _move_servo_to_angles (1 -> &U _idle_angles `*Cuc ]
+"104
+[; ;arm_fsm.c: 104:             next_state = IDLE;
+[e = _next_state . `E36 0 ]
+"105
+[; ;arm_fsm.c: 105:             process_fsm = 0;
+[e = _process_fsm -> -> 0 `i `a ]
+"106
+[; ;arm_fsm.c: 106:             break;
+[e $U 10  ]
+"107
+[; ;arm_fsm.c: 107:             }
+}
+"109
+[; ;arm_fsm.c: 109:         case IDLE:
+[e :U 22 ]
+"110
+[; ;arm_fsm.c: 110:         default:
+[e :U 23 ]
+"111
+[; ;arm_fsm.c: 111:             break;
+[e $U 10  ]
+"112
+[; ;arm_fsm.c: 112:     }
+}
+[e $U 10  ]
+[e :U 11 ]
+[e [\ -> _current_state `ui , $ -> . `E36 1 `ui 12
+ , $ -> . `E36 2 `ui 13
+ , $ -> . `E36 3 `ui 14
+ , $ -> . `E36 4 `ui 15
+ , $ -> . `E36 5 `ui 16
+ , $ -> . `E36 6 `ui 17
+ , $ -> . `E36 7 `ui 18
+ , $ -> . `E36 8 `ui 20
+ , $ -> . `E36 9 `ui 21
+ , $ -> . `E36 0 `ui 22
+ 23 ]
+[e :U 10 ]
+"114
+[; ;arm_fsm.c: 114:     current_state = next_state;
+[e = _current_state _next_state ]
+"115
+[; ;arm_fsm.c: 115: }
+[e :UE 8 ]
+}

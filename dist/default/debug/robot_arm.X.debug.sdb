@@ -75,6 +75,24 @@ RF24_CRC_DISABLED 0
 RF24_CRC_8 1
 RF24_CRC_16 2
 ]
+"12 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/arm_fsm.c
+[e E36 . `uc
+IDLE 0
+PICKUP 1
+MAGNET_ON 2
+MIDDLE1 3
+MIDDLE2 4
+BOAT_ROTATE 5
+PLACEMENT 6
+MAGNET_OFF 7
+MIDDLE3 8
+RETURN 9
+]
+"13
+[e E48 . `uc
+PLACE 0
+REMOVE 1
+]
 "4 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
 "62 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/float.c
@@ -87,6 +105,8 @@ RF24_CRC_16 2
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
 "19 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
+"4 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 3 0 ]
 "3 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/memset.c
 [v _memset memset `(*.39v  1 e 3 0 ]
 "5 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/printf.c
@@ -99,19 +119,29 @@ RF24_CRC_16 2
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 "8 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
-"3 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/strcmp.c
-[v _strcmp strcmp `(i  1 e 2 0 ]
 "15 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"25 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/main.c
+"43 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/arm_fsm.c
+[v _arm_fsm_update arm_fsm_update `(v  1 e 1 0 ]
+"23 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/boat_control.c
+[v _init_boats init_boats `(v  1 e 1 0 ]
+"29
+[v _move_boat move_boat `(v  1 e 1 0 ]
+"39
+[v _return_boat_to_dock return_boat_to_dock `(v  1 e 1 0 ]
+"45
+[v _get_docking_servo_angles get_docking_servo_angles `(*.32Cuc  1 e 3 0 ]
+"27 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/grid_lookup.c
+[v _get_grid_servo_angles get_grid_servo_angles `(*.32Cuc  1 e 3 0 ]
+"27 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/main.c
 [v _AdvancedSettings AdvancedSettings `(v  1 e 1 0 ]
-"43
+"45
 [v _slave slave `(v  1 e 1 0 ]
-"189
+"159
 [v _nrf_irq nrf_irq `(v  1 e 1 0 ]
-"214
+"184
 [v _main main `(v  1 e 1 0 ]
 "50 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mcc_generated_files/pwm/src/pwm1_16bit.c
 [v _PWM1_16BIT_Initialize PWM1_16BIT_Initialize `(v  1 e 1 0 ]
@@ -243,6 +273,8 @@ RF24_CRC_16 2
 [v _TMR0_Stop TMR0_Stop `(v  1 e 1 0 ]
 "139
 [v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+"151
+[v _TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
 "156
 [v _TMR0_DefaultCallback TMR0_DefaultCallback `(v  1 s 1 TMR0_DefaultCallback ]
 "57 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mcc_generated_files/timer/src/tmr2.c
@@ -259,6 +291,8 @@ RF24_CRC_16 2
 [v _TMR2_OverflowCallbackRegister TMR2_OverflowCallbackRegister `(v  1 e 1 0 ]
 "140
 [v _TMR2_DefaultOverflowCallback TMR2_DefaultOverflowCallback `(v  1 s 1 TMR2_DefaultOverflowCallback ]
+"4 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/message_parser.c
+[v _parse_robot_message parse_robot_message `(a  1 e 1 0 ]
 "45 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mirf.c
 [v _SPI_read_buff SPI_read_buff `(v  1 e 1 0 ]
 "55
@@ -281,12 +315,6 @@ RF24_CRC_16 2
 [v _Nrf24_readRegister Nrf24_readRegister `(v  1 e 1 0 ]
 "219
 [v _Nrf24_writeRegister Nrf24_writeRegister `(v  1 e 1 0 ]
-"231
-[v _Nrf24_send Nrf24_send `(v  1 e 1 0 ]
-"258
-[v _Nrf24_isSending Nrf24_isSending `(a  1 e 1 0 ]
-"275
-[v _Nrf24_isSend Nrf24_isSend `(a  1 e 1 0 ]
 "298
 [v _Nrf24_getStatus Nrf24_getStatus `(uc  1 e 1 0 ]
 "304
@@ -313,12 +341,20 @@ RF24_CRC_16 2
 [v _Nrf24_getPALevel Nrf24_getPALevel `(uc  1 e 1 0 ]
 "495
 [v _Nrf24_getRetransmitDelay Nrf24_getRetransmitDelay `(uc  1 e 1 0 ]
-"6 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/servo.c
+"7 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/servo.c
 [v _isrTim0 isrTim0 `(v  1 e 1 0 ]
-"39
+"30
+[v _enableMagnet enableMagnet `(v  1 e 1 0 ]
+"35
+[v _disableMagnet disableMagnet `(v  1 e 1 0 ]
+"40
 [v _calculateAngle calculateAngle `(us  1 e 2 0 ]
 "62
 [v _enablePWM enablePWM `(v  1 e 1 0 ]
+"69
+[v _move_servo_to_angles move_servo_to_angles `(v  1 e 1 0 ]
+"77
+[v _servoMovement servoMovement `(a  1 e 1 0 ]
 "3338 /Users/tolgakuntman/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h
 [v _SPI1RXB SPI1RXB `VEuc  1 e 1 @128 ]
 "3408
@@ -977,7 +1013,7 @@ RF24_CRC_16 2
 [v _LATB LATB `VEuc  1 e 1 @1215 ]
 "48985
 [v _LATC LATC `VEuc  1 e 1 @1216 ]
-[s S2056 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S2048 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -987,10 +1023,10 @@ RF24_CRC_16 2
 `uc 1 LATC7 1 0 :1:7 
 ]
 "49002
-[u S2065 . 1 `S2056 1 . 1 0 ]
+[u S2057 . 1 `S2048 1 . 1 0 ]
 "49002
 "49002
-[v _LATCbits LATCbits `VES2065  1 e 1 @1216 ]
+[v _LATCbits LATCbits `VES2057  1 e 1 @1216 ]
 "49047
 [v _LATD LATD `VEuc  1 e 1 @1217 ]
 "49109
@@ -1040,11 +1076,36 @@ RF24_CRC_16 2
 "49913
 "49913
 [v _INTCON0bits INTCON0bits `VES1180  1 e 1 @1238 ]
-"22 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/main.c
+"12 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/arm_fsm.c
+[v _current_state current_state `E36  1 s 1 current_state ]
+[v _next_state next_state `E36  1 s 1 next_state ]
+"13
+[v _arm_mode arm_mode `E48  1 s 1 arm_mode ]
+"14
+[v _target_boat target_boat `uc  1 s 1 target_boat ]
+"15
+[v _target_x target_x `uc  1 s 1 target_x ]
+[v _target_y target_y `uc  1 s 1 target_y ]
+"16
+[v _target_orientation target_orientation `uc  1 s 1 target_orientation ]
+"17
+[v _process_fsm process_fsm `VEa  1 s 1 process_fsm ]
+"18
+[v _state_done state_done `VEa  1 s 1 state_done ]
+[s S2506 . 4 `[4]uc 1 angles 4 0 ]
+"13 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/boat_control.c
+[v _docking_positions docking_positions `C[4]S2506  1 e 16 0 ]
+[s S2508 . 4 `uc 1 x 1 0 `uc 1 y 1 1 `uc 1 is_vertical 1 2 `uc 1 is_docked 1 3 ]
+"21
+[v _boats boats `[4]S2508  1 e 16 0 ]
+[s S2538 . 6 `[4]uc 1 angles 4 0 `uc 1 angle_h 1 4 `uc 1 angle_v 1 5 ]
+"10 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/grid_lookup.c
+[v _grid_angles grid_angles `C[5][5]S2538  1 e 150 0 ]
+"24 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/main.c
 [v _buf buf `[32]uc  1 e 32 0 ]
-"23
+"25
 [v _nrf_flag nrf_flag `a  1 e 1 0 ]
-"192
+"162
 [v _counter counter `uc  1 e 1 0 ]
 "43 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mcc_generated_files/pwm/src/pwm1_16bit.c
 [v _PWM1_16BIT_Slice1Output1_InterruptHandler PWM1_16BIT_Slice1Output1_InterruptHandler `*.38(v  1 s 3 PWM1_16BIT_Slice1Output1_InterruptHandler ]
@@ -1087,50 +1148,159 @@ RF24_CRC_16 2
 [v _rf24_crclength rf24_crclength `C[3][10]uc  1 e 30 0 ]
 "69
 [v _rf24_pa_dbm rf24_pa_dbm `[4][8]uc  1 e 32 0 ]
-[s S1982 . 4 `us 1 currAngle 2 0 `us 1 nextAngle 2 2 ]
-"4 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/servo.c
-[v _servos servos `[4]S1982  1 e 16 0 ]
-"214 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/main.c
+[s S1973 . 4 `us 1 currAngle 2 0 `us 1 nextAngle 2 2 ]
+"5 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/servo.c
+[v _servos servos `[4]S1973  1 e 16 0 ]
+"184 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"240
+"210
 } 0
-"43
+"45
 [v _slave slave `(v  1 e 1 0 ]
 {
-"71
-[v slave@response response `[5]uc  1 a 5 32 ]
-"80
-[v slave@buf buf `[32]uc  1 a 32 0 ]
+[s S1960 . 12 `[8]uc 1 message_type 8 0 `uc 1 ship_id 1 8 `uc 1 row 1 9 `uc 1 col 1 10 `uc 1 horizontal 1 11 ]
+"72
+[v slave@rob rob `S1960  1 a 12 2 ]
 [s S1899 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
-"44
-[v slave@dev dev `S1899  1 a 3 39 ]
-"49
-[v slave@ret ret `i  1 a 2 37 ]
-"43
-[v slave@pvParameters pvParameters `*.39v  1 p 2 9 ]
-"70
-[v slave@F18065 F18065 `[5]uc  1 s 5 F18065 ]
-"79
-[v slave@F18067 F18067 `[32]uc  1 s 32 F18067 ]
-"111
+"46
+[v slave@dev dev `S1899  1 a 3 14 ]
+"51
+[v slave@ret ret `i  1 a 2 0 ]
+"45
+[v slave@pvParameters pvParameters `*.39v  1 p 2 51 ]
+"81
 } 0
-"3 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/strcmp.c
-[v _strcmp strcmp `(i  1 e 2 0 ]
+"4 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/message_parser.c
+[v _parse_robot_message parse_robot_message `(a  1 e 1 0 ]
 {
-[v strcmp@l l `*.39Cuc  1 p 2 14 ]
-[v strcmp@r r `*.32Cuc  1 p 2 16 ]
+[v parse_robot_message@raw_data raw_data `*.39Cuc  1 p 2 25 ]
+[s S1960 . 12 `[8]uc 1 message_type 8 0 `uc 1 ship_id 1 8 `uc 1 row 1 9 `uc 1 col 1 10 `uc 1 horizontal 1 11 ]
+[v parse_robot_message@out out `*.39S1960  1 p 2 27 ]
+"17
+} 0
+"4 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 3 0 ]
+{
+"8
+[v memcpy@s s `*.39Cuc  1 a 2 23 ]
 "7
+[v memcpy@d d `*.39uc  1 a 2 21 ]
+"9
+[v memcpy@tmp tmp `uc  1 a 1 20 ]
+"4
+[v memcpy@d1 d1 `*.39v  1 p 2 14 ]
+[v memcpy@s1 s1 `*.39Cv  1 p 2 16 ]
+[v memcpy@n n `ui  1 p 2 18 ]
+"18
+} 0
+"43 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/arm_fsm.c
+[v _arm_fsm_update arm_fsm_update `(v  1 e 1 0 ]
+{
+"102
+[v arm_fsm_update@idle_angles idle_angles `[4]uc  1 a 4 45 ]
+"95
+[v arm_fsm_update@middle2_angles_2503 middle2_angles `[4]uc  1 a 4 41 ]
+"68
+[v arm_fsm_update@middle2_angles middle2_angles `[4]uc  1 a 4 37 ]
+"61
+[v arm_fsm_update@middle1_angles middle1_angles `[4]uc  1 a 4 33 ]
+"48
+[v arm_fsm_update@angles angles `*.32Cuc  1 a 2 49 ]
+"60
+[v arm_fsm_update@F135 F135 `[4]uc  1 s 4 F135 ]
+"67
+[v arm_fsm_update@F137 F137 `[4]uc  1 s 4 F137 ]
+"94
+[v arm_fsm_update@F139 F139 `[4]uc  1 s 4 F139 ]
+"101
+[v arm_fsm_update@F141 F141 `[4]uc  1 s 4 F141 ]
+"115
+} 0
+"77 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/servo.c
+[v _servoMovement servoMovement `(a  1 e 1 0 ]
+{
+"78
+[v servoMovement@i i `i  1 a 2 22 ]
+"84
+} 0
+"39 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/boat_control.c
+[v _return_boat_to_dock return_boat_to_dock `(v  1 e 1 0 ]
+{
+[v return_boat_to_dock@boat_id boat_id `uc  1 p 1 wreg ]
+[v return_boat_to_dock@boat_id boat_id `uc  1 p 1 wreg ]
+[v return_boat_to_dock@boat_id boat_id `uc  1 p 1 14 ]
+"43
+} 0
+"29
+[v _move_boat move_boat `(v  1 e 1 0 ]
+{
+[v move_boat@boat_id boat_id `uc  1 p 1 wreg ]
+[v move_boat@boat_id boat_id `uc  1 p 1 wreg ]
+[v move_boat@x x `uc  1 p 1 27 ]
+[v move_boat@y y `uc  1 p 1 28 ]
+[v move_boat@is_vertical is_vertical `uc  1 p 1 29 ]
+[v move_boat@boat_id boat_id `uc  1 p 1 30 ]
+"37
+} 0
+"69 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/servo.c
+[v _move_servo_to_angles move_servo_to_angles `(v  1 e 1 0 ]
+{
+"71
+[v move_servo_to_angles@i i `uc  1 a 1 26 ]
+"69
+[v move_servo_to_angles@angles angles `*.34Cuc  1 p 2 22 ]
+"75
+} 0
+"40
+[v _calculateAngle calculateAngle `(us  1 e 2 0 ]
+{
+[v calculateAngle@angleDeg angleDeg `uc  1 p 1 wreg ]
+[v calculateAngle@angleDeg angleDeg `uc  1 p 1 wreg ]
+[v calculateAngle@angleDeg angleDeg `uc  1 p 1 18 ]
+"42
+} 0
+"27 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/grid_lookup.c
+[v _get_grid_servo_angles get_grid_servo_angles `(*.32Cuc  1 e 3 0 ]
+{
+[v get_grid_servo_angles@x x `uc  1 p 1 wreg ]
+[v get_grid_servo_angles@x x `uc  1 p 1 wreg ]
+[v get_grid_servo_angles@y y `uc  1 p 1 14 ]
+[v get_grid_servo_angles@x x `uc  1 p 1 21 ]
+"31
+} 0
+"45 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/boat_control.c
+[v _get_docking_servo_angles get_docking_servo_angles `(*.32Cuc  1 e 3 0 ]
+{
+[v get_docking_servo_angles@boat_id boat_id `uc  1 p 1 wreg ]
+[v get_docking_servo_angles@boat_id boat_id `uc  1 p 1 wreg ]
+[v get_docking_servo_angles@boat_id boat_id `uc  1 p 1 17 ]
+"47
+} 0
+"30 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/servo.c
+[v _enableMagnet enableMagnet `(v  1 e 1 0 ]
+{
+"33
+} 0
+"35
+[v _disableMagnet disableMagnet `(v  1 e 1 0 ]
+{
+"38
+} 0
+"126 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mcc_generated_files/pwm/src/pwm1_16bit.c
+[v _PWM1_16BIT_Disable PWM1_16BIT_Disable `(v  1 e 1 0 ]
+{
+"129
 } 0
 "116 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mirf.c
 [v _Nrf24_setTADDR Nrf24_setTADDR `(i  1 e 2 0 ]
 {
 "123
-[v Nrf24_setTADDR@i i `i  1 a 2 7 ]
+[v Nrf24_setTADDR@i i `i  1 a 2 38 ]
 "121
-[v Nrf24_setTADDR@buffer buffer `[5]uc  1 a 5 0 ]
+[v Nrf24_setTADDR@buffer buffer `[5]uc  1 a 5 31 ]
 "118
-[v Nrf24_setTADDR@ret ret `i  1 a 2 5 ]
+[v Nrf24_setTADDR@ret ret `i  1 a 2 36 ]
 [s S1899 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
 "116
 [v Nrf24_setTADDR@dev dev `*.39S1899  1 p 2 24 ]
@@ -1141,11 +1311,11 @@ RF24_CRC_16 2
 [v _Nrf24_setRADDR Nrf24_setRADDR `(i  1 e 2 0 ]
 {
 "109
-[v Nrf24_setRADDR@i i `i  1 a 2 7 ]
+[v Nrf24_setRADDR@i i `i  1 a 2 38 ]
 "107
-[v Nrf24_setRADDR@buffer buffer `[5]uc  1 a 5 0 ]
+[v Nrf24_setRADDR@buffer buffer `[5]uc  1 a 5 31 ]
 "105
-[v Nrf24_setRADDR@ret ret `i  1 a 2 5 ]
+[v Nrf24_setRADDR@ret ret `i  1 a 2 36 ]
 [s S1899 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
 "103
 [v Nrf24_setRADDR@dev dev `*.39S1899  1 p 2 24 ]
@@ -1163,24 +1333,13 @@ RF24_CRC_16 2
 [v Nrf24_writeRegister@reg reg `uc  1 p 1 23 ]
 "227
 } 0
-"231
-[v _Nrf24_send Nrf24_send `(v  1 e 1 0 ]
-{
-"233
-[v Nrf24_send@status status `uc  1 a 1 0 ]
-[s S1899 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
-"231
-[v Nrf24_send@dev dev `*.39S1899  1 p 2 27 ]
-[v Nrf24_send@value value `*.39uc  1 p 2 29 ]
-"254
-} 0
 "55
 [v _SPI_write_buff SPI_write_buff `(v  1 e 1 0 ]
 {
 "57
 [v SPI_write_buff@i i `uc  1 a 1 19 ]
 "55
-[v SPI_write_buff@buffer buffer `*.34uc  1 p 2 16 ]
+[v SPI_write_buff@buffer buffer `*.32uc  1 p 2 16 ]
 [v SPI_write_buff@bytes bytes `uc  1 p 1 18 ]
 "64
 } 0
@@ -1189,42 +1348,6 @@ RF24_CRC_16 2
 {
 [v DELAY_microseconds@microseconds microseconds `us  1 p 2 14 ]
 "54
-} 0
-"319 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mirf.c
-[v _Nrf24_powerUpTx Nrf24_powerUpTx `(v  1 e 1 0 ]
-{
-[s S1899 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
-[v Nrf24_powerUpTx@dev dev `*.39S1899  1 p 2 18 ]
-"323
-} 0
-"258
-[v _Nrf24_isSending Nrf24_isSending `(a  1 e 1 0 ]
-{
-"259
-[v Nrf24_isSending@status status `uc  1 a 1 30 ]
-[s S1899 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
-"258
-[v Nrf24_isSending@dev dev `*.39S1899  1 p 2 27 ]
-"270
-} 0
-"275
-[v _Nrf24_isSend Nrf24_isSend `(a  1 e 1 0 ]
-{
-"278
-[v Nrf24_isSend@i i `ul  1 a 4 4 ]
-"276
-[v Nrf24_isSend@status status `uc  1 a 1 8 ]
-[s S1899 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
-"275
-[v Nrf24_isSend@dev dev `*.39S1899  1 p 2 27 ]
-[v Nrf24_isSend@timeout timeout `i  1 p 2 29 ]
-"295
-} 0
-"37 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mcc_generated_files/timer/src/delay.c
-[v _DELAY_milliseconds DELAY_milliseconds `(v  1 e 1 0 ]
-{
-[v DELAY_milliseconds@milliseconds milliseconds `us  1 p 2 14 ]
-"41
 } 0
 "71 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mirf.c
 [v _Nrf24_init Nrf24_init `(v  1 e 1 0 ]
@@ -1293,12 +1416,18 @@ RF24_CRC_16 2
 [v Nrf24_flushRx@dev dev `*.39S1899  1 p 2 16 ]
 "317
 } 0
-"25 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/main.c
+"37 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mcc_generated_files/timer/src/delay.c
+[v _DELAY_milliseconds DELAY_milliseconds `(v  1 e 1 0 ]
+{
+[v DELAY_milliseconds@milliseconds milliseconds `us  1 p 2 14 ]
+"41
+} 0
+"27 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/main.c
 [v _AdvancedSettings AdvancedSettings `(v  1 e 1 0 ]
 {
 [s S1899 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
 [v AdvancedSettings@dev dev `*.39S1899  1 p 2 28 ]
-"39
+"41
 } 0
 "365 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mirf.c
 [v _Nrf24_setRetransmitDelay Nrf24_setRetransmitDelay `(v  1 e 1 0 ]
@@ -1369,6 +1498,12 @@ RF24_CRC_16 2
 [v _enablePWM enablePWM `(v  1 e 1 0 ]
 {
 "67
+} 0
+"151 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
+{
+[v TMR0_OverflowCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 14 ]
+"154
 } 0
 "121 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mcc_generated_files/pwm/src/pwm2_16bit.c
 [v _PWM2_16BIT_Enable PWM2_16BIT_Enable `(v  1 e 1 0 ]
@@ -1529,11 +1664,6 @@ RF24_CRC_16 2
 {
 "58
 } 0
-"126 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mcc_generated_files/pwm/src/pwm1_16bit.c
-[v _PWM1_16BIT_Disable PWM1_16BIT_Disable `(v  1 e 1 0 ]
-{
-"129
-} 0
 "80 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mcc_generated_files/system/src/interrupt.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
 {
@@ -1549,12 +1679,22 @@ RF24_CRC_16 2
 {
 "144
 } 0
-"6 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/servo.c
+"139 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+{
+"149
+} 0
+"156
+[v _TMR0_DefaultCallback TMR0_DefaultCallback `(v  1 s 1 TMR0_DefaultCallback ]
+{
+"159
+} 0
+"7 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/servo.c
 [v _isrTim0 isrTim0 `(v  1 e 1 0 ]
 {
-"7
+"8
 [v isrTim0@i i `i  1 a 2 10 ]
-"27
+"28
 } 0
 "143 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mcc_generated_files/pwm/src/pwm3_16bit.c
 [v _PWM3_16BIT_SetSlice1Output2DutyCycleRegister PWM3_16BIT_SetSlice1Output2DutyCycleRegister `(v  1 e 1 0 ]
@@ -1590,16 +1730,6 @@ RF24_CRC_16 2
 {
 "153
 } 0
-"139 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mcc_generated_files/timer/src/tmr0.c
-[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
-{
-"149
-} 0
-"156
-[v _TMR0_DefaultCallback TMR0_DefaultCallback `(v  1 s 1 TMR0_DefaultCallback ]
-{
-"159
-} 0
 "153 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/mcc_generated_files/system/src/pins.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 {
@@ -1615,8 +1745,8 @@ RF24_CRC_16 2
 {
 "190
 } 0
-"189 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/main.c
+"159 /Users/tolgakuntman/MPLABXProjects/robot_arm.X/main.c
 [v _nrf_irq nrf_irq `(v  1 e 1 0 ]
 {
-"191
+"161
 } 0

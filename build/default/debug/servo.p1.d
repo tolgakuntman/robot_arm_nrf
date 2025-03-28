@@ -14,4 +14,5 @@ mcc_generated_files/system/../spi/spi1.h  \
 mcc_generated_files/system/../spi/spi_interface.h  \
 mcc_generated_files/system/../timer/tmr2.h  \
 mcc_generated_files/timer/timer_interface.h  \
-mcc_generated_files/system/../system/interrupt.h 
+mcc_generated_files/system/../system/interrupt.h  \
+boat_control.h 

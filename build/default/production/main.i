@@ -180,8 +180,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 4 "main.c" 2
-
+# 5 "main.c" 2
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/inttypes.h" 1 3
 # 11 "/Applications/microchip/xc8/v2.50/pic/include/c99/inttypes.h" 3
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 1 3
@@ -280,8 +279,7 @@ imaxdiv_t imaxdiv(intmax_t, intmax_t);
 
 intmax_t strtoimax(const char *restrict, char **restrict, int);
 uintmax_t strtoumax(const char *restrict, char **restrict, int);
-# 5 "main.c" 2
-
+# 6 "main.c" 2
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdlib.h" 1 3
 # 21 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdlib.h" 3
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 1 3
@@ -359,8 +357,7 @@ typedef struct { unsigned int quot, rem; } udiv_t;
 typedef struct { unsigned long quot, rem; } uldiv_t;
 udiv_t udiv (unsigned int, unsigned int);
 uldiv_t uldiv (unsigned long, unsigned long);
-# 6 "main.c" 2
-
+# 7 "main.c" 2
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/string.h" 1 3
 # 25 "/Applications/microchip/xc8/v2.50/pic/include/c99/string.h" 3
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 1 3
@@ -418,8 +415,7 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 7 "main.c" 2
-
+# 8 "main.c" 2
 # 1 "./mcc_generated_files/system/system.h" 1
 # 39 "./mcc_generated_files/system/system.h"
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/xc.h" 1 3
@@ -30292,8 +30288,7 @@ void TMR0_OverflowCallbackRegister(void (* CallbackHandler)(void));
 # 51 "./mcc_generated_files/system/system.h" 2
 # 60 "./mcc_generated_files/system/system.h"
 void SYSTEM_Initialize(void);
-# 8 "main.c" 2
-
+# 9 "main.c" 2
 # 1 "./mcc_generated_files/timer/delay.h" 1
 # 44 "./mcc_generated_files/timer/delay.h"
 void DELAY_milliseconds(uint16_t milliseconds);
@@ -30305,8 +30300,7 @@ void DELAY_milliseconds(uint16_t milliseconds);
 
 
 void DELAY_microseconds(uint16_t microseconds);
-# 9 "main.c" 2
-
+# 10 "main.c" 2
 # 1 "./mirf.h" 1
 # 11 "./mirf.h"
 typedef struct {
@@ -30383,27 +30377,69 @@ char * Nrf24_getPALevelString(NRF24_t * dev);
 uint8_t Nrf24_getRetransmitDelay(NRF24_t * dev);
 uint8_t Nrf24_getChannel(NRF24_t * dev);
 uint8_t Nrf24_getPayload(NRF24_t * dev);
-# 10 "main.c" 2
-
+# 11 "main.c" 2
 
 # 1 "./servo.h" 1
-# 16 "./servo.h"
+# 17 "./servo.h"
 typedef struct {
 
     uint16_t currAngle;
     uint16_t nextAngle;
 } servoMotor;
-# 29 "./servo.h"
+# 30 "./servo.h"
 extern servoMotor servos[4];
 
 void isrTim0();
 void enableMagnet();
 void disableMagnet();
-uint16_t calculateAngle(int angleDeg);
+uint16_t calculateAngle(uint8_t angleDeg);
 void initServo();
 void enablePWM();
-# 12 "main.c" 2
-# 22 "main.c"
+void move_servo_to_angles(const uint8_t* angles);
+_Bool servoMovement();
+# 13 "main.c" 2
+# 1 "./arm_fsm.h" 1
+# 14 "./arm_fsm.h"
+typedef enum {
+    IDLE,
+    PICKUP,
+    MAGNET_ON,
+    MIDDLE1,
+    MIDDLE2,
+    BOAT_ROTATE,
+    PLACEMENT,
+    MAGNET_OFF,
+    MIDDLE3,
+    RETURN
+} ArmState;
+
+typedef enum {
+    PLACE,
+    REMOVE
+} ArmMode;
+
+void arm_fsm_init();
+void arm_fsm_update();
+void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, ArmMode mode);
+_Bool arm_is_busy();
+# 14 "main.c" 2
+# 1 "./message_parser.h" 1
+
+
+
+
+
+typedef struct {
+    char message_type[8];
+    uint8_t ship_id;
+    uint8_t row;
+    uint8_t col;
+    uint8_t horizontal;
+} robot_command_t;
+
+_Bool parse_robot_message(const char *raw_data, robot_command_t *out);
+# 15 "main.c" 2
+# 24 "main.c"
 uint8_t buf[32];
 _Bool nrf_flag=0;
 
@@ -30448,33 +30484,22 @@ void slave(void *pvParameters){
 
 
     while(1){
-        if(nrf_flag){
-            if (Nrf24_dataReady(&dev)) {
-   Nrf24_getData(&dev, buf);
-            buf[31]='\0';
-            if (strcmp((char*)buf, "PING") == 0) {
-            uint8_t response[] = "PING";
-            Nrf24_send(&dev, response);
-            }
-            while(Nrf24_isSending(&dev)){
-                DELAY_milliseconds(1);
+        arm_fsm_update();
+       if(nrf_flag){
+           if (Nrf24_dataReady(&dev)) {
+            Nrf24_getData(&dev, buf);
+            robot_command_t rob;
+            parse_robot_message(buf, &rob);
+            arm_set_target(rob.ship_id,rob.row,rob.col,rob.horizontal,PLACE);
+
             }
             nrf_flag=0;
   }
-        }
-        uint8_t buf[32] = "PING";
 
-            Nrf24_send(&dev, buf);
-            Nrf24_isSend(&dev, 1000);
-
-
-
-        _delay((unsigned long)((200)*(64000000U/4000.0)));
-# 109 "main.c"
   DELAY_milliseconds(1);
         }
     }
-# 189 "main.c"
+# 160 "main.c"
 void nrf_irq(){
     nrf_flag=1;
 }
@@ -30516,5 +30541,5 @@ void main(void)
 
 
  slave(((void*)0));
-# 240 "main.c"
+# 211 "main.c"
 }
