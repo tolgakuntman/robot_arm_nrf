@@ -36,7 +36,9 @@ uint16_t calculateAngle(uint8_t angleDeg);
 void initServo();
 void enablePWM();
 void move_servo_to_angles(const uint8_t* angles);
+void move_servo_to_int(const uint16_t* intAngles);
 bool servoMovement();
+uint16_t getAngle(uint8_t i);
 
 #endif	/* SERVO_H */
 

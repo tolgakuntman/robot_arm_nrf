@@ -11,7 +11,7 @@
  */
 
 /*
-© [2025] Microchip Technology Inc. and its subsidiaries.
+? [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -63,8 +63,8 @@ void TMR2_Initialize(void){
     T2HLT = 0x0;
     // TRSEL T2CKIPPS pin; 
     T2RST = 0x0;
-    // PR 15; 
-    T2PR = 0xF;
+    // PR 12; 
+    T2PR = 0xC;
     // TMR 0x0; 
     T2TMR = 0x0;
 
@@ -126,10 +126,9 @@ void TMR2_ISR(void)
     // clear the TMR2 interrupt flag
      PIR3bits.TMR2IF = 0;
 
-    if(TMR2_OverflowCallback)
-    {
-        TMR2_OverflowCallback();
-    }
+    // ticker function call;
+    // ticker is 1 -> Callback function gets called everytime this ISR executes
+    TMR2_OverflowCallback();
 }
 
 void TMR2_OverflowCallbackRegister(void (* InterruptHandler)(void))

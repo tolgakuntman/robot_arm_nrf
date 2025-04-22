@@ -11,7 +11,7 @@
 #include <stdint.h>
 
 #define NUM_SERVOS 4
-#define DEP_SERVO 2 // The servo affected by orientation
+//#define DEP_SERVO 2 // The servo affected by orientation
 #define GRID_SIZE 5
 
 typedef struct {
@@ -25,6 +25,7 @@ extern uint8_t angles[NUM_SERVOS];
 
 const uint8_t* get_grid_servo_angles(uint8_t x, uint8_t y);
 uint8_t get_dependent_servo_angle(uint8_t x, uint8_t y, uint8_t is_vertical);
+void get_adjusted_servo_angles(uint8_t x, uint8_t y, uint8_t is_vertical, uint8_t* out_angles);
 
 #endif	/* GRID_LOOKUP_H */
 

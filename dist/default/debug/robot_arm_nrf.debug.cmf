@@ -1,0 +1,2134 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/debug/robot_arm_nrf.debug.o
+ivt0x8 CODE 0 8 8 12 1 2
+cinit CODE 0 10E90 10E90 8A 1 2
+text0 CODE 0 112F6 112F6 54 1 2
+text1 CODE 0 106EE 106EE 15A 1 2
+text2 CODE 0 1096E 1096E F6 1 2
+text3 CODE 0 1139C 1139C 50 1 2
+text4 CODE 0 11438 11438 4A 1 2
+text5 CODE 0 10000 10000 4A4 1 2
+text6 CODE 0 11936 11936 10 1 2
+text7 CODE 0 11A62 11A62 6 1 2
+text8 CODE 0 10DFE 10DFE 92 1 2
+text9 CODE 0 1129E 1129E 58 1 2
+nvCOMRAM COMRAM 1 53E 53E F 1 1
+text10 CODE 0 11014 11014 72 1 2
+text11 CODE 0 113EC 113EC 4C 1 2
+text12 CODE 0 1190E 1190E 14 1 2
+text13 CODE 0 10B2E 10B2E C8 1 2
+text14 CODE 0 10848 10848 126 1 2
+text15 CODE 0 11860 11860 1C 1 2
+text16 CODE 0 11A68 11A68 6 1 2
+text17 CODE 0 11A92 11A92 4 1 2
+text18 CODE 0 11A6E 11A6E 6 1 2
+text19 CODE 0 11A96 11A96 4 1 2
+text20 CODE 0 10CB8 10CB8 AC 1 2
+text21 CODE 0 10D64 10D64 9A 1 2
+text22 CODE 0 1161A 1161A 32 1 2
+text23 CODE 0 11482 11482 44 1 2
+text24 CODE 0 1134A 1134A 52 1 2
+text25 CODE 0 116DE 116DE 2C 1 2
+text26 CODE 0 10A64 10A64 CA 1 2
+text27 CODE 0 1164C 1164C 32 1 2
+text28 CODE 0 1178C 1178C 26 1 2
+text29 CODE 0 10F98 10F98 7C 1 2
+text30 CODE 0 117D8 117D8 24 1 2
+text31 CODE 0 118E2 118E2 16 1 2
+text32 CODE 0 11A18 11A18 C 1 2
+text33 CODE 0 1167E 1167E 30 1 2
+text34 CODE 0 117FC 117FC 22 1 2
+text35 CODE 0 1170A 1170A 2C 1 2
+text36 CODE 0 110F8 110F8 6E 1 2
+text37 CODE 0 116AE 116AE 30 1 2
+text38 CODE 0 115B2 115B2 34 1 2
+text39 CODE 0 118B2 118B2 18 1 2
+text40 CODE 0 11736 11736 2C 1 2
+text41 CODE 0 11898 11898 1A 1 2
+text42 CODE 0 11A9A 11A9A 4 1 2
+text43 CODE 0 11A9E 11A9E 4 1 2
+text44 CODE 0 1181E 1181E 22 1 2
+text45 CODE 0 11086 11086 72 1 2
+text46 CODE 0 1187C 1187C 1C 1 2
+text47 CODE 0 11946 11946 E 1 2
+text48 CODE 0 11A74 11A74 6 1 2
+text49 CODE 0 11A7A 11A7A 6 1 2
+text50 CODE 0 11A80 11A80 6 1 2
+text51 CODE 0 117B2 117B2 26 1 2
+text52 CODE 0 11762 11762 2A 1 2
+text53 CODE 0 11954 11954 E 1 2
+text54 CODE 0 115E6 115E6 34 1 2
+text55 CODE 0 118CA 118CA 18 1 2
+text56 CODE 0 11166 11166 68 1 2
+text57 CODE 0 11962 11962 E 1 2
+text58 CODE 0 11970 11970 E 1 2
+text59 CODE 0 1197E 1197E E 1 2
+text60 CODE 0 111CE 111CE 68 1 2
+text61 CODE 0 1198C 1198C E 1 2
+text62 CODE 0 1199A 1199A E 1 2
+text63 CODE 0 119A8 119A8 E 1 2
+text64 CODE 0 11236 11236 68 1 2
+text65 CODE 0 119B6 119B6 E 1 2
+text66 CODE 0 119C4 119C4 E 1 2
+text67 CODE 0 119D2 119D2 E 1 2
+text68 CODE 0 10BF6 10BF6 C2 1 2
+text69 CODE 0 119E0 119E0 E 1 2
+text70 CODE 0 114C6 114C6 40 1 2
+text71 CODE 0 119EE 119EE E 1 2
+text72 CODE 0 119FC 119FC E 1 2
+text73 CODE 0 11A0A 11A0A E 1 2
+text74 CODE 0 11922 11922 14 1 2
+text75 CODE 0 10F1A 10F1A 7E 1 2
+text76 CODE 0 11840 11840 20 1 2
+text77 CODE 0 11AAA 11AAA 2 1 2
+text78 CODE 0 104A4 104A4 24A 1 2
+text79 CODE 0 11A30 11A30 A 1 2
+text80 CODE 0 11A3A 11A3A A 1 2
+text81 CODE 0 11AA2 11AA2 4 1 2
+text82 CODE 0 11A44 11A44 A 1 2
+text83 CODE 0 11A4E 11A4E A 1 2
+text84 CODE 0 11AA6 11AA6 4 1 2
+text85 CODE 0 11506 11506 3E 1 2
+text86 CODE 0 11AAC 11AAC 2 1 2
+text87 CODE 0 11A24 11A24 C 1 2
+text88 CODE 0 11A86 11A86 6 1 2
+text89 CODE 0 118F8 118F8 16 1 2
+text90 CODE 0 1157C 1157C 36 1 2
+text91 CODE 0 11AAE 11AAE 2 1 2
+text92 CODE 0 11A8C 11A8C 6 1 2
+nvBANK5 BANK5 1 5D8 5D8 1E 1 1
+idataCOMRAM CODE 0 11AB0 11AB0 1 1 1
+cstackCOMRAM COMRAM 1 501 501 2A 1 1
+cstackBANK5 BANK5 1 560 560 3F 1 1
+cstackBANK6 BANK6 1 658 658 12 1 1
+bssBANK5 BANK5 1 59F 59F 39 1 1
+bssBANK6 BANK6 1 638 638 20 1 1
+idataBANK5 CODE 0 11A58 11A58 9 1 1
+idataBANK6 CODE 0 11544 11544 38 1 1
+dataBANK5 BANK5 1 5F6 5F6 9 1 1
+dataBANK6 BANK6 1 600 600 38 1 1
+dataCOMRAM COMRAM 1 54D 54D 1 1 1
+bssCOMRAM COMRAM 1 52B 52B 13 1 1
+mediumconst MEDIUMCONST 0 FDAE FDAE 252 1 2
+config CONFIG 4 300000 300000 A 1 1
+$/tmp/xcXjHeNCO/driver_tmp_9.o
+init CODE 0 1A 1A 4 1 2
+reset_vec CODE 0 0 0 4 1 2
+config CONFIG 4 300000 300000 A 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 5FF-5FF 1
+RAM 66A-24FF 1
+SFR 0-4FF 1
+SFR 2500-25FF 1
+BANK5 5FF-5FF 1
+BANK6 66A-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-7 1
+CONST 1E-FDAD 1
+CONST 11A61-11A61 1
+CONST 11AB1-1FFFF 1
+IDLOC 200000-20003F 1
+SMALLCONST 2600-FDAD 1
+SMALLCONST 11A61-11A61 1
+SMALLCONST 11AB1-1FFFF 1
+CODE 4-7 1
+CODE 1E-FDAD 1
+CODE 11A61-11A61 1
+CODE 11AB1-1FFFF 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-FFF 1
+BANK16 1000-10FF 1
+BANK17 1100-11FF 1
+BANK18 1200-12FF 1
+BANK19 1300-13FF 1
+BANK20 1400-14FF 1
+BANK21 1500-15FF 1
+BANK22 1600-16FF 1
+BANK23 1700-17FF 1
+BANK24 1800-18FF 1
+BANK25 1900-19FF 1
+BANK26 1A00-1AFF 1
+BANK27 1B00-1BFF 1
+BANK28 1C00-1CFF 1
+BANK29 1D00-1DFF 1
+BANK30 1E00-1EFF 1
+BANK31 1F00-1FFF 1
+BANK32 2000-20FF 1
+BANK33 2100-21FF 1
+BANK34 2200-22FF 1
+BANK35 2300-23FF 1
+BANK36 2400-24FF 1
+BIGRAM 54E-55F 1
+BIGRAM 5FF-5FF 1
+BIGRAM 66A-24FF 1
+BIGSFR 0-4FF 1
+BIGSFR 2500-25FF 1
+COMRAM 54E-55F 1
+CONFIG 30000A-300011 1
+EEDATA 380000-3803FF 1
+MEDIUMCONST 2600-FDAD 1
+MEDIUMCONST 12600-1FFFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/debug/robot_arm_nrf.debug.o
+11A8C text92 CODE >160:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+11A8C text92 CODE >161:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+11A90 text92 CODE >162:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+11AAE text91 CODE >187:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+11AAE text91 CODE >190:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+1157C text90 CODE >165:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+1157C text90 CODE >170:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+11592 text90 CODE >172:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+115AC text90 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+115B0 text90 CODE >175:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+118F8 text89 CODE >153:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+118F8 text89 CODE >156:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+11908 text89 CODE >158:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+1190C text89 CODE >160:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+11A86 text88 CODE >84:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11A86 text88 CODE >86:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11A8A text88 CODE >87:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11A24 text87 CODE >50:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+11A24 text87 CODE >51:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+11A2A text87 CODE >52:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+11A2E text87 CODE >53:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+11AAC text86 CODE >156:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11AAC text86 CODE >159:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11506 text85 CODE >139:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11506 text85 CODE >141:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+1150C text85 CODE >142:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11510 text85 CODE >144:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11526 text85 CODE >146:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11540 text85 CODE >148:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11542 text85 CODE >149:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11AA6 text84 CODE >149:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11AA6 text84 CODE >152:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11AA8 text84 CODE >153:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11A4E text83 CODE >137:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11A4E text83 CODE >139:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11A52 text83 CODE >140:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11A56 text83 CODE >141:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11A44 text82 CODE >143:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11A44 text82 CODE >145:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11A48 text82 CODE >146:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11A4C text82 CODE >147:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11AA2 text81 CODE >149:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11AA2 text81 CODE >152:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11AA4 text81 CODE >153:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11A3A text80 CODE >137:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11A3A text80 CODE >139:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11A3E text80 CODE >140:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11A42 text80 CODE >141:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11A30 text79 CODE >143:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11A30 text79 CODE >145:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11A34 text79 CODE >146:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11A38 text79 CODE >147:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+104A4 text78 CODE >7:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+104A4 text78 CODE >8:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+104AC text78 CODE >9:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+1050A text78 CODE >10:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+10530 text78 CODE >11:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+10592 text78 CODE >12:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+105B8 text78 CODE >16:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+105CA text78 CODE >17:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+105F6 text78 CODE >18:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+1060C text78 CODE >19:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+10638 text78 CODE >20:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+10650 text78 CODE >21:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+1067C text78 CODE >22:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+10694 text78 CODE >23:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+106C4 text78 CODE >24:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+106C4 text78 CODE >25:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+106E4 text78 CODE >26:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+106E8 text78 CODE >27:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+106EC text78 CODE >28:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11AAA text77 CODE >139:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11AAA text77 CODE >143:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11840 text76 CODE >124:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11840 text76 CODE >127:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11842 text76 CODE >131:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+1185E text76 CODE >132:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+10F1A text75 CODE >80:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+10F22 text75 CODE >83:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+10F3E text75 CODE >85:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+10F42 text75 CODE >86:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+10F46 text75 CODE >87:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+10F62 text75 CODE >89:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+10F66 text75 CODE >90:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+10F6A text75 CODE >91:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+10F86 text75 CODE >93:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+10F8A text75 CODE >94:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+10F8E text75 CODE >98:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+10F8E text75 CODE >99:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+11922 text74 CODE >39:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/clock.c
+11922 text74 CODE >42:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/clock.c
+11928 text74 CODE >44:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/clock.c
+1192A text74 CODE >46:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/clock.c
+1192C text74 CODE >53:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/clock.c
+11930 text74 CODE >54:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/clock.c
+11932 text74 CODE >55:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/clock.c
+11934 text74 CODE >58:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/clock.c
+11A0A text73 CODE >119:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+11A0A text73 CODE >120:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+11A16 text73 CODE >121:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+119FC text72 CODE >145:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+119FC text72 CODE >146:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+11A08 text72 CODE >147:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+119EE text71 CODE >171:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+119EE text71 CODE >172:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+119FA text71 CODE >173:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+114C6 text70 CODE >42:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+114C6 text70 CODE >45:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+114C8 text70 CODE >49:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+114CA text70 CODE >50:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+114CC text70 CODE >52:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+114DC text70 CODE >57:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+114DE text70 CODE >58:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+114E0 text70 CODE >60:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+114F0 text70 CODE >65:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+114F2 text70 CODE >66:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+114F4 text70 CODE >68:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+11504 text70 CODE >71:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+119E0 text69 CODE >180:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+119E0 text69 CODE >181:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+119EC text69 CODE >182:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10BF6 text68 CODE >39:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10BF6 text68 CODE >44:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10BF8 text68 CODE >45:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10BFA text68 CODE >46:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10BFC text68 CODE >47:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10BFE text68 CODE >48:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C00 text68 CODE >49:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C02 text68 CODE >53:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C06 text68 CODE >54:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C08 text68 CODE >55:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C0A text68 CODE >56:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C0C text68 CODE >57:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C0E text68 CODE >58:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C10 text68 CODE >63:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C12 text68 CODE >64:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C16 text68 CODE >65:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C1A text68 CODE >66:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C1C text68 CODE >67:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C20 text68 CODE >68:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C22 text68 CODE >73:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C24 text68 CODE >74:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C26 text68 CODE >75:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C2A text68 CODE >76:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C2C text68 CODE >77:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C30 text68 CODE >78:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C32 text68 CODE >83:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C34 text68 CODE >84:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C36 text68 CODE >85:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C38 text68 CODE >86:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C3A text68 CODE >87:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C3C text68 CODE >88:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C3E text68 CODE >94:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C40 text68 CODE >95:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C42 text68 CODE >96:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C44 text68 CODE >97:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C46 text68 CODE >98:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C4A text68 CODE >99:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C4C text68 CODE >104:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C4E text68 CODE >105:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C50 text68 CODE >106:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C52 text68 CODE >107:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C54 text68 CODE >108:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C58 text68 CODE >109:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C5A text68 CODE >114:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C5E text68 CODE >115:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C60 text68 CODE >116:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C62 text68 CODE >117:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C64 text68 CODE >121:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C68 text68 CODE >122:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C6C text68 CODE >123:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C70 text68 CODE >124:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C74 text68 CODE >125:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C78 text68 CODE >126:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C7C text68 CODE >127:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C80 text68 CODE >128:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C84 text68 CODE >129:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C88 text68 CODE >134:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C8C text68 CODE >135:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C8E text68 CODE >136:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C90 text68 CODE >137:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C92 text68 CODE >138:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C94 text68 CODE >139:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C96 text68 CODE >140:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C98 text68 CODE >141:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C9C text68 CODE >142:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10C9E text68 CODE >143:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10CA0 text68 CODE >144:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10CA2 text68 CODE >145:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10CA4 text68 CODE >147:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10CB4 text68 CODE >150:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+10CB6 text68 CODE >151:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+119D2 text67 CODE >199:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+119D2 text67 CODE >201:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+119DE text67 CODE >202:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+119C4 text66 CODE >189:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+119C4 text66 CODE >191:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+119D0 text66 CODE >192:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+119B6 text65 CODE >194:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+119B6 text65 CODE >196:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+119C2 text65 CODE >197:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11236 text64 CODE >50:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11236 text64 CODE >53:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11238 text64 CODE >56:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+1123C text64 CODE >59:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+1123E text64 CODE >62:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11242 text64 CODE >65:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11244 text64 CODE >68:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11248 text64 CODE >71:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+1124A text64 CODE >74:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+1124C text64 CODE >77:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+1124E text64 CODE >80:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11250 text64 CODE >83:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11254 text64 CODE >86:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11256 text64 CODE >89:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+1125A text64 CODE >92:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+1125C text64 CODE >95:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+1125E text64 CODE >98:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11260 text64 CODE >101:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11262 text64 CODE >104:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11264 text64 CODE >107:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11266 text64 CODE >110:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11268 text64 CODE >113:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11278 text64 CODE >114:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11288 text64 CODE >115:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11298 text64 CODE >118:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+1129C text64 CODE >119:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+119A8 text63 CODE >199:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+119A8 text63 CODE >201:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+119B4 text63 CODE >202:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+1199A text62 CODE >189:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+1199A text62 CODE >191:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+119A6 text62 CODE >192:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+1198C text61 CODE >194:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+1198C text61 CODE >196:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11998 text61 CODE >197:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111CE text60 CODE >50:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111CE text60 CODE >53:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111D0 text60 CODE >56:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111D4 text60 CODE >59:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111D6 text60 CODE >62:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111D8 text60 CODE >65:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111DC text60 CODE >68:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111E0 text60 CODE >71:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111E2 text60 CODE >74:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111E4 text60 CODE >77:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111E6 text60 CODE >80:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111E8 text60 CODE >83:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111EA text60 CODE >86:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111EE text60 CODE >89:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111F0 text60 CODE >92:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111F4 text60 CODE >95:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111F6 text60 CODE >98:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111F8 text60 CODE >101:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111FA text60 CODE >104:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111FC text60 CODE >107:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+111FE text60 CODE >110:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11200 text60 CODE >113:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11210 text60 CODE >114:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11220 text60 CODE >115:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11230 text60 CODE >118:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11234 text60 CODE >119:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+1197E text59 CODE >199:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+1197E text59 CODE >201:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+1198A text59 CODE >202:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11970 text58 CODE >189:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11970 text58 CODE >191:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+1197C text58 CODE >192:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11962 text57 CODE >194:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11962 text57 CODE >196:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+1196E text57 CODE >197:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11166 text56 CODE >50:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11166 text56 CODE >53:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11168 text56 CODE >56:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+1116C text56 CODE >59:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+1116E text56 CODE >62:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11170 text56 CODE >65:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11174 text56 CODE >68:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11178 text56 CODE >71:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+1117A text56 CODE >74:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+1117C text56 CODE >77:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+1117E text56 CODE >80:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11180 text56 CODE >83:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11182 text56 CODE >86:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11186 text56 CODE >89:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11188 text56 CODE >92:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+1118C text56 CODE >95:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+1118E text56 CODE >98:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11190 text56 CODE >101:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11192 text56 CODE >104:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11194 text56 CODE >107:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11196 text56 CODE >110:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11198 text56 CODE >113:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+111A8 text56 CODE >114:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+111B8 text56 CODE >115:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+111C8 text56 CODE >118:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+111CC text56 CODE >119:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+118CA text55 CODE >69:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+118CA text55 CODE >72:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+118CC text55 CODE >73:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+118CE text55 CODE >74:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+118D0 text55 CODE >77:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+118D4 text55 CODE >78:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+118D8 text55 CODE >79:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+118DA text55 CODE >80:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+118DC text55 CODE >81:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+118DE text55 CODE >82:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+118E0 text55 CODE >84:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+115E6 text54 CODE >46:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+115E6 text54 CODE >48:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+115EC text54 CODE >49:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+115F0 text54 CODE >51:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+115F4 text54 CODE >55:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11600 text54 CODE >56:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+1160E text54 CODE >58:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11610 text54 CODE >59:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11612 text54 CODE >61:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11618 text54 CODE >64:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11954 text53 CODE >134:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11954 text53 CODE >136:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11960 text53 CODE >137:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11762 text52 CODE >57:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11762 text52 CODE >61:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11768 text52 CODE >63:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+1176A text52 CODE >65:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+1176C text52 CODE >67:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11770 text52 CODE >69:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11772 text52 CODE >72:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11782 text52 CODE >75:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11784 text52 CODE >77:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11786 text52 CODE >79:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+1178A text52 CODE >80:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+117B2 text51 CODE >38:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/system.c
+117B2 text51 CODE >40:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/system.c
+117B6 text51 CODE >41:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/system.c
+117BA text51 CODE >42:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/system.c
+117BE text51 CODE >43:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/system.c
+117C2 text51 CODE >44:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/system.c
+117C6 text51 CODE >45:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/system.c
+117CA text51 CODE >46:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/system.c
+117CE text51 CODE >47:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/system.c
+117D2 text51 CODE >48:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/system.c
+117D6 text51 CODE >49:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/system.c
+11A80 text50 CODE >84:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11A80 text50 CODE >86:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11A84 text50 CODE >87:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11A7A text49 CODE >94:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11A7A text49 CODE >97:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11A7E text49 CODE >98:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11A74 text48 CODE >100:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11A74 text48 CODE >103:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11A78 text48 CODE >104:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+11946 text47 CODE >151:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11946 text47 CODE >153:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11952 text47 CODE >154:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+1187C text46 CODE >40:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+1187E text46 CODE >41:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11896 text46 CODE >42:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11086 text45 CODE >44:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11086 text45 CODE >46:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11094 text45 CODE >47:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+110A2 text45 CODE >50:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+110B0 text45 CODE >51:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+110BE text45 CODE >54:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+110CC text45 CODE >55:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+110DA text45 CODE >58:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+110E8 text45 CODE >59:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+110F6 text45 CODE >60:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+1181E text44 CODE >25:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1181E text44 CODE >26:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+11822 text44 CODE >27:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+11828 text44 CODE >28:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1182A text44 CODE >29:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1182E text44 CODE >30:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1183E text44 CODE >32:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+11A9E text43 CODE >121:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11A9E text43 CODE >123:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11AA0 text43 CODE >124:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+11A9A text42 CODE >121:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11A9A text42 CODE >123:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11A9C text42 CODE >124:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+11898 text41 CODE >62:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11898 text41 CODE >64:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+1189C text41 CODE >65:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+118A0 text41 CODE >66:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+118B0 text41 CODE >67:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11736 text40 CODE >209:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+11738 text40 CODE >211:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+11738 text40 CODE >213:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+1173C text40 CODE >216:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+11742 text40 CODE >219:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+11744 text40 CODE >220:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+11748 text40 CODE >222:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+1174C text40 CODE >224:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+1174C text40 CODE >227:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+1175A text40 CODE >228:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+1175E text40 CODE >229:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+11760 text40 CODE >230:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+118B2 text39 CODE >199:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+118B4 text39 CODE >201:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+118B6 text39 CODE >202:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+118C0 text39 CODE >203:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+118C6 text39 CODE >204:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+118C8 text39 CODE >205:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+115B2 text38 CODE >45:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+115B2 text38 CODE >46:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+115B4 text38 CODE >48:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+115BA text38 CODE >49:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+115CA text38 CODE >50:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+115CE text38 CODE >51:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+115E2 text38 CODE >52:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+115E4 text38 CODE >53:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+116AE text37 CODE >208:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+116B0 text37 CODE >210:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+116C0 text37 CODE >211:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+116C2 text37 CODE >212:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+116CA text37 CODE >213:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+116DA text37 CODE >214:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+116DC text37 CODE >216:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+110F8 text36 CODE >344:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+110F8 text36 CODE >346:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1110C text36 CODE >349:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1111E text36 CODE >350:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11130 text36 CODE >352:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11136 text36 CODE >353:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1113C text36 CODE >354:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11146 text36 CODE >355:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1114A text36 CODE >358:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11150 text36 CODE >359:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1115A text36 CODE >360:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11164 text36 CODE >362:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1170A text35 CODE >365:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1170A text35 CODE >368:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1171C text35 CODE >369:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11722 text35 CODE >370:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1172A text35 CODE >371:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11734 text35 CODE >372:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+117FC text34 CODE >27:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+117FC text34 CODE >34:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+1180C text34 CODE >40:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+1181C text34 CODE >41:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+1167E text33 CODE >37:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
+1167E text33 CODE >38:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
+11682 text33 CODE >39:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
+11692 text33 CODE >38:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
+116AC text33 CODE >41:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
+11A18 text32 CODE >312:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11A18 text32 CODE >314:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11A1A text32 CODE >315:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11A20 text32 CODE >316:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11A22 text32 CODE >317:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+118E2 text31 CODE >298:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+118E2 text31 CODE >300:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+118F4 text31 CODE >301:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+118F6 text31 CODE >302:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+117D8 text30 CODE >304:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+117D8 text30 CODE >305:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+117E2 text30 CODE >306:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+117E4 text30 CODE >307:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+117EE text30 CODE >308:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+117F0 text30 CODE >309:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+117FA text30 CODE >310:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10F98 text29 CODE >90:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10F98 text29 CODE >92:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10FA8 text29 CODE >93:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10FB8 text29 CODE >94:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10FC4 text29 CODE >95:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10FCE text29 CODE >96:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10FE4 text29 CODE >97:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10FFA text29 CODE >98:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11006 text29 CODE >99:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11012 text29 CODE >100:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1178C text28 CODE >159:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1178C text28 CODE >161:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1179A text28 CODE >162:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+117A8 text28 CODE >163:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+117AE text28 CODE >165:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+117B0 text28 CODE >166:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1164C text27 CODE >181:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1164C text27 CODE >183:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1164E text27 CODE >184:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11654 text27 CODE >185:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11670 text27 CODE >186:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11672 text27 CODE >195:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1167C text27 CODE >196:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10A64 text26 CODE >91:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+10A66 text26 CODE >93:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+10A66 text26 CODE >94:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+10A76 text26 CODE >96:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+10A92 text26 CODE >97:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+10AB6 text26 CODE >98:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+10ADC text26 CODE >99:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+10B00 text26 CODE >100:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+10B24 text26 CODE >101:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+10B26 text26 CODE >102:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+10B28 text26 CODE >103:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+10B28 text26 CODE >104:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+10B2C text26 CODE >105:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+10B2C text26 CODE >110:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+116DE text25 CODE >71:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+116DE text25 CODE >73:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+116E4 text25 CODE >75:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+116F4 text25 CODE >76:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11704 text25 CODE >78:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11706 text25 CODE >79:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11708 text25 CODE >80:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1134A text24 CODE >43:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
+1134A text24 CODE >44:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
+1134E text24 CODE >46:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
+11356 text24 CODE >47:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
+1135E text24 CODE >44:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
+11378 text24 CODE >52:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
+11380 text24 CODE >50:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
+1139A text24 CODE >54:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
+11482 text23 CODE >55:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11482 text23 CODE >56:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11484 text23 CODE >58:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1148A text23 CODE >59:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1149E text23 CODE >60:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+114A2 text23 CODE >61:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+114AE text23 CODE >62:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+114C2 text23 CODE >63:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+114C4 text23 CODE >64:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1161A text22 CODE >219:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1161C text22 CODE >221:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1162C text22 CODE >222:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1162E text22 CODE >223:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11638 text22 CODE >224:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11648 text22 CODE >225:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+1164A text22 CODE >227:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10D64 text21 CODE >103:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10D64 text21 CODE >105:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10D6C text21 CODE >106:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10D7E text21 CODE >108:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10D90 text21 CODE >109:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10D98 text21 CODE >110:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10DD4 text21 CODE >111:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10DF4 text21 CODE >112:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10DFC text21 CODE >113:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10CB8 text20 CODE >116:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10CB8 text20 CODE >118:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10CC0 text20 CODE >119:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10CD2 text20 CODE >120:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10CE4 text20 CODE >122:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10CF6 text20 CODE >123:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10CFE text20 CODE >124:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10D3A text20 CODE >125:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10D5A text20 CODE >126:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+10D62 text20 CODE >127:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+11A96 text19 CODE >126:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11A96 text19 CODE >128:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11A98 text19 CODE >129:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11A6E text18 CODE >35:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11A6E text18 CODE >36:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11A72 text18 CODE >38:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11A92 text17 CODE >121:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11A92 text17 CODE >123:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11A94 text17 CODE >124:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+11A68 text16 CODE >30:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11A68 text16 CODE >31:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11A6C text16 CODE >33:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11860 text15 CODE >95:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11862 text15 CODE >96:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+1187A text15 CODE >97:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+10848 text14 CODE >51:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+1084A text14 CODE >52:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+10852 text14 CODE >53:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+108A0 text14 CODE >54:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+108C0 text14 CODE >56:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+1096C text14 CODE >58:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+10B2E text13 CODE >44:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+10B30 text13 CODE >45:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+10B50 text13 CODE >46:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+10BF2 text13 CODE >48:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+10BF4 text13 CODE >49:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+1190E text12 CODE >45:/home/aevern/Documents/KULeuven/robot_arm_nrf/boat_control.c
+11910 text12 CODE >46:/home/aevern/Documents/KULeuven/robot_arm_nrf/boat_control.c
+11920 text12 CODE >47:/home/aevern/Documents/KULeuven/robot_arm_nrf/boat_control.c
+113EC text11 CODE >38:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+113EE text11 CODE >39:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+1140E text11 CODE >40:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+11436 text11 CODE >42:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+11014 text10 CODE >69:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11014 text10 CODE >70:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11026 text10 CODE >71:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11028 text10 CODE >72:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11072 text10 CODE >73:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11084 text10 CODE >75:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+1129E text9 CODE >77:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+1129E text9 CODE >78:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+112B0 text9 CODE >79:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+112B2 text9 CODE >80:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+112E2 text9 CODE >81:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+112F4 text9 CODE >83:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+10DFE text8 CODE >86:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+10DFE text8 CODE >87:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+10E06 text8 CODE >88:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+10E66 text8 CODE >89:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+10E6C text8 CODE >91:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+10E8C text8 CODE >92:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+10E8E text8 CODE >93:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+11A62 text7 CODE >79:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11A62 text7 CODE >81:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11A66 text7 CODE >82:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+11936 text6 CODE >55:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+11938 text6 CODE >56:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1193C text6 CODE >57:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+11940 text6 CODE >59:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+11944 text6 CODE >60:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10000 text5 CODE >63:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10000 text5 CODE >64:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1002A text5 CODE >68:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10038 text5 CODE >69:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10044 text5 CODE >70:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10066 text5 CODE >75:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1006A text5 CODE >76:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1008C text5 CODE >81:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+100D0 text5 CODE >82:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+100DC text5 CODE >83:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+100E2 text5 CODE >84:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+100E6 text5 CODE >88:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1012A text5 CODE >89:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10136 text5 CODE >92:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10158 text5 CODE >96:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10158 text5 CODE >97:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10168 text5 CODE >98:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10174 text5 CODE >99:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10194 text5 CODE >104:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+101FA text5 CODE >105:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10206 text5 CODE >106:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10224 text5 CODE >111:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10276 text5 CODE >112:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10286 text5 CODE >119:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1029C text5 CODE >120:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+102A8 text5 CODE >125:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+102BE text5 CODE >133:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+102C2 text5 CODE >138:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+102E6 text5 CODE >139:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+102EC text5 CODE >140:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+102F0 text5 CODE >144:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10304 text5 CODE >145:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10308 text5 CODE >146:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1030C text5 CODE >150:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10350 text5 CODE >151:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1035C text5 CODE >152:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1037A text5 CODE >157:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+103DC text5 CODE >158:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+103EC text5 CODE >163:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+103EC text5 CODE >164:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+103FC text5 CODE >165:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10408 text5 CODE >166:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1040C text5 CODE >167:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1040E text5 CODE >168:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10412 text5 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1041E text5 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1042C text5 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10434 text5 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1043C text5 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10444 text5 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1044C text5 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10454 text5 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1045C text5 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10464 text5 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1046C text5 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10474 text5 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1047C text5 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10484 text5 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1048C text5 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+10494 text5 CODE >174:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1049E text5 CODE >176:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+104A2 text5 CODE >177:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+11438 text4 CODE >34:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1143A text4 CODE >35:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1144C text4 CODE >36:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+11450 text4 CODE >37:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+11454 text4 CODE >38:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+11458 text4 CODE >39:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1145C text4 CODE >40:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+11460 text4 CODE >41:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1147C text4 CODE >42:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+11480 text4 CODE >44:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+1139C text3 CODE >4:/opt/microchip/xc8/v2.50/pic/sources/c99/common/memcpy.c
+1139C text3 CODE >11:/opt/microchip/xc8/v2.50/pic/sources/c99/common/memcpy.c
+113A4 text3 CODE >12:/opt/microchip/xc8/v2.50/pic/sources/c99/common/memcpy.c
+113AC text3 CODE >13:/opt/microchip/xc8/v2.50/pic/sources/c99/common/memcpy.c
+113B0 text3 CODE >14:/opt/microchip/xc8/v2.50/pic/sources/c99/common/memcpy.c
+113C0 text3 CODE >15:/opt/microchip/xc8/v2.50/pic/sources/c99/common/memcpy.c
+113D0 text3 CODE >13:/opt/microchip/xc8/v2.50/pic/sources/c99/common/memcpy.c
+113EA text3 CODE >18:/opt/microchip/xc8/v2.50/pic/sources/c99/common/memcpy.c
+1096E text2 CODE >4:/home/aevern/Documents/KULeuven/robot_arm_nrf/message_parser.c
+1096E text2 CODE >5:/home/aevern/Documents/KULeuven/robot_arm_nrf/message_parser.c
+10996 text2 CODE >8:/home/aevern/Documents/KULeuven/robot_arm_nrf/message_parser.c
+109B2 text2 CODE >11:/home/aevern/Documents/KULeuven/robot_arm_nrf/message_parser.c
+109CE text2 CODE >12:/home/aevern/Documents/KULeuven/robot_arm_nrf/message_parser.c
+109EA text2 CODE >13:/home/aevern/Documents/KULeuven/robot_arm_nrf/message_parser.c
+10A06 text2 CODE >14:/home/aevern/Documents/KULeuven/robot_arm_nrf/message_parser.c
+10A34 text2 CODE >15:/home/aevern/Documents/KULeuven/robot_arm_nrf/message_parser.c
+10A62 text2 CODE >17:/home/aevern/Documents/KULeuven/robot_arm_nrf/message_parser.c
+106EE text1 CODE >45:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+106EE text1 CODE >47:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+106FA text1 CODE >48:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+106FA text1 CODE >49:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+106FA text1 CODE >50:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+1070E text1 CODE >51:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+1072A text1 CODE >52:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+1072E text1 CODE >53:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+1074A text1 CODE >52:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+1075E text1 CODE >57:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+1077A text1 CODE >58:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+1077E text1 CODE >59:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+1079A text1 CODE >58:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+107AE text1 CODE >62:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+107BA text1 CODE >64:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+107C4 text1 CODE >68:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+107C8 text1 CODE >69:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+107D8 text1 CODE >70:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+107F4 text1 CODE >71:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+10808 text1 CODE >73:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+1081C text1 CODE >74:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+10834 text1 CODE >77:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+10836 text1 CODE >80:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+112F6 text0 CODE >185:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+112F6 text0 CODE >193:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+112FA text0 CODE >196:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+1130A text0 CODE >197:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+1130C text0 CODE >199:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+11310 text0 CODE >200:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+11314 text0 CODE >201:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+11318 text0 CODE >202:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+1131C text0 CODE >204:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+11320 text0 CODE >205:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+11324 text0 CODE >206:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+1133A text0 CODE >214:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+11346 text0 CODE >225:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+10E90 cinit CODE >25559:/tmp/xcXjHeNCO/driver_tmp_1.s
+10E90 cinit CODE >25561:/tmp/xcXjHeNCO/driver_tmp_1.s
+10E90 cinit CODE >25564:/tmp/xcXjHeNCO/driver_tmp_1.s
+10E90 cinit CODE >25659:/tmp/xcXjHeNCO/driver_tmp_1.s
+10E92 cinit CODE >25660:/tmp/xcXjHeNCO/driver_tmp_1.s
+10E94 cinit CODE >25661:/tmp/xcXjHeNCO/driver_tmp_1.s
+10E96 cinit CODE >25662:/tmp/xcXjHeNCO/driver_tmp_1.s
+10E98 cinit CODE >25663:/tmp/xcXjHeNCO/driver_tmp_1.s
+10E9A cinit CODE >25664:/tmp/xcXjHeNCO/driver_tmp_1.s
+10E9C cinit CODE >25665:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EA0 cinit CODE >25666:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EA4 cinit CODE >25667:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EA4 cinit CODE >25668:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EA6 cinit CODE >25669:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EAA cinit CODE >25670:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EAC cinit CODE >25671:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EAE cinit CODE >25672:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EB0 cinit CODE >25676:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EB2 cinit CODE >25677:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EB4 cinit CODE >25678:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EB6 cinit CODE >25679:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EB8 cinit CODE >25680:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EBA cinit CODE >25681:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EBC cinit CODE >25682:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EC0 cinit CODE >25683:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EC4 cinit CODE >25684:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EC4 cinit CODE >25685:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EC6 cinit CODE >25686:/tmp/xcXjHeNCO/driver_tmp_1.s
+10ECA cinit CODE >25687:/tmp/xcXjHeNCO/driver_tmp_1.s
+10ECC cinit CODE >25688:/tmp/xcXjHeNCO/driver_tmp_1.s
+10ECE cinit CODE >25689:/tmp/xcXjHeNCO/driver_tmp_1.s
+10ED0 cinit CODE >25693:/tmp/xcXjHeNCO/driver_tmp_1.s
+10ED2 cinit CODE >25694:/tmp/xcXjHeNCO/driver_tmp_1.s
+10ED4 cinit CODE >25695:/tmp/xcXjHeNCO/driver_tmp_1.s
+10ED6 cinit CODE >25696:/tmp/xcXjHeNCO/driver_tmp_1.s
+10ED8 cinit CODE >25697:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EDA cinit CODE >25698:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EDC cinit CODE >25699:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EDE cinit CODE >25700:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EE2 cinit CODE >25704:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EE6 cinit CODE >25705:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EE8 cinit CODE >25706:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EE8 cinit CODE >25707:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EEA cinit CODE >25708:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EEC cinit CODE >25709:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EEE cinit CODE >25712:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EF2 cinit CODE >25713:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EF4 cinit CODE >25714:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EF4 cinit CODE >25715:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EF6 cinit CODE >25716:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EF8 cinit CODE >25717:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EFA cinit CODE >25720:/tmp/xcXjHeNCO/driver_tmp_1.s
+10EFE cinit CODE >25721:/tmp/xcXjHeNCO/driver_tmp_1.s
+10F00 cinit CODE >25722:/tmp/xcXjHeNCO/driver_tmp_1.s
+10F00 cinit CODE >25723:/tmp/xcXjHeNCO/driver_tmp_1.s
+10F02 cinit CODE >25724:/tmp/xcXjHeNCO/driver_tmp_1.s
+10F04 cinit CODE >25725:/tmp/xcXjHeNCO/driver_tmp_1.s
+10F06 cinit CODE >25733:/tmp/xcXjHeNCO/driver_tmp_1.s
+10F08 cinit CODE >25734:/tmp/xcXjHeNCO/driver_tmp_1.s
+10F0A cinit CODE >25735:/tmp/xcXjHeNCO/driver_tmp_1.s
+10F0C cinit CODE >25736:/tmp/xcXjHeNCO/driver_tmp_1.s
+10F0E cinit CODE >25737:/tmp/xcXjHeNCO/driver_tmp_1.s
+10F10 cinit CODE >25738:/tmp/xcXjHeNCO/driver_tmp_1.s
+10F12 cinit CODE >25739:/tmp/xcXjHeNCO/driver_tmp_1.s
+10F14 cinit CODE >25745:/tmp/xcXjHeNCO/driver_tmp_1.s
+10F14 cinit CODE >25747:/tmp/xcXjHeNCO/driver_tmp_1.s
+10F16 cinit CODE >25748:/tmp/xcXjHeNCO/driver_tmp_1.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_SPI1SCKPPS 26A 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_SPI1SDIPPS 26B 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM2_16BIT_Slice1Output2_SetInterruptHandler 1199A 0 CODE 0 text61 dist/default/debug/robot_arm_nrf.debug.o
+_docking_positions FEAE 0 MEDIUMCONST 0 mediumconst dist/default/debug/robot_arm_nrf.debug.o
+__LdataBANK5 0 0 ABS 0 dataBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__LdataBANK6 0 0 ABS 0 dataBANK6 dist/default/debug/robot_arm_nrf.debug.o
+__Lmediumconst FDAE 0 MEDIUMCONST 0 mediumconst dist/default/debug/robot_arm_nrf.debug.o
+_PWM1_16BIT_Slice1Output1_InterruptHandler 54A 0 COMRAM 1 nvCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__Hspace_0 11AB1 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Hspace_1 66A 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Hspace_2 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Hspace_4 60000A 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_init@dev 510 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+move_servo_to_angles@angles 514 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_setRetransmitDelay@value 51C 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__HidataBANK5 0 0 ABS 0 idataBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__HidataBANK6 0 0 ABS 0 idataBANK6 dist/default/debug/robot_arm_nrf.debug.o
+_PWM1PIPOS 466 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM1S1CFG 46A 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM1S1P1H 46C 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM1S1P1L 46B 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM1S1P2H 46E 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM1S1P2L 46D 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM2_16BIT_Slice1Output1_SetInterruptHandler 1199A 0 CODE 0 text62 dist/default/debug/robot_arm_nrf.debug.o
+_PWM1CLK 461 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM1CON 469 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM1ERS 460 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM1GIE 468 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM1GIR 467 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM1LDS 462 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM1PRH 464 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM1PRL 463 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM2CLK 470 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM2CON 478 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM2ERS 46F 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM2GIE 477 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM2GIR 476 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM2LDS 471 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM2PRH 473 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM2PRL 472 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3CLK 47F 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3CON 487 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3ERS 47E 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3GIE 486 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3GIR 485 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3LDS 480 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3PRH 482 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3PRL 481 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/debug/robot_arm_nrf.debug.o
+__mediumconst FDAE 0 MEDIUMCONST 0 mediumconst /tmp/xcXjHeNCO/driver_tmp_9.o
+_INT0_DefaultInterruptHandler 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_Nrf24_config 10F98 0 CODE 0 text29 dist/default/debug/robot_arm_nrf.debug.o
+_PWM2PIPOS 475 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM2S1CFG 479 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM2S1P1H 47B 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM2S1P1L 47A 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM2S1P2H 47D 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM2S1P2L 47C 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM2_16BIT_SetSlice1Output2DutyCycleRegister 11A4E 0 CODE 0 text82 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_parse_robot_message 10A64 0 CODE 0 text2 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_INTERRUPT_Initialize 11506 0 CODE 0 text70 dist/default/debug/robot_arm_nrf.debug.o
+_PWM3PIPOS 484 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3S1CFG 488 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3S1P1H 48A 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3S1P1L 489 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3S1P2H 48C 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3S1P2L 48B 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM1_16BIT_Initialize 11236 0 CODE 0 text64 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PIN_MANAGER_IOC 1190E 0 CODE 0 text89 dist/default/debug/robot_arm_nrf.debug.o
+SPI1_ByteExchange@returnValue 510 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__L__absolute__ 0 0 ABS 0 __absolute__ dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM3_16BIT_Period_SetInterruptHandler 1198C 0 CODE 0 text59 dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_config@channel 51E 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_readRegister@len 517 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_readRegister@reg 518 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug/robot_arm_nrf.debug.o
+__end_of_TMR0_Stop 11A86 0 CODE 0 text50 dist/default/debug/robot_arm_nrf.debug.o
+_LATA 4BE 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_LATB 4BF 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_LATC 4C0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_LATD 4C1 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_LATE 4C2 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_LATF 4C3 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_T2PR 323 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_TMR2 322 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_WPUA 401 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_WPUB 409 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_WPUC 411 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_WPUD 419 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_WPUE 421 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_WPUF 429 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+___sp 0 0 STACK 2 stack /tmp/xcXjHeNCO/driver_tmp_9.o
+_main 112F6 0 CODE 0 text0 dist/default/debug/robot_arm_nrf.debug.o
+___stack_hi 0 0 STACK 2 stack /tmp/xcXjHeNCO/driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack /tmp/xcXjHeNCO/driver_tmp_9.o
+__end_of_SPI_read_buff 115E6 0 CODE 0 text38 dist/default/debug/robot_arm_nrf.debug.o
+_Nrf24_configRegister 118B2 0 CODE 0 text39 dist/default/debug/robot_arm_nrf.debug.o
+start 1A 0 CODE 0 init /tmp/xcXjHeNCO/driver_tmp_9.o
+_delay_next_state 5CF 0 BANK5 1 bssBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_nRF24_IRQ_SetInterruptHandler 119EE 0 CODE 0 text69 dist/default/debug/robot_arm_nrf.debug.o
+slave@pvParameters 529 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+arm_fsm_update@idle_angles 564 0 BANK5 1 cstackBANK5 dist/default/debug/robot_arm_nrf.debug.o
+servoMovement@i 517 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_SPI1_Initialize 118E2 0 CODE 0 text55 dist/default/debug/robot_arm_nrf.debug.o
+PWM3_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+INT2_SetInterruptHandler@InterruptHandler 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_TMR2_Stop 11A7A 0 CODE 0 text48 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM3_16BIT_Slice1Output2_SetInterruptHandler 11970 0 CODE 0 text57 dist/default/debug/robot_arm_nrf.debug.o
+_PWM3_16BIT_Period_InterruptHandler 5EA 0 BANK5 1 nvBANK5 dist/default/debug/robot_arm_nrf.debug.o
+_TMR0_OverflowCallback 5DB 0 BANK5 1 nvBANK5 dist/default/debug/robot_arm_nrf.debug.o
+_INT2_SetInterruptHandler 119EE 0 CODE 0 text71 dist/default/debug/robot_arm_nrf.debug.o
+arm_fsm_update@middle2_angles 560 0 BANK5 1 cstackBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__LidataBANK5 0 0 ABS 0 idataBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__LidataBANK6 0 0 ABS 0 idataBANK6 dist/default/debug/robot_arm_nrf.debug.o
+arm_fsm_update@moveup_angles 56E 0 BANK5 1 cstackBANK5 dist/default/debug/robot_arm_nrf.debug.o
+_PWM3_16BIT_Slice1Output1_SetInterruptHandler 11970 0 CODE 0 text58 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM2_16BIT_SetSlice1Output1DutyCycleRegister 11A58 0 CODE 0 text83 dist/default/debug/robot_arm_nrf.debug.o
+__Hpowerup 0 0 CODE 0 powerup dist/default/debug/robot_arm_nrf.debug.o
+__end_of_spi1_configuration FDFA 0 MEDIUMCONST 0 mediumconst dist/default/debug/robot_arm_nrf.debug.o
+_SPI1_Close 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM3_16BIT_SetSlice1Output2DutyCycleRegister 11A3A 0 CODE 0 text79 dist/default/debug/robot_arm_nrf.debug.o
+_nRF24_IRQ_InterruptHandler 5E7 0 BANK5 1 nvBANK5 dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_setRetransmitDelay@dev 519 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_setRetransmitDelay@val 51B 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_TMR0_Stop 11A80 0 CODE 0 text50 dist/default/debug/robot_arm_nrf.debug.o
+_TMR2_Initialize 11762 0 CODE 0 text52 dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_configRegister@reg 512 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+move_servo_to_int@intAngles 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_Timer2 FDEB 0 MEDIUMCONST 0 mediumconst dist/default/debug/robot_arm_nrf.debug.o
+__LnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_PWM2_16BIT_Slice1Output2_DefaultInterruptHandler 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_nRF24_IRQ_ISR 1157C 0 CODE 0 text90 dist/default/debug/robot_arm_nrf.debug.o
+_TMR2_Stop 11A74 0 CODE 0 text48 dist/default/debug/robot_arm_nrf.debug.o
+__accesstop 560 0 ABS 0 - /tmp/xcXjHeNCO/driver_tmp_9.o
+intlevel0 0 0 CODE 0 text /tmp/xcXjHeNCO/driver_tmp_9.o
+intlevel1 0 0 CODE 0 text /tmp/xcXjHeNCO/driver_tmp_9.o
+intlevel2 0 0 CODE 0 text /tmp/xcXjHeNCO/driver_tmp_9.o
+intlevel3 0 0 CODE 0 text /tmp/xcXjHeNCO/driver_tmp_9.o
+_SPI_write_buff 11482 0 CODE 0 text23 dist/default/debug/robot_arm_nrf.debug.o
+_PWM3_16BIT_Slice1Output1_DefaultInterruptHandler 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug/robot_arm_nrf.debug.o
+SPI_write_buff@bytes 513 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+parse_robot_message@out 51C 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_Nrf24_setRetransmitDelay 1170A 0 CODE 0 text35 dist/default/debug/robot_arm_nrf.debug.o
+arm_set_target@is_vertical 511 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_PIN_MANAGER_IOC 118F8 0 CODE 0 text89 dist/default/debug/robot_arm_nrf.debug.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/debug/robot_arm_nrf.debug.o
+__end_of_AdvancedSettings 1181E 0 CODE 0 text34 dist/default/debug/robot_arm_nrf.debug.o
+arm_fsm_update@middle1_angles 576 0 BANK5 1 cstackBANK5 dist/default/debug/robot_arm_nrf.debug.o
+_rf24_datarates 620 0 BANK6 1 dataBANK6 dist/default/debug/robot_arm_nrf.debug.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/debug/robot_arm_nrf.debug.o
+_PWM3_16BIT_Period_DefaultInterruptHandler 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM1_16BIT_Enable 11A92 0 CODE 0 text17 dist/default/debug/robot_arm_nrf.debug.o
+__pidataCOMRAM 11AB0 0 CODE 0 idataCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_INT1_SetInterruptHandler 11A0A 0 CODE 0 text72 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM3_16BIT_SetSlice1Output1DutyCycleRegister 11A44 0 CODE 0 text80 dist/default/debug/robot_arm_nrf.debug.o
+_Nrf24_init 116DE 0 CODE 0 text25 dist/default/debug/robot_arm_nrf.debug.o
+ivt0x8_base 8 0 CODE 0 ivt0x8 dist/default/debug/robot_arm_nrf.debug.o
+_SPI1CON0bits 84 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_SPI1_Initialize 118CA 0 CODE 0 text55 dist/default/debug/robot_arm_nrf.debug.o
+_ACTCON AC 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+PWM3_16BIT_SetSlice1Output1DutyCycleRegister@registerValue 501 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_Nrf24_config 11014 0 CODE 0 text29 dist/default/debug/robot_arm_nrf.debug.o
+_spi1_configuration FDEB 0 MEDIUMCONST 0 mediumconst dist/default/debug/robot_arm_nrf.debug.o
+_ANSELA 400 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_ANSELB 408 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_ANSELC 410 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_ANSELD 418 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_ANSELE 420 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_ANSELF 428 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3_16BIT_Slice1Output2_InterruptHandler 5ED 0 BANK5 1 nvBANK5 dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_writeRegister@len 517 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_writeRegister@reg 518 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_disableMagnet 11A74 0 CODE 0 text18 dist/default/debug/robot_arm_nrf.debug.o
+_PWM3_16BIT_Period_SetInterruptHandler 1197E 0 CODE 0 text59 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_Nrf24_powerUpRx 117FC 0 CODE 0 text30 dist/default/debug/robot_arm_nrf.debug.o
+___inthi_sp 0 0 STACK 2 stack /tmp/xcXjHeNCO/driver_tmp_9.o
+_Nrf24_getData 1164C 0 CODE 0 text27 dist/default/debug/robot_arm_nrf.debug.o
+___intlo_sp 0 0 STACK 2 stack /tmp/xcXjHeNCO/driver_tmp_9.o
+PWM1_16BIT_Period_SetInterruptHandler@InterruptHandler 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+arm_fsm_update@angles_2551 568 0 BANK5 1 cstackBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_INTERRUPT_InterruptManager 10F98 0 CODE 0 text75 dist/default/debug/robot_arm_nrf.debug.o
+slave@dev 667 0 BANK6 1 cstackBANK6 dist/default/debug/robot_arm_nrf.debug.o
+slave@ret 658 0 BANK6 1 cstackBANK6 dist/default/debug/robot_arm_nrf.debug.o
+slave@rob 65A 0 BANK6 1 cstackBANK6 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_enablePWM 118B2 0 CODE 0 text41 dist/default/debug/robot_arm_nrf.debug.o
+PWM1_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM2_16BIT_Enable 11AA2 0 CODE 0 text43 dist/default/debug/robot_arm_nrf.debug.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug/robot_arm_nrf.debug.o
+__Hmediumconst 10000 0 MEDIUMCONST 0 mediumconst dist/default/debug/robot_arm_nrf.debug.o
+__end_of_Nrf24_flushRx 11A24 0 CODE 0 text32 dist/default/debug/robot_arm_nrf.debug.o
+__LnvBANK5 0 0 ABS 0 nvBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_SPI_write_buff 114C6 0 CODE 0 text23 dist/default/debug/robot_arm_nrf.debug.o
+_SPI1_BufferRead 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_SPI1STATUSbits 87 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3_16BIT_Slice1Output1_InterruptHandler 5F0 0 BANK5 1 nvBANK5 dist/default/debug/robot_arm_nrf.debug.o
+_get_docking_servo_angles 1190E 0 CODE 0 text12 dist/default/debug/robot_arm_nrf.debug.o
+_PWM1_16BIT_Slice1Output2_SetInterruptHandler 119B6 0 CODE 0 text65 dist/default/debug/robot_arm_nrf.debug.o
+_INLVLA 404 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_INLVLB 40C 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_INLVLC 414 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_INLVLD 41C 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_INLVLE 424 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_INLVLF 42C 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_enablePWM 11898 0 CODE 0 text41 dist/default/debug/robot_arm_nrf.debug.o
+PWM2_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_PWM2_16BIT_Period_InterruptHandler 5F3 0 BANK5 1 nvBANK5 dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_setTADDR@adr 51B 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_setTADDR@dev 519 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_setTADDR@ret 525 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+DELAY_milliseconds@milliseconds 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_nrf_irq 11A8C 0 CODE 0 text92 dist/default/debug/robot_arm_nrf.debug.o
+__HnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+arm_fsm_update@moveup_angles_2548 57E 0 BANK5 1 cstackBANK5 dist/default/debug/robot_arm_nrf.debug.o
+arm_fsm_update@moveup_angles_2550 586 0 BANK5 1 cstackBANK5 dist/default/debug/robot_arm_nrf.debug.o
+arm_fsm_update@moveup_angles_2558 596 0 BANK5 1 cstackBANK5 dist/default/debug/robot_arm_nrf.debug.o
+_SPI1_BufferExchange 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_servoMovement 10DFE 0 CODE 0 text8 dist/default/debug/robot_arm_nrf.debug.o
+memcpy@tmp 515 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_INTCON0bits 4D6 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_dataReady@dev 51C 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_SPI1_IsRxReady 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PIN_MANAGER_Initialize 10BF6 0 CODE 0 text68 dist/default/debug/robot_arm_nrf.debug.o
+start_fsm_delay@next 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_Nrf24_init 1170A 0 CODE 0 text25 dist/default/debug/robot_arm_nrf.debug.o
+start_initialization 10E90 0 CODE 0 cinit dist/default/debug/robot_arm_nrf.debug.o
+_Nrf24_powerUpRx 117D8 0 CODE 0 text30 dist/default/debug/robot_arm_nrf.debug.o
+_ODCONA 402 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_ODCONB 40A 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_ODCONC 412 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_ODCOND 41A 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_ODCONE 422 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_ODCONF 42A 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+SPI_read_buff@bytes 513 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_OSCFRQ B1 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug/robot_arm_nrf.debug.o
+_TMR0_DefaultCallback 11AAC 0 CODE 0 text86 dist/default/debug/robot_arm_nrf.debug.o
+_TRISCbits 4C8 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+move_servo_to_int@i 513 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_PWM2_16BIT_Slice1Output2_SetInterruptHandler 1198C 0 CODE 0 text61 dist/default/debug/robot_arm_nrf.debug.o
+___rparam_used 1 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__end_of_TMR2_OverflowCallbackRegister 11962 0 CODE 0 text53 dist/default/debug/robot_arm_nrf.debug.o
+_RB0PPS 209 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_RB1I2C 289 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_RB1PPS 20A 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_RB2I2C 288 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_RB2PPS 20B 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_RB3PPS 20C 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_RC0PPS 211 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_RC3I2C 287 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_RC3PPS 214 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_RC4I2C 286 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_RC4PPS 215 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__end_of_memcpy 113EC 0 CODE 0 text3 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM1_16BIT_Disable 11A9A 0 CODE 0 text19 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_SYSTEM_Initialize 117D8 0 CODE 0 text51 dist/default/debug/robot_arm_nrf.debug.o
+_state_done 54D 0 COMRAM 1 dataCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+get_docking_servo_angles@boat_id 512 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+SPI_write_buff@i 514 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__pcstackBANK5 560 0 BANK5 1 cstackBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__pcstackBANK6 658 0 BANK6 1 cstackBANK6 dist/default/debug/robot_arm_nrf.debug.o
+_T0CON0 31A 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_T0CON1 31B 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_tmr0PeriodCount 53B 0 COMRAM 1 bssCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_T2CLKCON 326 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__end_of_start_fsm_delay 11946 0 CODE 0 text6 dist/default/debug/robot_arm_nrf.debug.o
+_TMR2_Start 11A7A 0 CODE 0 text49 dist/default/debug/robot_arm_nrf.debug.o
+_INT2_DefaultInterruptHandler 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+i2_TMR0_Stop 11A86 0 CODE 0 text88 dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_setRADDR@adr 51B 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_setRADDR@dev 519 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_setRADDR@ret 525 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_Timer2 FDD9 0 MEDIUMCONST 0 mediumconst dist/default/debug/robot_arm_nrf.debug.o
+_PWM2_16BIT_SetSlice1Output2DutyCycleRegister 11A44 0 CODE 0 text82 dist/default/debug/robot_arm_nrf.debug.o
+isa$xinst 0 0 ABS 0 - /tmp/xcXjHeNCO/driver_tmp_9.o
+_rf24_crclength FE90 0 MEDIUMCONST 0 mediumconst dist/default/debug/robot_arm_nrf.debug.o
+__end_of_Nrf24_readRegister 116DE 0 CODE 0 text37 dist/default/debug/robot_arm_nrf.debug.o
+_enableMagnet 11A68 0 CODE 0 text16 dist/default/debug/robot_arm_nrf.debug.o
+PWM2_16BIT_Period_SetInterruptHandler@InterruptHandler 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_setRADDR@buffer 520 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_SPI1_BufferWrite 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM2_16BIT_Enable 11A9E 0 CODE 0 text43 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank6 0 0 ABS 0 bank6 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank7 0 0 ABS 0 bank7 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank8 0 0 ABS 0 bank8 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank9 0 0 ABS 0 bank9 dist/default/debug/robot_arm_nrf.debug.o
+__Hcinit 0 0 ABS 0 cinit dist/default/debug/robot_arm_nrf.debug.o
+__Hconst 0 0 CONST 0 const dist/default/debug/robot_arm_nrf.debug.o
+__end_of_nRF24_IRQ_ISR 115B2 0 CODE 0 text90 dist/default/debug/robot_arm_nrf.debug.o
+__Hidata 0 0 CODE 0 idata dist/default/debug/robot_arm_nrf.debug.o
+__Hidloc 0 0 ABS 0 idloc dist/default/debug/robot_arm_nrf.debug.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/debug/robot_arm_nrf.debug.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_setTADDR@i 527 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/debug/robot_arm_nrf.debug.o
+__Hstack 0 0 STACK 2 stack dist/default/debug/robot_arm_nrf.debug.o
+__Htext0 0 0 ABS 0 text0 dist/default/debug/robot_arm_nrf.debug.o
+__Htext1 0 0 ABS 0 text1 dist/default/debug/robot_arm_nrf.debug.o
+__Htext2 0 0 ABS 0 text2 dist/default/debug/robot_arm_nrf.debug.o
+__Htext3 0 0 ABS 0 text3 dist/default/debug/robot_arm_nrf.debug.o
+__Htext4 0 0 ABS 0 text4 dist/default/debug/robot_arm_nrf.debug.o
+__Htext5 0 0 ABS 0 text5 dist/default/debug/robot_arm_nrf.debug.o
+__Htext6 0 0 ABS 0 text6 dist/default/debug/robot_arm_nrf.debug.o
+__Htext7 0 0 ABS 0 text7 dist/default/debug/robot_arm_nrf.debug.o
+__Htext8 0 0 ABS 0 text8 dist/default/debug/robot_arm_nrf.debug.o
+__Htext9 0 0 ABS 0 text9 dist/default/debug/robot_arm_nrf.debug.o
+?_get_docking_servo_angles 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__Hbank10 0 0 ABS 0 bank10 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank11 0 0 ABS 0 bank11 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank12 0 0 ABS 0 bank12 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank13 0 0 ABS 0 bank13 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank14 0 0 ABS 0 bank14 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank15 0 0 ABS 0 bank15 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank16 0 0 ABS 0 bank16 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank17 0 0 ABS 0 bank17 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank18 0 0 ABS 0 bank18 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank19 0 0 ABS 0 bank19 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank20 0 0 ABS 0 bank20 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank21 0 0 ABS 0 bank21 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank22 0 0 ABS 0 bank22 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank23 0 0 ABS 0 bank23 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank24 0 0 ABS 0 bank24 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank25 0 0 ABS 0 bank25 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank26 0 0 ABS 0 bank26 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank27 0 0 ABS 0 bank27 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank28 0 0 ABS 0 bank28 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank29 0 0 ABS 0 bank29 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank30 0 0 ABS 0 bank30 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank31 0 0 ABS 0 bank31 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank32 0 0 ABS 0 bank32 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank33 0 0 ABS 0 bank33 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank34 0 0 ABS 0 bank34 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank35 0 0 ABS 0 bank35 dist/default/debug/robot_arm_nrf.debug.o
+__Hbank36 0 0 ABS 0 bank36 dist/default/debug/robot_arm_nrf.debug.o
+_PWM3_16BIT_Slice1Output2_SetInterruptHandler 11962 0 CODE 0 text57 dist/default/debug/robot_arm_nrf.debug.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug/robot_arm_nrf.debug.o
+__Hbigram 0 0 ABS 0 bigram dist/default/debug/robot_arm_nrf.debug.o
+__Hbigsfr 0 0 ABS 0 bigsfr dist/default/debug/robot_arm_nrf.debug.o
+__smallconst 0 0 SMALLCONST 0 smallconst /tmp/xcXjHeNCO/driver_tmp_9.o
+getAngle@i 511 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_getStatus@dev 519 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__Hcomram 0 0 ABS 0 comram dist/default/debug/robot_arm_nrf.debug.o
+__Hconfig 30000A 0 CONFIG 4 config dist/default/debug/robot_arm_nrf.debug.o
+PWM2_16BIT_SetSlice1Output1DutyCycleRegister@registerValue 501 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+get_adjusted_servo_angles@i 51C 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+get_adjusted_servo_angles@x 51B 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+get_adjusted_servo_angles@y 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_PWM1_16BIT_Disable 11A96 0 CODE 0 text19 dist/default/debug/robot_arm_nrf.debug.o
+_T2HLTbits 325 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank6 0 0 ABS 0 bank6 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank7 0 0 ABS 0 bank7 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank8 0 0 ABS 0 bank8 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank9 0 0 ABS 0 bank9 dist/default/debug/robot_arm_nrf.debug.o
+__Lcinit 0 0 ABS 0 cinit dist/default/debug/robot_arm_nrf.debug.o
+__Lconst 0 0 CONST 0 const dist/default/debug/robot_arm_nrf.debug.o
+_PWM1_16BIT_Slice1Output2_DefaultInterruptHandler 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Lidata 0 0 CODE 0 idata dist/default/debug/robot_arm_nrf.debug.o
+__Lidloc 0 0 ABS 0 idloc dist/default/debug/robot_arm_nrf.debug.o
+_PWM2_16BIT_SetSlice1Output1DutyCycleRegister 11A4E 0 CODE 0 text83 dist/default/debug/robot_arm_nrf.debug.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/debug/robot_arm_nrf.debug.o
+INT1_SetInterruptHandler@InterruptHandler 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_isrTim0 106EE 0 CODE 0 text78 dist/default/debug/robot_arm_nrf.debug.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/debug/robot_arm_nrf.debug.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/debug/robot_arm_nrf.debug.o
+__Lstack 0 0 STACK 2 stack dist/default/debug/robot_arm_nrf.debug.o
+__Ltext0 0 0 ABS 0 text0 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext1 0 0 ABS 0 text1 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext2 0 0 ABS 0 text2 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext3 0 0 ABS 0 text3 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext4 0 0 ABS 0 text4 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext5 0 0 ABS 0 text5 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext6 0 0 ABS 0 text6 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext7 0 0 ABS 0 text7 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext8 0 0 ABS 0 text8 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext9 0 0 ABS 0 text9 dist/default/debug/robot_arm_nrf.debug.o
+_INT0_SetInterruptHandler 11A0A 0 CODE 0 text73 dist/default/debug/robot_arm_nrf.debug.o
+_PWM3_16BIT_SetSlice1Output2DutyCycleRegister 11A30 0 CODE 0 text79 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM3_16BIT_Enable 11A9E 0 CODE 0 text42 dist/default/debug/robot_arm_nrf.debug.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/debug/robot_arm_nrf.debug.o
+_PWM2_16BIT_Slice1Output1_DefaultInterruptHandler 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__end_of_SPI1_ByteExchange 11762 0 CODE 0 text40 dist/default/debug/robot_arm_nrf.debug.o
+calculateAngle@angleDeg 513 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_target_x 5D3 0 BANK5 1 bssBANK5 dist/default/debug/robot_arm_nrf.debug.o
+_target_y 5D2 0 BANK5 1 bssBANK5 dist/default/debug/robot_arm_nrf.debug.o
+memcpy@d1 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+memcpy@s1 511 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_INTERRUPT_Initialize 114C6 0 CODE 0 text70 dist/default/debug/robot_arm_nrf.debug.o
+__Habs1 0 0 ABS 0 abs1 dist/default/debug/robot_arm_nrf.debug.o
+__Hdata 0 0 ABS 0 data dist/default/debug/robot_arm_nrf.debug.o
+__Hheap 0 0 HEAP 7 heap dist/default/debug/robot_arm_nrf.debug.o
+__Hinit 1E 0 CODE 0 init dist/default/debug/robot_arm_nrf.debug.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/debug/robot_arm_nrf.debug.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/debug/robot_arm_nrf.debug.o
+__Htemp 0 0 COMRAM 1 temp dist/default/debug/robot_arm_nrf.debug.o
+__Htext 0 0 ABS 0 text dist/default/debug/robot_arm_nrf.debug.o
+__Labs1 0 0 ABS 0 abs1 dist/default/debug/robot_arm_nrf.debug.o
+nRF24_IRQ_SetInterruptHandler@InterruptHandler 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__Ldata 0 0 ABS 0 data dist/default/debug/robot_arm_nrf.debug.o
+__Lheap 0 0 HEAP 7 heap dist/default/debug/robot_arm_nrf.debug.o
+__Linit 1A 0 CODE 0 init dist/default/debug/robot_arm_nrf.debug.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/debug/robot_arm_nrf.debug.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/debug/robot_arm_nrf.debug.o
+__Ltemp 0 0 COMRAM 1 temp dist/default/debug/robot_arm_nrf.debug.o
+__Ltext 0 0 ABS 0 text dist/default/debug/robot_arm_nrf.debug.o
+memcpy@d 516 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+memcpy@n 513 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+memcpy@s 518 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM2_16BIT_LoadBufferRegisters 11AAA 0 CODE 0 text84 dist/default/debug/robot_arm_nrf.debug.o
+__pnvBANK5 5D8 0 BANK5 1 nvBANK5 dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_powerUpRx@dev 513 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_Nrf24_readRegister 116AE 0 CODE 0 text37 dist/default/debug/robot_arm_nrf.debug.o
+__LcstackBANK5 0 0 ABS 0 cstackBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__LcstackBANK6 0 0 ABS 0 cstackBANK6 dist/default/debug/robot_arm_nrf.debug.o
+_SPI1_ByteRead 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM1_16BIT_Period_InterruptHandler 544 0 COMRAM 1 nvCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_Nrf24_getData 1167E 0 CODE 0 text27 dist/default/debug/robot_arm_nrf.debug.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+arm_set_target@mode 512 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_start_fsm_delay 11936 0 CODE 0 text6 dist/default/debug/robot_arm_nrf.debug.o
+arm_fsm_update@F162 5FA 0 BANK5 1 dataBANK5 dist/default/debug/robot_arm_nrf.debug.o
+arm_fsm_update@F173 5F6 0 BANK5 1 dataBANK5 dist/default/debug/robot_arm_nrf.debug.o
+_SPI1INTFbits 8A 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Hirdata 0 0 CODE 0 irdata dist/default/debug/robot_arm_nrf.debug.o
+_PR2 323 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__S0 11AB1 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__S1 66A 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__S4 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__S5 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_buf 638 0 BANK6 1 bssBANK6 dist/default/debug/robot_arm_nrf.debug.o
+__Hivt0x8 1A 0 CODE 0 ivt0x8 dist/default/debug/robot_arm_nrf.debug.o
+_CLOCK_Initialize 11922 0 CODE 0 text74 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_INT2_SetInterruptHandler 119FC 0 CODE 0 text71 dist/default/debug/robot_arm_nrf.debug.o
+_arm_fsm_init 1181E 0 CODE 0 text44 dist/default/debug/robot_arm_nrf.debug.o
+IVTBASEH 45E 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+IVTBASEL 45D 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+IVTBASEU 45F 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__end_of_move_servo_to_angles 11086 0 CODE 0 text10 dist/default/debug/robot_arm_nrf.debug.o
+__pnvCOMRAM 53E 0 COMRAM 1 nvCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_rf24_crclength FEAE 0 MEDIUMCONST 0 mediumconst dist/default/debug/robot_arm_nrf.debug.o
+__end_of_TMR2_Start 11A80 0 CODE 0 text49 dist/default/debug/robot_arm_nrf.debug.o
+_SPI1BAUD 89 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_SPI1CON0 84 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_SPI1CON1 85 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_SPI1CON2 86 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_SetSpeedDataRates@dev 519 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_SetSpeedDataRates@val 51B 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_T2RSTbits 327 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__end_of_get_dependent_servo_angle 10BF6 0 CODE 0 text13 dist/default/debug/robot_arm_nrf.debug.o
+_arm_fsm_update 10000 0 CODE 0 text5 dist/default/debug/robot_arm_nrf.debug.o
+SPI1_Open@spiConfigIndex 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__pivt0x8 8 0 CODE 0 ivt0x8 dist/default/debug/robot_arm_nrf.debug.o
+_grid_angles FDFA 0 MEDIUMCONST 0 mediumconst dist/default/debug/robot_arm_nrf.debug.o
+_PWM3_16BIT_SetSlice1Output1DutyCycleRegister 11A3A 0 CODE 0 text80 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_DELAY_milliseconds 116AE 0 CODE 0 text33 dist/default/debug/robot_arm_nrf.debug.o
+_get_adjusted_servo_angles$2590 519 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/debug/robot_arm_nrf.debug.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/debug/robot_arm_nrf.debug.o
+_SYSTEM_Initialize 117B2 0 CODE 0 text51 dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_SetSpeedDataRates@value 51C 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_writeRegister@value 515 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_PWM2_16BIT_Period_DefaultInterruptHandler 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_current_state 5D7 0 BANK5 1 bssBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM3_16BIT_LoadBufferRegisters 11AA6 0 CODE 0 text81 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_enableMagnet 11A6E 0 CODE 0 text16 dist/default/debug/robot_arm_nrf.debug.o
+get_adjusted_servo_angles@out_angles 511 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_PWM3CONbits 487 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__HnvBANK5 0 0 ABS 0 nvBANK5 dist/default/debug/robot_arm_nrf.debug.o
+_TMR2_DefaultOverflowCallback 11AAA 0 CODE 0 text77 dist/default/debug/robot_arm_nrf.debug.o
+_Nrf24_writeRegister 1161A 0 CODE 0 text22 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_Nrf24_setRetransmitDelay 11736 0 CODE 0 text35 dist/default/debug/robot_arm_nrf.debug.o
+__Hramtop 2600 0 RAM 0 ramtop dist/default/debug/robot_arm_nrf.debug.o
+__end_of_get_grid_servo_angles 11438 0 CODE 0 text11 dist/default/debug/robot_arm_nrf.debug.o
+_PWM2_16BIT_Slice1Output2_InterruptHandler 53E 0 COMRAM 1 nvCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/debug/robot_arm_nrf.debug.o
+__pdataBANK5 5F6 0 BANK5 1 dataBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__pdataBANK6 600 0 BANK6 1 dataBANK6 dist/default/debug/robot_arm_nrf.debug.o
+__activetblptr 3 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/debug/robot_arm_nrf.debug.o
+__LbssBANK5 0 0 ABS 0 bssBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__LbssBANK6 0 0 ABS 0 bssBANK6 dist/default/debug/robot_arm_nrf.debug.o
+PWM3_16BIT_Period_SetInterruptHandler@InterruptHandler 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_servoMovement 10E90 0 CODE 0 text8 dist/default/debug/robot_arm_nrf.debug.o
+__Htext10 0 0 ABS 0 text10 dist/default/debug/robot_arm_nrf.debug.o
+__Htext11 0 0 ABS 0 text11 dist/default/debug/robot_arm_nrf.debug.o
+__Htext12 0 0 ABS 0 text12 dist/default/debug/robot_arm_nrf.debug.o
+__Htext13 0 0 ABS 0 text13 dist/default/debug/robot_arm_nrf.debug.o
+__Htext14 0 0 ABS 0 text14 dist/default/debug/robot_arm_nrf.debug.o
+__Htext15 0 0 ABS 0 text15 dist/default/debug/robot_arm_nrf.debug.o
+__Htext16 0 0 ABS 0 text16 dist/default/debug/robot_arm_nrf.debug.o
+__Htext17 0 0 ABS 0 text17 dist/default/debug/robot_arm_nrf.debug.o
+__Htext18 0 0 ABS 0 text18 dist/default/debug/robot_arm_nrf.debug.o
+__Htext19 0 0 ABS 0 text19 dist/default/debug/robot_arm_nrf.debug.o
+__Htext20 0 0 ABS 0 text20 dist/default/debug/robot_arm_nrf.debug.o
+__Htext21 0 0 ABS 0 text21 dist/default/debug/robot_arm_nrf.debug.o
+__Htext22 0 0 ABS 0 text22 dist/default/debug/robot_arm_nrf.debug.o
+__Htext23 0 0 ABS 0 text23 dist/default/debug/robot_arm_nrf.debug.o
+__Htext24 0 0 ABS 0 text24 dist/default/debug/robot_arm_nrf.debug.o
+__Htext25 0 0 ABS 0 text25 dist/default/debug/robot_arm_nrf.debug.o
+__Htext26 0 0 ABS 0 text26 dist/default/debug/robot_arm_nrf.debug.o
+__Htext27 0 0 ABS 0 text27 dist/default/debug/robot_arm_nrf.debug.o
+__Htext28 0 0 ABS 0 text28 dist/default/debug/robot_arm_nrf.debug.o
+__Htext29 0 0 ABS 0 text29 dist/default/debug/robot_arm_nrf.debug.o
+__Htext30 0 0 ABS 0 text30 dist/default/debug/robot_arm_nrf.debug.o
+__Htext31 0 0 ABS 0 text31 dist/default/debug/robot_arm_nrf.debug.o
+__Htext32 0 0 ABS 0 text32 dist/default/debug/robot_arm_nrf.debug.o
+__Htext33 0 0 ABS 0 text33 dist/default/debug/robot_arm_nrf.debug.o
+__Htext34 0 0 ABS 0 text34 dist/default/debug/robot_arm_nrf.debug.o
+__Htext35 0 0 ABS 0 text35 dist/default/debug/robot_arm_nrf.debug.o
+__Htext36 0 0 ABS 0 text36 dist/default/debug/robot_arm_nrf.debug.o
+__Htext37 0 0 ABS 0 text37 dist/default/debug/robot_arm_nrf.debug.o
+__Htext38 0 0 ABS 0 text38 dist/default/debug/robot_arm_nrf.debug.o
+__Htext39 0 0 ABS 0 text39 dist/default/debug/robot_arm_nrf.debug.o
+__Htext40 0 0 ABS 0 text40 dist/default/debug/robot_arm_nrf.debug.o
+__Htext41 0 0 ABS 0 text41 dist/default/debug/robot_arm_nrf.debug.o
+__Htext42 0 0 ABS 0 text42 dist/default/debug/robot_arm_nrf.debug.o
+__Htext43 0 0 ABS 0 text43 dist/default/debug/robot_arm_nrf.debug.o
+__Htext44 0 0 ABS 0 text44 dist/default/debug/robot_arm_nrf.debug.o
+__Htext45 0 0 ABS 0 text45 dist/default/debug/robot_arm_nrf.debug.o
+__Htext46 0 0 ABS 0 text46 dist/default/debug/robot_arm_nrf.debug.o
+__Htext47 0 0 ABS 0 text47 dist/default/debug/robot_arm_nrf.debug.o
+__Htext48 0 0 ABS 0 text48 dist/default/debug/robot_arm_nrf.debug.o
+__Htext49 0 0 ABS 0 text49 dist/default/debug/robot_arm_nrf.debug.o
+__Htext50 0 0 ABS 0 text50 dist/default/debug/robot_arm_nrf.debug.o
+__Htext51 0 0 ABS 0 text51 dist/default/debug/robot_arm_nrf.debug.o
+__Htext52 0 0 ABS 0 text52 dist/default/debug/robot_arm_nrf.debug.o
+__Htext53 0 0 ABS 0 text53 dist/default/debug/robot_arm_nrf.debug.o
+__Htext54 0 0 ABS 0 text54 dist/default/debug/robot_arm_nrf.debug.o
+__Htext55 0 0 ABS 0 text55 dist/default/debug/robot_arm_nrf.debug.o
+__Htext56 0 0 ABS 0 text56 dist/default/debug/robot_arm_nrf.debug.o
+__Htext57 0 0 ABS 0 text57 dist/default/debug/robot_arm_nrf.debug.o
+__Htext58 0 0 ABS 0 text58 dist/default/debug/robot_arm_nrf.debug.o
+__Htext59 0 0 ABS 0 text59 dist/default/debug/robot_arm_nrf.debug.o
+__Htext60 0 0 ABS 0 text60 dist/default/debug/robot_arm_nrf.debug.o
+__Htext61 0 0 ABS 0 text61 dist/default/debug/robot_arm_nrf.debug.o
+__Htext62 0 0 ABS 0 text62 dist/default/debug/robot_arm_nrf.debug.o
+__Htext63 0 0 ABS 0 text63 dist/default/debug/robot_arm_nrf.debug.o
+__Htext64 0 0 ABS 0 text64 dist/default/debug/robot_arm_nrf.debug.o
+__Htext65 0 0 ABS 0 text65 dist/default/debug/robot_arm_nrf.debug.o
+__Htext66 0 0 ABS 0 text66 dist/default/debug/robot_arm_nrf.debug.o
+__Htext67 0 0 ABS 0 text67 dist/default/debug/robot_arm_nrf.debug.o
+__Htext68 0 0 ABS 0 text68 dist/default/debug/robot_arm_nrf.debug.o
+__Htext69 0 0 ABS 0 text69 dist/default/debug/robot_arm_nrf.debug.o
+__Htext70 0 0 ABS 0 text70 dist/default/debug/robot_arm_nrf.debug.o
+__Htext71 0 0 ABS 0 text71 dist/default/debug/robot_arm_nrf.debug.o
+__Htext72 0 0 ABS 0 text72 dist/default/debug/robot_arm_nrf.debug.o
+__Htext73 0 0 ABS 0 text73 dist/default/debug/robot_arm_nrf.debug.o
+__Htext74 0 0 ABS 0 text74 dist/default/debug/robot_arm_nrf.debug.o
+__Htext75 0 0 ABS 0 text75 dist/default/debug/robot_arm_nrf.debug.o
+__Htext76 0 0 ABS 0 text76 dist/default/debug/robot_arm_nrf.debug.o
+__Htext77 0 0 ABS 0 text77 dist/default/debug/robot_arm_nrf.debug.o
+__Htext78 0 0 ABS 0 text78 dist/default/debug/robot_arm_nrf.debug.o
+__Htext79 0 0 ABS 0 text79 dist/default/debug/robot_arm_nrf.debug.o
+__Htext80 0 0 ABS 0 text80 dist/default/debug/robot_arm_nrf.debug.o
+__Htext81 0 0 ABS 0 text81 dist/default/debug/robot_arm_nrf.debug.o
+__Htext82 0 0 ABS 0 text82 dist/default/debug/robot_arm_nrf.debug.o
+__Htext83 0 0 ABS 0 text83 dist/default/debug/robot_arm_nrf.debug.o
+__Htext84 0 0 ABS 0 text84 dist/default/debug/robot_arm_nrf.debug.o
+__Htext85 0 0 ABS 0 text85 dist/default/debug/robot_arm_nrf.debug.o
+__Htext86 0 0 ABS 0 text86 dist/default/debug/robot_arm_nrf.debug.o
+__Htext87 0 0 ABS 0 text87 dist/default/debug/robot_arm_nrf.debug.o
+__Htext88 0 0 ABS 0 text88 dist/default/debug/robot_arm_nrf.debug.o
+__Htext89 0 0 ABS 0 text89 dist/default/debug/robot_arm_nrf.debug.o
+__Htext90 0 0 ABS 0 text90 dist/default/debug/robot_arm_nrf.debug.o
+__Htext91 0 0 ABS 0 text91 dist/default/debug/robot_arm_nrf.debug.o
+__Htext92 0 0 ABS 0 text92 dist/default/debug/robot_arm_nrf.debug.o
+SPI_read_buff@buffer 511 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+PWM3_16BIT_SetSlice1Output2DutyCycleRegister@registerValue 501 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_INTERRUPT_InterruptManager 10F1A 0 CODE 0 text75 dist/default/debug/robot_arm_nrf.debug.o
+_PIE0bits 49E 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PIE3bits 4A1 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PIE4bits 4A2 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PIE5bits 4A3 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PIE7bits 4A5 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PIR10bits 4B8 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_SPI1_Deinitialize 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__end_of_initServo 110F8 0 CODE 0 text45 dist/default/debug/robot_arm_nrf.debug.o
+_memcpy 1139C 0 CODE 0 text3 dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_getData@dev 515 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM1_16BIT_Period_SetInterruptHandler 119E0 0 CODE 0 text67 dist/default/debug/robot_arm_nrf.debug.o
+_DELAY_milliseconds 1167E 0 CODE 0 text33 dist/default/debug/robot_arm_nrf.debug.o
+_TMR0_ISR 11506 0 CODE 0 text85 dist/default/debug/robot_arm_nrf.debug.o
+_TMR2_ISR 11840 0 CODE 0 text76 dist/default/debug/robot_arm_nrf.debug.o
+__ptext10 11014 0 CODE 0 text10 dist/default/debug/robot_arm_nrf.debug.o
+__ptext11 113EC 0 CODE 0 text11 dist/default/debug/robot_arm_nrf.debug.o
+__ptext12 1190E 0 CODE 0 text12 dist/default/debug/robot_arm_nrf.debug.o
+__ptext13 10B2E 0 CODE 0 text13 dist/default/debug/robot_arm_nrf.debug.o
+__ptext14 10848 0 CODE 0 text14 dist/default/debug/robot_arm_nrf.debug.o
+__ptext15 11860 0 CODE 0 text15 dist/default/debug/robot_arm_nrf.debug.o
+__ptext16 11A68 0 CODE 0 text16 dist/default/debug/robot_arm_nrf.debug.o
+__ptext17 11A92 0 CODE 0 text17 dist/default/debug/robot_arm_nrf.debug.o
+__ptext18 11A6E 0 CODE 0 text18 dist/default/debug/robot_arm_nrf.debug.o
+__ptext19 11A96 0 CODE 0 text19 dist/default/debug/robot_arm_nrf.debug.o
+__ptext20 10CB8 0 CODE 0 text20 dist/default/debug/robot_arm_nrf.debug.o
+__ptext21 10D64 0 CODE 0 text21 dist/default/debug/robot_arm_nrf.debug.o
+__ptext22 1161A 0 CODE 0 text22 dist/default/debug/robot_arm_nrf.debug.o
+__ptext23 11482 0 CODE 0 text23 dist/default/debug/robot_arm_nrf.debug.o
+__ptext24 1134A 0 CODE 0 text24 dist/default/debug/robot_arm_nrf.debug.o
+__ptext25 116DE 0 CODE 0 text25 dist/default/debug/robot_arm_nrf.debug.o
+__ptext26 10A64 0 CODE 0 text26 dist/default/debug/robot_arm_nrf.debug.o
+__ptext27 1164C 0 CODE 0 text27 dist/default/debug/robot_arm_nrf.debug.o
+__ptext28 1178C 0 CODE 0 text28 dist/default/debug/robot_arm_nrf.debug.o
+__ptext29 10F98 0 CODE 0 text29 dist/default/debug/robot_arm_nrf.debug.o
+__ptext30 117D8 0 CODE 0 text30 dist/default/debug/robot_arm_nrf.debug.o
+__ptext31 118E2 0 CODE 0 text31 dist/default/debug/robot_arm_nrf.debug.o
+__ptext32 11A18 0 CODE 0 text32 dist/default/debug/robot_arm_nrf.debug.o
+__ptext33 1167E 0 CODE 0 text33 dist/default/debug/robot_arm_nrf.debug.o
+__ptext34 117FC 0 CODE 0 text34 dist/default/debug/robot_arm_nrf.debug.o
+__ptext35 1170A 0 CODE 0 text35 dist/default/debug/robot_arm_nrf.debug.o
+__ptext36 110F8 0 CODE 0 text36 dist/default/debug/robot_arm_nrf.debug.o
+__ptext37 116AE 0 CODE 0 text37 dist/default/debug/robot_arm_nrf.debug.o
+__ptext38 115B2 0 CODE 0 text38 dist/default/debug/robot_arm_nrf.debug.o
+__ptext39 118B2 0 CODE 0 text39 dist/default/debug/robot_arm_nrf.debug.o
+__ptext40 11736 0 CODE 0 text40 dist/default/debug/robot_arm_nrf.debug.o
+__ptext41 11898 0 CODE 0 text41 dist/default/debug/robot_arm_nrf.debug.o
+__ptext42 11A9A 0 CODE 0 text42 dist/default/debug/robot_arm_nrf.debug.o
+__ptext43 11A9E 0 CODE 0 text43 dist/default/debug/robot_arm_nrf.debug.o
+__ptext44 1181E 0 CODE 0 text44 dist/default/debug/robot_arm_nrf.debug.o
+__ptext45 11086 0 CODE 0 text45 dist/default/debug/robot_arm_nrf.debug.o
+__ptext46 1187C 0 CODE 0 text46 dist/default/debug/robot_arm_nrf.debug.o
+__ptext47 11946 0 CODE 0 text47 dist/default/debug/robot_arm_nrf.debug.o
+__ptext48 11A74 0 CODE 0 text48 dist/default/debug/robot_arm_nrf.debug.o
+__ptext49 11A7A 0 CODE 0 text49 dist/default/debug/robot_arm_nrf.debug.o
+__ptext50 11A80 0 CODE 0 text50 dist/default/debug/robot_arm_nrf.debug.o
+__ptext51 117B2 0 CODE 0 text51 dist/default/debug/robot_arm_nrf.debug.o
+__ptext52 11762 0 CODE 0 text52 dist/default/debug/robot_arm_nrf.debug.o
+__ptext53 11954 0 CODE 0 text53 dist/default/debug/robot_arm_nrf.debug.o
+__ptext54 115E6 0 CODE 0 text54 dist/default/debug/robot_arm_nrf.debug.o
+__ptext55 118CA 0 CODE 0 text55 dist/default/debug/robot_arm_nrf.debug.o
+__ptext56 11166 0 CODE 0 text56 dist/default/debug/robot_arm_nrf.debug.o
+__ptext57 11962 0 CODE 0 text57 dist/default/debug/robot_arm_nrf.debug.o
+__ptext58 11970 0 CODE 0 text58 dist/default/debug/robot_arm_nrf.debug.o
+__ptext59 1197E 0 CODE 0 text59 dist/default/debug/robot_arm_nrf.debug.o
+__ptext60 111CE 0 CODE 0 text60 dist/default/debug/robot_arm_nrf.debug.o
+__ptext61 1198C 0 CODE 0 text61 dist/default/debug/robot_arm_nrf.debug.o
+__ptext62 1199A 0 CODE 0 text62 dist/default/debug/robot_arm_nrf.debug.o
+__ptext63 119A8 0 CODE 0 text63 dist/default/debug/robot_arm_nrf.debug.o
+__ptext64 11236 0 CODE 0 text64 dist/default/debug/robot_arm_nrf.debug.o
+__ptext65 119B6 0 CODE 0 text65 dist/default/debug/robot_arm_nrf.debug.o
+__ptext66 119C4 0 CODE 0 text66 dist/default/debug/robot_arm_nrf.debug.o
+__ptext67 119D2 0 CODE 0 text67 dist/default/debug/robot_arm_nrf.debug.o
+__ptext68 10BF6 0 CODE 0 text68 dist/default/debug/robot_arm_nrf.debug.o
+__ptext69 119E0 0 CODE 0 text69 dist/default/debug/robot_arm_nrf.debug.o
+__ptext70 114C6 0 CODE 0 text70 dist/default/debug/robot_arm_nrf.debug.o
+__ptext71 119EE 0 CODE 0 text71 dist/default/debug/robot_arm_nrf.debug.o
+__ptext72 119FC 0 CODE 0 text72 dist/default/debug/robot_arm_nrf.debug.o
+__ptext73 11A0A 0 CODE 0 text73 dist/default/debug/robot_arm_nrf.debug.o
+__ptext74 11922 0 CODE 0 text74 dist/default/debug/robot_arm_nrf.debug.o
+__ptext75 10F1A 0 CODE 0 text75 dist/default/debug/robot_arm_nrf.debug.o
+__ptext76 11840 0 CODE 0 text76 dist/default/debug/robot_arm_nrf.debug.o
+__ptext77 11AAA 0 CODE 0 text77 dist/default/debug/robot_arm_nrf.debug.o
+__ptext78 104A4 0 CODE 0 text78 dist/default/debug/robot_arm_nrf.debug.o
+__ptext79 11A30 0 CODE 0 text79 dist/default/debug/robot_arm_nrf.debug.o
+__ptext80 11A3A 0 CODE 0 text80 dist/default/debug/robot_arm_nrf.debug.o
+__ptext81 11AA2 0 CODE 0 text81 dist/default/debug/robot_arm_nrf.debug.o
+__ptext82 11A44 0 CODE 0 text82 dist/default/debug/robot_arm_nrf.debug.o
+__ptext83 11A4E 0 CODE 0 text83 dist/default/debug/robot_arm_nrf.debug.o
+__ptext84 11AA6 0 CODE 0 text84 dist/default/debug/robot_arm_nrf.debug.o
+__ptext85 11506 0 CODE 0 text85 dist/default/debug/robot_arm_nrf.debug.o
+__ptext86 11AAC 0 CODE 0 text86 dist/default/debug/robot_arm_nrf.debug.o
+__ptext87 11A24 0 CODE 0 text87 dist/default/debug/robot_arm_nrf.debug.o
+__ptext88 11A86 0 CODE 0 text88 dist/default/debug/robot_arm_nrf.debug.o
+__ptext89 118F8 0 CODE 0 text89 dist/default/debug/robot_arm_nrf.debug.o
+__ptext90 1157C 0 CODE 0 text90 dist/default/debug/robot_arm_nrf.debug.o
+__ptext91 11AAE 0 CODE 0 text91 dist/default/debug/robot_arm_nrf.debug.o
+__ptext92 11A8C 0 CODE 0 text92 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM1_16BIT_Slice1Output1_SetInterruptHandler 119D2 0 CODE 0 text66 dist/default/debug/robot_arm_nrf.debug.o
+_IOCCFbits 417 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__end_of_get_adjusted_servo_angles 1096E 0 CODE 0 text14 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PIN_MANAGER_Initialize 10CB8 0 CODE 0 text68 dist/default/debug/robot_arm_nrf.debug.o
+_get_grid_servo_angles 113EC 0 CODE 0 text11 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_TMR0_Initialize 1161A 0 CODE 0 text54 dist/default/debug/robot_arm_nrf.debug.o
+_TMR0_OverflowCallbackRegister 11946 0 CODE 0 text47 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank10 0 0 ABS 0 bank10 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank11 0 0 ABS 0 bank11 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank12 0 0 ABS 0 bank12 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank13 0 0 ABS 0 bank13 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank14 0 0 ABS 0 bank14 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank15 0 0 ABS 0 bank15 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank16 0 0 ABS 0 bank16 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank17 0 0 ABS 0 bank17 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank18 0 0 ABS 0 bank18 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank19 0 0 ABS 0 bank19 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank20 0 0 ABS 0 bank20 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank21 0 0 ABS 0 bank21 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank22 0 0 ABS 0 bank22 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank23 0 0 ABS 0 bank23 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank24 0 0 ABS 0 bank24 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank25 0 0 ABS 0 bank25 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank26 0 0 ABS 0 bank26 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank27 0 0 ABS 0 bank27 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank28 0 0 ABS 0 bank28 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank29 0 0 ABS 0 bank29 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank30 0 0 ABS 0 bank30 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank31 0 0 ABS 0 bank31 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank32 0 0 ABS 0 bank32 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank33 0 0 ABS 0 bank33 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank34 0 0 ABS 0 bank34 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank35 0 0 ABS 0 bank35 dist/default/debug/robot_arm_nrf.debug.o
+__Lbank36 0 0 ABS 0 bank36 dist/default/debug/robot_arm_nrf.debug.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/debug/robot_arm_nrf.debug.o
+__Lbigram 0 0 ABS 0 bigram dist/default/debug/robot_arm_nrf.debug.o
+__Lbigsfr 0 0 ABS 0 bigsfr dist/default/debug/robot_arm_nrf.debug.o
+arm_fsm_update@angles 56C 0 BANK5 1 cstackBANK5 dist/default/debug/robot_arm_nrf.debug.o
+SPI1_ByteExchange@byteData 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_INT2_InterruptHandler 5DE 0 BANK5 1 nvBANK5 dist/default/debug/robot_arm_nrf.debug.o
+_next_state 5D6 0 BANK5 1 bssBANK5 dist/default/debug/robot_arm_nrf.debug.o
+_PWM2CONbits 478 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__end_of_arm_fsm_update 104A4 0 CODE 0 text5 dist/default/debug/robot_arm_nrf.debug.o
+__Lcomram 0 0 ABS 0 comram dist/default/debug/robot_arm_nrf.debug.o
+__Lconfig 0 0 CONFIG 4 config dist/default/debug/robot_arm_nrf.debug.o
+__end_of_Nrf24_configRegister 118CA 0 CODE 0 text39 dist/default/debug/robot_arm_nrf.debug.o
+_PWM2_16BIT_Slice1Output1_InterruptHandler 541 0 COMRAM 1 nvCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_PWM3_16BIT_Enable 11A9A 0 CODE 0 text42 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_TMR0_ISR 11544 0 CODE 0 text85 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_TMR2_ISR 11860 0 CODE 0 text76 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_move_servo_to_int 112F6 0 CODE 0 text9 dist/default/debug/robot_arm_nrf.debug.o
+_SPI1_ByteExchange 11736 0 CODE 0 text40 dist/default/debug/robot_arm_nrf.debug.o
+_LATCbits 4C0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+PWM2_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_DELAY_microseconds 1139C 0 CODE 0 text24 dist/default/debug/robot_arm_nrf.debug.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/debug/robot_arm_nrf.debug.o
+__end_of_arm_fsm_init 11840 0 CODE 0 text44 dist/default/debug/robot_arm_nrf.debug.o
+_initServo 11086 0 CODE 0 text45 dist/default/debug/robot_arm_nrf.debug.o
+_servos 52B 0 COMRAM 1 bssCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+___inthi_stack_hi 0 0 STACK 2 stack /tmp/xcXjHeNCO/driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack /tmp/xcXjHeNCO/driver_tmp_9.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/debug/robot_arm_nrf.debug.o
+isa$std 1 0 ABS 0 - /tmp/xcXjHeNCO/driver_tmp_9.o
+__end_of_CLOCK_Initialize 11936 0 CODE 0 text74 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_SPI1_Host FDD9 0 MEDIUMCONST 0 mediumconst dist/default/debug/robot_arm_nrf.debug.o
+__end_of_SPI1_Open 10B2E 0 CODE 0 text26 dist/default/debug/robot_arm_nrf.debug.o
+_getAngle 11860 0 CODE 0 text15 dist/default/debug/robot_arm_nrf.debug.o
+stackhi 0 0 ABS 0 - /tmp/xcXjHeNCO/driver_tmp_9.o
+stacklo 0 0 ABS 0 - /tmp/xcXjHeNCO/driver_tmp_9.o
+__end_of_get_docking_servo_angles 11922 0 CODE 0 text12 dist/default/debug/robot_arm_nrf.debug.o
+_arm_fsm_update$2554 59E 0 BANK5 1 cstackBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM2_16BIT_Slice1Output1_SetInterruptHandler 119A8 0 CODE 0 text62 dist/default/debug/robot_arm_nrf.debug.o
+_OSCCON1 AD 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_OSCCON3 AF 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_OSCTUNE B0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Lirdata 0 0 CODE 0 irdata dist/default/debug/robot_arm_nrf.debug.o
+__Livt0x8 8 0 CODE 0 ivt0x8 dist/default/debug/robot_arm_nrf.debug.o
+_INT1_InterruptHandler 5E1 0 BANK5 1 nvBANK5 dist/default/debug/robot_arm_nrf.debug.o
+_PWM2_16BIT_LoadBufferRegisters 11AA6 0 CODE 0 text84 dist/default/debug/robot_arm_nrf.debug.o
+_PWM3GIEbits 486 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3GIRbits 485 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_INT1_DefaultInterruptHandler 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Lspace_0 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Lspace_1 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Lspace_2 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Lspace_4 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__end_of_getAngle 1187C 0 CODE 0 text15 dist/default/debug/robot_arm_nrf.debug.o
+PWM3_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__pbssCOMRAM 52B 0 COMRAM 1 bssCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_PWM1CONbits 469 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_nRF24_IRQ_SetInterruptHandler 119E0 0 CODE 0 text69 dist/default/debug/robot_arm_nrf.debug.o
+__HcstackBANK5 0 0 ABS 0 cstackBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__HcstackBANK6 0 0 ABS 0 cstackBANK6 dist/default/debug/robot_arm_nrf.debug.o
+arm_set_target@x 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+arm_set_target@y 510 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_SPI1_ByteWrite 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PIR0bits 4AE 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PIR1bits 4AF 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PIR3bits 4B1 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PIR4bits 4B2 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PIR5bits 4B3 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PIR6bits 4B4 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PIR7bits 4B5 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_SPI1TCNTH 83 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_SPI1TCNTL 82 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_get_dependent_servo_angle$2583 517 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+end_of_initialization 10F14 0 CODE 0 cinit dist/default/debug/robot_arm_nrf.debug.o
+_nRF24_IRQ_DefaultInterruptHandler 11AAE 0 CODE 0 text91 dist/default/debug/robot_arm_nrf.debug.o
+_SPI1_Host FDAF 0 MEDIUMCONST 0 mediumconst dist/default/debug/robot_arm_nrf.debug.o
+_SPI1_Open 10A64 0 CODE 0 text26 dist/default/debug/robot_arm_nrf.debug.o
+_calculateAngle 1187C 0 CODE 0 text46 dist/default/debug/robot_arm_nrf.debug.o
+_TMR0_Initialize 115E6 0 CODE 0 text54 dist/default/debug/robot_arm_nrf.debug.o
+_DELAY_microseconds 1134A 0 CODE 0 text24 dist/default/debug/robot_arm_nrf.debug.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/debug/robot_arm_nrf.debug.o
+get_dependent_servo_angle@x 519 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+get_dependent_servo_angle@y 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+arm_set_target@boat_id 513 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+SPI_read_buff@i 514 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/debug/robot_arm_nrf.debug.o
+_Nrf24_SetSpeedDataRates 110F8 0 CODE 0 text36 dist/default/debug/robot_arm_nrf.debug.o
+_PWM1_16BIT_Period_SetInterruptHandler 119D2 0 CODE 0 text67 dist/default/debug/robot_arm_nrf.debug.o
+__HbssBANK5 0 0 ABS 0 bssBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__HbssBANK6 0 0 ABS 0 bssBANK6 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_Nrf24_writeRegister 1164C 0 CODE 0 text22 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM3_16BIT_Slice1Output1_SetInterruptHandler 1197E 0 CODE 0 text58 dist/default/debug/robot_arm_nrf.debug.o
+_INT0_InterruptHandler 5E4 0 BANK5 1 nvBANK5 dist/default/debug/robot_arm_nrf.debug.o
+_INT1_SetInterruptHandler 119FC 0 CODE 0 text72 dist/default/debug/robot_arm_nrf.debug.o
+__Lramtop 2600 0 RAM 0 ramtop dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_configRegister@value 511 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_Nrf24_SetSpeedDataRates 11166 0 CODE 0 text36 dist/default/debug/robot_arm_nrf.debug.o
+_target_orientation 5D1 0 BANK5 1 bssBANK5 dist/default/debug/robot_arm_nrf.debug.o
+_PWM3_16BIT_LoadBufferRegisters 11AA2 0 CODE 0 text81 dist/default/debug/robot_arm_nrf.debug.o
+_Nrf24_setRADDR 10D64 0 CODE 0 text21 dist/default/debug/robot_arm_nrf.debug.o
+_Nrf24_setTADDR 10CB8 0 CODE 0 text20 dist/default/debug/robot_arm_nrf.debug.o
+?_get_grid_servo_angles 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_getStatus@rv 51B 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_TMR0_Start 11A62 0 CODE 0 text7 dist/default/debug/robot_arm_nrf.debug.o
+AdvancedSettings@dev 51D 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__pcinit 10E90 0 CODE 0 cinit dist/default/debug/robot_arm_nrf.debug.o
+_PWM1_16BIT_Slice1Output1_DefaultInterruptHandler 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__end_ofi2_TMR0_Stop 11A8C 0 CODE 0 text88 dist/default/debug/robot_arm_nrf.debug.o
+_PWM2GIEbits 477 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__ptext0 112F6 0 CODE 0 text0 dist/default/debug/robot_arm_nrf.debug.o
+__ptext1 106EE 0 CODE 0 text1 dist/default/debug/robot_arm_nrf.debug.o
+__ptext2 1096E 0 CODE 0 text2 dist/default/debug/robot_arm_nrf.debug.o
+__ptext3 1139C 0 CODE 0 text3 dist/default/debug/robot_arm_nrf.debug.o
+__ptext4 11438 0 CODE 0 text4 dist/default/debug/robot_arm_nrf.debug.o
+__ptext5 10000 0 CODE 0 text5 dist/default/debug/robot_arm_nrf.debug.o
+__ptext6 11936 0 CODE 0 text6 dist/default/debug/robot_arm_nrf.debug.o
+__ptext7 11A62 0 CODE 0 text7 dist/default/debug/robot_arm_nrf.debug.o
+__ptext8 10DFE 0 CODE 0 text8 dist/default/debug/robot_arm_nrf.debug.o
+__ptext9 1129E 0 CODE 0 text9 dist/default/debug/robot_arm_nrf.debug.o
+get_dependent_servo_angle@is_vertical 510 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_PWM2GIRbits 476 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_setTADDR@buffer 520 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/debug/robot_arm_nrf.debug.o
+_SPI_read_buff 115B2 0 CODE 0 text38 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext10 0 0 ABS 0 text10 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext11 0 0 ABS 0 text11 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext12 0 0 ABS 0 text12 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext13 0 0 ABS 0 text13 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext14 0 0 ABS 0 text14 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext15 0 0 ABS 0 text15 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext16 0 0 ABS 0 text16 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext17 0 0 ABS 0 text17 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext18 0 0 ABS 0 text18 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext19 0 0 ABS 0 text19 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext20 0 0 ABS 0 text20 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext21 0 0 ABS 0 text21 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext22 0 0 ABS 0 text22 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext23 0 0 ABS 0 text23 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext24 0 0 ABS 0 text24 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext25 0 0 ABS 0 text25 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext26 0 0 ABS 0 text26 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext27 0 0 ABS 0 text27 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext28 0 0 ABS 0 text28 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext29 0 0 ABS 0 text29 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext30 0 0 ABS 0 text30 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext31 0 0 ABS 0 text31 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext32 0 0 ABS 0 text32 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext33 0 0 ABS 0 text33 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext34 0 0 ABS 0 text34 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext35 0 0 ABS 0 text35 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext36 0 0 ABS 0 text36 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext37 0 0 ABS 0 text37 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext38 0 0 ABS 0 text38 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext39 0 0 ABS 0 text39 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext40 0 0 ABS 0 text40 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext41 0 0 ABS 0 text41 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext42 0 0 ABS 0 text42 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext43 0 0 ABS 0 text43 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext44 0 0 ABS 0 text44 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext45 0 0 ABS 0 text45 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext46 0 0 ABS 0 text46 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext47 0 0 ABS 0 text47 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext48 0 0 ABS 0 text48 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext49 0 0 ABS 0 text49 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext50 0 0 ABS 0 text50 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext51 0 0 ABS 0 text51 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext52 0 0 ABS 0 text52 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext53 0 0 ABS 0 text53 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext54 0 0 ABS 0 text54 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext55 0 0 ABS 0 text55 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext56 0 0 ABS 0 text56 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext57 0 0 ABS 0 text57 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext58 0 0 ABS 0 text58 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext59 0 0 ABS 0 text59 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext60 0 0 ABS 0 text60 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext61 0 0 ABS 0 text61 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext62 0 0 ABS 0 text62 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext63 0 0 ABS 0 text63 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext64 0 0 ABS 0 text64 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext65 0 0 ABS 0 text65 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext66 0 0 ABS 0 text66 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext67 0 0 ABS 0 text67 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext68 0 0 ABS 0 text68 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext69 0 0 ABS 0 text69 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext70 0 0 ABS 0 text70 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext71 0 0 ABS 0 text71 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext72 0 0 ABS 0 text72 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext73 0 0 ABS 0 text73 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext74 0 0 ABS 0 text74 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext75 0 0 ABS 0 text75 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext76 0 0 ABS 0 text76 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext77 0 0 ABS 0 text77 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext78 0 0 ABS 0 text78 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext79 0 0 ABS 0 text79 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext80 0 0 ABS 0 text80 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext81 0 0 ABS 0 text81 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext82 0 0 ABS 0 text82 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext83 0 0 ABS 0 text83 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext84 0 0 ABS 0 text84 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext85 0 0 ABS 0 text85 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext86 0 0 ABS 0 text86 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext87 0 0 ABS 0 text87 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext88 0 0 ABS 0 text88 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext89 0 0 ABS 0 text89 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext90 0 0 ABS 0 text90 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext91 0 0 ABS 0 text91 dist/default/debug/robot_arm_nrf.debug.o
+__Ltext92 0 0 ABS 0 text92 dist/default/debug/robot_arm_nrf.debug.o
+__ramtop 2600 0 RAM 0 ramtop /tmp/xcXjHeNCO/driver_tmp_9.o
+_arm_set_target 11438 0 CODE 0 text4 dist/default/debug/robot_arm_nrf.debug.o
+__Lpowerup 0 0 CODE 0 powerup dist/default/debug/robot_arm_nrf.debug.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug/robot_arm_nrf.debug.o
+__H__absolute__ 0 0 ABS 0 __absolute__ dist/default/debug/robot_arm_nrf.debug.o
+_PWM3_16BIT_Slice1Output2_DefaultInterruptHandler 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_setRADDR@i 527 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_isrTim0 104A4 0 CODE 0 text78 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_Nrf24_getStatus 118F8 0 CODE 0 text31 dist/default/debug/robot_arm_nrf.debug.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/debug/robot_arm_nrf.debug.o
+INT0_SetInterruptHandler@InterruptHandler 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_docking_positions FEBE 0 MEDIUMCONST 0 mediumconst dist/default/debug/robot_arm_nrf.debug.o
+_move_servo_to_int 1129E 0 CODE 0 text9 dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_flushRx@dev 511 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM2_16BIT_Period_SetInterruptHandler 119B6 0 CODE 0 text63 dist/default/debug/robot_arm_nrf.debug.o
+PWM2_16BIT_SetSlice1Output2DutyCycleRegister@registerValue 501 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_SLRCONA 403 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_SLRCONB 40B 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_SLRCONC 413 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_SLRCOND 41B 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_SLRCONE 423 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_SLRCONF 42B 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+___heap_hi 0 0 ABS 0 - /tmp/xcXjHeNCO/driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - /tmp/xcXjHeNCO/driver_tmp_9.o
+___param_bank 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+___intlo_stack_hi 0 0 STACK 2 stack /tmp/xcXjHeNCO/driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack /tmp/xcXjHeNCO/driver_tmp_9.o
+_parse_robot_message 1096E 0 CODE 0 text2 dist/default/debug/robot_arm_nrf.debug.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/debug/robot_arm_nrf.debug.o
+__end_of__initialization 10F14 0 CODE 0 cinit dist/default/debug/robot_arm_nrf.debug.o
+SPI_write_buff@buffer 511 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/debug/robot_arm_nrf.debug.o
+__end_of_calculateAngle 11898 0 CODE 0 text46 dist/default/debug/robot_arm_nrf.debug.o
+PWM1_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM3_16BIT_Initialize 111CE 0 CODE 0 text56 dist/default/debug/robot_arm_nrf.debug.o
+_PWM1GIEbits 468 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__pidataBANK5 11A58 0 CODE 0 idataBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__pidataBANK6 11544 0 CODE 0 idataBANK6 dist/default/debug/robot_arm_nrf.debug.o
+_target_boat 5D4 0 BANK5 1 bssBANK5 dist/default/debug/robot_arm_nrf.debug.o
+_PWM1GIRbits 467 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/debug/robot_arm_nrf.debug.o
+__end_of_INT0_SetInterruptHandler 11A18 0 CODE 0 text73 dist/default/debug/robot_arm_nrf.debug.o
+_SPI1CLK 8C 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_SPI1RXB 80 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_SPI1TXB 81 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_rf24_pa_dbm 600 0 BANK6 1 dataBANK6 dist/default/debug/robot_arm_nrf.debug.o
+move_servo_to_angles@i 518 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_TMR2_DefaultOverflowCallback 11AAC 0 CODE 0 text77 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_Nrf24_dataReady 117B2 0 CODE 0 text28 dist/default/debug/robot_arm_nrf.debug.o
+?_calculateAngle 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_PWM1CPRE 465 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM2CPRE 474 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM3CPRE 483 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__pcstackCOMRAM 501 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_Nrf24_setRADDR 10DFE 0 CODE 0 text21 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_Nrf24_setTADDR 10D64 0 CODE 0 text20 dist/default/debug/robot_arm_nrf.debug.o
+_get_dependent_servo_angle 10B2E 0 CODE 0 text13 dist/default/debug/robot_arm_nrf.debug.o
+_T0CON0bits 31A 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__pmediumconst FDAE 0 MEDIUMCONST 0 mediumconst dist/default/debug/robot_arm_nrf.debug.o
+_PWM3_16BIT_Initialize 11166 0 CODE 0 text56 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_TMR0_Start 11A68 0 CODE 0 text7 dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_config@payload 51F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_TMR0_DefaultCallback 11AAE 0 CODE 0 text86 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_main 1134A 0 CODE 0 text0 dist/default/debug/robot_arm_nrf.debug.o
+_SPI1_IsTxReady 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_PWM1_16BIT_Period_DefaultInterruptHandler 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__end_of_arm_set_target 11482 0 CODE 0 text4 dist/default/debug/robot_arm_nrf.debug.o
+_delay_done 5FE 0 BANK5 1 dataBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_grid_angles FE90 0 MEDIUMCONST 0 mediumconst dist/default/debug/robot_arm_nrf.debug.o
+?_Nrf24_setRADDR 519 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+?_Nrf24_setTADDR 519 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_delay 11A30 0 CODE 0 text87 dist/default/debug/robot_arm_nrf.debug.o
+_IOCAF 407 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_IOCAN 406 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_IOCAP 405 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_IOCBF 40F 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_IOCBN 40E 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_IOCBP 40D 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_IOCCF 417 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_IOCCN 416 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_IOCCP 415 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_IOCEF 427 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_IOCEN 426 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_IOCEP 425 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_OSCEN B3 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_T2CON 324 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_T2HLT 325 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_T2RST 327 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_T2TMR 322 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_TMR0H 319 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_TMR0L 318 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_TRISA 4C6 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_TRISB 4C7 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_TRISC 4C8 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_TRISD 4C9 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_TRISE 4CA 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_TRISF 4CB 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_disableMagnet 11A6E 0 CODE 0 text18 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_slave 10848 0 CODE 0 text1 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM2_16BIT_Initialize 11236 0 CODE 0 text60 dist/default/debug/robot_arm_nrf.debug.o
+__HRAM 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Hbss 0 0 RAM 1 bss dist/default/debug/robot_arm_nrf.debug.o
+__Hram 0 0 ABS 0 ram dist/default/debug/robot_arm_nrf.debug.o
+__Hsfr 0 0 ABS 0 sfr dist/default/debug/robot_arm_nrf.debug.o
+__LRAM 1 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__Lbss 0 0 RAM 1 bss dist/default/debug/robot_arm_nrf.debug.o
+__Lram 0 0 ABS 0 ram dist/default/debug/robot_arm_nrf.debug.o
+__Lsfr 0 0 ABS 0 sfr dist/default/debug/robot_arm_nrf.debug.o
+_delay 11A24 0 CODE 0 text87 dist/default/debug/robot_arm_nrf.debug.o
+_nrf_flag 53D 0 COMRAM 1 bssCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM1_16BIT_Slice1Output2_SetInterruptHandler 119C4 0 CODE 0 text65 dist/default/debug/robot_arm_nrf.debug.o
+_Nrf24_getStatus 118E2 0 CODE 0 text31 dist/default/debug/robot_arm_nrf.debug.o
+_move_servo_to_angles 11014 0 CODE 0 text10 dist/default/debug/robot_arm_nrf.debug.o
+isrTim0@i 50B 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_slave 106EE 0 CODE 0 text1 dist/default/debug/robot_arm_nrf.debug.o
+get_adjusted_servo_angles@is_vertical 510 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_readRegister@value 515 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+?_getAngle 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_getData@data 517 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_PWM1_16BIT_Slice1Output2_InterruptHandler 547 0 COMRAM 1 nvCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+parse_robot_message@raw_data 51A 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_nrf_irq 11A92 0 CODE 0 text92 dist/default/debug/robot_arm_nrf.debug.o
+_TMR2_OverflowCallback 5D8 0 BANK5 1 nvBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__HdataBANK5 0 0 ABS 0 dataBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__HdataBANK6 0 0 ABS 0 dataBANK6 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_nRF24_IRQ_DefaultInterruptHandler 11AB0 0 CODE 0 text91 dist/default/debug/robot_arm_nrf.debug.o
+_PWM1_16BIT_Slice1Output1_SetInterruptHandler 119C4 0 CODE 0 text66 dist/default/debug/robot_arm_nrf.debug.o
+_TMR2_PeriodCountSet 0 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+__initialization 10E90 0 CODE 0 cinit dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_config@dev 51C 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+arm_fsm_update@middle2_angles_2556 58E 0 BANK5 1 cstackBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__pbssBANK5 59F 0 BANK5 1 bssBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__pbssBANK6 638 0 BANK6 1 bssBANK6 dist/default/debug/robot_arm_nrf.debug.o
+__pdataCOMRAM 54D 0 COMRAM 1 dataCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+Nrf24_dataReady@status 51E 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_T2CONbits 324 0 ABS 0 - dist/default/debug/robot_arm_nrf.debug.o
+_Nrf24_flushRx 11A18 0 CODE 0 text32 dist/default/debug/robot_arm_nrf.debug.o
+DELAY_microseconds@microseconds 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/debug/robot_arm_nrf.debug.o
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug/robot_arm_nrf.debug.o
+_PWM2_16BIT_Initialize 111CE 0 CODE 0 text60 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_TMR0_OverflowCallbackRegister 11954 0 CODE 0 text47 dist/default/debug/robot_arm_nrf.debug.o
+_PWM2_16BIT_Period_SetInterruptHandler 119A8 0 CODE 0 text63 dist/default/debug/robot_arm_nrf.debug.o
+TMR0_OverflowCallbackRegister@callbackHandler 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/debug/robot_arm_nrf.debug.o
+_process_fsm 5D0 0 BANK5 1 bssBANK5 dist/default/debug/robot_arm_nrf.debug.o
+_TMR2_OverflowCallbackRegister 11954 0 CODE 0 text53 dist/default/debug/robot_arm_nrf.debug.o
+TMR2_OverflowCallbackRegister@InterruptHandler 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+_get_adjusted_servo_angles 10848 0 CODE 0 text14 dist/default/debug/robot_arm_nrf.debug.o
+_Nrf24_dataReady 1178C 0 CODE 0 text28 dist/default/debug/robot_arm_nrf.debug.o
+_AdvancedSettings 117FC 0 CODE 0 text34 dist/default/debug/robot_arm_nrf.debug.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug/robot_arm_nrf.debug.o
+get_grid_servo_angles@x 516 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+get_grid_servo_angles@y 50F 0 COMRAM 1 cstackCOMRAM dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM1_16BIT_Enable 11A96 0 CODE 0 text17 dist/default/debug/robot_arm_nrf.debug.o
+_arm_mode 5D5 0 BANK5 1 bssBANK5 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_PWM1_16BIT_Initialize 1129E 0 CODE 0 text64 dist/default/debug/robot_arm_nrf.debug.o
+__end_of_TMR2_Initialize 1178C 0 CODE 0 text52 dist/default/debug/robot_arm_nrf.debug.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+ivt0x8 0 8 8 16 1
+text5 0 10000 10000 1A61 1
+text7 0 11A62 11A62 4F 1
+cstackCOMRAM 1 501 501 4D 1
+cstackBANK5 1 560 560 9F 1
+reset_vec 0 0 0 4 1
+dataBANK6 1 600 600 6A 1
+mediumconst 0 FDAE FDAE 252 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

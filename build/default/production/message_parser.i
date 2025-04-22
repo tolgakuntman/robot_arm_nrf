@@ -4,25 +4,25 @@
 # 288 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "/Applications/microchip/xc8/v2.50/pic/include/language_support.h" 1 3
+# 1 "/opt/microchip/xc8/v2.50/pic/include/language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "message_parser.c" 2
 # 1 "./message_parser.h" 1
 
 
-# 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 1 3
+# 1 "/opt/microchip/xc8/v2.50/pic/include/c99/stdint.h" 1 3
 
 
 
-# 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/musl_xc8.h" 1 3
-# 5 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 2 3
-# 26 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 3
-# 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 1 3
-# 133 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+# 1 "/opt/microchip/xc8/v2.50/pic/include/c99/musl_xc8.h" 1 3
+# 5 "/opt/microchip/xc8/v2.50/pic/include/c99/stdint.h" 2 3
+# 26 "/opt/microchip/xc8/v2.50/pic/include/c99/stdint.h" 3
+# 1 "/opt/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 1 3
+# 133 "/opt/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
 typedef unsigned __int24 uintptr_t;
-# 148 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+# 148 "/opt/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
 typedef __int24 intptr_t;
-# 164 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+# 164 "/opt/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
 typedef signed char int8_t;
 
 
@@ -45,7 +45,7 @@ typedef long int32_t;
 
 
 typedef long long int64_t;
-# 194 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+# 194 "/opt/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
 typedef long long intmax_t;
 
 
@@ -74,9 +74,9 @@ typedef unsigned long uint32_t;
 
 
 typedef unsigned long long uint64_t;
-# 235 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+# 235 "/opt/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
 typedef unsigned long long uintmax_t;
-# 27 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 2 3
+# 27 "/opt/microchip/xc8/v2.50/pic/include/c99/stdint.h" 2 3
 
 typedef int8_t int_fast8_t;
 
@@ -108,15 +108,15 @@ typedef uint24_t uint_fast24_t;
 typedef uint32_t uint_least32_t;
 
 typedef uint64_t uint_least64_t;
-# 148 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 3
-# 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/stdint.h" 1 3
+# 148 "/opt/microchip/xc8/v2.50/pic/include/c99/stdint.h" 3
+# 1 "/opt/microchip/xc8/v2.50/pic/include/c99/bits/stdint.h" 1 3
 typedef int16_t int_fast16_t;
 typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
-# 149 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 2 3
+# 149 "/opt/microchip/xc8/v2.50/pic/include/c99/stdint.h" 2 3
 # 4 "./message_parser.h" 2
-# 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdbool.h" 1 3
+# 1 "/opt/microchip/xc8/v2.50/pic/include/c99/stdbool.h" 1 3
 # 5 "./message_parser.h" 2
 
 typedef struct {
@@ -125,21 +125,20 @@ typedef struct {
     uint8_t row;
     uint8_t col;
     uint8_t horizontal;
+    uint8_t place;
 } robot_command_t;
-
-_Bool parse_robot_message(const char *raw_data, robot_command_t *out);
 # 2 "message_parser.c" 2
-# 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/string.h" 1 3
-# 10 "/Applications/microchip/xc8/v2.50/pic/include/c99/string.h" 3
-# 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/features.h" 1 3
-# 11 "/Applications/microchip/xc8/v2.50/pic/include/c99/string.h" 2 3
-# 25 "/Applications/microchip/xc8/v2.50/pic/include/c99/string.h" 3
-# 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 1 3
-# 128 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+# 1 "/opt/microchip/xc8/v2.50/pic/include/c99/string.h" 1 3
+# 10 "/opt/microchip/xc8/v2.50/pic/include/c99/string.h" 3
+# 1 "/opt/microchip/xc8/v2.50/pic/include/c99/features.h" 1 3
+# 11 "/opt/microchip/xc8/v2.50/pic/include/c99/string.h" 2 3
+# 25 "/opt/microchip/xc8/v2.50/pic/include/c99/string.h" 3
+# 1 "/opt/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 1 3
+# 128 "/opt/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
 typedef unsigned size_t;
-# 421 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+# 421 "/opt/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
 typedef struct __locale_struct * locale_t;
-# 26 "/Applications/microchip/xc8/v2.50/pic/include/c99/string.h" 2 3
+# 26 "/opt/microchip/xc8/v2.50/pic/include/c99/string.h" 2 3
 
 void *memcpy (void *restrict, const void *restrict, size_t);
 void *memmove (void *, const void *, size_t);
@@ -204,6 +203,6 @@ _Bool parse_robot_message(const char *raw_data, robot_command_t *out) {
     out->row = (uint8_t)raw_data[9];
     out->col = (uint8_t)raw_data[10];
     out->horizontal = (raw_data[11] != 0);
-
+    out->place = (raw_data[12] != 0);
     return 1;
 }

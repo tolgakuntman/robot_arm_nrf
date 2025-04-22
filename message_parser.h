@@ -9,6 +9,7 @@ typedef struct {
     uint8_t row;
     uint8_t col;
     uint8_t horizontal;
+    uint8_t place;
 } robot_command_t;
 
-bool parse_robot_message(const char *raw_data, robot_command_t *out);
+//bool parse_robot_message(const char *raw_data, robot_command_t *out);

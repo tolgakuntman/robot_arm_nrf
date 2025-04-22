@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "6 ./message_parser.h
 [; ;./message_parser.h: 6: typedef struct {
-[s S1 `uc -> 8 `i `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S1 . message_type ship_id row col horizontal ]
-"27 /Applications/microchip/xc8/v2.50/pic/include/c99/string.h
-[; ;/Applications/microchip/xc8/v2.50/pic/include/c99/string.h: 27: void *memcpy (void *restrict, const void *restrict, size_t);
+[s S1 `uc -> 8 `i `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S1 . message_type ship_id row col horizontal place ]
+"27 /opt/microchip/xc8/v2.50/pic/include/c99/string.h
+[; ;/opt/microchip/xc8/v2.50/pic/include/c99/string.h: 27: void *memcpy (void *restrict, const void *restrict, size_t);
 [v _memcpy `(*v ~T0 @X0 0 ef3`*v`*Cv`ui ]
 "4 message_parser.c
 [; ;message_parser.c: 4: _Bool parse_robot_message(const char *raw_data, robot_command_t *out) {
@@ -35,6 +35,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14
 [; ;message_parser.c: 14:     out->horizontal = (raw_data[11] != 0);
 [e = . *U _out 4 -> -> != -> *U + _raw_data * -> -> 11 `i `x -> -> # *U _raw_data `i `x `i -> 0 `i `i `uc ]
+"15
+[; ;message_parser.c: 15:     out->place = (raw_data[12] != 0);
+[e = . *U _out 5 -> -> != -> *U + _raw_data * -> -> 12 `i `x -> -> # *U _raw_data `i `x `i -> 0 `i `i `uc ]
 "16
 [; ;message_parser.c: 16:     return 1;
 [e ) -> -> 1 `i `a ]

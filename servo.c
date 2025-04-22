@@ -43,27 +43,27 @@ uint16_t calculateAngle(uint8_t angleDeg) {
 
 void initServo() {
     //servos[0].id = 0; P6
-    servos[0].currAngle = calculateAngle(50); 
-    servos[0].nextAngle = calculateAngle(50); // Ensure target angle is different for movement
+    servos[0].currAngle = calculateAngle(43); 
+    servos[0].nextAngle = calculateAngle(43); // Ensure target angle is different for movement
     
     //servos[1].id = 1; P5
-    servos[1].currAngle = calculateAngle(90);
-    servos[1].nextAngle = calculateAngle(90); // Ensure target angle is different for movement
+    servos[1].currAngle = calculateAngle(45);
+    servos[1].nextAngle = calculateAngle(45); // Ensure target angle is different for movement
 
     //servos[2].id = 2; P8
     servos[2].currAngle = calculateAngle(25);
     servos[2].nextAngle = calculateAngle(25); // Ensure target angle is different for movement
 
     //servos[3].id = 3; P7
-    servos[3].currAngle = calculateAngle(40);
-    servos[3].nextAngle = calculateAngle(40); // Ensure target angle is different for movement
+    servos[3].currAngle = calculateAngle(45);
+    servos[3].nextAngle = calculateAngle(45); // Ensure target angle is different for movement
 }
 
 void enablePWM() {
-    PWM1_16BIT_Enable();
+    //PWM1_16BIT_Enable();
     PWM2_16BIT_Enable();
-    //PWM3_16BIT_Enable();
-    TMR0_OverflowCallbackRegister(isrTim0);
+    PWM3_16BIT_Enable();
+    TMR2_OverflowCallbackRegister(isrTim0);
 }
 
 void move_servo_to_angles(const uint8_t* angles) {
@@ -74,6 +74,15 @@ void move_servo_to_angles(const uint8_t* angles) {
     }
 }
 
+void move_servo_to_int(const uint16_t* intAngles) {
+    if (intAngles) {
+        for (uint8_t i = 0; i < NUM_SERVOS; i++) {
+            servos[i].nextAngle = intAngles[i];
+        }
+    }
+}
+
+
 bool servoMovement() {
     for (int i = 0; i < NUM_SERVOS; i++) {
         if (servos[i].currAngle != servos[i].nextAngle) {
@@ -81,4 +90,8 @@ bool servoMovement() {
         }
     }
     return false;
+}
+
+uint16_t getAngle(uint8_t i) {
+    return servos[i].nextAngle;
 }

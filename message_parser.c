@@ -12,6 +12,6 @@ bool parse_robot_message(const char *raw_data, robot_command_t *out) {
     out->row = (uint8_t)raw_data[9];
     out->col = (uint8_t)raw_data[10];
     out->horizontal = (raw_data[11] != 0);  // Treat non-zero as true
-
+    out->place = (raw_data[12] != 0);
     return true;
 }

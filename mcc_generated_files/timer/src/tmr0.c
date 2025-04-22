@@ -12,7 +12,7 @@
  * @version Package Version 5.0.0
 */
 /*
-© [2025] Microchip Technology Inc. and its subsidiaries.
+? [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -45,11 +45,11 @@ static void TMR0_DefaultCallback(void);
 
 void TMR0_Initialize(void)
 {
-    TMR0H = 0x85;                    // Period 1s; Frequency 31250 Hz; Count 34286
-    TMR0L = 0xEE;
+    TMR0H = 0xC2;                    // Period 1s; Frequency 15625 Hz; Count 49911
+    TMR0L = 0xF7;
     
     T0CON1 = (3 << _T0CON1_T0CS_POSN)   // T0CS HFINTOSC
-        | (11 << _T0CON1_T0CKPS_POSN)   // T0CKPS 1:2048
+        | (12 << _T0CON1_T0CKPS_POSN)   // T0CKPS 1:4096
         | (1 << _T0CON1_T0ASYNC_POSN);  // T0ASYNC not_synchronised
     
     tmr0PeriodCount = ((uint16_t)TMR0H << 8) | TMR0L;

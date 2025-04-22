@@ -43,41 +43,41 @@ void AdvancedSettings(NRF24_t * dev)
 
 #if CONFIG_SLAVE
 void slave(void *pvParameters){
-    NRF24_t dev;
-	Nrf24_init(&dev);
-	uint8_t payload = 32;
-	uint8_t channel = CONFIG_RADIO_CHANNEL;
-	Nrf24_config(&dev, channel, payload);
-    int ret = Nrf24_setRADDR(&dev, (uint8_t *)"2RECV");
-	while (ret != NRF_OK) {
-		ret = Nrf24_setRADDR(&dev, (uint8_t *)"2RECV");
-	}
-
-	// Set destination address using 5 characters
-	ret = Nrf24_setTADDR(&dev, (uint8_t *)"2RECV");
-	while (ret != NRF_OK) {
-		ret = Nrf24_setTADDR(&dev, (uint8_t *)"2RECV");
-	}
-#if CONFIG_ADVANCED
-	AdvancedSettings(&dev);
-#endif // CONFIG_ADVANCED
-    Nrf24_configRegister(NRF_STATUS, (1 << RX_DR) | (1 << TX_DS) | (1 << MAX_RT));
+//    NRF24_t dev;
+//	Nrf24_init(&dev);
+//	uint8_t payload = 32;
+//	uint8_t channel = CONFIG_RADIO_CHANNEL;
+//	Nrf24_config(&dev, channel, payload);
+//    int ret = Nrf24_setRADDR(&dev, (uint8_t *)"2RECV");
+//	while (ret != NRF_OK) {
+//		ret = Nrf24_setRADDR(&dev, (uint8_t *)"2RECV");
+//	}
+//
+//	// Set destination address using 5 characters
+//	ret = Nrf24_setTADDR(&dev, (uint8_t *)"2RECV");
+//	while (ret != NRF_OK) {
+//		ret = Nrf24_setTADDR(&dev, (uint8_t *)"2RECV");
+//	}
+//#if CONFIG_ADVANCED
+//	AdvancedSettings(&dev);
+//#endif // CONFIG_ADVANCED
+//    Nrf24_configRegister(NRF_STATUS, (1 << RX_DR) | (1 << TX_DS) | (1 << MAX_RT));
 
     //main loop
     while(1){
         arm_fsm_update();
-       if(nrf_flag){
-           if (Nrf24_dataReady(&dev)) {
-            Nrf24_getData(&dev, buf);
-            robot_command_t rob;
-            parse_robot_message(buf, &rob);
-            arm_set_target(rob.ship_id,rob.row,rob.col,rob.horizontal,PLACE);
-            
-            }
-            nrf_flag=false;
-		}
-
-		DELAY_milliseconds(1);
+//       if(nrf_flag){
+//           if (Nrf24_dataReady(&dev)) {
+//            Nrf24_getData(&dev, buf);
+//            robot_command_t rob;
+//            parse_robot_message(buf, &rob);
+//            arm_set_target(rob.ship_id,rob.row,rob.col,rob.horizontal,rob.place);
+//            
+//            }
+//            nrf_flag=false;
+//		}
+//
+//		DELAY_milliseconds(1);
         }
     }
 #endif
@@ -160,39 +160,53 @@ void sender(void *pvParameters)
 void nrf_irq(){
     nrf_flag=true;
 }
-uint8_t counter=0;
-void servo_steps(){
-    if(counter==0){
-        counter++;
-        servos[0].nextAngle = calculateAngle(100); //mid angle P6
-        servos[1].nextAngle = calculateAngle(90); //wrist P5
-        servos[2].nextAngle = calculateAngle(100); //bot rotate P8
-        servos[3].nextAngle = calculateAngle(80); //bot angle P7
-    }else if(counter==1){
-        counter++;
-        servos[0].nextAngle = calculateAngle(70); //mid angle
-        servos[1].nextAngle = calculateAngle(90); //wrist
-        servos[2].nextAngle = calculateAngle(120); //bot rotate
-        servos[3].nextAngle = calculateAngle(20);
-    }else{
-        counter=0;
-        servos[0].nextAngle = calculateAngle(45); //mid angle
-        servos[1].nextAngle = calculateAngle(0); //wrist
-        servos[2].nextAngle = calculateAngle(140); //bot rotate
-        servos[3].nextAngle = calculateAngle(10);
-    }
-}
+//uint8_t counter=0;
+//void servo_steps(){
+//    if(counter==0){
+//        counter++;
+//        servos[0].nextAngle = calculateAngle(100); //mid angle P6
+//        servos[1].nextAngle = calculateAngle(90); //wrist P5
+//        servos[2].nextAngle = calculateAngle(100); //bot rotate P8
+//        servos[3].nextAngle = calculateAngle(80); //bot angle P7
+//    }else if(counter==1){
+//        counter++;
+//        servos[0].nextAngle = calculateAngle(70); //mid angle
+//        servos[1].nextAngle = calculateAngle(90); //wrist
+//        servos[2].nextAngle = calculateAngle(120); //bot rotate
+//        servos[3].nextAngle = calculateAngle(20);
+//    }else{
+//        counter=0;
+//        servos[0].nextAngle = calculateAngle(45); //mid angle
+//        servos[1].nextAngle = calculateAngle(0); //wrist
+//        servos[2].nextAngle = calculateAngle(140); //bot rotate
+//        servos[3].nextAngle = calculateAngle(10);
+//    }
+//}
 void main(void)
 {
+    
+
+    // Disable the Global Interrupts 
+    //INTERRUPT_GlobalInterruptDisable(); 
+    //servo0->nextAngle = 9000;
+        
     SYSTEM_Initialize();
-    INTERRUPT_GlobalInterruptEnable();
     //TMR0_OverflowCallbackRegister(Buttoncheck);
-    TMR2_Start();
+    //TMR2_Start();
     nRF24_IRQ_SetInterruptHandler(nrf_irq);
+    INTERRUPT_GlobalInterruptEnable();
+
     TMR0_Stop();  
-        TMR2_Stop();  
+    TMR2_Stop();  
     enablePWM();
     PWM1_16BIT_Disable();
+    //initServo();
+    TMR2_Start();
+    arm_fsm_init();
+    arm_set_target(0,2,4,1,PLACE);
+    //enableMagnet();
+
+
 //    TMR0_OverflowCallbackRegister(servo_steps);
 //    initServo();
 //    TMR0_Start();

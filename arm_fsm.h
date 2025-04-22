@@ -15,12 +15,16 @@ typedef enum {
     IDLE,
     PICKUP,
     MAGNET_ON,
+    MOVE_UP_DOCK,
     MIDDLE1,
     MIDDLE2,
+    ROTATE_BOARD,
     BOAT_ROTATE,
     PLACEMENT,
     MAGNET_OFF,
+    WAIT,
     MIDDLE3,
+    ROTATE_DOCK,
     RETURN
 } ArmState;
 
@@ -33,6 +37,8 @@ void arm_fsm_init();
 void arm_fsm_update();
 void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, ArmMode mode);
 bool arm_is_busy();  // Check if FSM is still running
+void delay();
+void start_fsm_delay(ArmState next);
 
 #endif	/* ARM_FSM_H */
 
