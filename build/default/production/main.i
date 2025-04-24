@@ -30410,9 +30410,6 @@ typedef enum {
     PLACEMENT,
     MAGNET_OFF,
     WAIT,
-
-
-
     RETURN
 } ArmState;
 

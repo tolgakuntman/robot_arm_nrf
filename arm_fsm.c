@@ -9,7 +9,7 @@
 #include "servo.h"
 #include "boat_control.h"
 #include "grid_lookup.h"
-//#include "mcc_generated_files/timer/tmr0.h"
+#include "mcc_generated_files/timer/tmr2.h"
 
 
 static ArmState current_state, next_state, previous_state = IDLE;
@@ -61,10 +61,11 @@ void start_fsm_delay(){//ArmState next) {
 
 void arm_fsm_update() {
     if (!process_fsm || servoMovement()) return;  // Only process when needed
-
+    TMR2_PeriodCountSet(0xF);
     switch (current_state) {
         
         case ROTATE_DOCK: {
+            TMR2_PeriodCountSet(0x2);
             uint16_t moveup_angles[NUM_SERVOS] = {getAngle(0), getAngle(1), calculateAngle(get_docking_servo_angles(target_boat)[2]), getAngle(3)};
             move_servo_to_int(moveup_angles);
             switch(previous_state) {
@@ -131,6 +132,7 @@ void arm_fsm_update() {
         }
         
         case ROTATE_BOARD: {
+            TMR2_PeriodCountSet(0x2);
             uint16_t moveup_angles[NUM_SERVOS] = {getAngle(0), getAngle(1), calculateAngle(get_grid_servo_angles(target_x, target_y)[2]), getAngle(3)};
             move_servo_to_int(moveup_angles);
             next_state = BOAT_ROTATE;
@@ -138,6 +140,7 @@ void arm_fsm_update() {
         }
         
         case BOAT_ROTATE: {
+            TMR2_PeriodCountSet(0x7);
             uint16_t angles[NUM_SERVOS] = {getAngle(0), calculateAngle(get_dependent_servo_angle(target_x, target_y, target_orientation)), getAngle(2), getAngle(3)};
             move_servo_to_int(angles);
             next_state = MOVE_UP_BOARD;
@@ -186,6 +189,9 @@ void arm_fsm_update() {
                 case MAGNET_OFF: {
                     next_state = (arm_mode == PLACE) ? MOVE_UP_BOARD : MOVE_UP_DOCK;
                     break;
+                }
+                case STILL: {
+                    
                 }
             }
             break;

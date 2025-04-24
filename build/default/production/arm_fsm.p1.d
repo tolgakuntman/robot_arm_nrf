@@ -5,4 +5,6 @@ servo.h  \
 mcc_generated_files/timer/tmr0.h  \
 mcc_generated_files/timer/tmr0_deprecated.h  \
 boat_control.h  \
-grid_lookup.h 
+grid_lookup.h  \
+mcc_generated_files/timer/tmr2.h  \
+mcc_generated_files/timer/timer_interface.h 

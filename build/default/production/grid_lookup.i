@@ -186,7 +186,7 @@ const GridPosition grid_angles_up[5][5] = {
       { {50, 110, 102, 60}, 110, 110}, { {70, 110, 107, 70}, 110, 110},
       { {90, 173, 109, 90}, 110, 110} },
 };
-# 61 "grid_lookup.c"
+
 const uint8_t* get_grid_servo_angles(uint8_t x, uint8_t y) {
     if (x < 5 && y < 5) {
         return grid_angles[x][y].angles;

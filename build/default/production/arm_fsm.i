@@ -139,9 +139,6 @@ typedef enum {
     PLACEMENT,
     MAGNET_OFF,
     WAIT,
-
-
-
     RETURN
 } ArmState;
 
@@ -253,13 +250,9 @@ uint16_t getAngle(uint8_t i);
 typedef struct {
     uint8_t angles[4];
 } DockingPosition;
-# 28 "./boat_control.h"
+
 extern const DockingPosition docking_positions[4];
 extern const DockingPosition docking_up[4];
-
-
-
-
 
 const uint8_t* get_docking_servo_angles(uint8_t boat_id);
 const uint8_t* get_docking_servo_angles_up(uint8_t boat_id);
@@ -281,7 +274,324 @@ uint8_t get_dependent_servo_angle(uint8_t x, uint8_t y, uint8_t is_vertical);
 void get_adjusted_servo_angles(uint8_t x, uint8_t y, uint8_t is_vertical, uint8_t* out_angles);
 void get_adjusted_servo_angles_up(uint8_t x, uint8_t y, uint8_t is_vertical, uint8_t* out_angles);
 # 12 "arm_fsm.c" 2
+# 1 "./mcc_generated_files/timer/tmr2.h" 1
+# 39 "./mcc_generated_files/timer/tmr2.h"
+# 1 "./mcc_generated_files/timer/timer_interface.h" 1
+# 42 "./mcc_generated_files/timer/timer_interface.h"
+# 1 "/opt/microchip/xc8/v2.50/pic/include/c99/stddef.h" 1 3
+# 19 "/opt/microchip/xc8/v2.50/pic/include/c99/stddef.h" 3
+# 1 "/opt/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 1 3
+# 24 "/opt/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+typedef long int wchar_t;
+# 128 "/opt/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+typedef unsigned size_t;
+# 138 "/opt/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+typedef int ptrdiff_t;
+# 20 "/opt/microchip/xc8/v2.50/pic/include/c99/stddef.h" 2 3
+# 43 "./mcc_generated_files/timer/timer_interface.h" 2
 
+
+
+
+
+
+
+struct TMR_INTERFACE
+{
+    void (*Initialize)(void);
+    void (*Start)(void);
+    void (*Stop)(void);
+    void (*PeriodCountSet)(size_t count);
+    void (*TimeoutCallbackRegister)(void (* CallbackHandler)(void));
+    void (*Tasks)(void);
+};
+# 40 "./mcc_generated_files/timer/tmr2.h" 2
+# 101 "./mcc_generated_files/timer/tmr2.h"
+extern const struct TMR_INTERFACE Timer2;
+
+
+
+
+
+
+typedef enum
+{
+# 118 "./mcc_generated_files/timer/tmr2.h"
+   TMR2_ROP_STARTS_TMRON,
+
+
+
+
+   TMR2_ROP_STARTS_TMRON_ERSHIGH,
+
+
+
+
+   TMR2_ROP_STARTS_TMRON_ERSLOW,
+
+
+
+
+   TMR2_ROP_RESETS_ERSBOTHEDGE,
+
+
+
+
+   TMR2_ROP_RESETS_ERSRISINGEDGE,
+
+
+
+
+   TMR2_ROP_RESETS_ERSFALLINGEDGE,
+
+
+
+
+   TMR2_ROP_RESETS_ERSLOW,
+
+
+
+
+   TMR2_ROP_RESETS_ERSHIGH,
+# 164 "./mcc_generated_files/timer/tmr2.h"
+   TMR2_OS_STARTS_TMRON,
+
+
+
+
+   TMR2_OS_STARTS_ERSRISINGEDGE ,
+
+
+
+
+   TMR2_OS_STARTS_ERSFALLINGEDGE ,
+
+
+
+
+   TMR2_OS_STARTS_ERSBOTHEDGE,
+
+
+
+
+
+   TMR2_OS_STARTS_ERSFIRSTRISINGEDGE,
+
+
+
+
+
+   TMR2_OS_STARTS_ERSFIRSTFALLINGEDGE,
+
+
+
+
+
+   TMR2_OS_STARTS_ERSRISINGEDGEDETECT,
+
+
+
+
+   TMR2_OS_STARTS_ERSFALLINGEDGEDETECT,
+
+
+
+
+   TMR2_OS_STARTS_TMRON_ERSHIGH = 0x16,
+
+
+
+
+   TMR2_OS_STARTS_TMRON_ERSLOW = 0x17,
+# 221 "./mcc_generated_files/timer/tmr2.h"
+   TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT = 0x11,
+
+
+
+
+   TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT = 0x12,
+
+
+
+
+
+   TMR2_MS_STARTS_TMRON_ERSBOTHEDGE = 0x13
+
+} TMR2_HLT_MODE;
+
+
+
+
+
+
+typedef enum
+{
+
+
+
+    TMR2_T2CKIPPS_PIN = 0x0,
+
+
+
+    TMR2_TMR4_POSTSCALED = 0x2,
+
+
+
+    TMR2_TMR6_POSTSCALED = 0x3,
+
+
+
+    TMR2_CCP1OUT = 0x4,
+
+
+
+    TMR2_CCP2OUT = 0x5,
+
+
+
+    TMR2_CCP3OUT = 0x6,
+
+
+
+    TMR2_PWM1_OUT1 = 0x7,
+
+
+
+    TMR2_PWM1_OUT2 = 0x8,
+
+
+
+    TMR2_PWM2_OUT1 = 0x9,
+
+
+
+    TMR2_PWM2_OUT2 = 0xa,
+
+
+
+    TMR2_PWM3_OUT1 = 0xb,
+
+
+
+    TMR2_PWM3_OUT2 = 0xc,
+
+
+
+    TMR2_CMP1OUT = 0xf,
+
+
+
+    TMR2_CMP2OUT = 0x10,
+
+
+
+    TMR2_ZCDOUT = 0x11,
+
+
+
+    TMR2_CLC1_OUT = 0x12,
+
+
+
+    TMR2_CLC2_OUT = 0x13,
+
+
+
+    TMR2_CLC3_OUT = 0x14,
+
+
+
+    TMR2_CLC4_OUT = 0x15,
+
+
+
+    TMR2_CLC5_OUT = 0x16,
+
+
+
+    TMR2_CLC6_OUT = 0x17,
+
+
+
+    TMR2_CLC7_OUT = 0x18,
+
+
+
+    TMR2_CLC8_OUT = 0x19,
+
+
+
+    TMR2_UART1_RX_EDGE = 0x1a,
+
+
+
+    TMR2_UART1_TX_EDGE = 0x1b,
+
+
+
+    TMR2_UART2_RX_EDGE = 0x1c,
+
+
+
+    TMR2_UART2_TX_EDGE = 0x1d,
+
+
+
+    TMR2_UART3_RX_EDGE = 0x1e,
+
+
+
+    TMR2_UART3_TX_EDGE = 0x1f,
+
+
+
+    TMR2_UART4_RX_EDGE = 0x20,
+
+
+
+    TMR2_UART4_TX_EDGE = 0x21,
+
+
+
+    TMR2_UART5_RX_EDGE = 0x22,
+
+
+
+    TMR2_UART5_TX_EDGE = 0x23
+} TMR2_HLT_EXT_RESET_SOURCE;
+# 387 "./mcc_generated_files/timer/tmr2.h"
+void TMR2_Initialize(void);
+# 396 "./mcc_generated_files/timer/tmr2.h"
+void TMR2_ModeSet(TMR2_HLT_MODE mode);
+# 405 "./mcc_generated_files/timer/tmr2.h"
+void TMR2_ExtResetSourceSet(TMR2_HLT_EXT_RESET_SOURCE reset);
+# 414 "./mcc_generated_files/timer/tmr2.h"
+void TMR2_Start(void);
+# 423 "./mcc_generated_files/timer/tmr2.h"
+void TMR2_Stop(void);
+# 432 "./mcc_generated_files/timer/tmr2.h"
+uint8_t TMR2_Read(void);
+# 441 "./mcc_generated_files/timer/tmr2.h"
+void TMR2_Write(uint8_t timerVal);
+# 450 "./mcc_generated_files/timer/tmr2.h"
+void TMR2_PeriodCountSet(size_t periodVal);
+
+
+
+
+
+
+
+void TMR2_ISR(void);
+
+
+
+
+
+
+
+void TMR2_OverflowCallbackRegister(void (* InterruptHandler)(void));
+# 13 "arm_fsm.c" 2
 
 
 static ArmState current_state, next_state, previous_state = IDLE;
@@ -333,10 +643,11 @@ void start_fsm_delay(){
 
 void arm_fsm_update() {
     if (!process_fsm || servoMovement()) return;
-
+    TMR2_PeriodCountSet(0xF);
     switch (current_state) {
 
         case ROTATE_DOCK: {
+            TMR2_PeriodCountSet(0x2);
             uint16_t moveup_angles[4] = {getAngle(0), getAngle(1), calculateAngle(get_docking_servo_angles(target_boat)[2]), getAngle(3)};
             move_servo_to_int(moveup_angles);
             switch(previous_state) {
@@ -349,7 +660,6 @@ void arm_fsm_update() {
                     break;
                 }
             }
-
             break;
         }
 
@@ -370,8 +680,6 @@ void arm_fsm_update() {
         case MOVE_UP_DOCK: {
             const uint8_t* angles = get_docking_servo_angles_up(target_boat);
             move_servo_to_angles(angles);
-
-
             switch(previous_state) {
                 case MAGNET_ON: {
                     next_state = STILL;
@@ -385,7 +693,6 @@ void arm_fsm_update() {
                     next_state = STILL;
                 }
             }
-
             break;
         }
 
@@ -402,12 +709,12 @@ void arm_fsm_update() {
                     break;
                 }
             }
-
             break;
 
         }
 
         case ROTATE_BOARD: {
+            TMR2_PeriodCountSet(0x2);
             uint16_t moveup_angles[4] = {getAngle(0), getAngle(1), calculateAngle(get_grid_servo_angles(target_x, target_y)[2]), getAngle(3)};
             move_servo_to_int(moveup_angles);
             next_state = BOAT_ROTATE;
@@ -415,6 +722,7 @@ void arm_fsm_update() {
         }
 
         case BOAT_ROTATE: {
+            TMR2_PeriodCountSet(0x7);
             uint16_t angles[4] = {getAngle(0), calculateAngle(get_dependent_servo_angle(target_x, target_y, target_orientation)), getAngle(2), getAngle(3)};
             move_servo_to_int(angles);
             next_state = MOVE_UP_BOARD;
@@ -446,23 +754,12 @@ void arm_fsm_update() {
             uint8_t angles[4];
             get_adjusted_servo_angles(target_x, target_y, target_orientation, angles);
             move_servo_to_angles(angles);
-
-
-
-
             next_state = (arm_mode == PLACE) ? MAGNET_OFF : MAGNET_ON;
-
-
-
             break;
         }
-# 198 "arm_fsm.c"
+
         case MAGNET_OFF: {
             disableMagnet();
-
-
-
-
             start_fsm_delay();
             next_state = WAIT;
             break;
@@ -475,11 +772,13 @@ void arm_fsm_update() {
                     next_state = (arm_mode == PLACE) ? MOVE_UP_BOARD : MOVE_UP_DOCK;
                     break;
                 }
-            }
+                case STILL: {
 
+                }
+            }
             break;
         }
-# 236 "arm_fsm.c"
+
         case RETURN: {
             uint8_t idle_angles[4] = {43, 45, 25, 45};
             move_servo_to_angles(idle_angles);

@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- /tmp/xcXmiOLGn/driver_tmp_3.o
+ /tmp/xcXgdjMOI/driver_tmp_3.o
  -Odist/default/production/robot_arm_nrf.production.hex
  -logfile=dist/default/production/robot_arm_nrf.production.hxl
  -addressing=1
@@ -9,25 +9,25 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(/tmp/xcXmiOLGn/driver_tmp_3.o)
-  8h - Bh		(/tmp/xcXmiOLGn/driver_tmp_3.o)
-  18h - 1Dh		(/tmp/xcXmiOLGn/driver_tmp_3.o)
-  FD08h - FFFEh		(/tmp/xcXmiOLGn/driver_tmp_3.o)
-  10000h - 11BE5h		(/tmp/xcXmiOLGn/driver_tmp_3.o)
-  300000h - 300007h		(/tmp/xcXmiOLGn/driver_tmp_3.o)
-  300009h - 300009h		(/tmp/xcXmiOLGn/driver_tmp_3.o)
+  0h - 3h		(/tmp/xcXgdjMOI/driver_tmp_3.o)
+  8h - Bh		(/tmp/xcXgdjMOI/driver_tmp_3.o)
+  18h - 1Dh		(/tmp/xcXgdjMOI/driver_tmp_3.o)
+  FD08h - FFFEh		(/tmp/xcXgdjMOI/driver_tmp_3.o)
+  10000h - 11C27h		(/tmp/xcXgdjMOI/driver_tmp_3.o)
+  300000h - 300007h		(/tmp/xcXgdjMOI/driver_tmp_3.o)
+  300009h - 300009h		(/tmp/xcXgdjMOI/driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   Ch - 17h
   1Eh - FD07h
   FFFFh - FFFFh
-  11BE6h - 2FFFFFh
+  11C28h - 2FFFFFh
   300008h - 300008h
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (/tmp/xcXmiOLGn/driver_tmp_3.o)
+  H1 = Input file             (/tmp/xcXgdjMOI/driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -528,7 +528,11 @@
 00011BB0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00011BC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00011BD0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00011BE0 | H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- --
+00011BE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00011BF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00011C00 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00011C10 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00011C20 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 -- H1 -- -- -- -- -- --
 00300010 | --
