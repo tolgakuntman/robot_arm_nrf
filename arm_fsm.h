@@ -25,9 +25,6 @@ typedef enum {
     PLACEMENT,
     MAGNET_OFF,
     WAIT,
-    //MIDDLE,
-    //MIDDLE2,
-    //MIDDLE3,
     RETURN
 } ArmState;
 

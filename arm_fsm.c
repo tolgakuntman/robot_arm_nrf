@@ -77,7 +77,6 @@ void arm_fsm_update() {
                     break;
                 }
             }
-            //next_state = PICKUP;
             break;
         }
 
@@ -98,8 +97,6 @@ void arm_fsm_update() {
         case MOVE_UP_DOCK: {
             const uint8_t* angles = get_docking_servo_angles_up(target_boat);
             move_servo_to_angles(angles);
-//            uint16_t moveup_angles[NUM_SERVOS] = {calculateAngle(50), getAngle(1), getAngle(2), calculateAngle(41)};
-//            move_servo_to_int(moveup_angles);
             switch(previous_state) {
                 case MAGNET_ON: {
                     next_state = STILL;
@@ -113,7 +110,6 @@ void arm_fsm_update() {
                     next_state = STILL;
                 }
             }
-            //next_state = STILL;
             break;
         }
         
@@ -130,7 +126,6 @@ void arm_fsm_update() {
                     break;
                 }
             }
-            //next_state = ROTATE_BOARD;
             break;
 
         }
@@ -138,7 +133,7 @@ void arm_fsm_update() {
         case ROTATE_BOARD: {
             uint16_t moveup_angles[NUM_SERVOS] = {getAngle(0), getAngle(1), calculateAngle(get_grid_servo_angles(target_x, target_y)[2]), getAngle(3)};
             move_servo_to_int(moveup_angles);
-            next_state = /*(arm_mode == PLACE) ?*/ BOAT_ROTATE;// : PLACEMENT;
+            next_state = BOAT_ROTATE;
             break;
         }
         
@@ -174,64 +169,27 @@ void arm_fsm_update() {
             uint8_t angles[NUM_SERVOS];
             get_adjusted_servo_angles(target_x, target_y, target_orientation, angles);
             move_servo_to_angles(angles);
-
-            //uint16_t p_angles[NUM_SERVOS] = (calculateAngle(get_grid_servo_angles(target_x, target_y)[0]), getAngle(1), getAngle(2), calculateAngle(get_grid_servo_angles(target_x, target_y)[3]));
-            //move_servo_to_int(p_angles);
-            //move_boat(target_boat, target_x, target_y, target_orientation);
             next_state = (arm_mode == PLACE) ? MAGNET_OFF : MAGNET_ON;
-              //          next_state = IDLE;
-            //process_fsm = false;  // FSM complete, reset flag
-
             break;
         }
-
-            
-//        case MIDDLE:{
-//            uint16_t middle1_angles[NUM_SERVOS] = {calculateAngle(50), getAngle(1), getAngle(2), calculateAngle(55)};
-//            move_servo_to_int(middle1_angles);
-//            //uint8_t middle1_angles[NUM_SERVOS] = {43, 90, 25, 45};
-//            //move_servo_to_angles(middle1_angles);
-//            next_state = (arm_mode == PLACE) ? /*MIDDLE2*/ ROTATE_BOARD : PICKUP;
-//            break;
-//        }
         
         case MAGNET_OFF: {
             disableMagnet();
-//            if (arm_mode == REMOVE) {
-//                return_boat_to_dock(target_boat);
-//            }
-            //next_state = (arm_mode == PLACE) ? WAIT/*RETURN*/ : RETURN;
-            start_fsm_delay();//(arm_mode == PLACE) ? MIDDLE3 : RETURN);
+            start_fsm_delay();
             next_state = WAIT;
             break;
         }
 
         case WAIT: {
-            if (!delay_done) return;  // Don?t move on until delay is done
+            if (!delay_done) return;
             switch(previous_state) {
                 case MAGNET_OFF: {
                     next_state = (arm_mode == PLACE) ? MOVE_UP_BOARD : MOVE_UP_DOCK;
                     break;
                 }
             }
-            //next_state = ;//delay_next_state;
             break;
         }
-
-
-//        case MIDDLE2: {
-//            uint8_t middle2_angles[NUM_SERVOS] = {47, 90, 115, 50};
-//            move_servo_to_angles(middle2_angles);
-//            next_state = (arm_mode == PLACE) ? PLACEMENT : MIDDLE1;
-//            break;
-//        }
-                                
-//        case MIDDLE3: {
-//            uint16_t middle2_angles[NUM_SERVOS] = {calculateAngle(50), getAngle(1), getAngle(2), calculateAngle(55)};
-//            move_servo_to_int(middle2_angles);
-//            next_state = (arm_mode == PLACE) ? RETURN : MIDDLE1;
-//            break;
-//        }
                     
         case RETURN: {
             uint8_t idle_angles[NUM_SERVOS] = {43, 45, 25, 45};
