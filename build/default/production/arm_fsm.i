@@ -125,20 +125,23 @@ typedef uint32_t uint_fast32_t;
 # 1 "/opt/microchip/xc8/v2.50/pic/include/c99/stdbool.h" 1 3
 # 13 "./arm_fsm.h" 2
 
+
 typedef enum {
     IDLE,
+    ROTATE_DOCK,
     PICKUP,
     MAGNET_ON,
     MOVE_UP_DOCK,
-    MIDDLE1,
-    MIDDLE2,
+    STILL,
     ROTATE_BOARD,
     BOAT_ROTATE,
+    MOVE_UP_BOARD,
     PLACEMENT,
     MAGNET_OFF,
     WAIT,
-    MIDDLE3,
-    ROTATE_DOCK,
+
+
+
     RETURN
 } ArmState;
 
@@ -152,7 +155,7 @@ void arm_fsm_update();
 void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, ArmMode mode);
 _Bool arm_is_busy();
 void delay();
-void start_fsm_delay(ArmState next);
+void start_fsm_delay();
 # 9 "arm_fsm.c" 2
 # 1 "./servo.h" 1
 # 15 "./servo.h"
@@ -252,13 +255,14 @@ typedef struct {
 } DockingPosition;
 # 28 "./boat_control.h"
 extern const DockingPosition docking_positions[4];
-
+extern const DockingPosition docking_up[4];
 
 
 
 
 
 const uint8_t* get_docking_servo_angles(uint8_t boat_id);
+const uint8_t* get_docking_servo_angles_up(uint8_t boat_id);
 # 11 "arm_fsm.c" 2
 # 1 "./grid_lookup.h" 1
 # 17 "./grid_lookup.h"
@@ -269,16 +273,18 @@ typedef struct {
 } GridPosition;
 
 extern const GridPosition grid_angles[5][5];
+extern const GridPosition grid_angles_up[5][5];
 extern uint8_t angles[4];
 
 const uint8_t* get_grid_servo_angles(uint8_t x, uint8_t y);
 uint8_t get_dependent_servo_angle(uint8_t x, uint8_t y, uint8_t is_vertical);
 void get_adjusted_servo_angles(uint8_t x, uint8_t y, uint8_t is_vertical, uint8_t* out_angles);
+void get_adjusted_servo_angles_up(uint8_t x, uint8_t y, uint8_t is_vertical, uint8_t* out_angles);
 # 12 "arm_fsm.c" 2
 
 
 
-static ArmState current_state, next_state = IDLE;
+static ArmState current_state, next_state, previous_state = IDLE;
 static ArmMode arm_mode = PLACE;
 static uint8_t target_boat;
 static uint8_t target_x, target_y;
@@ -286,11 +292,10 @@ static uint8_t target_orientation;
 static volatile _Bool process_fsm = 0;
 static volatile _Bool state_done = 1;
 static volatile _Bool delay_done = 1;
-static ArmState delay_next_state;
 
 void arm_fsm_init() {
     initServo();
-    current_state = next_state = IDLE;
+    current_state = next_state = previous_state = IDLE;
     process_fsm = 0;
     state_done = 1;
     TMR0_OverflowCallbackRegister(delay);
@@ -304,7 +309,7 @@ void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, 
         target_y = y;
         target_orientation = is_vertical;
         arm_mode = mode;
-        current_state = (mode == PLACE) ? PICKUP : ROTATE_BOARD;
+        current_state = (mode == PLACE) ? ROTATE_DOCK : ROTATE_BOARD;
         process_fsm = 1;
     }
 }
@@ -318,9 +323,9 @@ void delay() {
     TMR0_Stop();
 }
 
-void start_fsm_delay(ArmState next) {
+void start_fsm_delay(){
     delay_done = 0;
-    delay_next_state = next;
+
 
     TMR0_Start();
 }
@@ -330,6 +335,25 @@ void arm_fsm_update() {
     if (!process_fsm || servoMovement()) return;
 
     switch (current_state) {
+
+        case ROTATE_DOCK: {
+            uint16_t moveup_angles[4] = {getAngle(0), getAngle(1), calculateAngle(get_docking_servo_angles(target_boat)[2]), getAngle(3)};
+            move_servo_to_int(moveup_angles);
+            switch(previous_state) {
+                case STILL: {
+                    next_state = (arm_mode == PLACE) ? RETURN : MOVE_UP_DOCK;
+                    break;
+                }
+                default: {
+                    next_state = PICKUP;
+                    break;
+                }
+            }
+
+            break;
+        }
+
+
         case PICKUP: {
             const uint8_t* angles = get_docking_servo_angles(target_boat);
             move_servo_to_angles(angles);
@@ -339,44 +363,82 @@ void arm_fsm_update() {
 
         case MAGNET_ON: {
             enableMagnet();
-            next_state = (arm_mode == PLACE) ? MOVE_UP_DOCK : MIDDLE3;
+            next_state = (arm_mode == PLACE) ? MOVE_UP_DOCK : MOVE_UP_BOARD;
             break;
         }
 
         case MOVE_UP_DOCK: {
-            uint16_t moveup_angles[4] = {calculateAngle(50), getAngle(1), getAngle(2), calculateAngle(41)};
+            const uint8_t* angles = get_docking_servo_angles_up(target_boat);
+            move_servo_to_angles(angles);
+
+
+            switch(previous_state) {
+                case MAGNET_ON: {
+                    next_state = STILL;
+                    break;
+                }
+                case ROTATE_DOCK: {
+                    next_state = PICKUP;
+                    break;
+                }
+                case WAIT: {
+                    next_state = STILL;
+                }
+            }
+
+            break;
+        }
+
+        case STILL: {
+            uint16_t moveup_angles[4] = {calculateAngle(43), getAngle(1), getAngle(2), calculateAngle(45)};
             move_servo_to_int(moveup_angles);
-            next_state = MIDDLE1;
+            switch(previous_state) {
+                case MOVE_UP_DOCK: {
+                    next_state = (arm_mode == PLACE) ? ROTATE_BOARD : RETURN;
+                    break;
+                }
+                case MOVE_UP_BOARD: {
+                    next_state = ROTATE_DOCK;
+                    break;
+                }
+            }
+
             break;
-        }
 
-        case MIDDLE1:{
-            uint16_t middle1_angles[4] = {calculateAngle(50), getAngle(1), getAngle(2), calculateAngle(55)};
-            move_servo_to_int(middle1_angles);
-
-
-            next_state = (arm_mode == PLACE) ? ROTATE_BOARD : PICKUP;
-            break;
-        }
-
-        case MIDDLE2: {
-            uint8_t middle2_angles[4] = {47, 90, 115, 50};
-            move_servo_to_angles(middle2_angles);
-            next_state = (arm_mode == PLACE) ? PLACEMENT : MIDDLE1;
-            break;
         }
 
         case ROTATE_BOARD: {
             uint16_t moveup_angles[4] = {getAngle(0), getAngle(1), calculateAngle(get_grid_servo_angles(target_x, target_y)[2]), getAngle(3)};
             move_servo_to_int(moveup_angles);
-            next_state = (arm_mode == PLACE) ? BOAT_ROTATE : PLACEMENT;
+            next_state = BOAT_ROTATE;
             break;
         }
 
         case BOAT_ROTATE: {
-            uint16_t moveup_angles[4] = {getAngle(0), calculateAngle(get_dependent_servo_angle(target_x, target_y, target_orientation)), getAngle(2), getAngle(3)};
-            move_servo_to_int(moveup_angles);
-            next_state = PLACEMENT;
+            uint16_t angles[4] = {getAngle(0), calculateAngle(get_dependent_servo_angle(target_x, target_y, target_orientation)), getAngle(2), getAngle(3)};
+            move_servo_to_int(angles);
+            next_state = MOVE_UP_BOARD;
+            break;
+        }
+
+        case MOVE_UP_BOARD: {
+            uint8_t angles[4];
+            get_adjusted_servo_angles_up(target_x, target_y, target_orientation, angles);
+            move_servo_to_angles(angles);
+            switch(previous_state) {
+                case BOAT_ROTATE: {
+                    next_state = PLACEMENT;
+                    break;
+                case WAIT: {
+                    next_state = STILL;
+                    break;
+                    }
+                case MAGNET_ON: {
+                    next_state = STILL;
+                    break;
+                    }
+                }
+            }
             break;
         }
 
@@ -394,38 +456,30 @@ void arm_fsm_update() {
 
             break;
         }
-
+# 198 "arm_fsm.c"
         case MAGNET_OFF: {
             disableMagnet();
 
 
 
 
-            start_fsm_delay((arm_mode == PLACE) ? MIDDLE3 : RETURN);
+            start_fsm_delay();
             next_state = WAIT;
             break;
         }
 
         case WAIT: {
             if (!delay_done) return;
-            next_state = delay_next_state;
+            switch(previous_state) {
+                case MAGNET_OFF: {
+                    next_state = (arm_mode == PLACE) ? MOVE_UP_BOARD : MOVE_UP_DOCK;
+                    break;
+                }
+            }
+
             break;
         }
-
-        case MIDDLE3: {
-            uint16_t middle2_angles[4] = {calculateAngle(50), getAngle(1), getAngle(2), calculateAngle(55)};
-            move_servo_to_int(middle2_angles);
-            next_state = (arm_mode == PLACE) ? RETURN : MIDDLE1;
-            break;
-        }
-
-        case ROTATE_DOCK: {
-            uint16_t moveup_angles[4] = {getAngle(0), getAngle(1), calculateAngle(get_docking_servo_angles(target_boat)[2]), getAngle(3)};
-            move_servo_to_int(moveup_angles);
-            next_state = PLACEMENT;
-            break;
-        }
-
+# 236 "arm_fsm.c"
         case RETURN: {
             uint8_t idle_angles[4] = {43, 45, 25, 45};
             move_servo_to_angles(idle_angles);
@@ -438,6 +492,6 @@ void arm_fsm_update() {
         default:
             break;
     }
-
+    previous_state = current_state;
     current_state = next_state;
 }

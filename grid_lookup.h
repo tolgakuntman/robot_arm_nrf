@@ -21,11 +21,13 @@ typedef struct {
 } GridPosition;
 
 extern const GridPosition grid_angles[GRID_SIZE][GRID_SIZE];
+extern const GridPosition grid_angles_up[GRID_SIZE][GRID_SIZE];
 extern uint8_t angles[NUM_SERVOS];
 
 const uint8_t* get_grid_servo_angles(uint8_t x, uint8_t y);
 uint8_t get_dependent_servo_angle(uint8_t x, uint8_t y, uint8_t is_vertical);
 void get_adjusted_servo_angles(uint8_t x, uint8_t y, uint8_t is_vertical, uint8_t* out_angles);
+void get_adjusted_servo_angles_up(uint8_t x, uint8_t y, uint8_t is_vertical, uint8_t* out_angles);
 
 #endif	/* GRID_LOOKUP_H */
 

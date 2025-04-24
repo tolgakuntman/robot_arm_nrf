@@ -26,13 +26,14 @@ typedef struct {
 //} BoatState;
 
 extern const DockingPosition docking_positions[NUM_BOATS];
-//extern const DockingPosition docking_up[NUM_BOATS];
+extern const DockingPosition docking_up[NUM_BOATS];
 //extern BoatState boats[NUM_BOATS];                   
 
 //void init_boats();
 //void move_boat(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical);
 //void return_boat_to_dock(uint8_t boat_id);
 const uint8_t* get_docking_servo_angles(uint8_t boat_id);
+const uint8_t* get_docking_servo_angles_up(uint8_t boat_id);
 
 #endif	/* BOAT_CONTROL_H */
 

@@ -10,21 +10,24 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-
+// PLACE ORDER = IDLE > ROTATE_DOCK > PICKUP > MAGNET_ON > MOVE_UP_DOCK > STILL >> wait > ROTATE_BOARD > BOAT_ROTATE > MOVE_UP_BOARD > PLACEMENT > MAGNET_OFF > WAIT > MOVE_UP_BOARD > STILL >> wait > ROTATE_DOCK > RETURN
+// RETRUN ORDER = IDLE > ROTATE_BOARD > BOAT_ROTATE > MOVE_UP_BOARD > PLACEMENT > MAGNET_ON > MOVE_UP_BOARD > STILL > ROTATE_DOCK > MOVE_UP_DOCK > PICKUP > MAGNET_OFF > WAIT > MOVE_UP_DOCK > STILL > RETURN 
 typedef enum {
-    IDLE,
+    IDLE,    
+    ROTATE_DOCK,
     PICKUP,
     MAGNET_ON,
     MOVE_UP_DOCK,
-    MIDDLE1,
-    MIDDLE2,
+    STILL,
     ROTATE_BOARD,
     BOAT_ROTATE,
+    MOVE_UP_BOARD,
     PLACEMENT,
     MAGNET_OFF,
     WAIT,
-    MIDDLE3,
-    ROTATE_DOCK,
+    //MIDDLE,
+    //MIDDLE2,
+    //MIDDLE3,
     RETURN
 } ArmState;
 
@@ -38,7 +41,7 @@ void arm_fsm_update();
 void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, ArmMode mode);
 bool arm_is_busy();  // Check if FSM is still running
 void delay();
-void start_fsm_delay(ArmState next);
+void start_fsm_delay();//ArmState next);
 
 #endif	/* ARM_FSM_H */
 

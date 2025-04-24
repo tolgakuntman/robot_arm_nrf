@@ -79,14 +79,14 @@ void PWM1_16BIT_Initialize(void)
     //PWMPOL1 disabled; PWMPOL2 disabled; PWMPPEN disabled; PWMMODE Left aligned mode; 
     PWM1S1CFG = 0x0;
 
-    //PWMS1P1L 44; 
-    PWM1S1P1L = 0x2C;
+    //PWMS1P1L 51; 
+    PWM1S1P1L = 0x33;
 
     //PWMS1P1H 0; 
     PWM1S1P1H = 0x0;
 
-    //PWMS1P2L 44; 
-    PWM1S1P2L = 0x2C;
+    //PWMS1P2L 51; 
+    PWM1S1P2L = 0x33;
 
     //PWMS1P2H 0; 
     PWM1S1P2H = 0x0;

@@ -63,10 +63,25 @@ TMR2_UART4_TX_EDGE 33
 TMR2_UART5_RX_EDGE 34
 TMR2_UART5_TX_EDGE 35
 ]
-"74 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
-[e E18078 . `uc
+"69 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+[e E18077 . `uc
 PLACE 0
 REMOVE 1
+]
+[e E18062 . `uc
+IDLE 0
+ROTATE_DOCK 1
+PICKUP 2
+MAGNET_ON 3
+MOVE_UP_DOCK 4
+STILL 5
+ROTATE_BOARD 6
+BOAT_ROTATE 7
+MOVE_UP_BOARD 8
+PLACEMENT 9
+MAGNET_OFF 10
+WAIT 11
+RETURN 12
 ]
 "437 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
 [e E17611 . `uc
@@ -83,22 +98,21 @@ RF24_CRC_16 2
 "15 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [e E36 . `uc
 IDLE 0
-PICKUP 1
-MAGNET_ON 2
-MOVE_UP_DOCK 3
-MIDDLE1 4
-MIDDLE2 5
+ROTATE_DOCK 1
+PICKUP 2
+MAGNET_ON 3
+MOVE_UP_DOCK 4
+STILL 5
 ROTATE_BOARD 6
 BOAT_ROTATE 7
-PLACEMENT 8
-MAGNET_OFF 9
-WAIT 10
-MIDDLE3 11
-ROTATE_DOCK 12
-RETURN 13
+MOVE_UP_BOARD 8
+PLACEMENT 9
+MAGNET_OFF 10
+WAIT 11
+RETURN 12
 ]
 "16
-[e E52 . `uc
+[e E51 . `uc
 PLACE 0
 REMOVE 1
 ]
@@ -132,31 +146,35 @@ REMOVE 1
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 /opt/microchip/xc8/v2.50/pic/sources/c99/common/Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"25 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+"24 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [v _arm_fsm_init arm_fsm_init `(v  1 e 1 0 ]
-"34
+"33
 [v _arm_set_target arm_set_target `(v  1 e 1 0 ]
-"50
+"49
 [v _delay delay `(v  1 e 1 0 ]
-"55
+"54
 [v _start_fsm_delay start_fsm_delay `(v  1 e 1 0 ]
-"63
+"62
 [v _arm_fsm_update arm_fsm_update `(v  1 e 1 0 ]
-"45 /home/aevern/Documents/KULeuven/robot_arm_nrf/boat_control.c
+"53 /home/aevern/Documents/KULeuven/robot_arm_nrf/boat_control.c
 [v _get_docking_servo_angles get_docking_servo_angles `(*.32Cuc  1 e 3 0 ]
-"38 /home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+"57
+[v _get_docking_servo_angles_up get_docking_servo_angles_up `(*.32Cuc  1 e 3 0 ]
+"61 /home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
 [v _get_grid_servo_angles get_grid_servo_angles `(*.32Cuc  1 e 3 0 ]
-"44
+"67
 [v _get_dependent_servo_angle get_dependent_servo_angle `(uc  1 e 1 0 ]
-"51
+"74
 [v _get_adjusted_servo_angles get_adjusted_servo_angles `(v  1 e 1 0 ]
+"83
+[v _get_adjusted_servo_angles_up get_adjusted_servo_angles_up `(v  1 e 1 0 ]
 "27 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
 [v _AdvancedSettings AdvancedSettings `(v  1 e 1 0 ]
 "45
 [v _slave slave `(v  1 e 1 0 ]
-"160
+"165
 [v _nrf_irq nrf_irq `(v  1 e 1 0 ]
-"185
+"190
 [v _main main `(v  1 e 1 0 ]
 "50 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
 [v _PWM1_16BIT_Initialize PWM1_16BIT_Initialize `(v  1 e 1 0 ]
@@ -1039,7 +1057,7 @@ REMOVE 1
 [v _LATB LATB `VEuc  1 e 1 @1215 ]
 "48985
 [v _LATC LATC `VEuc  1 e 1 @1216 ]
-[s S2052 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S2066 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -1049,10 +1067,10 @@ REMOVE 1
 `uc 1 LATC7 1 0 :1:7 
 ]
 "49002
-[u S2061 . 1 `S2052 1 . 1 0 ]
+[u S2075 . 1 `S2066 1 . 1 0 ]
 "49002
 "49002
-[v _LATCbits LATCbits `VES2061  1 e 1 @1216 ]
+[v _LATCbits LATCbits `VES2075  1 e 1 @1216 ]
 "49047
 [v _LATD LATD `VEuc  1 e 1 @1217 ]
 "49109
@@ -1105,8 +1123,9 @@ REMOVE 1
 "15 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [v _current_state current_state `E36  1 s 1 current_state ]
 [v _next_state next_state `E36  1 s 1 next_state ]
+[v _previous_state previous_state `E36  1 s 1 previous_state ]
 "16
-[v _arm_mode arm_mode `E52  1 s 1 arm_mode ]
+[v _arm_mode arm_mode `E51  1 s 1 arm_mode ]
 "17
 [v _target_boat target_boat `uc  1 s 1 target_boat ]
 "18
@@ -1120,14 +1139,16 @@ REMOVE 1
 [v _state_done state_done `VEa  1 s 1 state_done ]
 "22
 [v _delay_done delay_done `VEa  1 s 1 delay_done ]
-"23
-[v _delay_next_state delay_next_state `E36  1 s 1 delay_next_state ]
-[s S2561 . 4 `[4]uc 1 angles 4 0 ]
+[s S2581 . 4 `[4]uc 1 angles 4 0 ]
 "13 /home/aevern/Documents/KULeuven/robot_arm_nrf/boat_control.c
-[v _docking_positions docking_positions `C[4]S2561  1 e 16 0 ]
-[s S2567 . 6 `[4]uc 1 angles 4 0 `uc 1 angle_h 1 4 `uc 1 angle_v 1 5 ]
+[v _docking_positions docking_positions `C[4]S2581  1 e 16 0 ]
+"20
+[v _docking_up docking_up `C[4]S2581  1 e 16 0 ]
+[s S2591 . 6 `[4]uc 1 angles 4 0 `uc 1 angle_h 1 4 `uc 1 angle_v 1 5 ]
 "10 /home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
-[v _grid_angles grid_angles `C[5][5]S2567  1 e 150 0 ]
+[v _grid_angles grid_angles `C[5][5]S2591  1 e 150 0 ]
+"32
+[v _grid_angles_up grid_angles_up `C[5][5]S2591  1 e 150 0 ]
 "24 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
 [v _buf buf `[32]uc  1 e 32 0 ]
 "25
@@ -1173,35 +1194,35 @@ REMOVE 1
 [v _rf24_crclength rf24_crclength `C[3][10]uc  1 e 30 0 ]
 "69
 [v _rf24_pa_dbm rf24_pa_dbm `[4][8]uc  1 e 32 0 ]
-[s S2401 . 4 `us 1 currAngle 2 0 `us 1 nextAngle 2 2 ]
+[s S2415 . 4 `us 1 currAngle 2 0 `us 1 nextAngle 2 2 ]
 "5 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
-[v _servos servos `[4]S2401  1 e 16 0 ]
-"185 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+[v _servos servos `[4]S2415  1 e 16 0 ]
+"190 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"225
+"226
 } 0
 "45
 [v _slave slave `(v  1 e 1 0 ]
 {
-[s S1959 . 13 `[8]uc 1 message_type 8 0 `uc 1 ship_id 1 8 `uc 1 row 1 9 `uc 1 col 1 10 `uc 1 horizontal 1 11 `uc 1 place 1 12 ]
-"72
-[v slave@rob rob `S1959  1 a 13 2 ]
+[s S1994 . 13 `[8]uc 1 message_type 8 0 `uc 1 ship_id 1 8 `uc 1 row 1 9 `uc 1 col 1 10 `uc 1 horizontal 1 11 `uc 1 place 1 12 ]
+"77
+[v slave@rob rob `S1994  1 a 13 44 ]
 [s S1898 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
 "46
-[v slave@dev dev `S1898  1 a 3 15 ]
+[v slave@dev dev `S1898  1 a 3 57 ]
 "51
-[v slave@ret ret `i  1 a 2 0 ]
+[v slave@ret ret `i  1 a 2 42 ]
 "45
 [v slave@pvParameters pvParameters `*.39v  1 p 2 40 ]
-"82
+"87
 } 0
 "4 /home/aevern/Documents/KULeuven/robot_arm_nrf/message_parser.c
 [v _parse_robot_message parse_robot_message `(a  1 e 1 0 ]
 {
 [v parse_robot_message@raw_data raw_data `*.39Cuc  1 p 2 25 ]
-[s S1959 . 13 `[8]uc 1 message_type 8 0 `uc 1 ship_id 1 8 `uc 1 row 1 9 `uc 1 col 1 10 `uc 1 horizontal 1 11 `uc 1 place 1 12 ]
-[v parse_robot_message@out out `*.39S1959  1 p 2 27 ]
+[s S1994 . 13 `[8]uc 1 message_type 8 0 `uc 1 ship_id 1 8 `uc 1 row 1 9 `uc 1 col 1 10 `uc 1 horizontal 1 11 `uc 1 place 1 12 ]
+[v parse_robot_message@out out `*.39S1994  1 p 2 27 ]
 "17
 } 0
 "4 /opt/microchip/xc8/v2.50/pic/sources/c99/common/memcpy.c
@@ -1219,7 +1240,22 @@ REMOVE 1
 [v memcpy@n n `ui  1 p 2 18 ]
 "18
 } 0
-"34 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+"62 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+[v _enablePWM enablePWM `(v  1 e 1 0 ]
+{
+"67
+} 0
+"121 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+[v _PWM3_16BIT_Enable PWM3_16BIT_Enable `(v  1 e 1 0 ]
+{
+"124
+} 0
+"121 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+[v _PWM2_16BIT_Enable PWM2_16BIT_Enable `(v  1 e 1 0 ]
+{
+"124
+} 0
+"33 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [v _arm_set_target arm_set_target `(v  1 e 1 0 ]
 {
 [v arm_set_target@boat_id boat_id `uc  1 p 1 wreg ]
@@ -1227,46 +1263,39 @@ REMOVE 1
 [v arm_set_target@x x `uc  1 p 1 14 ]
 [v arm_set_target@y y `uc  1 p 1 15 ]
 [v arm_set_target@is_vertical is_vertical `uc  1 p 1 16 ]
-[v arm_set_target@mode mode `E52  1 p 1 17 ]
+[v arm_set_target@mode mode `E51  1 p 1 17 ]
 [v arm_set_target@boat_id boat_id `uc  1 p 1 18 ]
-"44
+"43
 } 0
-"63
+"62
 [v _arm_fsm_update arm_fsm_update `(v  1 e 1 0 ]
 {
-"164
-[v arm_fsm_update@idle_angles idle_angles `[4]uc  1 a 4 4 ]
-"157
-[v arm_fsm_update@moveup_angles_2558 moveup_angles `[4]us  1 a 8 54 ]
-"150
-[v arm_fsm_update@middle2_angles_2556 middle2_angles `[4]us  1 a 8 46 ]
-"118
-[v arm_fsm_update@angles_2551 angles `[4]uc  1 a 4 8 ]
-"111
-[v arm_fsm_update@moveup_angles_2550 moveup_angles `[4]us  1 a 8 38 ]
-"104
-[v arm_fsm_update@moveup_angles_2548 moveup_angles `[4]us  1 a 8 30 ]
-"97
-[v arm_fsm_update@middle2_angles middle2_angles `[4]uc  1 a 4 0 ]
-"88
-[v arm_fsm_update@middle1_angles middle1_angles `[4]us  1 a 8 22 ]
-"81
-[v arm_fsm_update@moveup_angles moveup_angles `[4]us  1 a 8 14 ]
-"68
+"238
+[v arm_fsm_update@idle_angles idle_angles `[4]uc  1 a 4 0 ]
+"175
+[v arm_fsm_update@angles_2576 angles `[4]uc  1 a 4 8 ]
+"154
+[v arm_fsm_update@angles_2575 angles `[4]uc  1 a 4 4 ]
+"147
+[v arm_fsm_update@angles_2574 angles `[4]us  1 a 8 40 ]
+"140
+[v arm_fsm_update@moveup_angles_2572 moveup_angles `[4]us  1 a 8 32 ]
+"122
+[v arm_fsm_update@moveup_angles_2570 moveup_angles `[4]us  1 a 8 24 ]
+"100
+[v arm_fsm_update@angles_2568 angles `*.32Cuc  1 a 2 14 ]
+"87
 [v arm_fsm_update@angles angles `*.32Cuc  1 a 2 12 ]
-"96
-[v arm_fsm_update@F162 F162 `[4]uc  1 s 4 F162 ]
-"163
-[v arm_fsm_update@F173 F173 `[4]uc  1 s 4 F173 ]
-"177
+"68
+[v arm_fsm_update@moveup_angles moveup_angles `[4]us  1 a 8 16 ]
+"237
+[v arm_fsm_update@F176 F176 `[4]uc  1 s 4 F176 ]
+"251
 } 0
-"55
+"54
 [v _start_fsm_delay start_fsm_delay `(v  1 e 1 0 ]
 {
-[v start_fsm_delay@next next `E36  1 p 1 wreg ]
-[v start_fsm_delay@next next `E36  1 p 1 wreg ]
-[v start_fsm_delay@next next `E36  1 p 1 14 ]
-"60
+"59
 } 0
 "79 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_Start TMR0_Start `(v  1 e 1 0 ]
@@ -1298,24 +1327,32 @@ REMOVE 1
 [v move_servo_to_angles@angles angles `*.34Cuc  1 p 2 19 ]
 "75
 } 0
-"38 /home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+"61 /home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
 [v _get_grid_servo_angles get_grid_servo_angles `(*.32Cuc  1 e 3 0 ]
 {
 [v get_grid_servo_angles@x x `uc  1 p 1 wreg ]
 [v get_grid_servo_angles@x x `uc  1 p 1 wreg ]
 [v get_grid_servo_angles@y y `uc  1 p 1 14 ]
 [v get_grid_servo_angles@x x `uc  1 p 1 21 ]
-"42
+"65
 } 0
-"45 /home/aevern/Documents/KULeuven/robot_arm_nrf/boat_control.c
+"57 /home/aevern/Documents/KULeuven/robot_arm_nrf/boat_control.c
+[v _get_docking_servo_angles_up get_docking_servo_angles_up `(*.32Cuc  1 e 3 0 ]
+{
+[v get_docking_servo_angles_up@boat_id boat_id `uc  1 p 1 wreg ]
+[v get_docking_servo_angles_up@boat_id boat_id `uc  1 p 1 wreg ]
+[v get_docking_servo_angles_up@boat_id boat_id `uc  1 p 1 17 ]
+"59
+} 0
+"53
 [v _get_docking_servo_angles get_docking_servo_angles `(*.32Cuc  1 e 3 0 ]
 {
 [v get_docking_servo_angles@boat_id boat_id `uc  1 p 1 wreg ]
 [v get_docking_servo_angles@boat_id boat_id `uc  1 p 1 wreg ]
 [v get_docking_servo_angles@boat_id boat_id `uc  1 p 1 17 ]
-"47
+"55
 } 0
-"44 /home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+"67 /home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
 [v _get_dependent_servo_angle get_dependent_servo_angle `(uc  1 e 1 0 ]
 {
 [v get_dependent_servo_angle@x x `uc  1 p 1 wreg ]
@@ -1323,21 +1360,35 @@ REMOVE 1
 [v get_dependent_servo_angle@y y `uc  1 p 1 14 ]
 [v get_dependent_servo_angle@is_vertical is_vertical `uc  1 p 1 15 ]
 [v get_dependent_servo_angle@x x `uc  1 p 1 24 ]
-"49
+"72
 } 0
-"51
+"83
+[v _get_adjusted_servo_angles_up get_adjusted_servo_angles_up `(v  1 e 1 0 ]
+{
+[v get_adjusted_servo_angles_up@x x `uc  1 p 1 wreg ]
+"84
+[v get_adjusted_servo_angles_up@i i `i  1 a 2 27 ]
+"83
+[v get_adjusted_servo_angles_up@x x `uc  1 p 1 wreg ]
+[v get_adjusted_servo_angles_up@y y `uc  1 p 1 14 ]
+[v get_adjusted_servo_angles_up@is_vertical is_vertical `uc  1 p 1 15 ]
+[v get_adjusted_servo_angles_up@out_angles out_angles `*.39uc  1 p 2 16 ]
+[v get_adjusted_servo_angles_up@x x `uc  1 p 1 26 ]
+"90
+} 0
+"74
 [v _get_adjusted_servo_angles get_adjusted_servo_angles `(v  1 e 1 0 ]
 {
 [v get_adjusted_servo_angles@x x `uc  1 p 1 wreg ]
-"52
+"75
 [v get_adjusted_servo_angles@i i `i  1 a 2 27 ]
-"51
+"74
 [v get_adjusted_servo_angles@x x `uc  1 p 1 wreg ]
 [v get_adjusted_servo_angles@y y `uc  1 p 1 14 ]
 [v get_adjusted_servo_angles@is_vertical is_vertical `uc  1 p 1 15 ]
 [v get_adjusted_servo_angles@out_angles out_angles `*.39uc  1 p 2 16 ]
 [v get_adjusted_servo_angles@x x `uc  1 p 1 26 ]
-"58
+"81
 } 0
 "95 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
 [v _getAngle getAngle `(us  1 e 2 0 ]
@@ -1366,6 +1417,35 @@ REMOVE 1
 [v _PWM1_16BIT_Disable PWM1_16BIT_Disable `(v  1 e 1 0 ]
 {
 "129
+} 0
+"24 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+[v _arm_fsm_init arm_fsm_init `(v  1 e 1 0 ]
+{
+"31
+} 0
+"44 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+[v _initServo initServo `(v  1 e 1 0 ]
+{
+"60
+} 0
+"40
+[v _calculateAngle calculateAngle `(us  1 e 2 0 ]
+{
+[v calculateAngle@angleDeg angleDeg `uc  1 p 1 wreg ]
+[v calculateAngle@angleDeg angleDeg `uc  1 p 1 wreg ]
+[v calculateAngle@angleDeg angleDeg `uc  1 p 1 18 ]
+"42
+} 0
+"151 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
+{
+[v TMR0_OverflowCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 14 ]
+"154
+} 0
+"94 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+{
+"98
 } 0
 "116 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
 [v _Nrf24_setTADDR Nrf24_setTADDR `(i  1 e 2 0 ]
@@ -1569,54 +1649,10 @@ REMOVE 1
 [v SPI1_ByteExchange@byteData byteData `uc  1 p 1 14 ]
 "230
 } 0
-"62 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
-[v _enablePWM enablePWM `(v  1 e 1 0 ]
-{
-"67
-} 0
-"121 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
-[v _PWM3_16BIT_Enable PWM3_16BIT_Enable `(v  1 e 1 0 ]
-{
-"124
-} 0
-"121 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
-[v _PWM2_16BIT_Enable PWM2_16BIT_Enable `(v  1 e 1 0 ]
-{
-"124
-} 0
-"25 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
-[v _arm_fsm_init arm_fsm_init `(v  1 e 1 0 ]
-{
-"32
-} 0
-"44 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
-[v _initServo initServo `(v  1 e 1 0 ]
-{
-"60
-} 0
-"40
-[v _calculateAngle calculateAngle `(us  1 e 2 0 ]
-{
-[v calculateAngle@angleDeg angleDeg `uc  1 p 1 wreg ]
-[v calculateAngle@angleDeg angleDeg `uc  1 p 1 wreg ]
-[v calculateAngle@angleDeg angleDeg `uc  1 p 1 18 ]
-"42
-} 0
-"151 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
-[v _TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
-{
-[v TMR0_OverflowCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 14 ]
-"154
-} 0
 "100 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
 [v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
 {
 "104
-} 0
-"94
-[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
-{
-"98
 } 0
 "84 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_Stop TMR0_Stop `(v  1 e 1 0 ]
@@ -1823,10 +1859,10 @@ REMOVE 1
 {
 "159
 } 0
-"50 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+"49 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [v _delay delay `(v  1 e 1 0 ]
 {
-"53
+"52
 } 0
 "84 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
 [v i2_TMR0_Stop TMR0_Stop `(v  1 e 1 0 ]
@@ -1848,8 +1884,8 @@ REMOVE 1
 {
 "190
 } 0
-"160 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+"165 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
 [v _nrf_irq nrf_irq `(v  1 e 1 0 ]
 {
-"162
+"167
 } 0

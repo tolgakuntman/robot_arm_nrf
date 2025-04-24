@@ -6,9 +6,11 @@
             <file>file:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.h</file>
             <file>file:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c</file>
             <file>file:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c</file>
+            <file>file:/home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c</file>
             <file>file:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c</file>
-            <file>file:/home/aevern/Documents/KULeuven/robot_arm_nrf/message_parser.h</file>
             <file>file:/home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c</file>
+            <file>file:/home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c</file>
+            <file>file:/home/aevern/Documents/KULeuven/robot_arm_nrf/message_parser.c</file>
             <file>file:/home/aevern/Documents/KULeuven/robot_arm_nrf/servo.h</file>
             <file>file:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.h</file>
             <file>file:/home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c</file>

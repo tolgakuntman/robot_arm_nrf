@@ -9,9 +9,56 @@ Version 4.0 HI-TECH Software Intermediate Code
 "195
 [; ;./mirf.h: 195: void Nrf24_setRetransmitDelay(NRF24_t * dev, uint8_t val);
 [v _Nrf24_setRetransmitDelay `(v ~T0 @X0 0 ef2`*S2419`uc ]
-"37 ./arm_fsm.h
-[; ;./arm_fsm.h: 37: void arm_fsm_update();
+"172
+[; ;./mirf.h: 172: void Nrf24_init(NRF24_t * dev);
+[v _Nrf24_init `(v ~T0 @X0 0 ef1`*S2419 ]
+"174
+[; ;./mirf.h: 174: void Nrf24_config(NRF24_t * dev, uint8_t channel, uint8_t payload);
+[v _Nrf24_config `(v ~T0 @X0 0 ef3`*S2419`uc`uc ]
+"176
+[; ;./mirf.h: 176: int Nrf24_setRADDR(NRF24_t * dev, uint8_t * adr);
+[v _Nrf24_setRADDR `(i ~T0 @X0 0 ef2`*S2419`*uc ]
+"177
+[; ;./mirf.h: 177: int Nrf24_setTADDR(NRF24_t * dev, uint8_t * adr);
+[v _Nrf24_setTADDR `(i ~T0 @X0 0 ef2`*S2419`*uc ]
+"187
+[; ;./mirf.h: 187: void Nrf24_configRegister(uint8_t reg, uint8_t value);
+[v _Nrf24_configRegister `(v ~T0 @X0 0 ef2`uc`uc ]
+"37 ./servo.h
+[; ;./servo.h: 37: void enablePWM();
+[v _enablePWM `(v ~T0 @X0 0 e? ]
+"414 ./mcc_generated_files/system/../timer/tmr2.h
+[; ;./mcc_generated_files/system/../timer/tmr2.h: 414: void TMR2_Start(void);
+[v _TMR2_Start `(v ~T0 @X0 0 ef ]
+"39 ./arm_fsm.h
+[; ;./arm_fsm.h: 39: void arm_fsm_init();
+[v _arm_fsm_init `(v ~T0 @X0 0 e? ]
+"69 main.c
+[; ;main.c: 69:     arm_set_target(0,2,4,1,PLACE);
+[c E18077 0 1 .. ]
+[n E18077 . PLACE REMOVE  ]
+"41 ./arm_fsm.h
+[; ;./arm_fsm.h: 41: void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, ArmMode mode);
+[v _arm_set_target `(v ~T0 @X0 0 ef5`uc`uc`uc`uc`E18077 ]
+"40
+[; ;./arm_fsm.h: 40: void arm_fsm_update();
 [v _arm_fsm_update `(v ~T0 @X0 0 e? ]
+"179 ./mirf.h
+[; ;./mirf.h: 179: _Bool Nrf24_dataReady(NRF24_t * dev);
+[v _Nrf24_dataReady `(a ~T0 @X0 0 ef1`*S2419 ]
+"185
+[; ;./mirf.h: 185: void Nrf24_getData(NRF24_t * dev, uint8_t * data);
+[v _Nrf24_getData `(v ~T0 @X0 0 ef2`*S2419`*uc ]
+"6 ./message_parser.h
+[; ;./message_parser.h: 6: typedef struct {
+[s S2421 `uc -> 8 `i `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S2421 . message_type ship_id row col horizontal place ]
+"15
+[; ;./message_parser.h: 15: _Bool parse_robot_message(const char *raw_data, robot_command_t *out);
+[v _parse_robot_message `(a ~T0 @X0 0 ef2`*Cuc`*S2421 ]
+"44 ./mcc_generated_files/timer/delay.h
+[; ;./mcc_generated_files/timer/delay.h: 44: void DELAY_milliseconds(uint16_t milliseconds);
+[v _DELAY_milliseconds `(v ~T0 @X0 0 ef1`us ]
 [p mainexit ]
 "60 ./mcc_generated_files/system/system.h
 [; ;./mcc_generated_files/system/system.h: 60: void SYSTEM_Initialize(void);
@@ -20,7 +67,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "305 ./mcc_generated_files/system/../system/pins.h
 [; ;./mcc_generated_files/system/../system/pins.h: 305: void nRF24_IRQ_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _nRF24_IRQ_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F17633 ]
-[v F18110 `(v ~T0 @X0 0 tf ]
+[v F18116 `(v ~T0 @X0 0 tf ]
 "49899 /home/aevern/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h
 [; ;/home/aevern/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h: 49899:     struct {
 [s S2322 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -41,25 +88,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "423 ./mcc_generated_files/system/../timer/tmr2.h
 [; ;./mcc_generated_files/system/../timer/tmr2.h: 423: void TMR2_Stop(void);
 [v _TMR2_Stop `(v ~T0 @X0 0 ef ]
-"37 ./servo.h
-[; ;./servo.h: 37: void enablePWM();
-[v _enablePWM `(v ~T0 @X0 0 e? ]
 "67 ./mcc_generated_files/system/../pwm/pwm1_16bit.h
 [; ;./mcc_generated_files/system/../pwm/pwm1_16bit.h: 67: void PWM1_16BIT_Disable(void);
 [v _PWM1_16BIT_Disable `(v ~T0 @X0 0 ef ]
-"414 ./mcc_generated_files/system/../timer/tmr2.h
-[; ;./mcc_generated_files/system/../timer/tmr2.h: 414: void TMR2_Start(void);
-[v _TMR2_Start `(v ~T0 @X0 0 ef ]
-"36 ./arm_fsm.h
-[; ;./arm_fsm.h: 36: void arm_fsm_init();
-[v _arm_fsm_init `(v ~T0 @X0 0 e? ]
-"206 main.c
-[; ;main.c: 206:     arm_set_target(0,2,4,1,PLACE);
-[c E18078 0 1 .. ]
-[n E18078 . PLACE REMOVE  ]
-"38 ./arm_fsm.h
-[; ;./arm_fsm.h: 38: void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, ArmMode mode);
-[v _arm_set_target `(v ~T0 @X0 0 ef5`uc`uc`uc`uc`E18078 ]
 "328 /home/aevern/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h
 [; ;/home/aevern/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h: 328: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2670,79 +2701,179 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _slave ]
 [v _pvParameters `*v ~T0 @X0 1 r1 ]
 [f ]
-"67
-[; ;main.c: 67:     while(1){
+"46
+[; ;main.c: 46:     NRF24_t dev;
+[v _dev `S2419 ~T0 @X0 1 a ]
+"47
+[; ;main.c: 47:  Nrf24_init(&dev);
+[e ( _Nrf24_init (1 &U _dev ]
+"48
+[; ;main.c: 48:  uint8_t payload = 32;
+[v _payload `uc ~T0 @X0 1 a ]
+[e = _payload -> -> 32 `i `uc ]
+"49
+[; ;main.c: 49:  uint8_t channel = 112;
+[v _channel `uc ~T0 @X0 1 a ]
+[e = _channel -> -> 112 `i `uc ]
+"50
+[; ;main.c: 50:  Nrf24_config(&dev, channel, payload);
+[e ( _Nrf24_config (3 , , &U _dev _channel _payload ]
+"51
+[; ;main.c: 51:     int ret = Nrf24_setRADDR(&dev, (uint8_t *)"4RECV");
+[v _ret `i ~T0 @X0 1 a ]
+[e = _ret ( _Nrf24_setRADDR (2 , &U _dev -> :s 1C `*uc ]
+"52
+[; ;main.c: 52:  while (ret != 0) {
+[e $U 2424  ]
 [e :U 2425 ]
 {
-"68
-[; ;main.c: 68:         arm_fsm_update();
-[e ( _arm_fsm_update ..  ]
-"81
-[; ;main.c: 81:         }
+"53
+[; ;main.c: 53:   ret = Nrf24_setRADDR(&dev, (uint8_t *)"4RECV");
+[e = _ret ( _Nrf24_setRADDR (2 , &U _dev -> :s 2C `*uc ]
+"54
+[; ;main.c: 54:  }
 }
 [e :U 2424 ]
-[e $U 2425  ]
+"52
+[; ;main.c: 52:  while (ret != 0) {
+[e $ != _ret -> 0 `i 2425  ]
 [e :U 2426 ]
+"57
+[; ;main.c: 57:  ret = Nrf24_setTADDR(&dev, (uint8_t *)"4RECV");
+[e = _ret ( _Nrf24_setTADDR (2 , &U _dev -> :s 3C `*uc ]
+"58
+[; ;main.c: 58:  while (ret != 0) {
+[e $U 2427  ]
+[e :U 2428 ]
+{
+"59
+[; ;main.c: 59:   ret = Nrf24_setTADDR(&dev, (uint8_t *)"4RECV");
+[e = _ret ( _Nrf24_setTADDR (2 , &U _dev -> :s 4C `*uc ]
+"60
+[; ;main.c: 60:  }
+}
+[e :U 2427 ]
+"58
+[; ;main.c: 58:  while (ret != 0) {
+[e $ != _ret -> 0 `i 2428  ]
+[e :U 2429 ]
+"62
+[; ;main.c: 62:  AdvancedSettings(&dev);
+[e ( _AdvancedSettings (1 &U _dev ]
+"64
+[; ;main.c: 64:     Nrf24_configRegister(0x07, (1 << 6) | (1 << 5) | (1 << 4));
+[e ( _Nrf24_configRegister (2 , -> -> 7 `i `uc -> | | << -> 1 `i -> 6 `i << -> 1 `i -> 5 `i << -> 1 `i -> 4 `i `uc ]
+"66
+[; ;main.c: 66:     enablePWM();
+[e ( _enablePWM ..  ]
+"67
+[; ;main.c: 67:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"68
+[; ;main.c: 68:     arm_fsm_init();
+[e ( _arm_fsm_init ..  ]
+"69
+[; ;main.c: 69:     arm_set_target(0,2,4,1,PLACE);
+[e ( _arm_set_target (4 , , , , -> -> 0 `i `uc -> -> 2 `i `uc -> -> 4 `i `uc -> -> 1 `i `uc . `E18077 0 ]
+"72
+[; ;main.c: 72:     while(1){
+[e :U 2431 ]
+{
+"73
+[; ;main.c: 73:         arm_fsm_update();
+[e ( _arm_fsm_update ..  ]
+"74
+[; ;main.c: 74:        if(nrf_flag){
+[e $ ! != -> _nrf_flag `i -> 0 `i 2433  ]
+{
+"75
+[; ;main.c: 75:            if (Nrf24_dataReady(&dev)) {
+[e $ ! != -> ( _Nrf24_dataReady (1 &U _dev `i -> 0 `i 2434  ]
+{
+"76
+[; ;main.c: 76:             Nrf24_getData(&dev, buf);
+[e ( _Nrf24_getData (2 , &U _dev &U _buf ]
+"77
+[; ;main.c: 77:             robot_command_t rob;
+[v _rob `S2421 ~T0 @X0 1 a ]
+"78
+[; ;main.c: 78:             parse_robot_message(buf, &rob);
+[e ( _parse_robot_message (2 , -> &U _buf `*Cuc &U _rob ]
+"79
+[; ;main.c: 79:             arm_set_target(rob.ship_id,rob.row,rob.col,rob.horizontal,rob.place);
+[e ( _arm_set_target (4 , , , , . _rob 1 . _rob 2 . _rob 3 . _rob 4 -> . _rob 5 `E18077 ]
+"81
+[; ;main.c: 81:             }
+}
+[e :U 2434 ]
 "82
-[; ;main.c: 82:     }
+[; ;main.c: 82:             nrf_flag=0;
+[e = _nrf_flag -> -> 0 `i `a ]
+"83
+[; ;main.c: 83:   }
+}
+[e :U 2433 ]
+"85
+[; ;main.c: 85:   DELAY_milliseconds(1);
+[e ( _DELAY_milliseconds (1 -> -> 1 `i `us ]
+"86
+[; ;main.c: 86:         }
+}
+[e :U 2430 ]
+[e $U 2431  ]
+[e :U 2432 ]
+"87
+[; ;main.c: 87:     }
 [e :UE 2423 ]
 }
-"160
-[; ;main.c: 160: void nrf_irq(){
+"165
+[; ;main.c: 165: void nrf_irq(){
 [v _nrf_irq `(v ~T0 @X0 1 ef ]
 {
 [e :U _nrf_irq ]
 [f ]
-"161
-[; ;main.c: 161:     nrf_flag=1;
+"166
+[; ;main.c: 166:     nrf_flag=1;
 [e = _nrf_flag -> -> 1 `i `a ]
-"162
-[; ;main.c: 162: }
-[e :UE 2427 ]
+"167
+[; ;main.c: 167: }
+[e :UE 2435 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"185
-[; ;main.c: 185: void main(void)
+"190
+[; ;main.c: 190: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"186
-[; ;main.c: 186: {
+"191
+[; ;main.c: 191: {
 {
 [e :U _main ]
 [f ]
-"193
-[; ;main.c: 193:     SYSTEM_Initialize();
+"198
+[; ;main.c: 198:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"196
-[; ;main.c: 196:     nRF24_IRQ_SetInterruptHandler(nrf_irq);
-[e ( _nRF24_IRQ_SetInterruptHandler (1 -> &U _nrf_irq `*F18110 ]
-"197
-[; ;main.c: 197:     (INTCON0bits.GIE = 1);
-[e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
-"199
-[; ;main.c: 199:     TMR0_Stop();
-[e ( _TMR0_Stop ..  ]
-"200
-[; ;main.c: 200:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
 "201
-[; ;main.c: 201:     enablePWM();
-[e ( _enablePWM ..  ]
+[; ;main.c: 201:     nRF24_IRQ_SetInterruptHandler(nrf_irq);
+[e ( _nRF24_IRQ_SetInterruptHandler (1 -> &U _nrf_irq `*F18116 ]
 "202
-[; ;main.c: 202:     PWM1_16BIT_Disable();
-[e ( _PWM1_16BIT_Disable ..  ]
+[; ;main.c: 202:     (INTCON0bits.GIE = 1);
+[e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
 "204
-[; ;main.c: 204:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
+[; ;main.c: 204:     TMR0_Stop();
+[e ( _TMR0_Stop ..  ]
 "205
-[; ;main.c: 205:     arm_fsm_init();
-[e ( _arm_fsm_init ..  ]
+[; ;main.c: 205:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
 "206
-[; ;main.c: 206:     arm_set_target(0,2,4,1,PLACE);
-[e ( _arm_set_target (4 , , , , -> -> 0 `i `uc -> -> 2 `i `uc -> -> 4 `i `uc -> -> 1 `i `uc . `E18078 0 ]
-"214
-[; ;main.c: 214:  slave(((void*)0));
+[; ;main.c: 206:     PWM1_16BIT_Disable();
+[e ( _PWM1_16BIT_Disable ..  ]
+"215
+[; ;main.c: 215:  slave(((void*)0));
 [e ( _slave (1 -> -> 0 `i `*v ]
-"225
-[; ;main.c: 225: }
-[e :UE 2428 ]
+"226
+[; ;main.c: 226: }
+[e :UE 2436 ]
 }
+[a 1C 52 82 69 67 86 0 ]
+[a 2C 52 82 69 67 86 0 ]
+[a 3C 52 82 69 67 86 0 ]
+[a 4C 52 82 69 67 86 0 ]

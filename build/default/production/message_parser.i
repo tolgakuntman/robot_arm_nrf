@@ -127,6 +127,8 @@ typedef struct {
     uint8_t horizontal;
     uint8_t place;
 } robot_command_t;
+
+_Bool parse_robot_message(const char *raw_data, robot_command_t *out);
 # 2 "message_parser.c" 2
 # 1 "/opt/microchip/xc8/v2.50/pic/include/c99/string.h" 1 3
 # 10 "/opt/microchip/xc8/v2.50/pic/include/c99/string.h" 3

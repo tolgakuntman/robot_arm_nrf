@@ -132,13 +132,14 @@ typedef struct {
 } DockingPosition;
 # 28 "./boat_control.h"
 extern const DockingPosition docking_positions[4];
-
+extern const DockingPosition docking_up[4];
 
 
 
 
 
 const uint8_t* get_docking_servo_angles(uint8_t boat_id);
+const uint8_t* get_docking_servo_angles_up(uint8_t boat_id);
 # 9 "boat_control.c" 2
 # 1 "./grid_lookup.h" 1
 # 17 "./grid_lookup.h"
@@ -149,11 +150,13 @@ typedef struct {
 } GridPosition;
 
 extern const GridPosition grid_angles[5][5];
+extern const GridPosition grid_angles_up[5][5];
 extern uint8_t angles[4];
 
 const uint8_t* get_grid_servo_angles(uint8_t x, uint8_t y);
 uint8_t get_dependent_servo_angle(uint8_t x, uint8_t y, uint8_t is_vertical);
 void get_adjusted_servo_angles(uint8_t x, uint8_t y, uint8_t is_vertical, uint8_t* out_angles);
+void get_adjusted_servo_angles_up(uint8_t x, uint8_t y, uint8_t is_vertical, uint8_t* out_angles);
 # 10 "boat_control.c" 2
 # 1 "./servo.h" 1
 # 14 "./servo.h"
@@ -256,7 +259,18 @@ const DockingPosition docking_positions[4] = {
     { {64, 45, 14, 84} },
     { {61, 45, 32, 81} }
 };
-# 45 "boat_control.c"
+
+const DockingPosition docking_up[4] = {
+    { {30, 45, 40, 30} },
+    { {60, 45, 22, 60} },
+    { {70, 45, 14, 70} },
+    { {70, 45, 32, 70} }
+};
+# 53 "boat_control.c"
 const uint8_t* get_docking_servo_angles(uint8_t boat_id) {
     return docking_positions[boat_id].angles;
+}
+
+const uint8_t* get_docking_servo_angles_up(uint8_t boat_id) {
+    return docking_up[boat_id].angles;
 }

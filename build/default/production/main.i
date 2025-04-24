@@ -30396,21 +30396,23 @@ _Bool servoMovement();
 uint16_t getAngle(uint8_t i);
 # 13 "main.c" 2
 # 1 "./arm_fsm.h" 1
-# 14 "./arm_fsm.h"
+# 15 "./arm_fsm.h"
 typedef enum {
     IDLE,
+    ROTATE_DOCK,
     PICKUP,
     MAGNET_ON,
     MOVE_UP_DOCK,
-    MIDDLE1,
-    MIDDLE2,
+    STILL,
     ROTATE_BOARD,
     BOAT_ROTATE,
+    MOVE_UP_BOARD,
     PLACEMENT,
     MAGNET_OFF,
     WAIT,
-    MIDDLE3,
-    ROTATE_DOCK,
+
+
+
     RETURN
 } ArmState;
 
@@ -30424,7 +30426,7 @@ void arm_fsm_update();
 void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, ArmMode mode);
 _Bool arm_is_busy();
 void delay();
-void start_fsm_delay(ArmState next);
+void start_fsm_delay();
 # 14 "main.c" 2
 # 1 "./message_parser.h" 1
 
@@ -30440,6 +30442,8 @@ typedef struct {
     uint8_t horizontal;
     uint8_t place;
 } robot_command_t;
+
+_Bool parse_robot_message(const char *raw_data, robot_command_t *out);
 # 15 "main.c" 2
 # 24 "main.c"
 uint8_t buf[32];
@@ -30464,17 +30468,53 @@ void AdvancedSettings(NRF24_t * dev)
 
 
 void slave(void *pvParameters){
-# 67 "main.c"
+    NRF24_t dev;
+ Nrf24_init(&dev);
+ uint8_t payload = 32;
+ uint8_t channel = 112;
+ Nrf24_config(&dev, channel, payload);
+    int ret = Nrf24_setRADDR(&dev, (uint8_t *)"4RECV");
+ while (ret != 0) {
+  ret = Nrf24_setRADDR(&dev, (uint8_t *)"4RECV");
+ }
+
+
+ ret = Nrf24_setTADDR(&dev, (uint8_t *)"4RECV");
+ while (ret != 0) {
+  ret = Nrf24_setTADDR(&dev, (uint8_t *)"4RECV");
+ }
+
+ AdvancedSettings(&dev);
+
+    Nrf24_configRegister(0x07, (1 << 6) | (1 << 5) | (1 << 4));
+
+    enablePWM();
+    TMR2_Start();
+    arm_fsm_init();
+    arm_set_target(0,2,4,1,PLACE);
+
+
     while(1){
         arm_fsm_update();
-# 81 "main.c"
+       if(nrf_flag){
+           if (Nrf24_dataReady(&dev)) {
+            Nrf24_getData(&dev, buf);
+            robot_command_t rob;
+            parse_robot_message(buf, &rob);
+            arm_set_target(rob.ship_id,rob.row,rob.col,rob.horizontal,rob.place);
+
+            }
+            nrf_flag=0;
+  }
+
+  DELAY_milliseconds(1);
         }
     }
-# 160 "main.c"
+# 165 "main.c"
 void nrf_irq(){
     nrf_flag=1;
 }
-# 185 "main.c"
+# 190 "main.c"
 void main(void)
 {
 
@@ -30491,19 +30531,8 @@ void main(void)
 
     TMR0_Stop();
     TMR2_Stop();
-    enablePWM();
     PWM1_16BIT_Disable();
-
-    TMR2_Start();
-    arm_fsm_init();
-    arm_set_target(0,2,4,1,PLACE);
-
-
-
-
-
-
-
+# 215 "main.c"
  slave(((void*)0));
-# 225 "main.c"
+# 226 "main.c"
 }

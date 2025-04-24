@@ -3,10 +3,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./grid_lookup.h: 17: typedef struct {
 [s S1 `uc -> 4 `i `uc 1 `uc 1 ]
 [n S1 . angles angle_h angle_v ]
-[v F57 `CS1 ~T0 @X0 -> 5 `i t ]
+[v F64 `CS1 ~T0 @X0 -> 5 `i t ]
 "10 grid_lookup.c
 [; ;grid_lookup.c: 10: const GridPosition grid_angles[5][5] = {
-[v _grid_angles `F57 ~T0 @X0 -> 5 `i e ]
+[v _grid_angles `F64 ~T0 @X0 -> 5 `i e ]
 [i _grid_angles
 :U ..
 :U ..
@@ -271,32 +271,300 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"38
-[; ;grid_lookup.c: 38: const uint8_t* get_grid_servo_angles(uint8_t x, uint8_t y) {
+[v F66 `CS1 ~T0 @X0 -> 5 `i t ]
+"32
+[; ;grid_lookup.c: 32: const GridPosition grid_angles_up[5][5] = {
+[v _grid_angles_up `F66 ~T0 @X0 -> 5 `i e ]
+[i _grid_angles_up
+:U ..
+:U ..
+:U ..
+:U ..
+-> -> 30 `i `uc
+-> -> 110 `i `uc
+-> -> 161 `i `uc
+-> -> 30 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 40 `i `uc
+-> -> 110 `i `uc
+-> -> 153 `i `uc
+-> -> 40 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 50 `i `uc
+-> -> 110 `i `uc
+-> -> 148 `i `uc
+-> -> 60 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 60 `i `uc
+-> -> 110 `i `uc
+-> -> 145 `i `uc
+-> -> 70 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 80 `i `uc
+-> -> 60 `i `uc
+-> -> 142 `i `uc
+-> -> 80 `i `uc
+..
+-> -> 150 `i `uc
+-> -> 60 `i `uc
+..
+..
+:U ..
+:U ..
+:U ..
+-> -> 20 `i `uc
+-> -> 110 `i `uc
+-> -> 144 `i `uc
+-> -> 20 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 30 `i `uc
+-> -> 110 `i `uc
+-> -> 140 `i `uc
+-> -> 40 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 50 `i `uc
+-> -> 110 `i `uc
+-> -> 138 `i `uc
+-> -> 50 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 60 `i `uc
+-> -> 110 `i `uc
+-> -> 135 `i `uc
+-> -> 70 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 80 `i `uc
+-> -> 34 `i `uc
+-> -> 135 `i `uc
+-> -> 80 `i `uc
+..
+-> -> 140 `i `uc
+-> -> 34 `i `uc
+..
+..
+:U ..
+:U ..
+:U ..
+-> -> 30 `i `uc
+-> -> 110 `i `uc
+-> -> 125 `i `uc
+-> -> 20 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 30 `i `uc
+-> -> 110 `i `uc
+-> -> 125 `i `uc
+-> -> 30 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 40 `i `uc
+-> -> 110 `i `uc
+-> -> 126 `i `uc
+-> -> 50 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 60 `i `uc
+-> -> 110 `i `uc
+-> -> 126 `i `uc
+-> -> 70 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 80 `i `uc
+-> -> 28 `i `uc
+-> -> 127 `i `uc
+-> -> 60 `i `uc
+..
+-> -> 132 `i `uc
+-> -> 28 `i `uc
+..
+..
+:U ..
+:U ..
+:U ..
+-> -> 30 `i `uc
+-> -> 110 `i `uc
+-> -> 104 `i `uc
+-> -> 30 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 40 `i `uc
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+-> -> 40 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 50 `i `uc
+-> -> 110 `i `uc
+-> -> 114 `i `uc
+-> -> 50 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 60 `i `uc
+-> -> 110 `i `uc
+-> -> 116 `i `uc
+-> -> 70 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 80 `i `uc
+-> -> 173 `i `uc
+-> -> 116 `i `uc
+-> -> 80 `i `uc
+..
+-> -> 132 `i `uc
+-> -> 23 `i `uc
+..
+..
+:U ..
+:U ..
+:U ..
+-> -> 30 `i `uc
+-> -> 110 `i `uc
+-> -> 87 `i `uc
+-> -> 30 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 40 `i `uc
+-> -> 110 `i `uc
+-> -> 96 `i `uc
+-> -> 50 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 50 `i `uc
+-> -> 110 `i `uc
+-> -> 102 `i `uc
+-> -> 60 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 70 `i `uc
+-> -> 110 `i `uc
+-> -> 107 `i `uc
+-> -> 70 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+:U ..
+:U ..
+-> -> 90 `i `uc
+-> -> 173 `i `uc
+-> -> 109 `i `uc
+-> -> 90 `i `uc
+..
+-> -> 110 `i `uc
+-> -> 110 `i `uc
+..
+..
+..
+]
+"61
+[; ;grid_lookup.c: 61: const uint8_t* get_grid_servo_angles(uint8_t x, uint8_t y) {
 [v _get_grid_servo_angles `(*Cuc ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _get_grid_servo_angles ]
 [v _x `uc ~T0 @X0 1 r1 ]
 [v _y `uc ~T0 @X0 1 r2 ]
 [f ]
-"39
-[; ;grid_lookup.c: 39:     if (x < 5 && y < 5) {
+"62
+[; ;grid_lookup.c: 62:     if (x < 5 && y < 5) {
 [e $ ! && < -> _x `i -> 5 `i < -> _y `i -> 5 `i 3  ]
 {
-"40
-[; ;grid_lookup.c: 40:         return grid_angles[x][y].angles;
+"63
+[; ;grid_lookup.c: 63:         return grid_angles[x][y].angles;
 [e ) &U . *U + &U *U + &U _grid_angles * -> _x `ux -> * -> # *U &U *U &U _grid_angles `ui -> -> 5 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _grid_angles * -> _x `ux -> * -> # *U &U *U &U _grid_angles `ui -> -> 5 `i `ui `ux `ui `ux 0 ]
 [e $UE 2  ]
-"41
-[; ;grid_lookup.c: 41:     }
+"64
+[; ;grid_lookup.c: 64:     }
 }
 [e :U 3 ]
-"42
-[; ;grid_lookup.c: 42: }
+"65
+[; ;grid_lookup.c: 65: }
 [e :UE 2 ]
 }
-"44
-[; ;grid_lookup.c: 44: uint8_t get_dependent_servo_angle(uint8_t x, uint8_t y, uint8_t is_vertical) {
+"67
+[; ;grid_lookup.c: 67: uint8_t get_dependent_servo_angle(uint8_t x, uint8_t y, uint8_t is_vertical) {
 [v _get_dependent_servo_angle `(uc ~T0 @X0 1 ef3`uc`uc`uc ]
 {
 [e :U _get_dependent_servo_angle ]
@@ -304,28 +572,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _y `uc ~T0 @X0 1 r2 ]
 [v _is_vertical `uc ~T0 @X0 1 r3 ]
 [f ]
-"45
-[; ;grid_lookup.c: 45:     if (x < 5 && y < 5) {
+"68
+[; ;grid_lookup.c: 68:     if (x < 5 && y < 5) {
 [e $ ! && < -> _x `i -> 5 `i < -> _y `i -> 5 `i 5  ]
 {
-"46
-[; ;grid_lookup.c: 46:         return is_vertical ? grid_angles[x][y].angle_v : grid_angles[x][y].angle_h;
+"69
+[; ;grid_lookup.c: 69:         return is_vertical ? grid_angles[x][y].angle_v : grid_angles[x][y].angle_h;
 [e ) -> ? != -> _is_vertical `i -> 0 `i : -> . *U + &U *U + &U _grid_angles * -> _x `ux -> * -> # *U &U *U &U _grid_angles `ui -> -> 5 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _grid_angles * -> _x `ux -> * -> # *U &U *U &U _grid_angles `ui -> -> 5 `i `ui `ux `ui `ux 2 `i -> . *U + &U *U + &U _grid_angles * -> _x `ux -> * -> # *U &U *U &U _grid_angles `ui -> -> 5 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _grid_angles * -> _x `ux -> * -> # *U &U *U &U _grid_angles `ui -> -> 5 `i `ui `ux `ui `ux 1 `i `uc ]
 [e $UE 4  ]
-"47
-[; ;grid_lookup.c: 47:     }
+"70
+[; ;grid_lookup.c: 70:     }
 }
 [e :U 5 ]
-"48
-[; ;grid_lookup.c: 48:     return 0;
+"71
+[; ;grid_lookup.c: 71:     return 0;
 [e ) -> -> 0 `i `uc ]
 [e $UE 4  ]
-"49
-[; ;grid_lookup.c: 49: }
+"72
+[; ;grid_lookup.c: 72: }
 [e :UE 4 ]
 }
-"51
-[; ;grid_lookup.c: 51: void get_adjusted_servo_angles(uint8_t x, uint8_t y, uint8_t is_vertical, uint8_t* out_angles) {
+"74
+[; ;grid_lookup.c: 74: void get_adjusted_servo_angles(uint8_t x, uint8_t y, uint8_t is_vertical, uint8_t* out_angles) {
 [v _get_adjusted_servo_angles `(v ~T0 @X0 1 ef4`uc`uc`uc`*uc ]
 {
 [e :U _get_adjusted_servo_angles ]
@@ -334,8 +602,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _is_vertical `uc ~T0 @X0 1 r3 ]
 [v _out_angles `*uc ~T0 @X0 1 r4 ]
 [f ]
-"52
-[; ;grid_lookup.c: 52:     for (int i = 0; i < 4; ++i) {
+"75
+[; ;grid_lookup.c: 75:     for (int i = 0; i < 4; ++i) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -343,20 +611,56 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 8  ]
 [e :U 7 ]
 {
-"53
-[; ;grid_lookup.c: 53:         out_angles[i] = grid_angles[x][y].angles[i];
+"76
+[; ;grid_lookup.c: 76:         out_angles[i] = grid_angles[x][y].angles[i];
 [e = *U + _out_angles * -> _i `x -> -> # *U _out_angles `i `x *U + &U . *U + &U *U + &U _grid_angles * -> _x `ux -> * -> # *U &U *U &U _grid_angles `ui -> -> 5 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _grid_angles * -> _x `ux -> * -> # *U &U *U &U _grid_angles `ui -> -> 5 `i `ui `ux `ui `ux 0 * -> -> _i `ui `ux -> -> # *U &U . *U + &U *U + &U _grid_angles * -> _x `ux -> * -> # *U &U *U &U _grid_angles `ui -> -> 5 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _grid_angles * -> _x `ux -> * -> # *U &U *U &U _grid_angles `ui -> -> 5 `i `ui `ux `ui `ux 0 `ui `ux ]
-"54
-[; ;grid_lookup.c: 54:     }
+"77
+[; ;grid_lookup.c: 77:     }
 }
 [e =+ _i -> 1 `i ]
 [e $ < _i -> 4 `i 7  ]
 [e :U 8 ]
 }
-"56
-[; ;grid_lookup.c: 56:     out_angles[1] = is_vertical ? grid_angles[x][y].angle_v : grid_angles[x][y].angle_h;
+"79
+[; ;grid_lookup.c: 79:     out_angles[1] = is_vertical ? grid_angles[x][y].angle_v : grid_angles[x][y].angle_h;
 [e = *U + _out_angles * -> -> 1 `i `x -> -> # *U _out_angles `i `x -> ? != -> _is_vertical `i -> 0 `i : -> . *U + &U *U + &U _grid_angles * -> _x `ux -> * -> # *U &U *U &U _grid_angles `ui -> -> 5 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _grid_angles * -> _x `ux -> * -> # *U &U *U &U _grid_angles `ui -> -> 5 `i `ui `ux `ui `ux 2 `i -> . *U + &U *U + &U _grid_angles * -> _x `ux -> * -> # *U &U *U &U _grid_angles `ui -> -> 5 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _grid_angles * -> _x `ux -> * -> # *U &U *U &U _grid_angles `ui -> -> 5 `i `ui `ux `ui `ux 1 `i `uc ]
-"58
-[; ;grid_lookup.c: 58: }
+"81
+[; ;grid_lookup.c: 81: }
 [e :UE 6 ]
+}
+"83
+[; ;grid_lookup.c: 83: void get_adjusted_servo_angles_up(uint8_t x, uint8_t y, uint8_t is_vertical, uint8_t* out_angles) {
+[v _get_adjusted_servo_angles_up `(v ~T0 @X0 1 ef4`uc`uc`uc`*uc ]
+{
+[e :U _get_adjusted_servo_angles_up ]
+[v _x `uc ~T0 @X0 1 r1 ]
+[v _y `uc ~T0 @X0 1 r2 ]
+[v _is_vertical `uc ~T0 @X0 1 r3 ]
+[v _out_angles `*uc ~T0 @X0 1 r4 ]
+[f ]
+"84
+[; ;grid_lookup.c: 84:     for (int i = 0; i < 4; ++i) {
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 4 `i 11  ]
+[e $U 12  ]
+[e :U 11 ]
+{
+"85
+[; ;grid_lookup.c: 85:         out_angles[i] = grid_angles_up[x][y].angles[i];
+[e = *U + _out_angles * -> _i `x -> -> # *U _out_angles `i `x *U + &U . *U + &U *U + &U _grid_angles_up * -> _x `ux -> * -> # *U &U *U &U _grid_angles_up `ui -> -> 5 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _grid_angles_up * -> _x `ux -> * -> # *U &U *U &U _grid_angles_up `ui -> -> 5 `i `ui `ux `ui `ux 0 * -> -> _i `ui `ux -> -> # *U &U . *U + &U *U + &U _grid_angles_up * -> _x `ux -> * -> # *U &U *U &U _grid_angles_up `ui -> -> 5 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _grid_angles_up * -> _x `ux -> * -> # *U &U *U &U _grid_angles_up `ui -> -> 5 `i `ui `ux `ui `ux 0 `ui `ux ]
+"86
+[; ;grid_lookup.c: 86:     }
+}
+[e =+ _i -> 1 `i ]
+[e $ < _i -> 4 `i 11  ]
+[e :U 12 ]
+}
+"88
+[; ;grid_lookup.c: 88:     out_angles[1] = is_vertical ? grid_angles_up[x][y].angle_v : grid_angles_up[x][y].angle_h;
+[e = *U + _out_angles * -> -> 1 `i `x -> -> # *U _out_angles `i `x -> ? != -> _is_vertical `i -> 0 `i : -> . *U + &U *U + &U _grid_angles_up * -> _x `ux -> * -> # *U &U *U &U _grid_angles_up `ui -> -> 5 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _grid_angles_up * -> _x `ux -> * -> # *U &U *U &U _grid_angles_up `ui -> -> 5 `i `ui `ux `ui `ux 2 `i -> . *U + &U *U + &U _grid_angles_up * -> _x `ux -> * -> # *U &U *U &U _grid_angles_up `ui -> -> 5 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _grid_angles_up * -> _x `ux -> * -> # *U &U *U &U _grid_angles_up `ui -> -> 5 `i `ui `ux `ui `ux 1 `i `uc ]
+"90
+[; ;grid_lookup.c: 90: }
+[e :UE 10 ]
 }

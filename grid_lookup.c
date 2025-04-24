@@ -29,6 +29,29 @@ const GridPosition grid_angles[GRID_SIZE][GRID_SIZE] = {
       { {80, 173, 109, 94}, 110, 110} },
 };
 
+const GridPosition grid_angles_up[GRID_SIZE][GRID_SIZE] = {
+    { { {30, 110, 161, 30}, 110, 110}, { {40, 110, 153, 40}, 110, 110},
+      { {50, 110, 148, 60}, 110, 110}, { {60, 110, 145, 70}, 110, 110},
+      { {80, 60, 142, 80}, 150, 60} },
+
+    { { {20, 110, 144, 20}, 110, 110}, { {30, 110, 140, 40}, 110, 110},
+      { {50, 110, 138, 50}, 110, 110}, { {60, 110, 135, 70}, 110, 110},
+      { {80, 34, 135, 80}, 140, 34} },
+      
+    { { {30, 110, 125, 20}, 110, 110}, { {30, 110, 125, 30}, 110, 110},
+      { {40, 110, 126, 50}, 110, 110}, { {60, 110, 126, 70}, 110, 110},
+      { {80, 28, 127, 60}, 132, 28} },
+      
+    { { {30, 110, 104, 30}, 110, 110}, { {40, 110, 110, 40}, 110, 110},
+      { {50, 110, 114, 50}, 110, 110}, { {60, 110, 116, 70}, 110, 110},
+      { {80, 173, 116, 80}, 132, 23} },
+      
+    { { {30, 110, 87, 30}, 110, 110}, { {40, 110, 96, 50}, 110, 110},
+      { {50, 110, 102, 60}, 110, 110}, { {70, 110, 107, 70}, 110, 110},
+      { {90, 173, 109, 90}, 110, 110} },
+};
+
+
 //void set_servo_angles(uint8_t x, uint8_t y, uint8_t is_vertical) {
 //    if (x < GRID_SIZE && y < GRID_SIZE) {
 //        return is_vertical ? grid_angles[x][y].angle_v : grid_angles[x][y].angle_h;
@@ -56,3 +79,13 @@ void get_adjusted_servo_angles(uint8_t x, uint8_t y, uint8_t is_vertical, uint8_
     out_angles[1] = is_vertical ? grid_angles[x][y].angle_v : grid_angles[x][y].angle_h;
     
 }
+
+void get_adjusted_servo_angles_up(uint8_t x, uint8_t y, uint8_t is_vertical, uint8_t* out_angles) {
+    for (int i = 0; i < NUM_SERVOS; ++i) {
+        out_angles[i] = grid_angles_up[x][y].angles[i];
+    }
+    // Override servo [1] based on orientation
+    out_angles[1] = is_vertical ? grid_angles_up[x][y].angle_v : grid_angles_up[x][y].angle_h;
+    
+}
+

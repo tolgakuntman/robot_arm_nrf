@@ -18,18 +18,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 :U ..
 :U ..
--> -> 42 `i `uc
--> -> 45 `i `uc
--> -> 22 `i `uc
--> -> 67 `i `uc
-..
-..
-:U ..
-:U ..
 -> -> 64 `i `uc
 -> -> 45 `i `uc
 -> -> 14 `i `uc
 -> -> 84 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 42 `i `uc
+-> -> 45 `i `uc
+-> -> 22 `i `uc
+-> -> 67 `i `uc
 ..
 ..
 :U ..
@@ -42,18 +42,72 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"45
-[; ;boat_control.c: 45: const uint8_t* get_docking_servo_angles(uint8_t boat_id) {
+"20
+[; ;boat_control.c: 20: const DockingPosition docking_up[4] = {
+[v _docking_up `CS1 ~T0 @X0 -> 4 `i e ]
+[i _docking_up
+:U ..
+:U ..
+:U ..
+-> -> 30 `i `uc
+-> -> 45 `i `uc
+-> -> 40 `i `uc
+-> -> 30 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 70 `i `uc
+-> -> 45 `i `uc
+-> -> 14 `i `uc
+-> -> 70 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 60 `i `uc
+-> -> 45 `i `uc
+-> -> 22 `i `uc
+-> -> 60 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 70 `i `uc
+-> -> 45 `i `uc
+-> -> 32 `i `uc
+-> -> 70 `i `uc
+..
+..
+..
+]
+"53
+[; ;boat_control.c: 53: const uint8_t* get_docking_servo_angles(uint8_t boat_id) {
 [v _get_docking_servo_angles `(*Cuc ~T0 @X0 1 ef1`uc ]
 {
 [e :U _get_docking_servo_angles ]
 [v _boat_id `uc ~T0 @X0 1 r1 ]
 [f ]
-"46
-[; ;boat_control.c: 46:     return docking_positions[boat_id].angles;
+"54
+[; ;boat_control.c: 54:     return docking_positions[boat_id].angles;
 [e ) &U . *U + &U _docking_positions * -> _boat_id `ux -> -> # *U &U _docking_positions `ui `ux 0 ]
 [e $UE 4  ]
-"47
-[; ;boat_control.c: 47: }
+"55
+[; ;boat_control.c: 55: }
 [e :UE 4 ]
+}
+"57
+[; ;boat_control.c: 57: const uint8_t* get_docking_servo_angles_up(uint8_t boat_id) {
+[v _get_docking_servo_angles_up `(*Cuc ~T0 @X0 1 ef1`uc ]
+{
+[e :U _get_docking_servo_angles_up ]
+[v _boat_id `uc ~T0 @X0 1 r1 ]
+[f ]
+"58
+[; ;boat_control.c: 58:     return docking_up[boat_id].angles;
+[e ) &U . *U + &U _docking_up * -> _boat_id `ux -> -> # *U &U _docking_up `ui `ux 0 ]
+[e $UE 5  ]
+"59
+[; ;boat_control.c: 59: }
+[e :UE 5 ]
 }

@@ -30095,13 +30095,14 @@ typedef struct {
 } DockingPosition;
 # 28 "./boat_control.h"
 extern const DockingPosition docking_positions[4];
-
+extern const DockingPosition docking_up[4];
 
 
 
 
 
 const uint8_t* get_docking_servo_angles(uint8_t boat_id);
+const uint8_t* get_docking_servo_angles_up(uint8_t boat_id);
 # 4 "servo.c" 2
 
 servoMotor servos[4];
