@@ -2,12 +2,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "56 mcc_generated_files/system/src/../../system/clock.h
 [; ;mcc_generated_files/system/src/../../system/clock.h: 56: void CLOCK_Initialize(void);
 [v _CLOCK_Initialize `(v ~T0 @X0 0 ef ]
-"279 mcc_generated_files/system/src/../../system/pins.h
-[; ;mcc_generated_files/system/src/../../system/pins.h: 279: void PIN_MANAGER_Initialize (void);
+"299 mcc_generated_files/system/src/../../system/pins.h
+[; ;mcc_generated_files/system/src/../../system/pins.h: 299: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
 "169 mcc_generated_files/system/src/../../timer/tmr0.h
 [; ;mcc_generated_files/system/src/../../timer/tmr0.h: 169: void TMR0_Initialize(void);
 [v _TMR0_Initialize `(v ~T0 @X0 0 ef ]
+"175 mcc_generated_files/system/src/../../timer/tmr1.h
+[; ;mcc_generated_files/system/src/../../timer/tmr1.h: 175: void TMR1_Initialize(void);
+[v _TMR1_Initialize `(v ~T0 @X0 0 ef ]
+"53 mcc_generated_files/system/src/../../dac/dac1.h
+[; ;mcc_generated_files/system/src/../../dac/dac1.h: 53: void DAC1_Initialize(void);
+[v _DAC1_Initialize `(v ~T0 @X0 0 ef ]
 "50 mcc_generated_files/system/src/../../pwm/pwm1_16bit.h
 [; ;mcc_generated_files/system/src/../../pwm/pwm1_16bit.h: 50: void PWM1_16BIT_Initialize(void);
 [v _PWM1_16BIT_Initialize `(v ~T0 @X0 0 ef ]
@@ -2615,24 +2621,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/system.c: 42:     TMR0_Initialize();
 [e ( _TMR0_Initialize ..  ]
 "43
-[; ;mcc_generated_files/system/src/system.c: 43:     PWM1_16BIT_Initialize();
-[e ( _PWM1_16BIT_Initialize ..  ]
+[; ;mcc_generated_files/system/src/system.c: 43:     TMR1_Initialize();
+[e ( _TMR1_Initialize ..  ]
 "44
-[; ;mcc_generated_files/system/src/system.c: 44:     PWM2_16BIT_Initialize();
-[e ( _PWM2_16BIT_Initialize ..  ]
+[; ;mcc_generated_files/system/src/system.c: 44:     DAC1_Initialize();
+[e ( _DAC1_Initialize ..  ]
 "45
-[; ;mcc_generated_files/system/src/system.c: 45:     PWM3_16BIT_Initialize();
-[e ( _PWM3_16BIT_Initialize ..  ]
+[; ;mcc_generated_files/system/src/system.c: 45:     PWM1_16BIT_Initialize();
+[e ( _PWM1_16BIT_Initialize ..  ]
 "46
-[; ;mcc_generated_files/system/src/system.c: 46:     SPI1_Initialize();
-[e ( _SPI1_Initialize ..  ]
+[; ;mcc_generated_files/system/src/system.c: 46:     PWM2_16BIT_Initialize();
+[e ( _PWM2_16BIT_Initialize ..  ]
 "47
-[; ;mcc_generated_files/system/src/system.c: 47:     TMR2_Initialize();
-[e ( _TMR2_Initialize ..  ]
+[; ;mcc_generated_files/system/src/system.c: 47:     PWM3_16BIT_Initialize();
+[e ( _PWM3_16BIT_Initialize ..  ]
 "48
-[; ;mcc_generated_files/system/src/system.c: 48:     INTERRUPT_Initialize();
-[e ( _INTERRUPT_Initialize ..  ]
+[; ;mcc_generated_files/system/src/system.c: 48:     SPI1_Initialize();
+[e ( _SPI1_Initialize ..  ]
 "49
-[; ;mcc_generated_files/system/src/system.c: 49: }
+[; ;mcc_generated_files/system/src/system.c: 49:     TMR2_Initialize();
+[e ( _TMR2_Initialize ..  ]
+"50
+[; ;mcc_generated_files/system/src/system.c: 50:     INTERRUPT_Initialize();
+[e ( _INTERRUPT_Initialize ..  ]
+"51
+[; ;mcc_generated_files/system/src/system.c: 51: }
 [e :UE 2415 ]
 }

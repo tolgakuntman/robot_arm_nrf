@@ -153,6 +153,7 @@ void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, 
 _Bool arm_is_busy();
 void delay();
 void start_fsm_delay();
+void set_magnet_strength();
 # 9 "arm_fsm.c" 2
 # 1 "./servo.h" 1
 # 15 "./servo.h"
@@ -592,6 +593,86 @@ void TMR2_ISR(void);
 
 void TMR2_OverflowCallbackRegister(void (* InterruptHandler)(void));
 # 13 "arm_fsm.c" 2
+# 1 "./mcc_generated_files/pwm/pwm1_16bit.h" 1
+# 50 "./mcc_generated_files/pwm/pwm1_16bit.h"
+void PWM1_16BIT_Initialize(void);
+
+
+
+
+
+
+
+void PWM1_16BIT_Enable(void);
+# 67 "./mcc_generated_files/pwm/pwm1_16bit.h"
+void PWM1_16BIT_Disable(void);
+
+
+
+
+
+
+
+void PWM1_16BIT_WritePeriodRegister(uint16_t periodCount);
+
+
+
+
+
+
+
+void PWM1_16BIT_SetSlice1Output1DutyCycleRegister(uint16_t value);
+
+
+
+
+
+
+
+void PWM1_16BIT_SetSlice1Output2DutyCycleRegister(uint16_t value);
+# 101 "./mcc_generated_files/pwm/pwm1_16bit.h"
+void PWM1_16BIT_LoadBufferRegisters(void);
+
+
+
+
+
+
+
+void PWM1_16BIT_PWMI_ISR(void);
+
+
+
+
+
+
+
+void PWM1_16BIT_PWMPI_ISR(void);
+
+
+
+
+
+
+
+void PWM1_16BIT_Slice1Output1_SetInterruptHandler(void (* InterruptHandler)(void));
+
+
+
+
+
+
+
+void PWM1_16BIT_Slice1Output2_SetInterruptHandler(void (* InterruptHandler)(void));
+
+
+
+
+
+
+
+void PWM1_16BIT_Period_SetInterruptHandler(void (* InterruptHandler)(void));
+# 14 "arm_fsm.c" 2
 
 
 static ArmState current_state, next_state, previous_state = IDLE;
@@ -612,6 +693,24 @@ void arm_fsm_init() {
 
 }
 
+void set_magnet_strength() {
+    switch(target_boat) {
+        case(0): {
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(26000);
+        }
+        case(1): {
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(0);
+        }
+        case(2): {
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(13000);
+        }
+        case(3): {
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(6500);
+        }
+    }
+    PWM1_16BIT_LoadBufferRegisters();
+}
+
 void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, ArmMode mode) {
     if (current_state == IDLE) {
         target_boat = boat_id;
@@ -621,6 +720,7 @@ void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, 
         arm_mode = mode;
         current_state = (mode == PLACE) ? ROTATE_DOCK : ROTATE_BOARD;
         process_fsm = 1;
+        set_magnet_strength();
     }
 }
 
@@ -647,7 +747,7 @@ void arm_fsm_update() {
     switch (current_state) {
 
         case ROTATE_DOCK: {
-            TMR2_PeriodCountSet(0x2);
+            TMR2_PeriodCountSet(0x3);
             uint16_t moveup_angles[4] = {getAngle(0), getAngle(1), calculateAngle(get_docking_servo_angles(target_boat)[2]), getAngle(3)};
             move_servo_to_int(moveup_angles);
             switch(previous_state) {
@@ -655,8 +755,12 @@ void arm_fsm_update() {
                     next_state = (arm_mode == PLACE) ? RETURN : MOVE_UP_DOCK;
                     break;
                 }
+                case IDLE: {
+                    next_state = MOVE_UP_DOCK;
+                    break;
+                }
                 default: {
-                    next_state = PICKUP;
+
                     break;
                 }
             }
@@ -683,6 +787,8 @@ void arm_fsm_update() {
             switch(previous_state) {
                 case MAGNET_ON: {
                     next_state = STILL;
+
+
                     break;
                 }
                 case ROTATE_DOCK: {
@@ -714,10 +820,10 @@ void arm_fsm_update() {
         }
 
         case ROTATE_BOARD: {
-            TMR2_PeriodCountSet(0x2);
+            TMR2_PeriodCountSet(0x3);
             uint16_t moveup_angles[4] = {getAngle(0), getAngle(1), calculateAngle(get_grid_servo_angles(target_x, target_y)[2]), getAngle(3)};
             move_servo_to_int(moveup_angles);
-            next_state = BOAT_ROTATE;
+            next_state = MOVE_UP_BOARD;
             break;
         }
 
@@ -725,7 +831,7 @@ void arm_fsm_update() {
             TMR2_PeriodCountSet(0x7);
             uint16_t angles[4] = {getAngle(0), calculateAngle(get_dependent_servo_angle(target_x, target_y, target_orientation)), getAngle(2), getAngle(3)};
             move_servo_to_int(angles);
-            next_state = MOVE_UP_BOARD;
+            next_state = PLACEMENT;
             break;
         }
 
@@ -734,8 +840,8 @@ void arm_fsm_update() {
             get_adjusted_servo_angles_up(target_x, target_y, target_orientation, angles);
             move_servo_to_angles(angles);
             switch(previous_state) {
-                case BOAT_ROTATE: {
-                    next_state = PLACEMENT;
+                case ROTATE_BOARD: {
+                    next_state = BOAT_ROTATE;
                     break;
                 case WAIT: {
                     next_state = STILL;

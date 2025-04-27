@@ -29266,7 +29266,7 @@ unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "/opt/microchip/xc8/v2.50/pic/include/xc.h" 2 3
 # 39 "mcc_generated_files/system/src/../pins.h" 2
-# 279 "mcc_generated_files/system/src/../pins.h"
+# 299 "mcc_generated_files/system/src/../pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -29284,11 +29284,11 @@ void PIN_MANAGER_IOC(void);
 
 
 void nRF24_IRQ_ISR(void);
-# 305 "mcc_generated_files/system/src/../pins.h"
+# 325 "mcc_generated_files/system/src/../pins.h"
 void nRF24_IRQ_SetInterruptHandler(void (* InterruptHandler)(void));
-# 316 "mcc_generated_files/system/src/../pins.h"
+# 336 "mcc_generated_files/system/src/../pins.h"
 extern void (*nRF24_IRQ_InterruptHandler)(void);
-# 327 "mcc_generated_files/system/src/../pins.h"
+# 347 "mcc_generated_files/system/src/../pins.h"
 void nRF24_IRQ_DefaultInterruptHandler(void);
 # 36 "mcc_generated_files/system/src/pins.c" 2
 
@@ -29318,7 +29318,7 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    TRISA = 0xFF;
+    TRISA = 0xFB;
     TRISB = 0xF0;
     TRISC = 0x8E;
     TRISD = 0xFF;

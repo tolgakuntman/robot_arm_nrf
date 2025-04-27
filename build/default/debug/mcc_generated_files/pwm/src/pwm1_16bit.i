@@ -29396,13 +29396,13 @@ void PWM1_16BIT_Initialize(void)
     PWM1S1CFG = 0x0;
 
 
-    PWM1S1P1L = 0x33;
+    PWM1S1P1L = 0x26;
 
 
     PWM1S1P1H = 0x0;
 
 
-    PWM1S1P2L = 0x33;
+    PWM1S1P2L = 0x26;
 
 
     PWM1S1P2H = 0x0;

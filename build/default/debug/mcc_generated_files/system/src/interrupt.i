@@ -29311,7 +29311,7 @@ void CLOCK_Initialize(void);
 # 40 "mcc_generated_files/system/src/../../system/../system/config_bits.h" 2
 # 43 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../system/pins.h" 1
-# 279 "mcc_generated_files/system/src/../../system/../system/pins.h"
+# 299 "mcc_generated_files/system/src/../../system/../system/pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -29329,13 +29329,27 @@ void PIN_MANAGER_IOC(void);
 
 
 void nRF24_IRQ_ISR(void);
-# 305 "mcc_generated_files/system/src/../../system/../system/pins.h"
+# 325 "mcc_generated_files/system/src/../../system/../system/pins.h"
 void nRF24_IRQ_SetInterruptHandler(void (* InterruptHandler)(void));
-# 316 "mcc_generated_files/system/src/../../system/../system/pins.h"
+# 336 "mcc_generated_files/system/src/../../system/../system/pins.h"
 extern void (*nRF24_IRQ_InterruptHandler)(void);
-# 327 "mcc_generated_files/system/src/../../system/../system/pins.h"
+# 347 "mcc_generated_files/system/src/../../system/../system/pins.h"
 void nRF24_IRQ_DefaultInterruptHandler(void);
 # 44 "mcc_generated_files/system/src/../../system/system.h" 2
+# 1 "mcc_generated_files/system/src/../../system/../dac/dac1.h" 1
+# 53 "mcc_generated_files/system/src/../../system/../dac/dac1.h"
+void DAC1_Initialize(void);
+# 62 "mcc_generated_files/system/src/../../system/../dac/dac1.h"
+void DAC1_SetOutput(uint8_t inputData);
+
+
+
+
+
+
+
+uint8_t DAC1_GetOutput(void);
+# 45 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../pwm/pwm1_16bit.h" 1
 # 50 "mcc_generated_files/system/src/../../system/../pwm/pwm1_16bit.h"
 void PWM1_16BIT_Initialize(void);
@@ -29415,7 +29429,7 @@ void PWM1_16BIT_Slice1Output2_SetInterruptHandler(void (* InterruptHandler)(void
 
 
 void PWM1_16BIT_Period_SetInterruptHandler(void (* InterruptHandler)(void));
-# 45 "mcc_generated_files/system/src/../../system/system.h" 2
+# 46 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../pwm/pwm2_16bit.h" 1
 # 50 "mcc_generated_files/system/src/../../system/../pwm/pwm2_16bit.h"
 void PWM2_16BIT_Initialize(void);
@@ -29495,7 +29509,7 @@ void PWM2_16BIT_Slice1Output2_SetInterruptHandler(void (* InterruptHandler)(void
 
 
 void PWM2_16BIT_Period_SetInterruptHandler(void (* InterruptHandler)(void));
-# 46 "mcc_generated_files/system/src/../../system/system.h" 2
+# 47 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../pwm/pwm3_16bit.h" 1
 # 50 "mcc_generated_files/system/src/../../system/../pwm/pwm3_16bit.h"
 void PWM3_16BIT_Initialize(void);
@@ -29575,7 +29589,7 @@ void PWM3_16BIT_Slice1Output2_SetInterruptHandler(void (* InterruptHandler)(void
 
 
 void PWM3_16BIT_Period_SetInterruptHandler(void (* InterruptHandler)(void));
-# 47 "mcc_generated_files/system/src/../../system/system.h" 2
+# 48 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../spi/spi1.h" 1
 # 44 "mcc_generated_files/system/src/../../system/../spi/spi1.h"
 # 1 "mcc_generated_files/system/src/../../system/../spi/spi_interface.h" 1
@@ -29684,7 +29698,7 @@ uint8_t SPI1_ByteRead(void);
 _Bool SPI1_IsRxReady(void);
 # 227 "mcc_generated_files/system/src/../../system/../spi/spi1.h"
 _Bool SPI1_IsTxReady(void);
-# 48 "mcc_generated_files/system/src/../../system/system.h" 2
+# 49 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../timer/tmr2.h" 1
 # 39 "mcc_generated_files/system/src/../../system/../timer/tmr2.h"
 # 1 "mcc_generated_files/system/src/../../system/../timer/timer_interface.h" 1
@@ -29984,7 +29998,7 @@ void TMR2_ISR(void);
 
 
 void TMR2_OverflowCallbackRegister(void (* InterruptHandler)(void));
-# 49 "mcc_generated_files/system/src/../../system/system.h" 2
+# 50 "mcc_generated_files/system/src/../../system/system.h" 2
 
 
 # 1 "mcc_generated_files/system/src/../../system/../timer/tmr0.h" 1
@@ -30055,7 +30069,94 @@ void TMR0_ISR(void);
 
 
 void TMR0_OverflowCallbackRegister(void (* CallbackHandler)(void));
-# 52 "mcc_generated_files/system/src/../../system/system.h" 2
+# 53 "mcc_generated_files/system/src/../../system/system.h" 2
+# 1 "mcc_generated_files/system/src/../../system/../timer/tmr1.h" 1
+# 40 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+# 1 "mcc_generated_files/system/src/../../system/../timer/tmr1_deprecated.h" 1
+# 40 "mcc_generated_files/system/src/../../system/../timer/tmr1.h" 2
+# 175 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_Initialize(void);
+
+
+
+
+
+
+
+void TMR1_Deinitialize(void);
+# 192 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_Start(void);
+# 201 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_Stop(void);
+# 210 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+uint16_t TMR1_CounterGet(void);
+# 219 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_CounterSet(uint16_t timerVal);
+# 228 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_PeriodSet(uint16_t periodVal);
+
+
+
+
+
+
+
+uint16_t TMR1_PeriodGet(void);
+# 245 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_Reload(void);
+
+
+
+
+
+
+
+uint16_t TMR1_MaxCountGet(void);
+# 262 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+void TMR1_SinglePulseAcquisitionStart(void);
+# 271 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+uint8_t TMR1_GateStateGet(void);
+
+
+
+
+
+
+
+void TMR1_TMRInterruptEnable(void);
+
+
+
+
+
+
+
+void TMR1_TMRInterruptDisable(void);
+
+
+
+
+
+
+
+void TMR1_OverflowISR(void);
+
+
+
+
+
+
+
+ void TMR1_OverflowCallbackRegister(void (* CallbackHandler)(void));
+
+
+
+
+
+
+
+ void TMR1_GateCallbackRegister(void (* CallbackHandler)(void));
+# 54 "mcc_generated_files/system/src/../../system/system.h" 2
 
 
 
@@ -30117,6 +30218,10 @@ void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
     else if(PIE3bits.TMR2IE == 1 && PIR3bits.TMR2IF == 1)
     {
         TMR2_ISR();
+    }
+    else if(PIE3bits.TMR1IE == 1 && PIR3bits.TMR1IF == 1)
+    {
+        TMR1_OverflowISR();
     }
     else
     {

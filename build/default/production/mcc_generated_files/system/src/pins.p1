@@ -202,11 +202,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;/home/aevern/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h: 42027: extern volatile unsigned char IOCEF __attribute__((address(0x427)));
 [v _IOCEF `Vuc ~T0 @X0 0 e@1063 ]
 [v F17119 `(v ~T0 @X0 0 tf ]
-"305 mcc_generated_files/system/src/../pins.h
-[; ;mcc_generated_files/system/src/../pins.h: 305: void nRF24_IRQ_SetInterruptHandler(void (* InterruptHandler)(void));
+"325 mcc_generated_files/system/src/../pins.h
+[; ;mcc_generated_files/system/src/../pins.h: 325: void nRF24_IRQ_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _nRF24_IRQ_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F17119 ]
-"327
-[; ;mcc_generated_files/system/src/../pins.h: 327: void nRF24_IRQ_DefaultInterruptHandler(void);
+"347
+[; ;mcc_generated_files/system/src/../pins.h: 347: void nRF24_IRQ_DefaultInterruptHandler(void);
 [v _nRF24_IRQ_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
 "47119 /home/aevern/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h
 [; ;/home/aevern/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h: 47119:     struct {
@@ -230,8 +230,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "41458
 [; ;/home/aevern/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h: 41458: extern volatile IOCCFbits_t IOCCFbits __attribute__((address(0x417)));
 [v _IOCCFbits `VS1945 ~T0 @X0 0 e@1047 ]
-"295 mcc_generated_files/system/src/../pins.h
-[; ;mcc_generated_files/system/src/../pins.h: 295: void nRF24_IRQ_ISR(void);
+"315 mcc_generated_files/system/src/../pins.h
+[; ;mcc_generated_files/system/src/../pins.h: 315: void nRF24_IRQ_ISR(void);
 [v _nRF24_IRQ_ISR `(v ~T0 @X0 0 ef ]
 [v F17131 `(v ~T0 @X0 0 tf ]
 [v F17133 `(v ~T0 @X0 0 tf ]
@@ -2855,8 +2855,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/pins.c: 58:     ODCONF = 0x0;
 [e = _ODCONF -> -> 0 `i `uc ]
 "63
-[; ;mcc_generated_files/system/src/pins.c: 63:     TRISA = 0xFF;
-[e = _TRISA -> -> 255 `i `uc ]
+[; ;mcc_generated_files/system/src/pins.c: 63:     TRISA = 0xFB;
+[e = _TRISA -> -> 251 `i `uc ]
 "64
 [; ;mcc_generated_files/system/src/pins.c: 64:     TRISB = 0xF0;
 [e = _TRISB -> -> 240 `i `uc ]

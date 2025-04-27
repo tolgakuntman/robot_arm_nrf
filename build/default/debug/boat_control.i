@@ -130,13 +130,9 @@ typedef uint32_t uint_fast32_t;
 typedef struct {
     uint8_t angles[4];
 } DockingPosition;
-# 28 "./boat_control.h"
+
 extern const DockingPosition docking_positions[4];
 extern const DockingPosition docking_up[4];
-
-
-
-
 
 const uint8_t* get_docking_servo_angles(uint8_t boat_id);
 const uint8_t* get_docking_servo_angles_up(uint8_t boat_id);
@@ -254,19 +250,19 @@ uint16_t getAngle(uint8_t i);
 
 
 const DockingPosition docking_positions[4] = {
-    { {23, 45, 40, 42} },
-    { {42, 45, 22, 67} },
-    { {64, 45, 14, 84} },
-    { {61, 45, 32, 81} }
+    { {21, 45, 41, 40} },
+    { {38, 20, 23, 61} },
+    { {60, 10, 15, 85} },
+    { {58, 45, 31, 81} }
 };
 
 const DockingPosition docking_up[4] = {
-    { {30, 45, 40, 30} },
-    { {60, 45, 22, 60} },
-    { {70, 45, 14, 70} },
-    { {70, 45, 32, 70} }
+    { {35, 45, 42, 38} },
+    { {60, 20, 23, 53} },
+    { {73, 10, 15, 75} },
+    { {70, 45, 31, 70} }
 };
-# 53 "boat_control.c"
+
 const uint8_t* get_docking_servo_angles(uint8_t boat_id) {
     return docking_positions[boat_id].angles;
 }

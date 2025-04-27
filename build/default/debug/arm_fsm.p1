@@ -1,23 +1,29 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"15 arm_fsm.c
-[; ;arm_fsm.c: 15: static ArmState current_state, next_state, previous_state = IDLE;
+"16 arm_fsm.c
+[; ;arm_fsm.c: 16: static ArmState current_state, next_state, previous_state = IDLE;
 [c E36 0 1 2 3 4 5 6 7 8 9 10 11 12 .. ]
 [n E36 . IDLE ROTATE_DOCK PICKUP MAGNET_ON MOVE_UP_DOCK STILL ROTATE_BOARD BOAT_ROTATE MOVE_UP_BOARD PLACEMENT MAGNET_OFF WAIT RETURN  ]
-"16
-[; ;arm_fsm.c: 16: static ArmMode arm_mode = PLACE;
+"17
+[; ;arm_fsm.c: 17: static ArmMode arm_mode = PLACE;
 [c E51 0 1 .. ]
 [n E51 . PLACE REMOVE  ]
 "36 ./servo.h
 [; ;./servo.h: 36: void initServo();
 [v _initServo `(v ~T0 @X0 0 e? ]
-[v F82 `(v ~T0 @X0 0 tf ]
+[v F83 `(v ~T0 @X0 0 tf ]
 "280 ./mcc_generated_files/timer/tmr0.h
 [; ;./mcc_generated_files/timer/tmr0.h: 280: void TMR0_OverflowCallbackRegister(void (* CallbackHandler)(void));
-[v _TMR0_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F82 ]
-"43 ./arm_fsm.h
-[; ;./arm_fsm.h: 43: void delay();
+[v _TMR0_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F83 ]
+"40 ./arm_fsm.h
+[; ;./arm_fsm.h: 40: void delay();
 [v _delay `(v ~T0 @X0 0 e? ]
-[v F152 `(v ~T0 @X0 0 tf ]
+[v F272 `(v ~T0 @X0 0 tf ]
+"83 ./mcc_generated_files/pwm/pwm1_16bit.h
+[; ;./mcc_generated_files/pwm/pwm1_16bit.h: 83: void PWM1_16BIT_SetSlice1Output1DutyCycleRegister(uint16_t value);
+[v _PWM1_16BIT_SetSlice1Output1DutyCycleRegister `(v ~T0 @X0 0 ef1`us ]
+"101
+[; ;./mcc_generated_files/pwm/pwm1_16bit.h: 101: void PWM1_16BIT_LoadBufferRegisters(void);
+[v _PWM1_16BIT_LoadBufferRegisters `(v ~T0 @X0 0 ef ]
 "195 ./mcc_generated_files/timer/tmr0.h
 [; ;./mcc_generated_files/timer/tmr0.h: 195: void TMR0_Stop(void);
 [v _TMR0_Stop `(v ~T0 @X0 0 ef ]
@@ -27,14 +33,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "40 ./servo.h
 [; ;./servo.h: 40: _Bool servoMovement();
 [v _servoMovement `(a ~T0 @X0 0 e? ]
-"41
+"450 ./mcc_generated_files/timer/tmr2.h
+[; ;./mcc_generated_files/timer/tmr2.h: 450: void TMR2_PeriodCountSet(size_t periodVal);
+[v _TMR2_PeriodCountSet `(v ~T0 @X0 0 ef1`ui ]
+"41 ./servo.h
 [; ;./servo.h: 41: uint16_t getAngle(uint8_t i);
 [v _getAngle `(us ~T0 @X0 0 ef1`uc ]
 "35
 [; ;./servo.h: 35: uint16_t calculateAngle(uint8_t angleDeg);
 [v _calculateAngle `(us ~T0 @X0 0 ef1`uc ]
-"35 ./boat_control.h
-[; ;./boat_control.h: 35: const uint8_t* get_docking_servo_angles(uint8_t boat_id);
+"24 ./boat_control.h
+[; ;./boat_control.h: 24: const uint8_t* get_docking_servo_angles(uint8_t boat_id);
 [v _get_docking_servo_angles `(*Cuc ~T0 @X0 0 ef1`uc ]
 "39 ./servo.h
 [; ;./servo.h: 39: void move_servo_to_int(const uint16_t* intAngles);
@@ -45,8 +54,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "33
 [; ;./servo.h: 33: void enableMagnet();
 [v _enableMagnet `(v ~T0 @X0 0 e? ]
-"36 ./boat_control.h
-[; ;./boat_control.h: 36: const uint8_t* get_docking_servo_angles_up(uint8_t boat_id);
+"25 ./boat_control.h
+[; ;./boat_control.h: 25: const uint8_t* get_docking_servo_angles_up(uint8_t boat_id);
 [v _get_docking_servo_angles_up `(*Cuc ~T0 @X0 0 ef1`uc ]
 "27 ./grid_lookup.h
 [; ;./grid_lookup.h: 27: const uint8_t* get_grid_servo_angles(uint8_t x, uint8_t y);
@@ -63,75 +72,143 @@ Version 4.0 HI-TECH Software Intermediate Code
 "34 ./servo.h
 [; ;./servo.h: 34: void disableMagnet();
 [v _disableMagnet `(v ~T0 @X0 0 e? ]
-"15 arm_fsm.c
-[; ;arm_fsm.c: 15: static ArmState current_state, next_state, previous_state = IDLE;
+"16 arm_fsm.c
+[; ;arm_fsm.c: 16: static ArmState current_state, next_state, previous_state = IDLE;
 [v _current_state `E36 ~T0 @X0 1 s ]
 [v _next_state `E36 ~T0 @X0 1 s ]
 [v _previous_state `E36 ~T0 @X0 1 s ]
 [i _previous_state
 . `E36 0
 ]
-"16
-[; ;arm_fsm.c: 16: static ArmMode arm_mode = PLACE;
+"17
+[; ;arm_fsm.c: 17: static ArmMode arm_mode = PLACE;
 [v _arm_mode `E51 ~T0 @X0 1 s ]
 [i _arm_mode
 . `E51 0
 ]
-"17
-[; ;arm_fsm.c: 17: static uint8_t target_boat;
-[v _target_boat `uc ~T0 @X0 1 s ]
 "18
-[; ;arm_fsm.c: 18: static uint8_t target_x, target_y;
+[; ;arm_fsm.c: 18: static uint8_t target_boat;
+[v _target_boat `uc ~T0 @X0 1 s ]
+"19
+[; ;arm_fsm.c: 19: static uint8_t target_x, target_y;
 [v _target_x `uc ~T0 @X0 1 s ]
 [v _target_y `uc ~T0 @X0 1 s ]
-"19
-[; ;arm_fsm.c: 19: static uint8_t target_orientation;
-[v _target_orientation `uc ~T0 @X0 1 s ]
 "20
-[; ;arm_fsm.c: 20: static volatile _Bool process_fsm = 0;
+[; ;arm_fsm.c: 20: static uint8_t target_orientation;
+[v _target_orientation `uc ~T0 @X0 1 s ]
+"21
+[; ;arm_fsm.c: 21: static volatile _Bool process_fsm = 0;
 [v _process_fsm `Va ~T0 @X0 1 s ]
 [i _process_fsm
 -> -> 0 `i `a
 ]
-"21
-[; ;arm_fsm.c: 21: static volatile _Bool state_done = 1;
+"22
+[; ;arm_fsm.c: 22: static volatile _Bool state_done = 1;
 [v _state_done `Va ~T0 @X0 1 s ]
 [i _state_done
 -> -> 1 `i `a
 ]
-"22
-[; ;arm_fsm.c: 22: static volatile _Bool delay_done = 1;
+"23
+[; ;arm_fsm.c: 23: static volatile _Bool delay_done = 1;
 [v _delay_done `Va ~T0 @X0 1 s ]
 [i _delay_done
 -> -> 1 `i `a
 ]
-"24
-[; ;arm_fsm.c: 24: void arm_fsm_init() {
+"25
+[; ;arm_fsm.c: 25: void arm_fsm_init() {
 [v _arm_fsm_init `(v ~T0 @X0 1 ef ]
 {
 [e :U _arm_fsm_init ]
 [f ]
-"25
-[; ;arm_fsm.c: 25:     initServo();
-[e ( _initServo ..  ]
 "26
-[; ;arm_fsm.c: 26:     current_state = next_state = previous_state = IDLE;
-[e = _current_state = _next_state = _previous_state . `E36 0 ]
+[; ;arm_fsm.c: 26:     initServo();
+[e ( _initServo ..  ]
 "27
-[; ;arm_fsm.c: 27:     process_fsm = 0;
-[e = _process_fsm -> -> 0 `i `a ]
+[; ;arm_fsm.c: 27:     current_state = next_state = previous_state = IDLE;
+[e = _current_state = _next_state = _previous_state . `E36 0 ]
 "28
-[; ;arm_fsm.c: 28:     state_done = 1;
-[e = _state_done -> -> 1 `i `a ]
+[; ;arm_fsm.c: 28:     process_fsm = 0;
+[e = _process_fsm -> -> 0 `i `a ]
 "29
-[; ;arm_fsm.c: 29:     TMR0_OverflowCallbackRegister(delay);
-[e ( _TMR0_OverflowCallbackRegister (1 -> &U _delay `*F152 ]
-"31
-[; ;arm_fsm.c: 31: }
-[e :UE 4 ]
+[; ;arm_fsm.c: 29:     state_done = 1;
+[e = _state_done -> -> 1 `i `a ]
+"30
+[; ;arm_fsm.c: 30:     TMR0_OverflowCallbackRegister(delay);
+[e ( _TMR0_OverflowCallbackRegister (1 -> &U _delay `*F272 ]
+"32
+[; ;arm_fsm.c: 32: }
+[e :UE 5 ]
 }
-"33
-[; ;arm_fsm.c: 33: void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, ArmMode mode) {
+"34
+[; ;arm_fsm.c: 34: void set_magnet_strength() {
+[v _set_magnet_strength `(v ~T0 @X0 1 ef ]
+{
+[e :U _set_magnet_strength ]
+[f ]
+"35
+[; ;arm_fsm.c: 35:     switch(target_boat) {
+[e $U 8  ]
+{
+"36
+[; ;arm_fsm.c: 36:         case(0): {
+[e :U 9 ]
+{
+"37
+[; ;arm_fsm.c: 37:             PWM1_16BIT_SetSlice1Output1DutyCycleRegister(26000);
+[e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 -> -> 26000 `i `us ]
+"38
+[; ;arm_fsm.c: 38:         }
+}
+"39
+[; ;arm_fsm.c: 39:         case(1): {
+[e :U 10 ]
+{
+"40
+[; ;arm_fsm.c: 40:             PWM1_16BIT_SetSlice1Output1DutyCycleRegister(5000);
+[e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 -> -> 5000 `i `us ]
+"41
+[; ;arm_fsm.c: 41:         }
+}
+"42
+[; ;arm_fsm.c: 42:         case(2): {
+[e :U 11 ]
+{
+"43
+[; ;arm_fsm.c: 43:             PWM1_16BIT_SetSlice1Output1DutyCycleRegister(13000);
+[e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 -> -> 13000 `i `us ]
+"44
+[; ;arm_fsm.c: 44:         }
+}
+"45
+[; ;arm_fsm.c: 45:         case(3): {
+[e :U 12 ]
+{
+"46
+[; ;arm_fsm.c: 46:             PWM1_16BIT_SetSlice1Output1DutyCycleRegister(6500);
+[e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 -> -> 6500 `i `us ]
+"47
+[; ;arm_fsm.c: 47:         }
+}
+"48
+[; ;arm_fsm.c: 48:     }
+}
+[e $U 7  ]
+[e :U 8 ]
+[e [\ _target_boat , $ -> 0 `i 9
+ , $ -> 1 `i 10
+ , $ -> 2 `i 11
+ , $ -> 3 `i 12
+ 7 ]
+[e :U 7 ]
+"49
+[; ;arm_fsm.c: 49:     PWM1_16BIT_LoadBufferRegisters();
+[e ( _PWM1_16BIT_LoadBufferRegisters ..  ]
+"50
+[; ;arm_fsm.c: 50: }
+[e :UE 6 ]
+}
+"52
+[; ;arm_fsm.c: 52: void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, ArmMode mode) {
 [v _arm_set_target `(v ~T0 @X0 1 ef5`uc`uc`uc`uc`E51 ]
 {
 [e :U _arm_set_target ]
@@ -141,346 +218,297 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _is_vertical `uc ~T0 @X0 1 r4 ]
 [v _mode `E51 ~T0 @X0 1 r5 ]
 [f ]
-"34
-[; ;arm_fsm.c: 34:     if (current_state == IDLE) {
-[e $ ! == -> _current_state `ui -> . `E36 0 `ui 6  ]
+"53
+[; ;arm_fsm.c: 53:     if (current_state == IDLE) {
+[e $ ! == -> _current_state `ui -> . `E36 0 `ui 14  ]
 {
-"35
-[; ;arm_fsm.c: 35:         target_boat = boat_id;
+"54
+[; ;arm_fsm.c: 54:         target_boat = boat_id;
 [e = _target_boat _boat_id ]
-"36
-[; ;arm_fsm.c: 36:         target_x = x;
+"55
+[; ;arm_fsm.c: 55:         target_x = x;
 [e = _target_x _x ]
-"37
-[; ;arm_fsm.c: 37:         target_y = y;
+"56
+[; ;arm_fsm.c: 56:         target_y = y;
 [e = _target_y _y ]
-"38
-[; ;arm_fsm.c: 38:         target_orientation = is_vertical;
+"57
+[; ;arm_fsm.c: 57:         target_orientation = is_vertical;
 [e = _target_orientation _is_vertical ]
-"39
-[; ;arm_fsm.c: 39:         arm_mode = mode;
+"58
+[; ;arm_fsm.c: 58:         arm_mode = mode;
 [e = _arm_mode _mode ]
-"40
-[; ;arm_fsm.c: 40:         current_state = (mode == PLACE) ? ROTATE_DOCK : ROTATE_BOARD;
+"59
+[; ;arm_fsm.c: 59:         current_state = (mode == PLACE) ? ROTATE_DOCK : ROTATE_BOARD;
 [e = _current_state -> ? == -> _mode `ui -> . `E51 0 `ui : . `E36 1 . `E36 6 `E36 ]
-"41
-[; ;arm_fsm.c: 41:         process_fsm = 1;
+"60
+[; ;arm_fsm.c: 60:         process_fsm = 1;
 [e = _process_fsm -> -> 1 `i `a ]
-"42
-[; ;arm_fsm.c: 42:     }
+"61
+[; ;arm_fsm.c: 61:         set_magnet_strength();
+[e ( _set_magnet_strength ..  ]
+"62
+[; ;arm_fsm.c: 62:     }
 }
-[e :U 6 ]
-"43
-[; ;arm_fsm.c: 43: }
-[e :UE 5 ]
+[e :U 14 ]
+"63
+[; ;arm_fsm.c: 63: }
+[e :UE 13 ]
 }
-"45
-[; ;arm_fsm.c: 45: _Bool arm_is_busy() {
+"65
+[; ;arm_fsm.c: 65: _Bool arm_is_busy() {
 [v _arm_is_busy `(a ~T0 @X0 1 ef ]
 {
 [e :U _arm_is_busy ]
 [f ]
-"46
-[; ;arm_fsm.c: 46:     return process_fsm;
+"66
+[; ;arm_fsm.c: 66:     return process_fsm;
 [e ) _process_fsm ]
-[e $UE 7  ]
-"47
-[; ;arm_fsm.c: 47: }
-[e :UE 7 ]
+[e $UE 15  ]
+"67
+[; ;arm_fsm.c: 67: }
+[e :UE 15 ]
 }
-"49
-[; ;arm_fsm.c: 49: void delay() {
+"69
+[; ;arm_fsm.c: 69: void delay() {
 [v _delay `(v ~T0 @X0 1 ef ]
 {
 [e :U _delay ]
 [f ]
-"50
-[; ;arm_fsm.c: 50:     delay_done = 1;
+"70
+[; ;arm_fsm.c: 70:     delay_done = 1;
 [e = _delay_done -> -> 1 `i `a ]
-"51
-[; ;arm_fsm.c: 51:     TMR0_Stop();
+"71
+[; ;arm_fsm.c: 71:     TMR0_Stop();
 [e ( _TMR0_Stop ..  ]
-"52
-[; ;arm_fsm.c: 52: }
-[e :UE 8 ]
+"72
+[; ;arm_fsm.c: 72: }
+[e :UE 16 ]
 }
-"54
-[; ;arm_fsm.c: 54: void start_fsm_delay(){
+"74
+[; ;arm_fsm.c: 74: void start_fsm_delay(){
 [v _start_fsm_delay `(v ~T0 @X0 1 ef ]
 {
 [e :U _start_fsm_delay ]
 [f ]
-"55
-[; ;arm_fsm.c: 55:     delay_done = 0;
+"75
+[; ;arm_fsm.c: 75:     delay_done = 0;
 [e = _delay_done -> -> 0 `i `a ]
-"58
-[; ;arm_fsm.c: 58:     TMR0_Start();
+"78
+[; ;arm_fsm.c: 78:     TMR0_Start();
 [e ( _TMR0_Start ..  ]
-"59
-[; ;arm_fsm.c: 59: }
-[e :UE 9 ]
+"79
+[; ;arm_fsm.c: 79: }
+[e :UE 17 ]
 }
-"62
-[; ;arm_fsm.c: 62: void arm_fsm_update() {
+"82
+[; ;arm_fsm.c: 82: void arm_fsm_update() {
 [v _arm_fsm_update `(v ~T0 @X0 1 ef ]
 {
 [e :U _arm_fsm_update ]
 [f ]
-"63
-[; ;arm_fsm.c: 63:     if (!process_fsm || servoMovement()) return;
-[e $ ! || ! != -> _process_fsm `i -> 0 `i != -> ( _servoMovement ..  `i -> 0 `i 11  ]
-[e $UE 10  ]
-[e :U 11 ]
-"65
-[; ;arm_fsm.c: 65:     switch (current_state) {
-[e $U 13  ]
-{
-"67
-[; ;arm_fsm.c: 67:         case ROTATE_DOCK: {
-[e :U 14 ]
-{
-[v F164 `us ~T0 @X0 -> 4 `i s ]
-[i F164
-:U ..
-"68
-[; ;arm_fsm.c: 68:             uint16_t moveup_angles[4] = {getAngle(0), getAngle(1), calculateAngle(get_docking_servo_angles(target_boat)[2]), getAngle(3)};
--> -> 0 `i `us
--> -> 0 `i `us
--> -> 0 `i `us
--> -> 0 `i `us
-..
-]
-[v _moveup_angles `us ~T0 @X0 -> 4 `i a ]
-[e = _moveup_angles F164 ]
-[e ; = *U + &U _moveup_angles * -> -> -> 0 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _getAngle (1 -> -> 0 `i `uc ; = *U + &U _moveup_angles * -> -> -> 1 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _getAngle (1 -> -> 1 `i `uc ; = *U + &U _moveup_angles * -> -> -> 2 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _calculateAngle (1 *U + ( _get_docking_servo_angles (1 _target_boat * -> -> 2 `i `x -> -> # *U ( _get_docking_servo_angles (1 _target_boat `i `x = *U + &U _moveup_angles * -> -> -> 3 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _getAngle (1 -> -> 3 `i `uc ]
-"69
-[; ;arm_fsm.c: 69:             move_servo_to_int(moveup_angles);
-[e ( _move_servo_to_int (1 -> &U _moveup_angles `*Cus ]
-"70
-[; ;arm_fsm.c: 70:             switch(previous_state) {
-[e $U 16  ]
-{
-"71
-[; ;arm_fsm.c: 71:                 case STILL: {
-[e :U 17 ]
-{
-"72
-[; ;arm_fsm.c: 72:                     next_state = (arm_mode == PLACE) ? RETURN : MOVE_UP_DOCK;
-[e = _next_state -> ? == -> _arm_mode `ui -> . `E51 0 `ui : . `E36 12 . `E36 4 `E36 ]
-"73
-[; ;arm_fsm.c: 73:                     break;
-[e $U 15  ]
-"74
-[; ;arm_fsm.c: 74:                 }
-}
-"76
-[; ;arm_fsm.c: 76:                 default: {
-[e :U 18 ]
-{
-"77
-[; ;arm_fsm.c: 77:                     next_state = PICKUP;
-[e = _next_state . `E36 2 ]
-"78
-[; ;arm_fsm.c: 78:                     break;
-[e $U 15  ]
-"79
-[; ;arm_fsm.c: 79:                 }
-}
-"80
-[; ;arm_fsm.c: 80:             }
-}
-[e $U 15  ]
-[e :U 16 ]
-[e [\ -> _previous_state `ui , $ -> . `E36 5 `ui 17
- 18 ]
-[e :U 15 ]
-"82
-[; ;arm_fsm.c: 82:             break;
-[e $U 12  ]
 "83
-[; ;arm_fsm.c: 83:         }
-}
-"86
-[; ;arm_fsm.c: 86:         case PICKUP: {
+[; ;arm_fsm.c: 83:     if (!process_fsm || servoMovement()) return;
+[e $ ! || ! != -> _process_fsm `i -> 0 `i != -> ( _servoMovement ..  `i -> 0 `i 19  ]
+[e $UE 18  ]
 [e :U 19 ]
+"84
+[; ;arm_fsm.c: 84:     TMR2_PeriodCountSet(0xF);
+[e ( _TMR2_PeriodCountSet (1 -> -> 15 `i `ui ]
+"85
+[; ;arm_fsm.c: 85:     switch (current_state) {
+[e $U 21  ]
 {
 "87
-[; ;arm_fsm.c: 87:             const uint8_t* angles = get_docking_servo_angles(target_boat);
-[v _angles `*Cuc ~T0 @X0 1 a ]
-[e = _angles ( _get_docking_servo_angles (1 _target_boat ]
+[; ;arm_fsm.c: 87:         case ROTATE_DOCK: {
+[e :U 22 ]
+{
 "88
-[; ;arm_fsm.c: 88:             move_servo_to_angles(angles);
-[e ( _move_servo_to_angles (1 _angles ]
+[; ;arm_fsm.c: 88:             TMR2_PeriodCountSet(0x3);
+[e ( _TMR2_PeriodCountSet (1 -> -> 3 `i `ui ]
+[v F285 `us ~T0 @X0 -> 4 `i s ]
+[i F285
+:U ..
 "89
-[; ;arm_fsm.c: 89:             next_state = (arm_mode == PLACE) ? MAGNET_ON : MAGNET_OFF;
-[e = _next_state -> ? == -> _arm_mode `ui -> . `E51 0 `ui : . `E36 3 . `E36 10 `E36 ]
+[; ;arm_fsm.c: 89:             uint16_t moveup_angles[4] = {getAngle(0), getAngle(1), calculateAngle(get_docking_servo_angles(target_boat)[2]), getAngle(3)};
+-> -> 0 `i `us
+-> -> 0 `i `us
+-> -> 0 `i `us
+-> -> 0 `i `us
+..
+]
+[v _moveup_angles `us ~T0 @X0 -> 4 `i a ]
+[e = _moveup_angles F285 ]
+[e ; = *U + &U _moveup_angles * -> -> -> 0 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _getAngle (1 -> -> 0 `i `uc ; = *U + &U _moveup_angles * -> -> -> 1 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _getAngle (1 -> -> 1 `i `uc ; = *U + &U _moveup_angles * -> -> -> 2 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _calculateAngle (1 *U + ( _get_docking_servo_angles (1 _target_boat * -> -> 2 `i `x -> -> # *U ( _get_docking_servo_angles (1 _target_boat `i `x = *U + &U _moveup_angles * -> -> -> 3 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _getAngle (1 -> -> 3 `i `uc ]
 "90
-[; ;arm_fsm.c: 90:             break;
-[e $U 12  ]
+[; ;arm_fsm.c: 90:             move_servo_to_int(moveup_angles);
+[e ( _move_servo_to_int (1 -> &U _moveup_angles `*Cus ]
 "91
-[; ;arm_fsm.c: 91:         }
-}
-"93
-[; ;arm_fsm.c: 93:         case MAGNET_ON: {
-[e :U 20 ]
+[; ;arm_fsm.c: 91:             switch(previous_state) {
+[e $U 24  ]
 {
-"94
-[; ;arm_fsm.c: 94:             enableMagnet();
-[e ( _enableMagnet ..  ]
-"95
-[; ;arm_fsm.c: 95:             next_state = (arm_mode == PLACE) ? MOVE_UP_DOCK : MOVE_UP_BOARD;
-[e = _next_state -> ? == -> _arm_mode `ui -> . `E51 0 `ui : . `E36 4 . `E36 8 `E36 ]
-"96
-[; ;arm_fsm.c: 96:             break;
-[e $U 12  ]
-"97
-[; ;arm_fsm.c: 97:         }
-}
-"99
-[; ;arm_fsm.c: 99:         case MOVE_UP_DOCK: {
-[e :U 21 ]
-{
-"100
-[; ;arm_fsm.c: 100:             const uint8_t* angles = get_docking_servo_angles_up(target_boat);
-[v _angles `*Cuc ~T0 @X0 1 a ]
-[e = _angles ( _get_docking_servo_angles_up (1 _target_boat ]
-"101
-[; ;arm_fsm.c: 101:             move_servo_to_angles(angles);
-[e ( _move_servo_to_angles (1 _angles ]
-"104
-[; ;arm_fsm.c: 104:             switch(previous_state) {
-[e $U 23  ]
-{
-"105
-[; ;arm_fsm.c: 105:                 case MAGNET_ON: {
-[e :U 24 ]
-{
-"106
-[; ;arm_fsm.c: 106:                     next_state = STILL;
-[e = _next_state . `E36 5 ]
-"107
-[; ;arm_fsm.c: 107:                     break;
-[e $U 22  ]
-"108
-[; ;arm_fsm.c: 108:                 }
-}
-"109
-[; ;arm_fsm.c: 109:                 case ROTATE_DOCK: {
+"92
+[; ;arm_fsm.c: 92:                 case STILL: {
 [e :U 25 ]
 {
-"110
-[; ;arm_fsm.c: 110:                     next_state = PICKUP;
-[e = _next_state . `E36 2 ]
-"111
-[; ;arm_fsm.c: 111:                     break;
-[e $U 22  ]
-"112
-[; ;arm_fsm.c: 112:                 }
+"93
+[; ;arm_fsm.c: 93:                     next_state = (arm_mode == PLACE) ? RETURN : MOVE_UP_DOCK;
+[e = _next_state -> ? == -> _arm_mode `ui -> . `E51 0 `ui : . `E36 12 . `E36 4 `E36 ]
+"94
+[; ;arm_fsm.c: 94:                     break;
+[e $U 23  ]
+"95
+[; ;arm_fsm.c: 95:                 }
 }
-"113
-[; ;arm_fsm.c: 113:                 case WAIT: {
+"96
+[; ;arm_fsm.c: 96:                 case IDLE: {
 [e :U 26 ]
 {
-"114
-[; ;arm_fsm.c: 114:                     next_state = STILL;
-[e = _next_state . `E36 5 ]
-"115
-[; ;arm_fsm.c: 115:                 }
+"97
+[; ;arm_fsm.c: 97:                     next_state = MOVE_UP_DOCK;
+[e = _next_state . `E36 4 ]
+"98
+[; ;arm_fsm.c: 98:                     break;
+[e $U 23  ]
+"99
+[; ;arm_fsm.c: 99:                 }
 }
-"116
-[; ;arm_fsm.c: 116:             }
-}
-[e $U 22  ]
-[e :U 23 ]
-[e [\ -> _previous_state `ui , $ -> . `E36 3 `ui 24
- , $ -> . `E36 1 `ui 25
- , $ -> . `E36 11 `ui 26
- 22 ]
-[e :U 22 ]
-"117
-[; ;arm_fsm.c: 117:             next_state = STILL;
-[e = _next_state . `E36 5 ]
-"118
-[; ;arm_fsm.c: 118:             break;
-[e $U 12  ]
-"119
-[; ;arm_fsm.c: 119:         }
-}
-"121
-[; ;arm_fsm.c: 121:         case STILL: {
+"100
+[; ;arm_fsm.c: 100:                 default: {
 [e :U 27 ]
 {
-[v F168 `us ~T0 @X0 -> 4 `i s ]
-[i F168
-:U ..
-"122
-[; ;arm_fsm.c: 122:             uint16_t moveup_angles[4] = {calculateAngle(43), getAngle(1), getAngle(2), calculateAngle(45)};
--> -> 0 `i `us
--> -> 0 `i `us
--> -> 0 `i `us
--> -> 0 `i `us
-..
-]
-[v _moveup_angles `us ~T0 @X0 -> 4 `i a ]
-[e = _moveup_angles F168 ]
-[e ; = *U + &U _moveup_angles * -> -> -> 0 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _calculateAngle (1 -> -> 43 `i `uc ; = *U + &U _moveup_angles * -> -> -> 1 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _getAngle (1 -> -> 1 `i `uc ; = *U + &U _moveup_angles * -> -> -> 2 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _getAngle (1 -> -> 2 `i `uc = *U + &U _moveup_angles * -> -> -> 3 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _calculateAngle (1 -> -> 45 `i `uc ]
-"123
-[; ;arm_fsm.c: 123:             move_servo_to_int(moveup_angles);
-[e ( _move_servo_to_int (1 -> &U _moveup_angles `*Cus ]
-"124
-[; ;arm_fsm.c: 124:             switch(previous_state) {
-[e $U 29  ]
+"102
+[; ;arm_fsm.c: 102:                     break;
+[e $U 23  ]
+"103
+[; ;arm_fsm.c: 103:                 }
+}
+"104
+[; ;arm_fsm.c: 104:             }
+}
+[e $U 23  ]
+[e :U 24 ]
+[e [\ -> _previous_state `ui , $ -> . `E36 5 `ui 25
+ , $ -> . `E36 0 `ui 26
+ 27 ]
+[e :U 23 ]
+"105
+[; ;arm_fsm.c: 105:             break;
+[e $U 20  ]
+"106
+[; ;arm_fsm.c: 106:         }
+}
+"109
+[; ;arm_fsm.c: 109:         case PICKUP: {
+[e :U 28 ]
 {
-"125
-[; ;arm_fsm.c: 125:                 case MOVE_UP_DOCK: {
+"110
+[; ;arm_fsm.c: 110:             const uint8_t* angles = get_docking_servo_angles(target_boat);
+[v _angles `*Cuc ~T0 @X0 1 a ]
+[e = _angles ( _get_docking_servo_angles (1 _target_boat ]
+"111
+[; ;arm_fsm.c: 111:             move_servo_to_angles(angles);
+[e ( _move_servo_to_angles (1 _angles ]
+"112
+[; ;arm_fsm.c: 112:             next_state = (arm_mode == PLACE) ? MAGNET_ON : MAGNET_OFF;
+[e = _next_state -> ? == -> _arm_mode `ui -> . `E51 0 `ui : . `E36 3 . `E36 10 `E36 ]
+"113
+[; ;arm_fsm.c: 113:             break;
+[e $U 20  ]
+"114
+[; ;arm_fsm.c: 114:         }
+}
+"116
+[; ;arm_fsm.c: 116:         case MAGNET_ON: {
+[e :U 29 ]
+{
+"117
+[; ;arm_fsm.c: 117:             enableMagnet();
+[e ( _enableMagnet ..  ]
+"118
+[; ;arm_fsm.c: 118:             next_state = (arm_mode == PLACE) ? MOVE_UP_DOCK : MOVE_UP_BOARD;
+[e = _next_state -> ? == -> _arm_mode `ui -> . `E51 0 `ui : . `E36 4 . `E36 8 `E36 ]
+"119
+[; ;arm_fsm.c: 119:             break;
+[e $U 20  ]
+"120
+[; ;arm_fsm.c: 120:         }
+}
+"122
+[; ;arm_fsm.c: 122:         case MOVE_UP_DOCK: {
 [e :U 30 ]
 {
-"126
-[; ;arm_fsm.c: 126:                     next_state = (arm_mode == PLACE) ? ROTATE_BOARD : RETURN;
-[e = _next_state -> ? == -> _arm_mode `ui -> . `E51 0 `ui : . `E36 6 . `E36 12 `E36 ]
-"127
-[; ;arm_fsm.c: 127:                     break;
-[e $U 28  ]
-"128
-[; ;arm_fsm.c: 128:                 }
-}
-"129
-[; ;arm_fsm.c: 129:                 case MOVE_UP_BOARD: {
-[e :U 31 ]
+"123
+[; ;arm_fsm.c: 123:             const uint8_t* angles = get_docking_servo_angles_up(target_boat);
+[v _angles `*Cuc ~T0 @X0 1 a ]
+[e = _angles ( _get_docking_servo_angles_up (1 _target_boat ]
+"124
+[; ;arm_fsm.c: 124:             move_servo_to_angles(angles);
+[e ( _move_servo_to_angles (1 _angles ]
+"125
+[; ;arm_fsm.c: 125:             switch(previous_state) {
+[e $U 32  ]
 {
+"126
+[; ;arm_fsm.c: 126:                 case MAGNET_ON: {
+[e :U 33 ]
+{
+"127
+[; ;arm_fsm.c: 127:                     next_state = STILL;
+[e = _next_state . `E36 5 ]
 "130
-[; ;arm_fsm.c: 130:                     next_state = ROTATE_DOCK;
-[e = _next_state . `E36 1 ]
+[; ;arm_fsm.c: 130:                     break;
+[e $U 31  ]
 "131
-[; ;arm_fsm.c: 131:                     break;
-[e $U 28  ]
+[; ;arm_fsm.c: 131:                 }
+}
 "132
-[; ;arm_fsm.c: 132:                 }
-}
+[; ;arm_fsm.c: 132:                 case ROTATE_DOCK: {
+[e :U 34 ]
+{
 "133
-[; ;arm_fsm.c: 133:             }
-}
-[e $U 28  ]
-[e :U 29 ]
-[e [\ -> _previous_state `ui , $ -> . `E36 4 `ui 30
- , $ -> . `E36 8 `ui 31
- 28 ]
-[e :U 28 ]
+[; ;arm_fsm.c: 133:                     next_state = PICKUP;
+[e = _next_state . `E36 2 ]
+"134
+[; ;arm_fsm.c: 134:                     break;
+[e $U 31  ]
 "135
-[; ;arm_fsm.c: 135:             break;
-[e $U 12  ]
+[; ;arm_fsm.c: 135:                 }
+}
+"136
+[; ;arm_fsm.c: 136:                 case WAIT: {
+[e :U 35 ]
+{
 "137
-[; ;arm_fsm.c: 137:         }
+[; ;arm_fsm.c: 137:                     next_state = STILL;
+[e = _next_state . `E36 5 ]
+"138
+[; ;arm_fsm.c: 138:                 }
 }
 "139
-[; ;arm_fsm.c: 139:         case ROTATE_BOARD: {
+[; ;arm_fsm.c: 139:             }
+}
+[e $U 31  ]
 [e :U 32 ]
-{
-[v F170 `us ~T0 @X0 -> 4 `i s ]
-[i F170
-:U ..
+[e [\ -> _previous_state `ui , $ -> . `E36 3 `ui 33
+ , $ -> . `E36 1 `ui 34
+ , $ -> . `E36 11 `ui 35
+ 31 ]
+[e :U 31 ]
 "140
-[; ;arm_fsm.c: 140:             uint16_t moveup_angles[4] = {getAngle(0), getAngle(1), calculateAngle(get_grid_servo_angles(target_x, target_y)[2]), getAngle(3)};
+[; ;arm_fsm.c: 140:             break;
+[e $U 20  ]
+"141
+[; ;arm_fsm.c: 141:         }
+}
+"143
+[; ;arm_fsm.c: 143:         case STILL: {
+[e :U 36 ]
+{
+[v F289 `us ~T0 @X0 -> 4 `i s ]
+[i F289
+:U ..
+"144
+[; ;arm_fsm.c: 144:             uint16_t moveup_angles[4] = {calculateAngle(43), getAngle(1), getAngle(2), calculateAngle(45)};
 -> -> 0 `i `us
 -> -> 0 `i `us
 -> -> 0 `i `us
@@ -488,29 +516,101 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _moveup_angles `us ~T0 @X0 -> 4 `i a ]
-[e = _moveup_angles F170 ]
-[e ; = *U + &U _moveup_angles * -> -> -> 0 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _getAngle (1 -> -> 0 `i `uc ; = *U + &U _moveup_angles * -> -> -> 1 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _getAngle (1 -> -> 1 `i `uc ; = *U + &U _moveup_angles * -> -> -> 2 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _calculateAngle (1 *U + ( _get_grid_servo_angles (2 , _target_x _target_y * -> -> 2 `i `x -> -> # *U ( _get_grid_servo_angles (2 , _target_x _target_y `i `x = *U + &U _moveup_angles * -> -> -> 3 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _getAngle (1 -> -> 3 `i `uc ]
-"141
-[; ;arm_fsm.c: 141:             move_servo_to_int(moveup_angles);
+[e = _moveup_angles F289 ]
+[e ; = *U + &U _moveup_angles * -> -> -> 0 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _calculateAngle (1 -> -> 43 `i `uc ; = *U + &U _moveup_angles * -> -> -> 1 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _getAngle (1 -> -> 1 `i `uc ; = *U + &U _moveup_angles * -> -> -> 2 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _getAngle (1 -> -> 2 `i `uc = *U + &U _moveup_angles * -> -> -> 3 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _calculateAngle (1 -> -> 45 `i `uc ]
+"145
+[; ;arm_fsm.c: 145:             move_servo_to_int(moveup_angles);
 [e ( _move_servo_to_int (1 -> &U _moveup_angles `*Cus ]
-"142
-[; ;arm_fsm.c: 142:             next_state = BOAT_ROTATE;
-[e = _next_state . `E36 7 ]
-"143
-[; ;arm_fsm.c: 143:             break;
-[e $U 12  ]
-"144
-[; ;arm_fsm.c: 144:         }
-}
 "146
-[; ;arm_fsm.c: 146:         case BOAT_ROTATE: {
-[e :U 33 ]
+[; ;arm_fsm.c: 146:             switch(previous_state) {
+[e $U 38  ]
 {
-[v F172 `us ~T0 @X0 -> 4 `i s ]
-[i F172
-:U ..
 "147
-[; ;arm_fsm.c: 147:             uint16_t angles[4] = {getAngle(0), calculateAngle(get_dependent_servo_angle(target_x, target_y, target_orientation)), getAngle(2), getAngle(3)};
+[; ;arm_fsm.c: 147:                 case MOVE_UP_DOCK: {
+[e :U 39 ]
+{
+"148
+[; ;arm_fsm.c: 148:                     next_state = (arm_mode == PLACE) ? ROTATE_BOARD : RETURN;
+[e = _next_state -> ? == -> _arm_mode `ui -> . `E51 0 `ui : . `E36 6 . `E36 12 `E36 ]
+"149
+[; ;arm_fsm.c: 149:                     break;
+[e $U 37  ]
+"150
+[; ;arm_fsm.c: 150:                 }
+}
+"151
+[; ;arm_fsm.c: 151:                 case MOVE_UP_BOARD: {
+[e :U 40 ]
+{
+"152
+[; ;arm_fsm.c: 152:                     next_state = ROTATE_DOCK;
+[e = _next_state . `E36 1 ]
+"153
+[; ;arm_fsm.c: 153:                     break;
+[e $U 37  ]
+"154
+[; ;arm_fsm.c: 154:                 }
+}
+"155
+[; ;arm_fsm.c: 155:             }
+}
+[e $U 37  ]
+[e :U 38 ]
+[e [\ -> _previous_state `ui , $ -> . `E36 4 `ui 39
+ , $ -> . `E36 8 `ui 40
+ 37 ]
+[e :U 37 ]
+"156
+[; ;arm_fsm.c: 156:             break;
+[e $U 20  ]
+"158
+[; ;arm_fsm.c: 158:         }
+}
+"160
+[; ;arm_fsm.c: 160:         case ROTATE_BOARD: {
+[e :U 41 ]
+{
+"161
+[; ;arm_fsm.c: 161:             TMR2_PeriodCountSet(0x3);
+[e ( _TMR2_PeriodCountSet (1 -> -> 3 `i `ui ]
+[v F291 `us ~T0 @X0 -> 4 `i s ]
+[i F291
+:U ..
+"162
+[; ;arm_fsm.c: 162:             uint16_t moveup_angles[4] = {getAngle(0), getAngle(1), calculateAngle(get_grid_servo_angles(target_x, target_y)[2]), getAngle(3)};
+-> -> 0 `i `us
+-> -> 0 `i `us
+-> -> 0 `i `us
+-> -> 0 `i `us
+..
+]
+[v _moveup_angles `us ~T0 @X0 -> 4 `i a ]
+[e = _moveup_angles F291 ]
+[e ; = *U + &U _moveup_angles * -> -> -> 0 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _getAngle (1 -> -> 0 `i `uc ; = *U + &U _moveup_angles * -> -> -> 1 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _getAngle (1 -> -> 1 `i `uc ; = *U + &U _moveup_angles * -> -> -> 2 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _calculateAngle (1 *U + ( _get_grid_servo_angles (2 , _target_x _target_y * -> -> 2 `i `x -> -> # *U ( _get_grid_servo_angles (2 , _target_x _target_y `i `x = *U + &U _moveup_angles * -> -> -> 3 `i `ui `ux -> -> # *U &U _moveup_angles `ui `ux ( _getAngle (1 -> -> 3 `i `uc ]
+"163
+[; ;arm_fsm.c: 163:             move_servo_to_int(moveup_angles);
+[e ( _move_servo_to_int (1 -> &U _moveup_angles `*Cus ]
+"164
+[; ;arm_fsm.c: 164:             next_state = BOAT_ROTATE;
+[e = _next_state . `E36 7 ]
+"165
+[; ;arm_fsm.c: 165:             break;
+[e $U 20  ]
+"166
+[; ;arm_fsm.c: 166:         }
+}
+"168
+[; ;arm_fsm.c: 168:         case BOAT_ROTATE: {
+[e :U 42 ]
+{
+"169
+[; ;arm_fsm.c: 169:             TMR2_PeriodCountSet(0x7);
+[e ( _TMR2_PeriodCountSet (1 -> -> 7 `i `ui ]
+[v F293 `us ~T0 @X0 -> 4 `i s ]
+[i F293
+:U ..
+"170
+[; ;arm_fsm.c: 170:             uint16_t angles[4] = {getAngle(0), calculateAngle(get_dependent_servo_angle(target_x, target_y, target_orientation)), getAngle(2), getAngle(3)};
 -> -> 0 `i `us
 -> -> 0 `i `us
 -> -> 0 `i `us
@@ -518,182 +618,190 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _angles `us ~T0 @X0 -> 4 `i a ]
-[e = _angles F172 ]
+[e = _angles F293 ]
 [e ; = *U + &U _angles * -> -> -> 0 `i `ui `ux -> -> # *U &U _angles `ui `ux ( _getAngle (1 -> -> 0 `i `uc ; = *U + &U _angles * -> -> -> 1 `i `ui `ux -> -> # *U &U _angles `ui `ux ( _calculateAngle (1 ( _get_dependent_servo_angle (3 , , _target_x _target_y _target_orientation ; = *U + &U _angles * -> -> -> 2 `i `ui `ux -> -> # *U &U _angles `ui `ux ( _getAngle (1 -> -> 2 `i `uc = *U + &U _angles * -> -> -> 3 `i `ui `ux -> -> # *U &U _angles `ui `ux ( _getAngle (1 -> -> 3 `i `uc ]
-"148
-[; ;arm_fsm.c: 148:             move_servo_to_int(angles);
-[e ( _move_servo_to_int (1 -> &U _angles `*Cus ]
-"149
-[; ;arm_fsm.c: 149:             next_state = MOVE_UP_BOARD;
-[e = _next_state . `E36 8 ]
-"150
-[; ;arm_fsm.c: 150:             break;
-[e $U 12  ]
-"151
-[; ;arm_fsm.c: 151:         }
-}
-"153
-[; ;arm_fsm.c: 153:         case MOVE_UP_BOARD: {
-[e :U 34 ]
-{
-"154
-[; ;arm_fsm.c: 154:             uint8_t angles[4];
-[v _angles `uc ~T0 @X0 -> 4 `i a ]
-"155
-[; ;arm_fsm.c: 155:             get_adjusted_servo_angles_up(target_x, target_y, target_orientation, angles);
-[e ( _get_adjusted_servo_angles_up (4 , , , _target_x _target_y _target_orientation &U _angles ]
-"156
-[; ;arm_fsm.c: 156:             move_servo_to_angles(angles);
-[e ( _move_servo_to_angles (1 -> &U _angles `*Cuc ]
-"157
-[; ;arm_fsm.c: 157:             switch(previous_state) {
-[e $U 36  ]
-{
-"158
-[; ;arm_fsm.c: 158:                 case BOAT_ROTATE: {
-[e :U 37 ]
-{
-"159
-[; ;arm_fsm.c: 159:                     next_state = PLACEMENT;
-[e = _next_state . `E36 9 ]
-"160
-[; ;arm_fsm.c: 160:                     break;
-[e $U 35  ]
-"161
-[; ;arm_fsm.c: 161:                 case WAIT: {
-[e :U 38 ]
-{
-"162
-[; ;arm_fsm.c: 162:                     next_state = STILL;
-[e = _next_state . `E36 5 ]
-"163
-[; ;arm_fsm.c: 163:                     break;
-[e $U 35  ]
-"164
-[; ;arm_fsm.c: 164:                     }
-}
-"165
-[; ;arm_fsm.c: 165:                 case MAGNET_ON: {
-[e :U 39 ]
-{
-"166
-[; ;arm_fsm.c: 166:                     next_state = STILL;
-[e = _next_state . `E36 5 ]
-"167
-[; ;arm_fsm.c: 167:                     break;
-[e $U 35  ]
-"168
-[; ;arm_fsm.c: 168:                     }
-}
-"169
-[; ;arm_fsm.c: 169:                 }
-}
-"170
-[; ;arm_fsm.c: 170:             }
-}
-[e $U 35  ]
-[e :U 36 ]
-[e [\ -> _previous_state `ui , $ -> . `E36 7 `ui 37
- , $ -> . `E36 11 `ui 38
- , $ -> . `E36 3 `ui 39
- 35 ]
-[e :U 35 ]
 "171
-[; ;arm_fsm.c: 171:             break;
-[e $U 12  ]
+[; ;arm_fsm.c: 171:             move_servo_to_int(angles);
+[e ( _move_servo_to_int (1 -> &U _angles `*Cus ]
 "172
-[; ;arm_fsm.c: 172:         }
-}
+[; ;arm_fsm.c: 172:             next_state = MOVE_UP_BOARD;
+[e = _next_state . `E36 8 ]
+"173
+[; ;arm_fsm.c: 173:             break;
+[e $U 20  ]
 "174
-[; ;arm_fsm.c: 174:         case PLACEMENT: {
-[e :U 40 ]
-{
-"175
-[; ;arm_fsm.c: 175:             uint8_t angles[4];
-[v _angles `uc ~T0 @X0 -> 4 `i a ]
+[; ;arm_fsm.c: 174:         }
+}
 "176
-[; ;arm_fsm.c: 176:             get_adjusted_servo_angles(target_x, target_y, target_orientation, angles);
-[e ( _get_adjusted_servo_angles (4 , , , _target_x _target_y _target_orientation &U _angles ]
-"177
-[; ;arm_fsm.c: 177:             move_servo_to_angles(angles);
-[e ( _move_servo_to_angles (1 -> &U _angles `*Cuc ]
-"182
-[; ;arm_fsm.c: 182:             next_state = (arm_mode == PLACE) ? MAGNET_OFF : MAGNET_ON;
-[e = _next_state -> ? == -> _arm_mode `ui -> . `E51 0 `ui : . `E36 10 . `E36 3 `E36 ]
-"186
-[; ;arm_fsm.c: 186:             break;
-[e $U 12  ]
-"187
-[; ;arm_fsm.c: 187:         }
-}
-"199
-[; ;arm_fsm.c: 199:         case MAGNET_OFF: {
-[e :U 41 ]
-{
-"200
-[; ;arm_fsm.c: 200:             disableMagnet();
-[e ( _disableMagnet ..  ]
-"205
-[; ;arm_fsm.c: 205:             start_fsm_delay();
-[e ( _start_fsm_delay ..  ]
-"206
-[; ;arm_fsm.c: 206:             next_state = WAIT;
-[e = _next_state . `E36 11 ]
-"207
-[; ;arm_fsm.c: 207:             break;
-[e $U 12  ]
-"208
-[; ;arm_fsm.c: 208:         }
-}
-"210
-[; ;arm_fsm.c: 210:         case WAIT: {
-[e :U 42 ]
-{
-"211
-[; ;arm_fsm.c: 211:             if (!delay_done) return;
-[e $ ! ! != -> _delay_done `i -> 0 `i 43  ]
-[e $UE 10  ]
+[; ;arm_fsm.c: 176:         case MOVE_UP_BOARD: {
 [e :U 43 ]
-"212
-[; ;arm_fsm.c: 212:             switch(previous_state) {
+{
+"177
+[; ;arm_fsm.c: 177:             uint8_t angles[4];
+[v _angles `uc ~T0 @X0 -> 4 `i a ]
+"178
+[; ;arm_fsm.c: 178:             get_adjusted_servo_angles_up(target_x, target_y, target_orientation, angles);
+[e ( _get_adjusted_servo_angles_up (4 , , , _target_x _target_y _target_orientation &U _angles ]
+"179
+[; ;arm_fsm.c: 179:             move_servo_to_angles(angles);
+[e ( _move_servo_to_angles (1 -> &U _angles `*Cuc ]
+"180
+[; ;arm_fsm.c: 180:             switch(previous_state) {
 [e $U 45  ]
 {
-"213
-[; ;arm_fsm.c: 213:                 case MAGNET_OFF: {
+"181
+[; ;arm_fsm.c: 181:                 case BOAT_ROTATE: {
 [e :U 46 ]
 {
-"214
-[; ;arm_fsm.c: 214:                     next_state = (arm_mode == PLACE) ? MOVE_UP_BOARD : MOVE_UP_DOCK;
-[e = _next_state -> ? == -> _arm_mode `ui -> . `E51 0 `ui : . `E36 8 . `E36 4 `E36 ]
-"215
-[; ;arm_fsm.c: 215:                     break;
+"182
+[; ;arm_fsm.c: 182:                     next_state = PLACEMENT;
+[e = _next_state . `E36 9 ]
+"183
+[; ;arm_fsm.c: 183:                     break;
 [e $U 44  ]
-"216
-[; ;arm_fsm.c: 216:                 }
+"184
+[; ;arm_fsm.c: 184:                 case WAIT: {
+[e :U 47 ]
+{
+"185
+[; ;arm_fsm.c: 185:                     next_state = STILL;
+[e = _next_state . `E36 5 ]
+"186
+[; ;arm_fsm.c: 186:                     break;
+[e $U 44  ]
+"187
+[; ;arm_fsm.c: 187:                     }
 }
-"217
-[; ;arm_fsm.c: 217:             }
+"188
+[; ;arm_fsm.c: 188:                 case MAGNET_ON: {
+[e :U 48 ]
+{
+"189
+[; ;arm_fsm.c: 189:                     next_state = STILL;
+[e = _next_state . `E36 5 ]
+"190
+[; ;arm_fsm.c: 190:                     break;
+[e $U 44  ]
+"191
+[; ;arm_fsm.c: 191:                     }
+}
+"192
+[; ;arm_fsm.c: 192:                 }
+}
+"193
+[; ;arm_fsm.c: 193:             }
 }
 [e $U 44  ]
 [e :U 45 ]
-[e [\ -> _previous_state `ui , $ -> . `E36 10 `ui 46
+[e [\ -> _previous_state `ui , $ -> . `E36 7 `ui 46
+ , $ -> . `E36 11 `ui 47
+ , $ -> . `E36 3 `ui 48
  44 ]
 [e :U 44 ]
-"219
-[; ;arm_fsm.c: 219:             break;
-[e $U 12  ]
-"220
-[; ;arm_fsm.c: 220:         }
+"194
+[; ;arm_fsm.c: 194:             break;
+[e $U 20  ]
+"195
+[; ;arm_fsm.c: 195:         }
 }
-"237
-[; ;arm_fsm.c: 237:         case RETURN: {
-[e :U 47 ]
+"197
+[; ;arm_fsm.c: 197:         case PLACEMENT: {
+[e :U 49 ]
 {
-[v F176 `uc ~T0 @X0 -> 4 `i s ]
-[i F176
+"198
+[; ;arm_fsm.c: 198:             uint8_t angles[4];
+[v _angles `uc ~T0 @X0 -> 4 `i a ]
+"199
+[; ;arm_fsm.c: 199:             get_adjusted_servo_angles(target_x, target_y, target_orientation, angles);
+[e ( _get_adjusted_servo_angles (4 , , , _target_x _target_y _target_orientation &U _angles ]
+"200
+[; ;arm_fsm.c: 200:             move_servo_to_angles(angles);
+[e ( _move_servo_to_angles (1 -> &U _angles `*Cuc ]
+"201
+[; ;arm_fsm.c: 201:             next_state = (arm_mode == PLACE) ? MAGNET_OFF : MAGNET_ON;
+[e = _next_state -> ? == -> _arm_mode `ui -> . `E51 0 `ui : . `E36 10 . `E36 3 `E36 ]
+"202
+[; ;arm_fsm.c: 202:             break;
+[e $U 20  ]
+"203
+[; ;arm_fsm.c: 203:         }
+}
+"205
+[; ;arm_fsm.c: 205:         case MAGNET_OFF: {
+[e :U 50 ]
+{
+"206
+[; ;arm_fsm.c: 206:             disableMagnet();
+[e ( _disableMagnet ..  ]
+"207
+[; ;arm_fsm.c: 207:             start_fsm_delay();
+[e ( _start_fsm_delay ..  ]
+"208
+[; ;arm_fsm.c: 208:             next_state = WAIT;
+[e = _next_state . `E36 11 ]
+"209
+[; ;arm_fsm.c: 209:             break;
+[e $U 20  ]
+"210
+[; ;arm_fsm.c: 210:         }
+}
+"212
+[; ;arm_fsm.c: 212:         case WAIT: {
+[e :U 51 ]
+{
+"213
+[; ;arm_fsm.c: 213:             if (!delay_done) return;
+[e $ ! ! != -> _delay_done `i -> 0 `i 52  ]
+[e $UE 18  ]
+[e :U 52 ]
+"214
+[; ;arm_fsm.c: 214:             switch(previous_state) {
+[e $U 54  ]
+{
+"215
+[; ;arm_fsm.c: 215:                 case MAGNET_OFF: {
+[e :U 55 ]
+{
+"216
+[; ;arm_fsm.c: 216:                     next_state = (arm_mode == PLACE) ? MOVE_UP_BOARD : MOVE_UP_DOCK;
+[e = _next_state -> ? == -> _arm_mode `ui -> . `E51 0 `ui : . `E36 8 . `E36 4 `E36 ]
+"217
+[; ;arm_fsm.c: 217:                     break;
+[e $U 53  ]
+"218
+[; ;arm_fsm.c: 218:                 }
+}
+"219
+[; ;arm_fsm.c: 219:                 case STILL: {
+[e :U 56 ]
+{
+"221
+[; ;arm_fsm.c: 221:                 }
+}
+"222
+[; ;arm_fsm.c: 222:             }
+}
+[e $U 53  ]
+[e :U 54 ]
+[e [\ -> _previous_state `ui , $ -> . `E36 10 `ui 55
+ , $ -> . `E36 5 `ui 56
+ 53 ]
+[e :U 53 ]
+"223
+[; ;arm_fsm.c: 223:             break;
+[e $U 20  ]
+"224
+[; ;arm_fsm.c: 224:         }
+}
+"226
+[; ;arm_fsm.c: 226:         case RETURN: {
+[e :U 57 ]
+{
+[v F297 `uc ~T0 @X0 -> 4 `i s ]
+[i F297
 :U ..
-"238
-[; ;arm_fsm.c: 238:             uint8_t idle_angles[4] = {43, 45, 25, 45};
+"227
+[; ;arm_fsm.c: 227:             uint8_t idle_angles[4] = {43, 45, 25, 45};
 -> -> 43 `i `uc
 -> -> 45 `i `uc
 -> -> 25 `i `uc
@@ -701,58 +809,58 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _idle_angles `uc ~T0 @X0 -> 4 `i a ]
-[e = _idle_angles F176 ]
-"239
-[; ;arm_fsm.c: 239:             move_servo_to_angles(idle_angles);
+[e = _idle_angles F297 ]
+"228
+[; ;arm_fsm.c: 228:             move_servo_to_angles(idle_angles);
 [e ( _move_servo_to_angles (1 -> &U _idle_angles `*Cuc ]
-"240
-[; ;arm_fsm.c: 240:             next_state = IDLE;
+"229
+[; ;arm_fsm.c: 229:             next_state = IDLE;
 [e = _next_state . `E36 0 ]
-"241
-[; ;arm_fsm.c: 241:             process_fsm = 0;
+"230
+[; ;arm_fsm.c: 230:             process_fsm = 0;
 [e = _process_fsm -> -> 0 `i `a ]
-"242
-[; ;arm_fsm.c: 242:             break;
-[e $U 12  ]
-"243
-[; ;arm_fsm.c: 243:             }
+"231
+[; ;arm_fsm.c: 231:             break;
+[e $U 20  ]
+"232
+[; ;arm_fsm.c: 232:             }
 }
-"245
-[; ;arm_fsm.c: 245:         case IDLE:
-[e :U 48 ]
-"246
-[; ;arm_fsm.c: 246:         default:
-[e :U 49 ]
-"247
-[; ;arm_fsm.c: 247:             break;
-[e $U 12  ]
-"248
-[; ;arm_fsm.c: 248:     }
+"234
+[; ;arm_fsm.c: 234:         case IDLE:
+[e :U 58 ]
+"235
+[; ;arm_fsm.c: 235:         default:
+[e :U 59 ]
+"236
+[; ;arm_fsm.c: 236:             break;
+[e $U 20  ]
+"237
+[; ;arm_fsm.c: 237:     }
 }
-[e $U 12  ]
-[e :U 13 ]
-[e [\ -> _current_state `ui , $ -> . `E36 1 `ui 14
- , $ -> . `E36 2 `ui 19
- , $ -> . `E36 3 `ui 20
- , $ -> . `E36 4 `ui 21
- , $ -> . `E36 5 `ui 27
- , $ -> . `E36 6 `ui 32
- , $ -> . `E36 7 `ui 33
- , $ -> . `E36 8 `ui 34
- , $ -> . `E36 9 `ui 40
- , $ -> . `E36 10 `ui 41
- , $ -> . `E36 11 `ui 42
- , $ -> . `E36 12 `ui 47
- , $ -> . `E36 0 `ui 48
- 49 ]
-[e :U 12 ]
-"249
-[; ;arm_fsm.c: 249:     previous_state = current_state;
+[e $U 20  ]
+[e :U 21 ]
+[e [\ -> _current_state `ui , $ -> . `E36 1 `ui 22
+ , $ -> . `E36 2 `ui 28
+ , $ -> . `E36 3 `ui 29
+ , $ -> . `E36 4 `ui 30
+ , $ -> . `E36 5 `ui 36
+ , $ -> . `E36 6 `ui 41
+ , $ -> . `E36 7 `ui 42
+ , $ -> . `E36 8 `ui 43
+ , $ -> . `E36 9 `ui 49
+ , $ -> . `E36 10 `ui 50
+ , $ -> . `E36 11 `ui 51
+ , $ -> . `E36 12 `ui 57
+ , $ -> . `E36 0 `ui 58
+ 59 ]
+[e :U 20 ]
+"238
+[; ;arm_fsm.c: 238:     previous_state = current_state;
 [e = _previous_state _current_state ]
-"250
-[; ;arm_fsm.c: 250:     current_state = next_state;
+"239
+[; ;arm_fsm.c: 239:     current_state = next_state;
 [e = _current_state _next_state ]
-"251
-[; ;arm_fsm.c: 251: }
-[e :UE 10 ]
+"240
+[; ;arm_fsm.c: 240: }
+[e :UE 18 ]
 }

@@ -12,6 +12,7 @@
 #include "servo.h"
 #include "arm_fsm.h"
 #include "message_parser.h"
+#include "audio.h"
 
 #define CONFIG_RECEIVER 0
 #define CONFIG_SENDER 0
@@ -66,7 +67,8 @@ void slave(void *pvParameters){
     enablePWM();
     TMR2_Start();
     arm_fsm_init();
-    arm_set_target(0,2,4,1,PLACE);
+    arm_set_target(0,0,3,0,PLACE);
+    audio_init();
 
     //main loop
     while(1){
@@ -74,10 +76,22 @@ void slave(void *pvParameters){
        if(nrf_flag){
            if (Nrf24_dataReady(&dev)) {
             Nrf24_getData(&dev, buf);
+            if(strncmp((char *)buf, "SOUND",8)==0){
+                if(buf[8]){
+                    sound->length=MISS_SOUND_LENGTH;
+                    sound->sound_array=MissSound;
+                }else{
+                    sound->length=HIT_SOUND_LENGTH;
+                    sound->sound_array=HitSound;                    
+                }
+                TMR1_Start();
+            }else{
             robot_command_t rob;
             parse_robot_message(buf, &rob);
             arm_set_target(rob.ship_id,rob.row,rob.col,rob.horizontal,rob.place);
             
+            }
+
             }
             nrf_flag=false;
 		}

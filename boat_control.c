@@ -11,17 +11,17 @@
 
 // Fixed docking positions
 const DockingPosition docking_positions[NUM_BOATS] = {
-    { {23, 45, 40, 42} },  // Boat 0   P6-P5-P8-P7
-    { {64, 45, 14, 84} },  // Boat 2
-    { {42, 45, 22, 67} },  // Boat 1
-    { {61, 45, 32, 81} }   // Boat 3
+    { {21, 45, 41, 40} },  // Boat 0   P6-P5-P8-P7
+    { {38, 28, 23, 61} },  // Boat 1
+    { {55, 21, 15, 80} },  // Boat 2
+    { {54, 42, 32, 77} }   // Boat 3
 };
 
 const DockingPosition docking_up[NUM_BOATS] = {
-    { {30, 45, 40, 30} },  // Boat 0   P6-P5-P8-P7
-    { {70, 45, 14, 70} },  // Boat 2
-    { {60, 45, 22, 60} },  // Boat 1
-    { {70, 45, 32, 70} }   // Boat 3
+    { {35, 45, 42, 38} },  // Boat 0   P6-P5-P8-P7
+    { {60, 28, 23, 53} },  // Boat 1
+    { {73, 21, 15, 75} },  // Boat 2
+    { {70, 42, 33, 70} }   // Boat 3
 };
 
 const uint8_t* get_docking_servo_angles(uint8_t boat_id) {

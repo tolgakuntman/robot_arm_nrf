@@ -90,12 +90,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _Nrf24_getRetransmitDelay `(uc ~T0 @X0 0 ef1`*S2417 ]
 "437 mirf.c
 [; ;mirf.c: 437:  rf24_datarate_e result;
-[c E17611 0 1 2 .. ]
-[n E17611 . RF24_1MBPS RF24_2MBPS RF24_250KBPS  ]
+[c E17640 0 1 2 .. ]
+[n E17640 . RF24_1MBPS RF24_2MBPS RF24_250KBPS  ]
 "463
 [; ;mirf.c: 463:  rf24_crclength_e result = RF24_CRC_DISABLED;
-[c E17616 0 1 2 .. ]
-[n E17616 . RF24_CRC_DISABLED RF24_CRC_8 RF24_CRC_16  ]
+[c E17645 0 1 2 .. ]
+[n E17645 . RF24_CRC_DISABLED RF24_CRC_8 RF24_CRC_16  ]
 "328 /home/aevern/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h
 [; ;/home/aevern/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h: 328: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2770,10 +2770,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mirf.c: 64: }
 [e :UE 2431 ]
 }
-[v F18052 `uc ~T0 @X0 -> 8 `i t ]
+[v F18081 `uc ~T0 @X0 -> 8 `i t ]
 "67
 [; ;mirf.c: 67: char rf24_datarates[][8] = {"1Mbps", "2Mbps", "250Kbps"};
-[v _rf24_datarates `F18052 ~T0 @X0 -> 3 `i e ]
+[v _rf24_datarates `F18081 ~T0 @X0 -> 3 `i e ]
 [i _rf24_datarates
 :U ..
 :U ..
@@ -2804,10 +2804,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-[v F18054 `Cuc ~T0 @X0 -> 10 `i t ]
+[v F18083 `Cuc ~T0 @X0 -> 10 `i t ]
 "68
 [; ;mirf.c: 68: const char rf24_crclength[][10] = {"Disabled", "8 bits", "16 bits"};
-[v _rf24_crclength `F18054 ~T0 @X0 -> 3 `i e ]
+[v _rf24_crclength `F18083 ~T0 @X0 -> 3 `i e ]
 [i _rf24_crclength
 :U ..
 :U ..
@@ -2842,10 +2842,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-[v F18056 `uc ~T0 @X0 -> 8 `i t ]
+[v F18085 `uc ~T0 @X0 -> 8 `i t ]
 "69
 [; ;mirf.c: 69: char rf24_pa_dbm[][8] = {"PA_MIN", "PA_LOW", "PA_HIGH", "PA_MAX"};
-[v _rf24_pa_dbm `F18056 ~T0 @X0 -> 4 `i e ]
+[v _rf24_pa_dbm `F18085 ~T0 @X0 -> 4 `i e ]
 [i _rf24_pa_dbm
 :U ..
 :U ..
@@ -4197,7 +4197,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "437
 [; ;mirf.c: 437:  rf24_datarate_e result;
-[v _result `E17611 ~T0 @X0 1 a ]
+[v _result `E17640 ~T0 @X0 1 a ]
 "438
 [; ;mirf.c: 438:  uint8_t dr;
 [v _dr `uc ~T0 @X0 1 a ]
@@ -4213,7 +4213,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "445
 [; ;mirf.c: 445:   result = RF24_250KBPS;
-[e = _result . `E17611 2 ]
+[e = _result . `E17640 2 ]
 "446
 [; ;mirf.c: 446:  } else if (dr == (1<<(3))) {
 }
@@ -4223,7 +4223,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "448
 [; ;mirf.c: 448:   result = RF24_2MBPS;
-[e = _result . `E17611 1 ]
+[e = _result . `E17640 1 ]
 "449
 [; ;mirf.c: 449:  } else {
 }
@@ -4232,7 +4232,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "451
 [; ;mirf.c: 451:   result = RF24_1MBPS;
-[e = _result . `E17611 0 ]
+[e = _result . `E17640 0 ]
 "452
 [; ;mirf.c: 452:  }
 }
@@ -4282,8 +4282,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "463
 [; ;mirf.c: 463:  rf24_crclength_e result = RF24_CRC_DISABLED;
-[v _result `E17616 ~T0 @X0 1 a ]
-[e = _result . `E17616 0 ]
+[v _result `E17645 ~T0 @X0 1 a ]
+[e = _result . `E17645 0 ]
 "465
 [; ;mirf.c: 465:  uint8_t config;
 [v _config `uc ~T0 @X0 1 a ]
@@ -4309,7 +4309,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "473
 [; ;mirf.c: 473:    result = RF24_CRC_16;
-[e = _result . `E17616 2 ]
+[e = _result . `E17645 2 ]
 "474
 [; ;mirf.c: 474:   } else {
 }
@@ -4318,7 +4318,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "475
 [; ;mirf.c: 475:    result = RF24_CRC_8;
-[e = _result . `E17616 1 ]
+[e = _result . `E17645 1 ]
 "476
 [; ;mirf.c: 476:   }
 }

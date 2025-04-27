@@ -4,6 +4,7 @@ mcc_generated_files/system/src/../system.h  \
 mcc_generated_files/system/src/../../system/config_bits.h  \
 mcc_generated_files/system/src/../../system/clock.h  \
 mcc_generated_files/system/src/../../system/pins.h  \
+mcc_generated_files/system/src/../../dac/dac1.h  \
 mcc_generated_files/system/src/../../pwm/pwm1_16bit.h  \
 mcc_generated_files/system/src/../../pwm/pwm2_16bit.h  \
 mcc_generated_files/system/src/../../pwm/pwm3_16bit.h  \
@@ -13,4 +14,6 @@ mcc_generated_files/system/src/../../timer/tmr2.h  \
 mcc_generated_files/system/src/../../timer/timer_interface.h  \
 mcc_generated_files/system/src/../../system/interrupt.h  \
 mcc_generated_files/system/src/../../timer/tmr0.h  \
-mcc_generated_files/system/src/../../timer/tmr0_deprecated.h 
+mcc_generated_files/system/src/../../timer/tmr0_deprecated.h  \
+mcc_generated_files/system/src/../../timer/tmr1.h  \
+mcc_generated_files/system/src/../../timer/tmr1_deprecated.h 
