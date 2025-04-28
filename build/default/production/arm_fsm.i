@@ -696,16 +696,20 @@ void arm_fsm_init() {
 void set_magnet_strength() {
     switch(target_boat) {
         case(0): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(26000);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(23000);
+            break;
         }
         case(1): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(0);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(100);
+            break;
         }
         case(2): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(13000);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(50);
+            break;
         }
         case(3): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(6500);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(50);
+            break;
         }
     }
     PWM1_16BIT_LoadBufferRegisters();
@@ -747,7 +751,7 @@ void arm_fsm_update() {
     switch (current_state) {
 
         case ROTATE_DOCK: {
-            TMR2_PeriodCountSet(0x3);
+            TMR2_PeriodCountSet(0x4);
             uint16_t moveup_angles[4] = {getAngle(0), getAngle(1), calculateAngle(get_docking_servo_angles(target_boat)[2]), getAngle(3)};
             move_servo_to_int(moveup_angles);
             switch(previous_state) {
@@ -760,7 +764,7 @@ void arm_fsm_update() {
                     break;
                 }
                 default: {
-
+                    next_state = MOVE_UP_DOCK;
                     break;
                 }
             }
@@ -820,7 +824,7 @@ void arm_fsm_update() {
         }
 
         case ROTATE_BOARD: {
-            TMR2_PeriodCountSet(0x3);
+            TMR2_PeriodCountSet(0x5);
             uint16_t moveup_angles[4] = {getAngle(0), getAngle(1), calculateAngle(get_grid_servo_angles(target_x, target_y)[2]), getAngle(3)};
             move_servo_to_int(moveup_angles);
             next_state = MOVE_UP_BOARD;

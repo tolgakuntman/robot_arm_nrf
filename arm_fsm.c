@@ -34,16 +34,20 @@ void arm_fsm_init() {
 void set_magnet_strength() {
     switch(target_boat) {
         case(0): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(26000);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(23000);
+            break;
         }
         case(1): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(0);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(100);
+            break;
         }
         case(2): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(13000);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(50);
+            break;
         }
         case(3): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(6500);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(50);
+            break;
         }
     }
     PWM1_16BIT_LoadBufferRegisters();
@@ -56,7 +60,7 @@ void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, 
         target_y = y;
         target_orientation = is_vertical;
         arm_mode = mode;
-        current_state = (mode == PLACE) ? /*PICKUP*/ ROTATE_DOCK : ROTATE_BOARD;
+        current_state = (mode == PLACE) ? ROTATE_DOCK/* MAGNET_ON*/ : ROTATE_BOARD;
         process_fsm = true;
         set_magnet_strength();
     }
@@ -85,7 +89,7 @@ void arm_fsm_update() {
     switch (current_state) {
         
         case ROTATE_DOCK: {
-            TMR2_PeriodCountSet(0x3);
+            TMR2_PeriodCountSet(0x4);
             uint16_t moveup_angles[NUM_SERVOS] = {getAngle(0), getAngle(1), calculateAngle(get_docking_servo_angles(target_boat)[2]), getAngle(3)};
             move_servo_to_int(moveup_angles);
             switch(previous_state) {
@@ -98,7 +102,7 @@ void arm_fsm_update() {
                     break;
                 }
                 default: {
-                    //next_state = PICKUP;
+                    next_state = MOVE_UP_DOCK;
                     break;
                 }
             }
@@ -115,7 +119,7 @@ void arm_fsm_update() {
             
         case MAGNET_ON: {
             enableMagnet();
-            next_state = (arm_mode == PLACE) ? MOVE_UP_DOCK : MOVE_UP_BOARD;
+            next_state = (arm_mode == PLACE) ? MOVE_UP_DOCK/*IDLE*/ : MOVE_UP_BOARD;
             break;
         }
         
@@ -158,7 +162,7 @@ void arm_fsm_update() {
         }
         
         case ROTATE_BOARD: {
-            TMR2_PeriodCountSet(0x3);
+            TMR2_PeriodCountSet(0x5);
             uint16_t moveup_angles[NUM_SERVOS] = {getAngle(0), getAngle(1), calculateAngle(get_grid_servo_angles(target_x, target_y)[2]), getAngle(3)};
             move_servo_to_int(moveup_angles);
             next_state = MOVE_UP_BOARD;

@@ -11,8 +11,8 @@
 
 // Fixed docking positions
 const DockingPosition docking_positions[NUM_BOATS] = {
-    { {21, 45, 41, 40} },  // Boat 0   P6-P5-P8-P7
-    { {38, 28, 23, 61} },  // Boat 1
+    { {22, 45, 41, 42} },  // Boat 0   P6-P5-P8-P7
+    { {37, 28, 23, 62} },  // Boat 1
     { {55, 21, 15, 80} },  // Boat 2
     { {54, 42, 32, 77} }   // Boat 3
 };

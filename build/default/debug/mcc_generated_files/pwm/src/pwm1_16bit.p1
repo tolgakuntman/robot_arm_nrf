@@ -2751,14 +2751,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/pwm/src/pwm1_16bit.c: 80:     PWM1S1CFG = 0x0;
 [e = _PWM1S1CFG -> -> 0 `i `uc ]
 "83
-[; ;mcc_generated_files/pwm/src/pwm1_16bit.c: 83:     PWM1S1P1L = 0x26;
-[e = _PWM1S1P1L -> -> 38 `i `uc ]
+[; ;mcc_generated_files/pwm/src/pwm1_16bit.c: 83:     PWM1S1P1L = 0x2C;
+[e = _PWM1S1P1L -> -> 44 `i `uc ]
 "86
 [; ;mcc_generated_files/pwm/src/pwm1_16bit.c: 86:     PWM1S1P1H = 0x0;
 [e = _PWM1S1P1H -> -> 0 `i `uc ]
 "89
-[; ;mcc_generated_files/pwm/src/pwm1_16bit.c: 89:     PWM1S1P2L = 0x26;
-[e = _PWM1S1P2L -> -> 38 `i `uc ]
+[; ;mcc_generated_files/pwm/src/pwm1_16bit.c: 89:     PWM1S1P2L = 0x0;
+[e = _PWM1S1P2L -> -> 0 `i `uc ]
 "92
 [; ;mcc_generated_files/pwm/src/pwm1_16bit.c: 92:     PWM1S1P2H = 0x0;
 [e = _PWM1S1P2H -> -> 0 `i `uc ]

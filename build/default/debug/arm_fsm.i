@@ -696,16 +696,20 @@ void arm_fsm_init() {
 void set_magnet_strength() {
     switch(target_boat) {
         case(0): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(26000);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(23000);
+            break;
         }
         case(1): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(5000);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(10000);
+            break;
         }
         case(2): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(13000);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(2700);
+            break;
         }
         case(3): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(6500);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(500);
+            break;
         }
     }
     PWM1_16BIT_LoadBufferRegisters();
@@ -823,7 +827,7 @@ void arm_fsm_update() {
             TMR2_PeriodCountSet(0x3);
             uint16_t moveup_angles[4] = {getAngle(0), getAngle(1), calculateAngle(get_grid_servo_angles(target_x, target_y)[2]), getAngle(3)};
             move_servo_to_int(moveup_angles);
-            next_state = BOAT_ROTATE;
+            next_state = MOVE_UP_BOARD;
             break;
         }
 
@@ -831,7 +835,7 @@ void arm_fsm_update() {
             TMR2_PeriodCountSet(0x7);
             uint16_t angles[4] = {getAngle(0), calculateAngle(get_dependent_servo_angle(target_x, target_y, target_orientation)), getAngle(2), getAngle(3)};
             move_servo_to_int(angles);
-            next_state = MOVE_UP_BOARD;
+            next_state = PLACEMENT;
             break;
         }
 
@@ -840,8 +844,8 @@ void arm_fsm_update() {
             get_adjusted_servo_angles_up(target_x, target_y, target_orientation, angles);
             move_servo_to_angles(angles);
             switch(previous_state) {
-                case BOAT_ROTATE: {
-                    next_state = PLACEMENT;
+                case ROTATE_BOARD: {
+                    next_state = BOAT_ROTATE;
                     break;
                 case WAIT: {
                     next_state = STILL;

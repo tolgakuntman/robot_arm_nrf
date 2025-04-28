@@ -251,16 +251,16 @@ uint16_t getAngle(uint8_t i);
 
 const DockingPosition docking_positions[4] = {
     { {21, 45, 41, 40} },
-    { {38, 20, 23, 61} },
-    { {60, 10, 15, 85} },
-    { {58, 45, 31, 81} }
+    { {38, 28, 23, 61} },
+    { {55, 21, 15, 80} },
+    { {54, 42, 32, 77} }
 };
 
 const DockingPosition docking_up[4] = {
     { {35, 45, 42, 38} },
-    { {60, 20, 23, 53} },
-    { {73, 10, 15, 75} },
-    { {70, 45, 31, 70} }
+    { {60, 28, 23, 53} },
+    { {73, 21, 15, 75} },
+    { {70, 42, 33, 70} }
 };
 
 const uint8_t* get_docking_servo_angles(uint8_t boat_id) {

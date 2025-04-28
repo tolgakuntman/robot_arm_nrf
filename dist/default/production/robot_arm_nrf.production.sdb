@@ -63,7 +63,7 @@ TMR2_UART4_TX_EDGE 33
 TMR2_UART5_RX_EDGE 34
 TMR2_UART5_TX_EDGE 35
 ]
-"70 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+"91 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
 [e E18106 . `uc
 PLACE 0
 REMOVE 1
@@ -143,13 +143,13 @@ REMOVE 1
 [v _arm_fsm_init arm_fsm_init `(v  1 e 1 0 ]
 "34
 [v _set_magnet_strength set_magnet_strength `(v  1 e 1 0 ]
-"52
+"56
 [v _arm_set_target arm_set_target `(v  1 e 1 0 ]
-"69
+"73
 [v _delay delay `(v  1 e 1 0 ]
-"74
+"78
 [v _start_fsm_delay start_fsm_delay `(v  1 e 1 0 ]
-"82
+"86
 [v _arm_fsm_update arm_fsm_update `(v  1 e 1 0 ]
 "52 /home/aevern/Documents/KULeuven/robot_arm_nrf/audio.c
 [v _tim_1_irs tim_1_irs `(v  1 e 1 0 ]
@@ -1336,9 +1336,9 @@ REMOVE 1
 "46
 [v _slave slave `(v  1 e 1 0 ]
 {
-[s S2238 . 13 `[8]uc 1 message_type 8 0 `uc 1 ship_id 1 8 `uc 1 row 1 9 `uc 1 col 1 10 `uc 1 horizontal 1 11 `uc 1 place 1 12 ]
+[s S2226 . 13 `[8]uc 1 message_type 8 0 `uc 1 ship_id 1 8 `uc 1 row 1 9 `uc 1 col 1 10 `uc 1 horizontal 1 11 `uc 1 place 1 12 ]
 "89
-[v slave@rob rob `S2238  1 a 13 2 ]
+[v slave@rob rob `S2226  1 a 13 2 ]
 [s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
 "47
 [v slave@dev dev `S2144  1 a 3 15 ]
@@ -1360,8 +1360,8 @@ REMOVE 1
 [v _parse_robot_message parse_robot_message `(a  1 e 1 0 ]
 {
 [v parse_robot_message@raw_data raw_data `*.39Cuc  1 p 2 29 ]
-[s S2238 . 13 `[8]uc 1 message_type 8 0 `uc 1 ship_id 1 8 `uc 1 row 1 9 `uc 1 col 1 10 `uc 1 horizontal 1 11 `uc 1 place 1 12 ]
-[v parse_robot_message@out out `*.39S2238  1 p 2 31 ]
+[s S2226 . 13 `[8]uc 1 message_type 8 0 `uc 1 ship_id 1 8 `uc 1 row 1 9 `uc 1 col 1 10 `uc 1 horizontal 1 11 `uc 1 place 1 12 ]
+[v parse_robot_message@out out `*.39S2226  1 p 2 31 ]
 "17
 } 0
 "4 /opt/microchip/xc8/v2.50/pic/sources/c99/common/memcpy.c
@@ -1468,7 +1468,7 @@ REMOVE 1
 [v TMR1_OverflowCallbackRegister@CallbackHandler CallbackHandler `*.38(v  1 p 3 18 ]
 "195
 } 0
-"52 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+"56 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [v _arm_set_target arm_set_target `(v  1 e 1 0 ]
 {
 [v arm_set_target@boat_id boat_id `uc  1 p 1 wreg ]
@@ -1478,12 +1478,12 @@ REMOVE 1
 [v arm_set_target@is_vertical is_vertical `uc  1 p 1 22 ]
 [v arm_set_target@mode mode `E51  1 p 1 23 ]
 [v arm_set_target@boat_id boat_id `uc  1 p 1 24 ]
-"63
+"67
 } 0
 "34
 [v _set_magnet_strength set_magnet_strength `(v  1 e 1 0 ]
 {
-"50
+"54
 } 0
 "137 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
 [v _PWM1_16BIT_SetSlice1Output1DutyCycleRegister PWM1_16BIT_SetSlice1Output1DutyCycleRegister `(v  1 e 1 0 ]
@@ -1496,35 +1496,35 @@ REMOVE 1
 {
 "153
 } 0
-"82 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+"86 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [v _arm_fsm_update arm_fsm_update `(v  1 e 1 0 ]
 {
-"227
+"231
 [v arm_fsm_update@idle_angles idle_angles `[4]uc  1 a 4 0 ]
-"198
+"202
 [v arm_fsm_update@angles_2834 angles `[4]uc  1 a 4 8 ]
-"177
+"181
 [v arm_fsm_update@angles_2833 angles `[4]uc  1 a 4 4 ]
-"170
+"174
 [v arm_fsm_update@angles_2832 angles `[4]us  1 a 8 40 ]
-"162
+"166
 [v arm_fsm_update@moveup_angles_2830 moveup_angles `[4]us  1 a 8 32 ]
-"144
+"148
 [v arm_fsm_update@moveup_angles_2828 moveup_angles `[4]us  1 a 8 24 ]
-"123
+"127
 [v arm_fsm_update@angles_2826 angles `*.32Cuc  1 a 2 14 ]
-"110
+"114
 [v arm_fsm_update@angles angles `*.32Cuc  1 a 2 12 ]
-"89
+"93
 [v arm_fsm_update@moveup_angles moveup_angles `[4]us  1 a 8 16 ]
-"226
+"230
 [v arm_fsm_update@F297 F297 `[4]uc  1 s 4 F297 ]
-"240
+"244
 } 0
-"74
+"78
 [v _start_fsm_delay start_fsm_delay `(v  1 e 1 0 ]
 {
-"79
+"83
 } 0
 "79 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_Start TMR0_Start `(v  1 e 1 0 ]
@@ -2138,10 +2138,10 @@ REMOVE 1
 {
 "159
 } 0
-"69 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+"73 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [v _delay delay `(v  1 e 1 0 ]
 {
-"72
+"76
 } 0
 "84 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
 [v i2_TMR0_Stop TMR0_Stop `(v  1 e 1 0 ]

@@ -30612,7 +30612,7 @@ void slave(void *pvParameters){
     enablePWM();
     TMR2_Start();
     arm_fsm_init();
-    arm_set_target(0,0,3,0,PLACE);
+
     audio_init();
 
 
