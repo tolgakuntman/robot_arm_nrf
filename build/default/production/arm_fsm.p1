@@ -154,8 +154,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 9 ]
 {
 "37
-[; ;arm_fsm.c: 37:             PWM1_16BIT_SetSlice1Output1DutyCycleRegister(23000);
-[e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 -> -> 23000 `i `us ]
+[; ;arm_fsm.c: 37:             PWM1_16BIT_SetSlice1Output1DutyCycleRegister(40000);
+[e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 -> -> 40000 `l `us ]
 "38
 [; ;arm_fsm.c: 38:             break;
 [e $U 7  ]
@@ -167,8 +167,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 10 ]
 {
 "41
-[; ;arm_fsm.c: 41:             PWM1_16BIT_SetSlice1Output1DutyCycleRegister(100);
-[e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 -> -> 100 `i `us ]
+[; ;arm_fsm.c: 41:             PWM1_16BIT_SetSlice1Output1DutyCycleRegister(60000);
+[e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 -> -> 60000 `l `us ]
 "42
 [; ;arm_fsm.c: 42:             break;
 [e $U 7  ]
@@ -180,8 +180,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 11 ]
 {
 "45
-[; ;arm_fsm.c: 45:             PWM1_16BIT_SetSlice1Output1DutyCycleRegister(50);
-[e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 -> -> 50 `i `us ]
+[; ;arm_fsm.c: 45:             PWM1_16BIT_SetSlice1Output1DutyCycleRegister(10000);
+[e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 -> -> 10000 `i `us ]
 "46
 [; ;arm_fsm.c: 46:             break;
 [e $U 7  ]
@@ -193,8 +193,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 12 ]
 {
 "49
-[; ;arm_fsm.c: 49:             PWM1_16BIT_SetSlice1Output1DutyCycleRegister(50);
-[e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 -> -> 50 `i `us ]
+[; ;arm_fsm.c: 49:             PWM1_16BIT_SetSlice1Output1DutyCycleRegister(100);
+[e ( _PWM1_16BIT_SetSlice1Output1DutyCycleRegister (1 -> -> 100 `i `us ]
 "50
 [; ;arm_fsm.c: 50:             break;
 [e $U 7  ]

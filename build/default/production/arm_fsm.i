@@ -696,19 +696,19 @@ void arm_fsm_init() {
 void set_magnet_strength() {
     switch(target_boat) {
         case(0): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(23000);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(40000);
             break;
         }
         case(1): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(100);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(60000);
             break;
         }
         case(2): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(50);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(10000);
             break;
         }
         case(3): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(50);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(100);
             break;
         }
     }
