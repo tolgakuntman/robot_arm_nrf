@@ -51,8 +51,8 @@ void initServo() {
     servos[1].nextAngle = calculateAngle(45); // Ensure target angle is different for movement
 
     //servos[2].id = 2; P8
-    servos[2].currAngle = calculateAngle(25);
-    servos[2].nextAngle = calculateAngle(25); // Ensure target angle is different for movement
+    servos[2].currAngle = calculateAngle(28);
+    servos[2].nextAngle = calculateAngle(28); // Ensure target angle is different for movement
 
     //servos[3].id = 3; P7
     servos[3].currAngle = calculateAngle(45);

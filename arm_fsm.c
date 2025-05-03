@@ -152,7 +152,7 @@ void arm_fsm_update() {
                     next_state = (arm_mode == PLACE) ? ROTATE_BOARD : RETURN;
                     break;
                 }
-                case MOVE_UP_BOARD: {
+                default: {
                     next_state = ROTATE_DOCK;
                     break;
                 }
@@ -169,11 +169,19 @@ void arm_fsm_update() {
             break;
         }
         
-        case BOAT_ROTATE: {
+        case BOAT_ROTATE_BOARD: {
             TMR2_PeriodCountSet(0x7);
             uint16_t angles[NUM_SERVOS] = {getAngle(0), calculateAngle(get_dependent_servo_angle(target_x, target_y, target_orientation)), getAngle(2), getAngle(3)};
             move_servo_to_int(angles);
             next_state = PLACEMENT;
+            break;
+        }
+        
+        case BOAT_ROTATE_DOCK: {
+            TMR2_PeriodCountSet(0x7);
+            uint16_t angles[NUM_SERVOS] = {getAngle(0), calculateAngle(get_docking_servo_angles(target_boat)[1]), getAngle(2), getAngle(3)};
+            move_servo_to_int(angles);
+            next_state = STILL;
             break;
         }
 
@@ -183,14 +191,14 @@ void arm_fsm_update() {
             move_servo_to_angles(angles);
             switch(previous_state) {
                 case ROTATE_BOARD: {
-                    next_state = BOAT_ROTATE;
+                    next_state = BOAT_ROTATE_BOARD;
                     break;
                 case WAIT: {
                     next_state = STILL;
                     break;
                     }
                 case MAGNET_ON: {
-                    next_state = STILL;
+                    next_state = BOAT_ROTATE_DOCK;
                     break;
                     }
                 }
@@ -228,7 +236,7 @@ void arm_fsm_update() {
         }
                     
         case RETURN: {
-            uint8_t idle_angles[NUM_SERVOS] = {43, 45, 25, 45};
+            uint8_t idle_angles[NUM_SERVOS] = {43, 45, 28, 45};
             move_servo_to_angles(idle_angles);
             next_state = IDLE;
             process_fsm = false;  // FSM complete, reset flag

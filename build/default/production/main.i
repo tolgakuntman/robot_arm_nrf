@@ -30506,7 +30506,8 @@ typedef enum {
     MOVE_UP_DOCK,
     STILL,
     ROTATE_BOARD,
-    BOAT_ROTATE,
+    BOAT_ROTATE_BOARD,
+    BOAT_ROTATE_DOCK,
     MOVE_UP_BOARD,
     PLACEMENT,
     MAGNET_OFF,
@@ -30612,7 +30613,7 @@ void slave(void *pvParameters){
     enablePWM();
     TMR2_Start();
     arm_fsm_init();
-
+    arm_set_target(0,3,4,0,RETURN);
     audio_init();
 
 

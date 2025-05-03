@@ -2770,11 +2770,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;servo.c: 51:     servos[1].nextAngle = calculateAngle(45);
 [e = . *U + &U _servos * -> -> -> 1 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 45 `i `uc ]
 "54
-[; ;servo.c: 54:     servos[2].currAngle = calculateAngle(25);
-[e = . *U + &U _servos * -> -> -> 2 `i `ui `ux -> -> # *U &U _servos `ui `ux 0 ( _calculateAngle (1 -> -> 25 `i `uc ]
+[; ;servo.c: 54:     servos[2].currAngle = calculateAngle(28);
+[e = . *U + &U _servos * -> -> -> 2 `i `ui `ux -> -> # *U &U _servos `ui `ux 0 ( _calculateAngle (1 -> -> 28 `i `uc ]
 "55
-[; ;servo.c: 55:     servos[2].nextAngle = calculateAngle(25);
-[e = . *U + &U _servos * -> -> -> 2 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 25 `i `uc ]
+[; ;servo.c: 55:     servos[2].nextAngle = calculateAngle(28);
+[e = . *U + &U _servos * -> -> -> 2 `i `ui `ux -> -> # *U &U _servos `ui `ux 1 ( _calculateAngle (1 -> -> 28 `i `uc ]
 "58
 [; ;servo.c: 58:     servos[3].currAngle = calculateAngle(45);
 [e = . *U + &U _servos * -> -> -> 3 `i `ui `ux -> -> # *U &U _servos `ui `ux 0 ( _calculateAngle (1 -> -> 45 `i `uc ]
