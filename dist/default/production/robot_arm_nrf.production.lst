@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.50 build 20240725155939 
-                                                                                               Sat May  3 15:26:30 2025
+                                                                                               Sat May  3 21:02:47 2025
 
 Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1 
      1                           	processor	18F57Q43
@@ -14955,25 +14955,25 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  14941                           	callstack 0
  14942   00C145  1E                 	db	30
  14943   00C146  6E                 	db	110
- 14944   00C147  A4                 	db	164
+ 14944   00C147  A1                 	db	161
  14945   00C148  1E                 	db	30
- 14946   00C149  46                 	db	70
- 14947   00C14A  46                 	db	70
+ 14946   00C149  44                 	db	68
+ 14947   00C14A  44                 	db	68
  14948   00C14B  28                 	db	40
  14949   00C14C  6E                 	db	110
- 14950   00C14D  9C                 	db	156
+ 14950   00C14D  99                 	db	153
  14951   00C14E  28                 	db	40
- 14952   00C14F  6E                 	db	110
- 14953   00C150  6E                 	db	110
+ 14952   00C14F  A2                 	db	162
+ 14953   00C150  3E                 	db	62
  14954   00C151  32                 	db	50
  14955   00C152  6E                 	db	110
- 14956   00C153  99                 	db	153
+ 14956   00C153  96                 	db	150
  14957   00C154  3C                 	db	60
  14958   00C155  98                 	db	152
- 14959   00C156  38                 	db	56
+ 14959   00C156  37                 	db	55
  14960   00C157  3C                 	db	60
  14961   00C158  6E                 	db	110
- 14962   00C159  97                 	db	151
+ 14962   00C159  94                 	db	148
  14963   00C15A  46                 	db	70
  14964   00C15B  96                 	db	150
  14965   00C15C  33                 	db	51
@@ -14985,27 +14985,27 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  14971   00C162  31                 	db	49
  14972   00C163  14                 	db	20
  14973   00C164  6E                 	db	110
- 14974   00C165  93                 	db	147
+ 14974   00C165  95                 	db	149
  14975   00C166  14                 	db	20
- 14976   00C167  32                 	db	50
- 14977   00C168  32                 	db	50
+ 14976   00C167  34                 	db	52
+ 14977   00C168  34                 	db	52
  14978   00C169  23                 	db	35
  14979   00C16A  6E                 	db	110
- 14980   00C16B  91                 	db	145
+ 14980   00C16B  8F                 	db	143
  14981   00C16C  23                 	db	35
  14982   00C16D  93                 	db	147
- 14983   00C16E  32                 	db	50
+ 14983   00C16E  31                 	db	49
  14984   00C16F  32                 	db	50
  14985   00C170  6E                 	db	110
- 14986   00C171  8D                 	db	141
+ 14986   00C171  8B                 	db	139
  14987   00C172  32                 	db	50
- 14988   00C173  92                 	db	146
- 14989   00C174  2E                 	db	46
+ 14988   00C173  91                 	db	145
+ 14989   00C174  2C                 	db	44
  14990   00C175  3C                 	db	60
  14991   00C176  6E                 	db	110
- 14992   00C177  8D                 	db	141
+ 14992   00C177  8B                 	db	139
  14993   00C178  46                 	db	70
- 14994   00C179  8C                 	db	140
+ 14994   00C179  8D                 	db	141
  14995   00C17A  28                 	db	40
  14996   00C17B  50                 	db	80
  14997   00C17C  22                 	db	34
@@ -15021,19 +15021,19 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  15007   00C186  20                 	db	32
  15008   00C187  1E                 	db	30
  15009   00C188  6E                 	db	110
- 15010   00C189  83                 	db	131
+ 15010   00C189  7E                 	db	126
  15011   00C18A  1E                 	db	30
- 15012   00C18B  6E                 	db	110
- 15013   00C18C  6E                 	db	110
+ 15012   00C18B  86                 	db	134
+ 15013   00C18C  22                 	db	34
  15014   00C18D  28                 	db	40
  15015   00C18E  6E                 	db	110
- 15016   00C18F  82                 	db	130
+ 15016   00C18F  80                 	db	128
  15017   00C190  32                 	db	50
- 15018   00C191  87                 	db	135
- 15019   00C192  23                 	db	35
+ 15018   00C191  83                 	db	131
+ 15019   00C192  21                 	db	33
  15020   00C193  3C                 	db	60
  15021   00C194  6E                 	db	110
- 15022   00C195  83                 	db	131
+ 15022   00C195  81                 	db	129
  15023   00C196  46                 	db	70
  15024   00C197  85                 	db	133
  15025   00C198  1E                 	db	30
@@ -15045,25 +15045,25 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  15031   00C19E  1C                 	db	28
  15032   00C19F  1E                 	db	30
  15033   00C1A0  6E                 	db	110
- 15034   00C1A1  6B                 	db	107
+ 15034   00C1A1  72                 	db	114
  15035   00C1A2  1E                 	db	30
- 15036   00C1A3  09                 	db	9
- 15037   00C1A4  09                 	db	9
+ 15036   00C1A3  0F                 	db	15
+ 15037   00C1A4  0F                 	db	15
  15038   00C1A5  28                 	db	40
  15039   00C1A6  6E                 	db	110
  15040   00C1A7  71                 	db	113
  15041   00C1A8  28                 	db	40
- 15042   00C1A9  6E                 	db	110
- 15043   00C1AA  6E                 	db	110
+ 15042   00C1A9  73                 	db	115
+ 15043   00C1AA  10                 	db	16
  15044   00C1AB  32                 	db	50
  15045   00C1AC  6E                 	db	110
  15046   00C1AD  75                 	db	117
  15047   00C1AE  32                 	db	50
- 15048   00C1AF  6E                 	db	110
- 15049   00C1B0  28                 	db	40
+ 15048   00C1AF  76                 	db	118
+ 15049   00C1B0  15                 	db	21
  15050   00C1B1  3C                 	db	60
  15051   00C1B2  6E                 	db	110
- 15052   00C1B3  78                 	db	120
+ 15052   00C1B3  77                 	db	119
  15053   00C1B4  46                 	db	70
  15054   00C1B5  7D                 	db	125
  15055   00C1B6  17                 	db	23
@@ -15075,22 +15075,22 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  15061   00C1BC  17                 	db	23
  15062   00C1BD  1E                 	db	30
  15063   00C1BE  6E                 	db	110
- 15064   00C1BF  5A                 	db	90
+ 15064   00C1BF  5E                 	db	94
  15065   00C1C0  1E                 	db	30
  15066   00C1C1  69                 	db	105
  15067   00C1C2  09                 	db	9
  15068   00C1C3  28                 	db	40
  15069   00C1C4  6E                 	db	110
- 15070   00C1C5  63                 	db	99
+ 15070   00C1C5  65                 	db	101
  15071   00C1C6  32                 	db	50
- 15072   00C1C7  69                 	db	105
- 15073   00C1C8  69                 	db	105
+ 15072   00C1C7  6A                 	db	106
+ 15073   00C1C8  6A                 	db	106
  15074   00C1C9  32                 	db	50
  15075   00C1CA  6E                 	db	110
  15076   00C1CB  69                 	db	105
  15077   00C1CC  3C                 	db	60
- 15078   00C1CD  6E                 	db	110
- 15079   00C1CE  6E                 	db	110
+ 15078   00C1CD  6A                 	db	106
+ 15079   00C1CE  6A                 	db	106
  15080   00C1CF  46                 	db	70
  15081   00C1D0  6E                 	db	110
  15082   00C1D1  6E                 	db	110
@@ -22851,26 +22851,26 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  22837                           	callstack 0
  22838   00FDE4  17                 	db	23
  22839   00FDE5  6E                 	db	110
- 22840   00FDE6  A4                 	db	164
- 22841   00FDE7  25                 	db	37
- 22842   00FDE8  46                 	db	70
- 22843   00FDE9  46                 	db	70
- 22844   00FDEA  1E                 	db	30
+ 22840   00FDE6  A1                 	db	161
+ 22841   00FDE7  29                 	db	41
+ 22842   00FDE8  44                 	db	68
+ 22843   00FDE9  44                 	db	68
+ 22844   00FDEA  1F                 	db	31
  22845   00FDEB  6E                 	db	110
- 22846   00FDEC  9C                 	db	156
- 22847   00FDED  30                 	db	48
- 22848   00FDEE  6E                 	db	110
- 22849   00FDEF  6E                 	db	110
- 22850   00FDF0  2F                 	db	47
+ 22846   00FDEC  99                 	db	153
+ 22847   00FDED  38                 	db	56
+ 22848   00FDEE  A2                 	db	162
+ 22849   00FDEF  3E                 	db	62
+ 22850   00FDF0  2E                 	db	46
  22851   00FDF1  6E                 	db	110
- 22852   00FDF2  99                 	db	153
- 22853   00FDF3  45                 	db	69
+ 22852   00FDF2  96                 	db	150
+ 22853   00FDF3  47                 	db	71
  22854   00FDF4  98                 	db	152
- 22855   00FDF5  38                 	db	56
- 22856   00FDF6  3B                 	db	59
+ 22855   00FDF5  37                 	db	55
+ 22856   00FDF6  3D                 	db	61
  22857   00FDF7  6E                 	db	110
- 22858   00FDF8  97                 	db	151
- 22859   00FDF9  4F                 	db	79
+ 22858   00FDF8  94                 	db	148
+ 22859   00FDF9  55                 	db	85
  22860   00FDFA  96                 	db	150
  22861   00FDFB  33                 	db	51
  22862   00FDFC  4C                 	db	76
@@ -22879,29 +22879,29 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  22865   00FDFF  61                 	db	97
  22866   00FE00  93                 	db	147
  22867   00FE01  31                 	db	49
- 22868   00FE02  12                 	db	18
+ 22868   00FE02  13                 	db	19
  22869   00FE03  6E                 	db	110
- 22870   00FE04  93                 	db	147
- 22871   00FE05  1D                 	db	29
- 22872   00FE06  32                 	db	50
- 22873   00FE07  32                 	db	50
+ 22870   00FE04  95                 	db	149
+ 22871   00FE05  20                 	db	32
+ 22872   00FE06  34                 	db	52
+ 22873   00FE07  34                 	db	52
  22874   00FE08  1E                 	db	30
  22875   00FE09  6E                 	db	110
- 22876   00FE0A  91                 	db	145
+ 22876   00FE0A  8F                 	db	143
  22877   00FE0B  34                 	db	52
  22878   00FE0C  93                 	db	147
- 22879   00FE0D  32                 	db	50
- 22880   00FE0E  2C                 	db	44
+ 22879   00FE0D  31                 	db	49
+ 22880   00FE0E  28                 	db	40
  22881   00FE0F  6E                 	db	110
- 22882   00FE10  8D                 	db	141
+ 22882   00FE10  8B                 	db	139
  22883   00FE11  42                 	db	66
- 22884   00FE12  92                 	db	146
- 22885   00FE13  2E                 	db	46
- 22886   00FE14  36                 	db	54
+ 22884   00FE12  91                 	db	145
+ 22885   00FE13  2C                 	db	44
+ 22886   00FE14  37                 	db	55
  22887   00FE15  6E                 	db	110
- 22888   00FE16  8D                 	db	141
- 22889   00FE17  4E                 	db	78
- 22890   00FE18  8C                 	db	140
+ 22888   00FE16  8B                 	db	139
+ 22889   00FE17  4F                 	db	79
+ 22890   00FE18  8D                 	db	141
  22891   00FE19  28                 	db	40
  22892   00FE1A  4A                 	db	74
  22893   00FE1B  22                 	db	34
@@ -22909,28 +22909,28 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  22895   00FE1D  5F                 	db	95
  22896   00FE1E  8C                 	db	140
  22897   00FE1F  28                 	db	40
- 22898   00FE20  12                 	db	18
+ 22898   00FE20  0E                 	db	14
  22899   00FE21  6E                 	db	110
  22900   00FE22  80                 	db	128
- 22901   00FE23  1E                 	db	30
+ 22901   00FE23  1A                 	db	26
  22902   00FE24  20                 	db	32
  22903   00FE25  20                 	db	32
- 22904   00FE26  1A                 	db	26
+ 22904   00FE26  1F                 	db	31
  22905   00FE27  6E                 	db	110
- 22906   00FE28  80                 	db	128
- 22907   00FE29  2B                 	db	43
- 22908   00FE2A  6E                 	db	110
- 22909   00FE2B  6E                 	db	110
- 22910   00FE2C  2D                 	db	45
+ 22906   00FE28  7E                 	db	126
+ 22907   00FE29  34                 	db	52
+ 22908   00FE2A  86                 	db	134
+ 22909   00FE2B  22                 	db	34
+ 22910   00FE2C  2B                 	db	43
  22911   00FE2D  6E                 	db	110
- 22912   00FE2E  82                 	db	130
- 22913   00FE2F  44                 	db	68
- 22914   00FE30  87                 	db	135
- 22915   00FE31  23                 	db	35
+ 22912   00FE2E  80                 	db	128
+ 22913   00FE2F  43                 	db	67
+ 22914   00FE30  83                 	db	131
+ 22915   00FE31  21                 	db	33
  22916   00FE32  38                 	db	56
  22917   00FE33  6E                 	db	110
- 22918   00FE34  83                 	db	131
- 22919   00FE35  4E                 	db	78
+ 22918   00FE34  81                 	db	129
+ 22919   00FE35  52                 	db	82
  22920   00FE36  85                 	db	133
  22921   00FE37  1E                 	db	30
  22922   00FE38  48                 	db	72
@@ -22939,29 +22939,29 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  22925   00FE3B  5E                 	db	94
  22926   00FE3C  84                 	db	132
  22927   00FE3D  1C                 	db	28
- 22928   00FE3E  15                 	db	21
+ 22928   00FE3E  14                 	db	20
  22929   00FE3F  6E                 	db	110
- 22930   00FE40  6B                 	db	107
- 22931   00FE41  23                 	db	35
- 22932   00FE42  09                 	db	9
- 22933   00FE43  09                 	db	9
+ 22930   00FE40  72                 	db	114
+ 22931   00FE41  2A                 	db	42
+ 22932   00FE42  0F                 	db	15
+ 22933   00FE43  0F                 	db	15
  22934   00FE44  1E                 	db	30
  22935   00FE45  6E                 	db	110
  22936   00FE46  71                 	db	113
- 22937   00FE47  30                 	db	48
- 22938   00FE48  6E                 	db	110
- 22939   00FE49  6E                 	db	110
- 22940   00FE4A  27                 	db	39
+ 22937   00FE47  38                 	db	56
+ 22938   00FE48  73                 	db	115
+ 22939   00FE49  10                 	db	16
+ 22940   00FE4A  2B                 	db	43
  22941   00FE4B  6E                 	db	110
  22942   00FE4C  75                 	db	117
- 22943   00FE4D  3F                 	db	63
- 22944   00FE4E  6E                 	db	110
- 22945   00FE4F  28                 	db	40
- 22946   00FE50  38                 	db	56
+ 22943   00FE4D  46                 	db	70
+ 22944   00FE4E  76                 	db	118
+ 22945   00FE4F  15                 	db	21
+ 22946   00FE50  3B                 	db	59
  22947   00FE51  6E                 	db	110
- 22948   00FE52  78                 	db	120
- 22949   00FE53  4D                 	db	77
- 22950   00FE54  7D                 	db	125
+ 22948   00FE52  77                 	db	119
+ 22949   00FE53  56                 	db	86
+ 22950   00FE54  7B                 	db	123
  22951   00FE55  17                 	db	23
  22952   00FE56  4C                 	db	76
  22953   00FE57  AD                 	db	173
@@ -22971,26 +22971,26 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  22957   00FE5B  17                 	db	23
  22958   00FE5C  19                 	db	25
  22959   00FE5D  6E                 	db	110
- 22960   00FE5E  5A                 	db	90
- 22961   00FE5F  2C                 	db	44
+ 22960   00FE5E  5E                 	db	94
+ 22961   00FE5F  31                 	db	49
  22962   00FE60  69                 	db	105
  22963   00FE61  09                 	db	9
- 22964   00FE62  22                 	db	34
+ 22964   00FE62  27                 	db	39
  22965   00FE63  6E                 	db	110
- 22966   00FE64  63                 	db	99
- 22967   00FE65  37                 	db	55
- 22968   00FE66  69                 	db	105
- 22969   00FE67  69                 	db	105
- 22970   00FE68  2E                 	db	46
+ 22966   00FE64  65                 	db	101
+ 22967   00FE65  3F                 	db	63
+ 22968   00FE66  6A                 	db	106
+ 22969   00FE67  6A                 	db	106
+ 22970   00FE68  34                 	db	52
  22971   00FE69  6E                 	db	110
  22972   00FE6A  69                 	db	105
- 22973   00FE6B  43                 	db	67
- 22974   00FE6C  6E                 	db	110
- 22975   00FE6D  6E                 	db	110
- 22976   00FE6E  3C                 	db	60
+ 22973   00FE6B  4D                 	db	77
+ 22974   00FE6C  6A                 	db	106
+ 22975   00FE6D  6A                 	db	106
+ 22976   00FE6E  42                 	db	66
  22977   00FE6F  6E                 	db	110
  22978   00FE70  6E                 	db	110
- 22979   00FE71  50                 	db	80
+ 22979   00FE71  58                 	db	88
  22980   00FE72  6F                 	db	111
  22981   00FE73  6F                 	db	111
  22982   00FE74  50                 	db	80
@@ -23043,11 +23043,11 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  23029   00FE9B  26                 	db	38
  23030   00FE9C  3C                 	db	60
  23031   00FE9D  1C                 	db	28
- 23032   00FE9E  1E                 	db	30
+ 23032   00FE9E  1F                 	db	31
  23033   00FE9F  35                 	db	53
  23034   00FEA0  49                 	db	73
  23035   00FEA1  15                 	db	21
- 23036   00FEA2  16                 	db	22
+ 23036   00FEA2  18                 	db	24
  23037   00FEA3  4B                 	db	75
  23038   00FEA4  46                 	db	70
  23039   00FEA5  2A                 	db	42
@@ -23060,14 +23060,14 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  23046   00FEA8  15                 	db	21
  23047   00FEA9  2D                 	db	45
  23048   00FEAA  2F                 	db	47
- 23049   00FEAB  29                 	db	41
+ 23049   00FEAB  2A                 	db	42
  23050   00FEAC  24                 	db	36
  23051   00FEAD  1C                 	db	28
- 23052   00FEAE  1E                 	db	30
+ 23052   00FEAE  1F                 	db	31
  23053   00FEAF  3E                 	db	62
  23054   00FEB0  38                 	db	56
  23055   00FEB1  15                 	db	21
- 23056   00FEB2  16                 	db	22
+ 23056   00FEB2  18                 	db	24
  23057   00FEB3  51                 	db	81
  23058   00FEB4  35                 	db	53
  23059   00FEB5  2A                 	db	42
@@ -24637,16 +24637,16 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
  24603                           ;main.c: 69:     arm_fsm_init();
  24604   010B34  EC1F  F091         	call	_arm_fsm_init	;wreg free
  24605   010B38                     
- 24606                           ;main.c: 70:     arm_set_target(0,3,4,0,RETURN);
- 24607   010B38  0E03               	movlw	3
+ 24606                           ;main.c: 70:     arm_set_target(3,4,0,1,RETURN);
+ 24607   010B38  0E04               	movlw	4
  24608   010B3A  6E15               	movwf	arm_set_target@x^(0+1280),c
- 24609   010B3C  0E04               	movlw	4
+ 24609   010B3C  0E00               	movlw	0
  24610   010B3E  6E16               	movwf	arm_set_target@y^(0+1280),c
- 24611   010B40  0E00               	movlw	0
+ 24611   010B40  0E01               	movlw	1
  24612   010B42  6E17               	movwf	arm_set_target@is_vertical^(0+1280),c
  24613   010B44  0E0D               	movlw	13
  24614   010B46  6E18               	movwf	arm_set_target@mode^(0+1280),c
- 24615   010B48  0E00               	movlw	0
+ 24615   010B48  0E03               	movlw	3
  24616   010B4A  ECA3  F08E         	call	_arm_set_target
  24617   010B4E                     
  24618                           ;main.c: 71:     audio_init();
@@ -37550,7 +37550,7 @@ DATA                 0      0     361      0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.50 build 20240725155939 
-Symbol Table                                                                                   Sat May  3 15:26:30 2025
+Symbol Table                                                                                   Sat May  3 21:02:47 2025
 
                                        ??_TMR2_PeriodCountSet 0515  
                                            _SPI1_ByteExchange 21C2  

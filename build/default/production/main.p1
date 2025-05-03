@@ -38,14 +38,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./arm_fsm.h: 37: void arm_fsm_init();
 [v _arm_fsm_init `(v ~T0 @X0 0 e? ]
 "70 main.c
-[; ;main.c: 70:     arm_set_target(0,3,4,0,RETURN);
+[; ;main.c: 70:     arm_set_target(3,4,0,1,RETURN);
 [c E18107 0 1 .. ]
 [n E18107 . PLACE REMOVE  ]
 "39 ./arm_fsm.h
 [; ;./arm_fsm.h: 39: void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, ArmMode mode);
 [v _arm_set_target `(v ~T0 @X0 0 ef5`uc`uc`uc`uc`E18107 ]
 "70 main.c
-[; ;main.c: 70:     arm_set_target(0,3,4,0,RETURN);
+[; ;main.c: 70:     arm_set_target(3,4,0,1,RETURN);
 [c E18091 0 1 2 3 4 5 6 7 8 9 10 11 12 13 .. ]
 [n E18091 . IDLE ROTATE_DOCK PICKUP MAGNET_ON MOVE_UP_DOCK STILL ROTATE_BOARD BOAT_ROTATE_BOARD BOAT_ROTATE_DOCK MOVE_UP_BOARD PLACEMENT MAGNET_OFF WAIT RETURN  ]
 "35 ./audio.h
@@ -10454,8 +10454,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 69:     arm_fsm_init();
 [e ( _arm_fsm_init ..  ]
 "70
-[; ;main.c: 70:     arm_set_target(0,3,4,0,RETURN);
-[e ( _arm_set_target (4 , , , , -> -> 0 `i `uc -> -> 3 `i `uc -> -> 4 `i `uc -> -> 0 `i `uc . `E18091 13 ]
+[; ;main.c: 70:     arm_set_target(3,4,0,1,RETURN);
+[e ( _arm_set_target (4 , , , , -> -> 3 `i `uc -> -> 4 `i `uc -> -> 0 `i `uc -> -> 1 `i `uc . `E18091 13 ]
 "71
 [; ;main.c: 71:     audio_init();
 [e ( _audio_init ..  ]

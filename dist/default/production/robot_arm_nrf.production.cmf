@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/xcXNNhihd/driver_tmp_9.o
+$/tmp/xcXooIFpD/driver_tmp_9.o
 heap HEAP 7 67D 67D 1E83 1 1
 init CODE 0 1A 1A 4 1 2
 reset_vec CODE 0 0 0 4 1 2
@@ -1194,73 +1194,73 @@ $dist/default/production/robot_arm_nrf.production.o
 12064 text0 CODE >220:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
 12068 text0 CODE >229:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
 12074 text0 CODE >240:/home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
-1177E cinit CODE >38611:/tmp/xcXNNhihd/driver_tmp_1.s
-1177E cinit CODE >38613:/tmp/xcXNNhihd/driver_tmp_1.s
-1177E cinit CODE >38616:/tmp/xcXNNhihd/driver_tmp_1.s
-1177E cinit CODE >38726:/tmp/xcXNNhihd/driver_tmp_1.s
-11780 cinit CODE >38727:/tmp/xcXNNhihd/driver_tmp_1.s
-11782 cinit CODE >38728:/tmp/xcXNNhihd/driver_tmp_1.s
-11784 cinit CODE >38729:/tmp/xcXNNhihd/driver_tmp_1.s
-11786 cinit CODE >38730:/tmp/xcXNNhihd/driver_tmp_1.s
-11788 cinit CODE >38731:/tmp/xcXNNhihd/driver_tmp_1.s
-1178A cinit CODE >38732:/tmp/xcXNNhihd/driver_tmp_1.s
-1178E cinit CODE >38733:/tmp/xcXNNhihd/driver_tmp_1.s
-11792 cinit CODE >38734:/tmp/xcXNNhihd/driver_tmp_1.s
-11792 cinit CODE >38735:/tmp/xcXNNhihd/driver_tmp_1.s
-11794 cinit CODE >38736:/tmp/xcXNNhihd/driver_tmp_1.s
-11798 cinit CODE >38737:/tmp/xcXNNhihd/driver_tmp_1.s
-1179A cinit CODE >38738:/tmp/xcXNNhihd/driver_tmp_1.s
-1179C cinit CODE >38739:/tmp/xcXNNhihd/driver_tmp_1.s
-1179E cinit CODE >38743:/tmp/xcXNNhihd/driver_tmp_1.s
-117A0 cinit CODE >38744:/tmp/xcXNNhihd/driver_tmp_1.s
-117A2 cinit CODE >38745:/tmp/xcXNNhihd/driver_tmp_1.s
-117A4 cinit CODE >38746:/tmp/xcXNNhihd/driver_tmp_1.s
-117A6 cinit CODE >38747:/tmp/xcXNNhihd/driver_tmp_1.s
-117A8 cinit CODE >38748:/tmp/xcXNNhihd/driver_tmp_1.s
-117AA cinit CODE >38749:/tmp/xcXNNhihd/driver_tmp_1.s
-117AE cinit CODE >38750:/tmp/xcXNNhihd/driver_tmp_1.s
-117B2 cinit CODE >38751:/tmp/xcXNNhihd/driver_tmp_1.s
-117B2 cinit CODE >38752:/tmp/xcXNNhihd/driver_tmp_1.s
-117B4 cinit CODE >38753:/tmp/xcXNNhihd/driver_tmp_1.s
-117B8 cinit CODE >38754:/tmp/xcXNNhihd/driver_tmp_1.s
-117BA cinit CODE >38755:/tmp/xcXNNhihd/driver_tmp_1.s
-117BC cinit CODE >38756:/tmp/xcXNNhihd/driver_tmp_1.s
-117BE cinit CODE >38760:/tmp/xcXNNhihd/driver_tmp_1.s
-117C0 cinit CODE >38761:/tmp/xcXNNhihd/driver_tmp_1.s
-117C2 cinit CODE >38762:/tmp/xcXNNhihd/driver_tmp_1.s
-117C4 cinit CODE >38763:/tmp/xcXNNhihd/driver_tmp_1.s
-117C6 cinit CODE >38764:/tmp/xcXNNhihd/driver_tmp_1.s
-117C8 cinit CODE >38765:/tmp/xcXNNhihd/driver_tmp_1.s
-117CA cinit CODE >38766:/tmp/xcXNNhihd/driver_tmp_1.s
-117CC cinit CODE >38767:/tmp/xcXNNhihd/driver_tmp_1.s
-117D0 cinit CODE >38771:/tmp/xcXNNhihd/driver_tmp_1.s
-117D4 cinit CODE >38772:/tmp/xcXNNhihd/driver_tmp_1.s
-117D6 cinit CODE >38773:/tmp/xcXNNhihd/driver_tmp_1.s
-117D6 cinit CODE >38774:/tmp/xcXNNhihd/driver_tmp_1.s
-117D8 cinit CODE >38775:/tmp/xcXNNhihd/driver_tmp_1.s
-117DA cinit CODE >38776:/tmp/xcXNNhihd/driver_tmp_1.s
-117DC cinit CODE >38779:/tmp/xcXNNhihd/driver_tmp_1.s
-117E0 cinit CODE >38780:/tmp/xcXNNhihd/driver_tmp_1.s
-117E2 cinit CODE >38781:/tmp/xcXNNhihd/driver_tmp_1.s
-117E2 cinit CODE >38782:/tmp/xcXNNhihd/driver_tmp_1.s
-117E4 cinit CODE >38783:/tmp/xcXNNhihd/driver_tmp_1.s
-117E6 cinit CODE >38784:/tmp/xcXNNhihd/driver_tmp_1.s
-117E8 cinit CODE >38787:/tmp/xcXNNhihd/driver_tmp_1.s
-117EC cinit CODE >38788:/tmp/xcXNNhihd/driver_tmp_1.s
-117EE cinit CODE >38789:/tmp/xcXNNhihd/driver_tmp_1.s
-117EE cinit CODE >38790:/tmp/xcXNNhihd/driver_tmp_1.s
-117F0 cinit CODE >38791:/tmp/xcXNNhihd/driver_tmp_1.s
-117F2 cinit CODE >38792:/tmp/xcXNNhihd/driver_tmp_1.s
-117F4 cinit CODE >38800:/tmp/xcXNNhihd/driver_tmp_1.s
-117F6 cinit CODE >38801:/tmp/xcXNNhihd/driver_tmp_1.s
-117F8 cinit CODE >38802:/tmp/xcXNNhihd/driver_tmp_1.s
-117FA cinit CODE >38803:/tmp/xcXNNhihd/driver_tmp_1.s
-117FC cinit CODE >38804:/tmp/xcXNNhihd/driver_tmp_1.s
-117FE cinit CODE >38805:/tmp/xcXNNhihd/driver_tmp_1.s
-11800 cinit CODE >38806:/tmp/xcXNNhihd/driver_tmp_1.s
-11802 cinit CODE >38812:/tmp/xcXNNhihd/driver_tmp_1.s
-11802 cinit CODE >38814:/tmp/xcXNNhihd/driver_tmp_1.s
-11804 cinit CODE >38815:/tmp/xcXNNhihd/driver_tmp_1.s
+1177E cinit CODE >38611:/tmp/xcXooIFpD/driver_tmp_1.s
+1177E cinit CODE >38613:/tmp/xcXooIFpD/driver_tmp_1.s
+1177E cinit CODE >38616:/tmp/xcXooIFpD/driver_tmp_1.s
+1177E cinit CODE >38726:/tmp/xcXooIFpD/driver_tmp_1.s
+11780 cinit CODE >38727:/tmp/xcXooIFpD/driver_tmp_1.s
+11782 cinit CODE >38728:/tmp/xcXooIFpD/driver_tmp_1.s
+11784 cinit CODE >38729:/tmp/xcXooIFpD/driver_tmp_1.s
+11786 cinit CODE >38730:/tmp/xcXooIFpD/driver_tmp_1.s
+11788 cinit CODE >38731:/tmp/xcXooIFpD/driver_tmp_1.s
+1178A cinit CODE >38732:/tmp/xcXooIFpD/driver_tmp_1.s
+1178E cinit CODE >38733:/tmp/xcXooIFpD/driver_tmp_1.s
+11792 cinit CODE >38734:/tmp/xcXooIFpD/driver_tmp_1.s
+11792 cinit CODE >38735:/tmp/xcXooIFpD/driver_tmp_1.s
+11794 cinit CODE >38736:/tmp/xcXooIFpD/driver_tmp_1.s
+11798 cinit CODE >38737:/tmp/xcXooIFpD/driver_tmp_1.s
+1179A cinit CODE >38738:/tmp/xcXooIFpD/driver_tmp_1.s
+1179C cinit CODE >38739:/tmp/xcXooIFpD/driver_tmp_1.s
+1179E cinit CODE >38743:/tmp/xcXooIFpD/driver_tmp_1.s
+117A0 cinit CODE >38744:/tmp/xcXooIFpD/driver_tmp_1.s
+117A2 cinit CODE >38745:/tmp/xcXooIFpD/driver_tmp_1.s
+117A4 cinit CODE >38746:/tmp/xcXooIFpD/driver_tmp_1.s
+117A6 cinit CODE >38747:/tmp/xcXooIFpD/driver_tmp_1.s
+117A8 cinit CODE >38748:/tmp/xcXooIFpD/driver_tmp_1.s
+117AA cinit CODE >38749:/tmp/xcXooIFpD/driver_tmp_1.s
+117AE cinit CODE >38750:/tmp/xcXooIFpD/driver_tmp_1.s
+117B2 cinit CODE >38751:/tmp/xcXooIFpD/driver_tmp_1.s
+117B2 cinit CODE >38752:/tmp/xcXooIFpD/driver_tmp_1.s
+117B4 cinit CODE >38753:/tmp/xcXooIFpD/driver_tmp_1.s
+117B8 cinit CODE >38754:/tmp/xcXooIFpD/driver_tmp_1.s
+117BA cinit CODE >38755:/tmp/xcXooIFpD/driver_tmp_1.s
+117BC cinit CODE >38756:/tmp/xcXooIFpD/driver_tmp_1.s
+117BE cinit CODE >38760:/tmp/xcXooIFpD/driver_tmp_1.s
+117C0 cinit CODE >38761:/tmp/xcXooIFpD/driver_tmp_1.s
+117C2 cinit CODE >38762:/tmp/xcXooIFpD/driver_tmp_1.s
+117C4 cinit CODE >38763:/tmp/xcXooIFpD/driver_tmp_1.s
+117C6 cinit CODE >38764:/tmp/xcXooIFpD/driver_tmp_1.s
+117C8 cinit CODE >38765:/tmp/xcXooIFpD/driver_tmp_1.s
+117CA cinit CODE >38766:/tmp/xcXooIFpD/driver_tmp_1.s
+117CC cinit CODE >38767:/tmp/xcXooIFpD/driver_tmp_1.s
+117D0 cinit CODE >38771:/tmp/xcXooIFpD/driver_tmp_1.s
+117D4 cinit CODE >38772:/tmp/xcXooIFpD/driver_tmp_1.s
+117D6 cinit CODE >38773:/tmp/xcXooIFpD/driver_tmp_1.s
+117D6 cinit CODE >38774:/tmp/xcXooIFpD/driver_tmp_1.s
+117D8 cinit CODE >38775:/tmp/xcXooIFpD/driver_tmp_1.s
+117DA cinit CODE >38776:/tmp/xcXooIFpD/driver_tmp_1.s
+117DC cinit CODE >38779:/tmp/xcXooIFpD/driver_tmp_1.s
+117E0 cinit CODE >38780:/tmp/xcXooIFpD/driver_tmp_1.s
+117E2 cinit CODE >38781:/tmp/xcXooIFpD/driver_tmp_1.s
+117E2 cinit CODE >38782:/tmp/xcXooIFpD/driver_tmp_1.s
+117E4 cinit CODE >38783:/tmp/xcXooIFpD/driver_tmp_1.s
+117E6 cinit CODE >38784:/tmp/xcXooIFpD/driver_tmp_1.s
+117E8 cinit CODE >38787:/tmp/xcXooIFpD/driver_tmp_1.s
+117EC cinit CODE >38788:/tmp/xcXooIFpD/driver_tmp_1.s
+117EE cinit CODE >38789:/tmp/xcXooIFpD/driver_tmp_1.s
+117EE cinit CODE >38790:/tmp/xcXooIFpD/driver_tmp_1.s
+117F0 cinit CODE >38791:/tmp/xcXooIFpD/driver_tmp_1.s
+117F2 cinit CODE >38792:/tmp/xcXooIFpD/driver_tmp_1.s
+117F4 cinit CODE >38800:/tmp/xcXooIFpD/driver_tmp_1.s
+117F6 cinit CODE >38801:/tmp/xcXooIFpD/driver_tmp_1.s
+117F8 cinit CODE >38802:/tmp/xcXooIFpD/driver_tmp_1.s
+117FA cinit CODE >38803:/tmp/xcXooIFpD/driver_tmp_1.s
+117FC cinit CODE >38804:/tmp/xcXooIFpD/driver_tmp_1.s
+117FE cinit CODE >38805:/tmp/xcXooIFpD/driver_tmp_1.s
+11800 cinit CODE >38806:/tmp/xcXooIFpD/driver_tmp_1.s
+11802 cinit CODE >38812:/tmp/xcXooIFpD/driver_tmp_1.s
+11802 cinit CODE >38814:/tmp/xcXooIFpD/driver_tmp_1.s
+11804 cinit CODE >38815:/tmp/xcXooIFpD/driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1324,7 +1324,7 @@ _PWM3LDS 480 0 ABS 0 - dist/default/production/robot_arm_nrf.production.o
 _PWM3PRH 482 0 ABS 0 - dist/default/production/robot_arm_nrf.production.o
 _PWM3PRL 481 0 ABS 0 - dist/default/production/robot_arm_nrf.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production/robot_arm_nrf.production.o
-__mediumconst C144 0 MEDIUMCONST 0 mediumconst /tmp/xcXNNhihd/driver_tmp_9.o
+__mediumconst C144 0 MEDIUMCONST 0 mediumconst /tmp/xcXooIFpD/driver_tmp_9.o
 _INT0_DefaultInterruptHandler 0 0 ABS 0 - dist/default/production/robot_arm_nrf.production.o
 __end_of_PWM1_16BIT_SetSlice1Output1DutyCycleRegister 124C0 0 CODE 0 text16 dist/default/production/robot_arm_nrf.production.o
 _Nrf24_config 11808 0 CODE 0 text51 dist/default/production/robot_arm_nrf.production.o
@@ -1371,17 +1371,17 @@ _WPUC 411 0 ABS 0 - dist/default/production/robot_arm_nrf.production.o
 _WPUD 419 0 ABS 0 - dist/default/production/robot_arm_nrf.production.o
 _WPUE 421 0 ABS 0 - dist/default/production/robot_arm_nrf.production.o
 _WPUF 429 0 ABS 0 - dist/default/production/robot_arm_nrf.production.o
-___sp 0 0 STACK 2 stack /tmp/xcXNNhihd/driver_tmp_9.o
+___sp 0 0 STACK 2 stack /tmp/xcXooIFpD/driver_tmp_9.o
 _brkp 539 0 COMRAM 1 bssCOMRAM dist/default/production/robot_arm_nrf.production.o
 _main 12046 0 CODE 0 text0 dist/default/production/robot_arm_nrf.production.o
 ___simple_search_fl@best 526 0 COMRAM 1 cstackCOMRAM dist/default/production/robot_arm_nrf.production.o
 ___simple_search_fl@last 520 0 COMRAM 1 cstackCOMRAM dist/default/production/robot_arm_nrf.production.o
 ___simple_search_fl@next 522 0 COMRAM 1 cstackCOMRAM dist/default/production/robot_arm_nrf.production.o
-___stack_hi 0 0 STACK 2 stack /tmp/xcXNNhihd/driver_tmp_9.o
-___stack_lo 0 0 STACK 2 stack /tmp/xcXNNhihd/driver_tmp_9.o
+___stack_hi 0 0 STACK 2 stack /tmp/xcXooIFpD/driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack /tmp/xcXooIFpD/driver_tmp_9.o
 __end_of_SPI_read_buff 12012 0 CODE 0 text60 dist/default/production/robot_arm_nrf.production.o
 _Nrf24_configRegister 1231A 0 CODE 0 text61 dist/default/production/robot_arm_nrf.production.o
-start 1A 0 CODE 0 init /tmp/xcXNNhihd/driver_tmp_9.o
+start 1A 0 CODE 0 init /tmp/xcXooIFpD/driver_tmp_9.o
 __end_of_nRF24_IRQ_SetInterruptHandler 12468 0 CODE 0 text84 dist/default/production/robot_arm_nrf.production.o
 __end_of_TMR1_Stop 124F8 0 CODE 0 text12 dist/default/production/robot_arm_nrf.production.o
 slave@pvParameters 535 0 COMRAM 1 cstackCOMRAM dist/default/production/robot_arm_nrf.production.o
@@ -1422,11 +1422,11 @@ __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/robot_arm_nrf.product
 _PWM2_16BIT_Slice1Output2_DefaultInterruptHandler 0 0 ABS 0 - dist/default/production/robot_arm_nrf.production.o
 _nRF24_IRQ_ISR 11FA8 0 CODE 0 text111 dist/default/production/robot_arm_nrf.production.o
 _TMR2_Stop 1251C 0 CODE 0 text63 dist/default/production/robot_arm_nrf.production.o
-__accesstop 560 0 ABS 0 - /tmp/xcXNNhihd/driver_tmp_9.o
-intlevel0 0 0 CODE 0 text /tmp/xcXNNhihd/driver_tmp_9.o
-intlevel1 0 0 CODE 0 text /tmp/xcXNNhihd/driver_tmp_9.o
-intlevel2 0 0 CODE 0 text /tmp/xcXNNhihd/driver_tmp_9.o
-intlevel3 0 0 CODE 0 text /tmp/xcXNNhihd/driver_tmp_9.o
+__accesstop 560 0 ABS 0 - /tmp/xcXooIFpD/driver_tmp_9.o
+intlevel0 0 0 CODE 0 text /tmp/xcXooIFpD/driver_tmp_9.o
+intlevel1 0 0 CODE 0 text /tmp/xcXooIFpD/driver_tmp_9.o
+intlevel2 0 0 CODE 0 text /tmp/xcXooIFpD/driver_tmp_9.o
+intlevel3 0 0 CODE 0 text /tmp/xcXooIFpD/driver_tmp_9.o
 _SPI_write_buff 11E6E 0 CODE 0 text45 dist/default/production/robot_arm_nrf.production.o
 __ptext100 12558 0 CODE 0 text100 dist/default/production/robot_arm_nrf.production.o
 __ptext101 11EF2 0 CODE 0 text101 dist/default/production/robot_arm_nrf.production.o
@@ -1485,10 +1485,10 @@ __end_of_disableMagnet 1250A 0 CODE 0 text33 dist/default/production/robot_arm_n
 _PWM3_16BIT_Period_SetInterruptHandler 123F8 0 CODE 0 text74 dist/default/production/robot_arm_nrf.production.o
 __end_of_TMR1_DefaultOverflowCallback 12560 0 CODE 0 text102 dist/default/production/robot_arm_nrf.production.o
 __end_of_Nrf24_powerUpRx 12286 0 CODE 0 text52 dist/default/production/robot_arm_nrf.production.o
-___inthi_sp 0 0 STACK 2 stack /tmp/xcXNNhihd/driver_tmp_9.o
+___inthi_sp 0 0 STACK 2 stack /tmp/xcXooIFpD/driver_tmp_9.o
 __end_of_get_adjusted_servo_angles_up 10EF2 0 CODE 0 text28 dist/default/production/robot_arm_nrf.production.o
 _Nrf24_getData 120AA 0 CODE 0 text49 dist/default/production/robot_arm_nrf.production.o
-___intlo_sp 0 0 STACK 2 stack /tmp/xcXNNhihd/driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack /tmp/xcXooIFpD/driver_tmp_9.o
 PWM1_16BIT_Period_SetInterruptHandler@InterruptHandler 513 0 COMRAM 1 cstackCOMRAM dist/default/production/robot_arm_nrf.production.o
 __end_of_TMR1_Start 1251C 0 CODE 0 text41 dist/default/production/robot_arm_nrf.production.o
 arm_fsm_update@angles_2842 56E 0 BANK5 1 cstackBANK5 dist/default/production/robot_arm_nrf.production.o
@@ -1630,7 +1630,7 @@ Nrf24_setRADDR@dev 51D 0 COMRAM 1 cstackCOMRAM dist/default/production/robot_arm
 Nrf24_setRADDR@ret 529 0 COMRAM 1 cstackCOMRAM dist/default/production/robot_arm_nrf.production.o
 _Timer2 C205 0 MEDIUMCONST 0 mediumconst dist/default/production/robot_arm_nrf.production.o
 _PWM2_16BIT_SetSlice1Output2DutyCycleRegister 124DE 0 CODE 0 text98 dist/default/production/robot_arm_nrf.production.o
-isa$xinst 0 0 ABS 0 - /tmp/xcXNNhihd/driver_tmp_9.o
+isa$xinst 0 0 ABS 0 - /tmp/xcXooIFpD/driver_tmp_9.o
 i2_TMR1_Stop 12528 0 CODE 0 text104 dist/default/production/robot_arm_nrf.production.o
 _rf24_crclength FE7A 0 MEDIUMCONST 0 mediumconst dist/default/production/robot_arm_nrf.production.o
 __end_of_Nrf24_readRegister 1213C 0 CODE 0 text59 dist/default/production/robot_arm_nrf.production.o
@@ -1698,7 +1698,7 @@ _PWM3_16BIT_Slice1Output2_SetInterruptHandler 123DC 0 CODE 0 text72 dist/default
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production/robot_arm_nrf.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production/robot_arm_nrf.production.o
 __Hbigsfr 0 0 ABS 0 bigsfr dist/default/production/robot_arm_nrf.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst /tmp/xcXNNhihd/driver_tmp_9.o
+__smallconst 0 0 SMALLCONST 0 smallconst /tmp/xcXooIFpD/driver_tmp_9.o
 getAngle@i 515 0 COMRAM 1 cstackCOMRAM dist/default/production/robot_arm_nrf.production.o
 Nrf24_getStatus@dev 51D 0 COMRAM 1 cstackCOMRAM dist/default/production/robot_arm_nrf.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production/robot_arm_nrf.production.o
@@ -2122,19 +2122,19 @@ __Lfarbss 0 0 FARRAM 0 farbss dist/default/production/robot_arm_nrf.production.o
 __end_of_arm_fsm_init 12262 0 CODE 0 text36 dist/default/production/robot_arm_nrf.production.o
 _initServo 119E0 0 CODE 0 text37 dist/default/production/robot_arm_nrf.production.o
 _servos 598 0 BANK5 1 bssBANK5 dist/default/production/robot_arm_nrf.production.o
-___inthi_stack_hi 0 0 STACK 2 stack /tmp/xcXNNhihd/driver_tmp_9.o
-___inthi_stack_lo 0 0 STACK 2 stack /tmp/xcXNNhihd/driver_tmp_9.o
+___inthi_stack_hi 0 0 STACK 2 stack /tmp/xcXooIFpD/driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack /tmp/xcXooIFpD/driver_tmp_9.o
 ___expand_heap 114F8 0 CODE 0 text11 dist/default/production/robot_arm_nrf.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production/robot_arm_nrf.production.o
-isa$std 1 0 ABS 0 - /tmp/xcXNNhihd/driver_tmp_9.o
+isa$std 1 0 ABS 0 - /tmp/xcXooIFpD/driver_tmp_9.o
 ___simple_search_fl@best_last 51C 0 COMRAM 1 cstackCOMRAM dist/default/production/robot_arm_nrf.production.o
 __end_of_CLOCK_Initialize 123B2 0 CODE 0 text90 dist/default/production/robot_arm_nrf.production.o
 __end_of_SPI1_Host C205 0 MEDIUMCONST 0 mediumconst dist/default/production/robot_arm_nrf.production.o
 __end_of_SPI1_Open 112AA 0 CODE 0 text48 dist/default/production/robot_arm_nrf.production.o
 PWM1_16BIT_SetSlice1Output1DutyCycleRegister@registerValue 513 0 COMRAM 1 cstackCOMRAM dist/default/production/robot_arm_nrf.production.o
 _getAngle 122C8 0 CODE 0 text30 dist/default/production/robot_arm_nrf.production.o
-stackhi 0 0 ABS 0 - /tmp/xcXNNhihd/driver_tmp_9.o
-stacklo 0 0 ABS 0 - /tmp/xcXNNhihd/driver_tmp_9.o
+stackhi 0 0 ABS 0 - /tmp/xcXooIFpD/driver_tmp_9.o
+stacklo 0 0 ABS 0 - /tmp/xcXooIFpD/driver_tmp_9.o
 __end_of_get_docking_servo_angles 1239E 0 CODE 0 text26 dist/default/production/robot_arm_nrf.production.o
 _grid_angles_up C145 0 MEDIUMCONST 0 mediumconst dist/default/production/robot_arm_nrf.production.o
 __end_of_PWM2_16BIT_Slice1Output1_SetInterruptHandler 12422 0 CODE 0 text77 dist/default/production/robot_arm_nrf.production.o
@@ -2322,7 +2322,7 @@ __Ltext97 0 0 ABS 0 text97 dist/default/production/robot_arm_nrf.production.o
 __Ltext98 0 0 ABS 0 text98 dist/default/production/robot_arm_nrf.production.o
 __Ltext99 0 0 ABS 0 text99 dist/default/production/robot_arm_nrf.production.o
 _get_docking_servo_angles_up 12376 0 CODE 0 text25 dist/default/production/robot_arm_nrf.production.o
-__ramtop 2600 0 RAM 0 ramtop /tmp/xcXNNhihd/driver_tmp_9.o
+__ramtop 2600 0 RAM 0 ramtop /tmp/xcXooIFpD/driver_tmp_9.o
 _arm_set_target 11D46 0 CODE 0 text14 dist/default/production/robot_arm_nrf.production.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production/robot_arm_nrf.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/robot_arm_nrf.production.o
@@ -2349,11 +2349,11 @@ _SLRCONC 413 0 ABS 0 - dist/default/production/robot_arm_nrf.production.o
 _SLRCOND 41B 0 ABS 0 - dist/default/production/robot_arm_nrf.production.o
 _SLRCONE 423 0 ABS 0 - dist/default/production/robot_arm_nrf.production.o
 _SLRCONF 42B 0 ABS 0 - dist/default/production/robot_arm_nrf.production.o
-___heap_hi 2500 0 HEAP 7 heap /tmp/xcXNNhihd/driver_tmp_9.o
-___heap_lo 67D 0 HEAP 7 heap /tmp/xcXNNhihd/driver_tmp_9.o
+___heap_hi 2500 0 HEAP 7 heap /tmp/xcXooIFpD/driver_tmp_9.o
+___heap_lo 67D 0 HEAP 7 heap /tmp/xcXooIFpD/driver_tmp_9.o
 ___param_bank 0 0 ABS 0 - dist/default/production/robot_arm_nrf.production.o
-___intlo_stack_hi 0 0 STACK 2 stack /tmp/xcXNNhihd/driver_tmp_9.o
-___intlo_stack_lo 0 0 STACK 2 stack /tmp/xcXNNhihd/driver_tmp_9.o
+___intlo_stack_hi 0 0 STACK 2 stack /tmp/xcXooIFpD/driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack /tmp/xcXooIFpD/driver_tmp_9.o
 _parse_robot_message 11018 0 CODE 0 text3 dist/default/production/robot_arm_nrf.production.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production/robot_arm_nrf.production.o
 __end_of__initialization 11802 0 CODE 0 cinit dist/default/production/robot_arm_nrf.production.o

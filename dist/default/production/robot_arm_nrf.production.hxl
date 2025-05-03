@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- /tmp/xcXNNhihd/driver_tmp_3.o
+ /tmp/xcXooIFpD/driver_tmp_3.o
  -Odist/default/production/robot_arm_nrf.production.hex
  -logfile=dist/default/production/robot_arm_nrf.production.hxl
  -addressing=1
@@ -9,14 +9,14 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(/tmp/xcXNNhihd/driver_tmp_3.o)
-  8h - Bh		(/tmp/xcXNNhihd/driver_tmp_3.o)
-  18h - 1Dh		(/tmp/xcXNNhihd/driver_tmp_3.o)
-  C144h - FFFEh		(/tmp/xcXNNhihd/driver_tmp_3.o)
-  10000h - 1253Eh		(/tmp/xcXNNhihd/driver_tmp_3.o)
-  12540h - 12564h		(/tmp/xcXNNhihd/driver_tmp_3.o)
-  300000h - 300007h		(/tmp/xcXNNhihd/driver_tmp_3.o)
-  300009h - 300009h		(/tmp/xcXNNhihd/driver_tmp_3.o)
+  0h - 3h		(/tmp/xcXooIFpD/driver_tmp_3.o)
+  8h - Bh		(/tmp/xcXooIFpD/driver_tmp_3.o)
+  18h - 1Dh		(/tmp/xcXooIFpD/driver_tmp_3.o)
+  C144h - FFFEh		(/tmp/xcXooIFpD/driver_tmp_3.o)
+  10000h - 1253Eh		(/tmp/xcXooIFpD/driver_tmp_3.o)
+  12540h - 12564h		(/tmp/xcXooIFpD/driver_tmp_3.o)
+  300000h - 300007h		(/tmp/xcXooIFpD/driver_tmp_3.o)
+  300009h - 300009h		(/tmp/xcXooIFpD/driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   Ch - 17h
@@ -29,7 +29,7 @@
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (/tmp/xcXNNhihd/driver_tmp_3.o)
+  H1 = Input file             (/tmp/xcXooIFpD/driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------

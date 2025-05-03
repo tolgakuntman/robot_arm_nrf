@@ -13,14 +13,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 21 `i `uc
 -> -> 45 `i `uc
 -> -> 47 `i `uc
--> -> 41 `i `uc
+-> -> 42 `i `uc
 ..
 ..
 :U ..
 :U ..
 -> -> 36 `i `uc
 -> -> 28 `i `uc
--> -> 30 `i `uc
+-> -> 31 `i `uc
 -> -> 62 `i `uc
 ..
 ..
@@ -28,7 +28,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 :U ..
 -> -> 56 `i `uc
 -> -> 21 `i `uc
--> -> 22 `i `uc
+-> -> 24 `i `uc
 -> -> 81 `i `uc
 ..
 ..
@@ -59,7 +59,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 :U ..
 -> -> 60 `i `uc
 -> -> 28 `i `uc
--> -> 30 `i `uc
+-> -> 31 `i `uc
 -> -> 53 `i `uc
 ..
 ..
@@ -67,7 +67,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 :U ..
 -> -> 73 `i `uc
 -> -> 21 `i `uc
--> -> 22 `i `uc
+-> -> 24 `i `uc
 -> -> 75 `i `uc
 ..
 ..
