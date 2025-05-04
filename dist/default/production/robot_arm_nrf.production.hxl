@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- /tmp/xcXOhGCdb/driver_tmp_3.o
+ /tmp/xcXIiNJDI/driver_tmp_3.o
  -Odist/default/production/robot_arm_nrf.production.hex
  -logfile=dist/default/production/robot_arm_nrf.production.hxl
  -addressing=1
@@ -9,27 +9,27 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(/tmp/xcXOhGCdb/driver_tmp_3.o)
-  8h - Bh		(/tmp/xcXOhGCdb/driver_tmp_3.o)
-  18h - 1Dh		(/tmp/xcXOhGCdb/driver_tmp_3.o)
-  C144h - FFFEh		(/tmp/xcXOhGCdb/driver_tmp_3.o)
-  10000h - 12546h		(/tmp/xcXOhGCdb/driver_tmp_3.o)
-  12548h - 1256Ch		(/tmp/xcXOhGCdb/driver_tmp_3.o)
-  300000h - 300007h		(/tmp/xcXOhGCdb/driver_tmp_3.o)
-  300009h - 300009h		(/tmp/xcXOhGCdb/driver_tmp_3.o)
+  0h - 3h		(/tmp/xcXIiNJDI/driver_tmp_3.o)
+  8h - Bh		(/tmp/xcXIiNJDI/driver_tmp_3.o)
+  18h - 1Dh		(/tmp/xcXIiNJDI/driver_tmp_3.o)
+  C144h - FFFEh		(/tmp/xcXIiNJDI/driver_tmp_3.o)
+  10000h - 12528h		(/tmp/xcXIiNJDI/driver_tmp_3.o)
+  1252Ah - 1254Eh		(/tmp/xcXIiNJDI/driver_tmp_3.o)
+  300000h - 300007h		(/tmp/xcXIiNJDI/driver_tmp_3.o)
+  300009h - 300009h		(/tmp/xcXIiNJDI/driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   Ch - 17h
   1Eh - C143h
   FFFFh - FFFFh
-  12547h - 12547h
-  1256Dh - 2FFFFFh
+  12529h - 12529h
+  1254Fh - 2FFFFFh
   300008h - 300008h
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (/tmp/xcXOhGCdb/driver_tmp_3.o)
+  H1 = Input file             (/tmp/xcXIiNJDI/driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -1634,11 +1634,9 @@
 000124F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00012500 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00012510 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00012520 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00012520 | H1 H1 H1 H1 H1 H1 H1 H1 H1 -- H1 H1 H1 H1 H1 H1
 00012530 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00012540 | H1 H1 H1 H1 H1 H1 H1 -- H1 H1 H1 H1 H1 H1 H1 H1
-00012550 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00012560 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- --
+00012540 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 --
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 -- H1 -- -- -- -- -- --
 00300010 | --

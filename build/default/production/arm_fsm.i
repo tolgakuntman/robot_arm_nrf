@@ -857,9 +857,7 @@ void arm_fsm_update() {
                     next_state = BOAT_ROTATE_BOARD;
                     break;
                 case WAIT: {
-                                                    process_fsm = 0;
-
-                    next_state = IDLE;
+                    next_state = STILL;
                     break;
                     }
                 case MAGNET_ON: {

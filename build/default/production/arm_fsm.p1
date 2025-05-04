@@ -711,35 +711,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 48 ]
 {
 "197
-[; ;arm_fsm.c: 197:                                                     process_fsm = 0;
-[e = _process_fsm -> -> 0 `i `a ]
-"199
-[; ;arm_fsm.c: 199:                     next_state = IDLE;
-[e = _next_state . `E36 0 ]
-"200
-[; ;arm_fsm.c: 200:                     break;
+[; ;arm_fsm.c: 197:                     next_state = STILL;
+[e = _next_state . `E36 5 ]
+"198
+[; ;arm_fsm.c: 198:                     break;
 [e $U 45  ]
-"201
-[; ;arm_fsm.c: 201:                     }
+"199
+[; ;arm_fsm.c: 199:                     }
 }
-"202
-[; ;arm_fsm.c: 202:                 case MAGNET_ON: {
+"200
+[; ;arm_fsm.c: 200:                 case MAGNET_ON: {
 [e :U 49 ]
 {
-"203
-[; ;arm_fsm.c: 203:                     next_state = BOAT_ROTATE_DOCK;
+"201
+[; ;arm_fsm.c: 201:                     next_state = BOAT_ROTATE_DOCK;
 [e = _next_state . `E36 8 ]
-"204
-[; ;arm_fsm.c: 204:                     break;
+"202
+[; ;arm_fsm.c: 202:                     break;
 [e $U 45  ]
+"203
+[; ;arm_fsm.c: 203:                     }
+}
+"204
+[; ;arm_fsm.c: 204:                 }
+}
 "205
-[; ;arm_fsm.c: 205:                     }
-}
-"206
-[; ;arm_fsm.c: 206:                 }
-}
-"207
-[; ;arm_fsm.c: 207:             }
+[; ;arm_fsm.c: 205:             }
 }
 [e $U 45  ]
 [e :U 46 ]
@@ -748,88 +745,88 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E36 3 `ui 49
  45 ]
 [e :U 45 ]
-"208
-[; ;arm_fsm.c: 208:             break;
+"206
+[; ;arm_fsm.c: 206:             break;
 [e $U 20  ]
-"209
-[; ;arm_fsm.c: 209:         }
+"207
+[; ;arm_fsm.c: 207:         }
 }
-"211
-[; ;arm_fsm.c: 211:         case PLACEMENT: {
+"209
+[; ;arm_fsm.c: 209:         case PLACEMENT: {
 [e :U 50 ]
 {
-"212
-[; ;arm_fsm.c: 212:             uint8_t angles[4];
+"210
+[; ;arm_fsm.c: 210:             uint8_t angles[4];
 [v _angles `uc ~T0 @X0 -> 4 `i a ]
-"213
-[; ;arm_fsm.c: 213:             get_adjusted_servo_angles(target_x, target_y, target_orientation, angles);
+"211
+[; ;arm_fsm.c: 211:             get_adjusted_servo_angles(target_x, target_y, target_orientation, angles);
 [e ( _get_adjusted_servo_angles (4 , , , _target_x _target_y _target_orientation &U _angles ]
-"214
-[; ;arm_fsm.c: 214:             move_servo_to_angles(angles);
+"212
+[; ;arm_fsm.c: 212:             move_servo_to_angles(angles);
 [e ( _move_servo_to_angles (1 -> &U _angles `*Cuc ]
-"215
-[; ;arm_fsm.c: 215:             next_state = (arm_mode == PLACE) ? MAGNET_OFF : MAGNET_ON;
+"213
+[; ;arm_fsm.c: 213:             next_state = (arm_mode == PLACE) ? MAGNET_OFF : MAGNET_ON;
 [e = _next_state -> ? == -> _arm_mode `ui -> . `E52 0 `ui : . `E36 11 . `E36 3 `E36 ]
-"216
-[; ;arm_fsm.c: 216:             break;
+"214
+[; ;arm_fsm.c: 214:             break;
 [e $U 20  ]
-"217
-[; ;arm_fsm.c: 217:         }
+"215
+[; ;arm_fsm.c: 215:         }
 }
-"219
-[; ;arm_fsm.c: 219:         case MAGNET_OFF: {
+"217
+[; ;arm_fsm.c: 217:         case MAGNET_OFF: {
 [e :U 51 ]
 {
-"220
-[; ;arm_fsm.c: 220:             disableMagnet();
+"218
+[; ;arm_fsm.c: 218:             disableMagnet();
 [e ( _disableMagnet ..  ]
-"221
-[; ;arm_fsm.c: 221:             start_fsm_delay();
+"219
+[; ;arm_fsm.c: 219:             start_fsm_delay();
 [e ( _start_fsm_delay ..  ]
-"222
-[; ;arm_fsm.c: 222:             next_state = WAIT;
+"220
+[; ;arm_fsm.c: 220:             next_state = WAIT;
 [e = _next_state . `E36 12 ]
-"223
-[; ;arm_fsm.c: 223:             break;
+"221
+[; ;arm_fsm.c: 221:             break;
 [e $U 20  ]
-"224
-[; ;arm_fsm.c: 224:         }
+"222
+[; ;arm_fsm.c: 222:         }
 }
-"226
-[; ;arm_fsm.c: 226:         case WAIT: {
+"224
+[; ;arm_fsm.c: 224:         case WAIT: {
 [e :U 52 ]
 {
-"227
-[; ;arm_fsm.c: 227:             if (!delay_done) return;
+"225
+[; ;arm_fsm.c: 225:             if (!delay_done) return;
 [e $ ! ! != -> _delay_done `i -> 0 `i 53  ]
 [e $UE 18  ]
 [e :U 53 ]
-"228
-[; ;arm_fsm.c: 228:             switch(previous_state) {
+"226
+[; ;arm_fsm.c: 226:             switch(previous_state) {
 [e $U 55  ]
 {
-"229
-[; ;arm_fsm.c: 229:                 case MAGNET_OFF: {
+"227
+[; ;arm_fsm.c: 227:                 case MAGNET_OFF: {
 [e :U 56 ]
 {
-"230
-[; ;arm_fsm.c: 230:                     next_state = (arm_mode == PLACE) ? MOVE_UP_BOARD : MOVE_UP_DOCK;
+"228
+[; ;arm_fsm.c: 228:                     next_state = (arm_mode == PLACE) ? MOVE_UP_BOARD : MOVE_UP_DOCK;
 [e = _next_state -> ? == -> _arm_mode `ui -> . `E52 0 `ui : . `E36 9 . `E36 4 `E36 ]
-"231
-[; ;arm_fsm.c: 231:                     break;
+"229
+[; ;arm_fsm.c: 229:                     break;
 [e $U 54  ]
-"232
-[; ;arm_fsm.c: 232:                 }
+"230
+[; ;arm_fsm.c: 230:                 }
 }
-"233
-[; ;arm_fsm.c: 233:                 case STILL: {
+"231
+[; ;arm_fsm.c: 231:                 case STILL: {
 [e :U 57 ]
 {
-"235
-[; ;arm_fsm.c: 235:                 }
+"233
+[; ;arm_fsm.c: 233:                 }
 }
-"236
-[; ;arm_fsm.c: 236:             }
+"234
+[; ;arm_fsm.c: 234:             }
 }
 [e $U 54  ]
 [e :U 55 ]
@@ -837,21 +834,21 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E36 5 `ui 57
  54 ]
 [e :U 54 ]
-"237
-[; ;arm_fsm.c: 237:             break;
+"235
+[; ;arm_fsm.c: 235:             break;
 [e $U 20  ]
-"238
-[; ;arm_fsm.c: 238:         }
+"236
+[; ;arm_fsm.c: 236:         }
 }
-"240
-[; ;arm_fsm.c: 240:         case RETURN: {
+"238
+[; ;arm_fsm.c: 238:         case RETURN: {
 [e :U 58 ]
 {
 [v F300 `uc ~T0 @X0 -> 4 `i s ]
 [i F300
 :U ..
-"241
-[; ;arm_fsm.c: 241:             uint8_t idle_angles[4] = {43, 45, 28, 45};
+"239
+[; ;arm_fsm.c: 239:             uint8_t idle_angles[4] = {43, 45, 28, 45};
 -> -> 43 `i `uc
 -> -> 45 `i `uc
 -> -> 28 `i `uc
@@ -860,32 +857,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 [v _idle_angles `uc ~T0 @X0 -> 4 `i a ]
 [e = _idle_angles F300 ]
-"242
-[; ;arm_fsm.c: 242:             move_servo_to_angles(idle_angles);
+"240
+[; ;arm_fsm.c: 240:             move_servo_to_angles(idle_angles);
 [e ( _move_servo_to_angles (1 -> &U _idle_angles `*Cuc ]
-"243
-[; ;arm_fsm.c: 243:             next_state = IDLE;
+"241
+[; ;arm_fsm.c: 241:             next_state = IDLE;
 [e = _next_state . `E36 0 ]
-"244
-[; ;arm_fsm.c: 244:             process_fsm = 0;
+"242
+[; ;arm_fsm.c: 242:             process_fsm = 0;
 [e = _process_fsm -> -> 0 `i `a ]
-"245
-[; ;arm_fsm.c: 245:             break;
+"243
+[; ;arm_fsm.c: 243:             break;
 [e $U 20  ]
-"246
-[; ;arm_fsm.c: 246:             }
+"244
+[; ;arm_fsm.c: 244:             }
 }
-"248
-[; ;arm_fsm.c: 248:         case IDLE:
+"246
+[; ;arm_fsm.c: 246:         case IDLE:
 [e :U 59 ]
-"249
-[; ;arm_fsm.c: 249:         default:
+"247
+[; ;arm_fsm.c: 247:         default:
 [e :U 60 ]
-"250
-[; ;arm_fsm.c: 250:             break;
+"248
+[; ;arm_fsm.c: 248:             break;
 [e $U 20  ]
-"251
-[; ;arm_fsm.c: 251:     }
+"249
+[; ;arm_fsm.c: 249:     }
 }
 [e $U 20  ]
 [e :U 21 ]
@@ -905,13 +902,13 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E36 0 `ui 59
  60 ]
 [e :U 20 ]
-"252
-[; ;arm_fsm.c: 252:     previous_state = current_state;
+"250
+[; ;arm_fsm.c: 250:     previous_state = current_state;
 [e = _previous_state _current_state ]
-"253
-[; ;arm_fsm.c: 253:     current_state = next_state;
+"251
+[; ;arm_fsm.c: 251:     current_state = next_state;
 [e = _current_state _next_state ]
-"254
-[; ;arm_fsm.c: 254: }
+"252
+[; ;arm_fsm.c: 252: }
 [e :UE 18 ]
 }

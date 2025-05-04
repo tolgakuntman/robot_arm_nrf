@@ -63,26 +63,10 @@ TMR2_UART4_TX_EDGE 33
 TMR2_UART5_RX_EDGE 34
 TMR2_UART5_TX_EDGE 35
 ]
-"70 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+"91 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
 [e E18107 . `uc
 PLACE 0
 REMOVE 1
-]
-[e E18091 . `uc
-IDLE 0
-ROTATE_DOCK 1
-PICKUP 2
-MAGNET_ON 3
-MOVE_UP_DOCK 4
-STILL 5
-ROTATE_BOARD 6
-BOAT_ROTATE_BOARD 7
-BOAT_ROTATE_DOCK 8
-MOVE_UP_BOARD 9
-PLACEMENT 10
-MAGNET_OFF 11
-WAIT 12
-RETURN 13
 ]
 "437 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
 [e E17640 . `uc
@@ -1186,7 +1170,7 @@ REMOVE 1
 [v _LATB LATB `VEuc  1 e 1 @1215 ]
 "48985
 [v _LATC LATC `VEuc  1 e 1 @1216 ]
-[s S2332 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S2317 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -1196,10 +1180,10 @@ REMOVE 1
 `uc 1 LATC7 1 0 :1:7 
 ]
 "49002
-[u S2341 . 1 `S2332 1 . 1 0 ]
+[u S2326 . 1 `S2317 1 . 1 0 ]
 "49002
 "49002
-[v _LATCbits LATCbits `VES2341  1 e 1 @1216 ]
+[v _LATCbits LATCbits `VES2326  1 e 1 @1216 ]
 "49047
 [v _LATD LATD `VEuc  1 e 1 @1217 ]
 "49109
@@ -1257,9 +1241,9 @@ REMOVE 1
 "12
 [v _brkp brkp `*.39uc  1 s 2 brkp ]
 "17 /opt/microchip/xc8/v2.50/pic/sources/c99/common/lite_free.c
-[u S3416 . 2 `*.39S3418 1 next 2 0 `[1]uc 1 space 1 0 ]
-[s S3418 chunk 4 `ui 1 size 2 0 `S3416 1 . 2 2 ]
-[v ___freelist __freelist `*.39S3418  1 e 2 0 ]
+[u S3401 . 2 `*.39S3403 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S3403 chunk 4 `ui 1 size 2 0 `S3401 1 . 2 2 ]
+[v ___freelist __freelist `*.39S3403  1 e 2 0 ]
 "16 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [v _current_state current_state `E36  1 s 1 current_state ]
 [v _next_state next_state `E36  1 s 1 next_state ]
@@ -1281,16 +1265,16 @@ REMOVE 1
 [v _delay_done delay_done `VEa  1 s 1 delay_done ]
 "51 /home/aevern/Documents/KULeuven/robot_arm_nrf/audio.c
 [v _index index `VEus  1 e 2 0 ]
-[s S2857 . 4 `[4]uc 1 angles 4 0 ]
+[s S2842 . 4 `[4]uc 1 angles 4 0 ]
 "13 /home/aevern/Documents/KULeuven/robot_arm_nrf/boat_control.c
-[v _docking_positions docking_positions `C[4]S2857  1 e 16 0 ]
+[v _docking_positions docking_positions `C[4]S2842  1 e 16 0 ]
 "20
-[v _docking_up docking_up `C[4]S2857  1 e 16 0 ]
-[s S2867 . 6 `[4]uc 1 angles 4 0 `uc 1 angle_h 1 4 `uc 1 angle_v 1 5 ]
+[v _docking_up docking_up `C[4]S2842  1 e 16 0 ]
+[s S2852 . 6 `[4]uc 1 angles 4 0 `uc 1 angle_h 1 4 `uc 1 angle_v 1 5 ]
 "10 /home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
-[v _grid_angles grid_angles `C[5][5]S2867  1 e 150 0 ]
+[v _grid_angles grid_angles `C[5][5]S2852  1 e 150 0 ]
 "32
-[v _grid_angles_up grid_angles_up `C[5][5]S2867  1 e 150 0 ]
+[v _grid_angles_up grid_angles_up `C[5][5]S2852  1 e 150 0 ]
 "25 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
 [v _buf buf `[32]uc  1 e 32 0 ]
 "26
@@ -1342,9 +1326,9 @@ REMOVE 1
 [v _rf24_crclength rf24_crclength `C[3][10]uc  1 e 30 0 ]
 "69
 [v _rf24_pa_dbm rf24_pa_dbm `[4][8]uc  1 e 32 0 ]
-[s S2681 . 4 `us 1 currAngle 2 0 `us 1 nextAngle 2 2 ]
+[s S2666 . 4 `us 1 currAngle 2 0 `us 1 nextAngle 2 2 ]
 "5 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
-[v _servos servos `[4]S2681  1 e 16 0 ]
+[v _servos servos `[4]S2666  1 e 16 0 ]
 "204 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
 [v _main main `(v  1 e 1 0 ]
 {
@@ -1353,9 +1337,9 @@ REMOVE 1
 "46
 [v _slave slave `(v  1 e 1 0 ]
 {
-[s S2253 . 13 `[8]uc 1 message_type 8 0 `uc 1 ship_id 1 8 `uc 1 row 1 9 `uc 1 col 1 10 `uc 1 horizontal 1 11 `uc 1 place 1 12 ]
+[s S2226 . 13 `[8]uc 1 message_type 8 0 `uc 1 ship_id 1 8 `uc 1 row 1 9 `uc 1 col 1 10 `uc 1 horizontal 1 11 `uc 1 place 1 12 ]
 "89
-[v slave@rob rob `S2253  1 a 13 2 ]
+[v slave@rob rob `S2226  1 a 13 2 ]
 [s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
 "47
 [v slave@dev dev `S2144  1 a 3 15 ]
@@ -1377,8 +1361,8 @@ REMOVE 1
 [v _parse_robot_message parse_robot_message `(a  1 e 1 0 ]
 {
 [v parse_robot_message@raw_data raw_data `*.39Cuc  1 p 2 29 ]
-[s S2253 . 13 `[8]uc 1 message_type 8 0 `uc 1 ship_id 1 8 `uc 1 row 1 9 `uc 1 col 1 10 `uc 1 horizontal 1 11 `uc 1 place 1 12 ]
-[v parse_robot_message@out out `*.39S2253  1 p 2 31 ]
+[s S2226 . 13 `[8]uc 1 message_type 8 0 `uc 1 ship_id 1 8 `uc 1 row 1 9 `uc 1 col 1 10 `uc 1 horizontal 1 11 `uc 1 place 1 12 ]
+[v parse_robot_message@out out `*.39S2226  1 p 2 31 ]
 "17
 } 0
 "4 /opt/microchip/xc8/v2.50/pic/sources/c99/common/memcpy.c
@@ -1440,25 +1424,25 @@ REMOVE 1
 [v ___simple_search_fl __simple_search_fl `(*.39v  1 e 3 0 ]
 {
 "50
-[u S3416 . 2 `*.39S3418 1 next 2 0 `[1]uc 1 space 1 0 ]
-[s S3418 chunk 4 `ui 1 size 2 0 `S3416 1 . 2 2 ]
-[v ___simple_search_fl@split split `*.39S3418  1 a 2 29 ]
+[u S3401 . 2 `*.39S3403 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S3403 chunk 4 `ui 1 size 2 0 `S3401 1 . 2 2 ]
+[v ___simple_search_fl@split split `*.39S3403  1 a 2 29 ]
 "53
 [v ___simple_search_fl@remaining_size remaining_size `ui  1 a 2 25 ]
 "45
-[u S3416 . 2 `*.39S3418 1 next 2 0 `[1]uc 1 space 1 0 ]
-[s S3418 chunk 4 `ui 1 size 2 0 `S3416 1 . 2 2 ]
-[v ___simple_search_fl@next next `*.39S3418  1 a 2 33 ]
+[u S3401 . 2 `*.39S3403 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S3403 chunk 4 `ui 1 size 2 0 `S3401 1 . 2 2 ]
+[v ___simple_search_fl@next next `*.39S3403  1 a 2 33 ]
 "20
-[u S3416 . 2 `*.39S3418 1 next 2 0 `[1]uc 1 space 1 0 ]
-[s S3418 chunk 4 `ui 1 size 2 0 `S3416 1 . 2 2 ]
-[v ___simple_search_fl@best best `*.39S3418  1 a 2 37 ]
+[u S3401 . 2 `*.39S3403 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S3403 chunk 4 `ui 1 size 2 0 `S3401 1 . 2 2 ]
+[v ___simple_search_fl@best best `*.39S3403  1 a 2 37 ]
 "23
-[v ___simple_search_fl@c c `*.39S3418  1 a 2 35 ]
+[v ___simple_search_fl@c c `*.39S3403  1 a 2 35 ]
 "22
-[v ___simple_search_fl@last last `*.39S3418  1 a 2 31 ]
+[v ___simple_search_fl@last last `*.39S3403  1 a 2 31 ]
 "21
-[v ___simple_search_fl@best_last best_last `*.39S3418  1 a 2 27 ]
+[v ___simple_search_fl@best_last best_last `*.39S3403  1 a 2 27 ]
 "19
 [v ___simple_search_fl@n n `ui  1 p 2 18 ]
 "65
@@ -1516,29 +1500,29 @@ REMOVE 1
 "86 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [v _arm_fsm_update arm_fsm_update `(v  1 e 1 0 ]
 {
-"241
+"239
 [v arm_fsm_update@idle_angles idle_angles `[4]uc  1 a 4 0 ]
-"212
-[v arm_fsm_update@angles_2852 angles `[4]uc  1 a 4 8 ]
+"210
+[v arm_fsm_update@angles_2837 angles `[4]uc  1 a 4 8 ]
 "189
-[v arm_fsm_update@angles_2851 angles `[4]uc  1 a 4 4 ]
+[v arm_fsm_update@angles_2836 angles `[4]uc  1 a 4 4 ]
 "182
-[v arm_fsm_update@angles_2850 angles `[4]us  1 a 8 48 ]
+[v arm_fsm_update@angles_2835 angles `[4]us  1 a 8 48 ]
 "174
-[v arm_fsm_update@angles_2848 angles `[4]us  1 a 8 40 ]
+[v arm_fsm_update@angles_2833 angles `[4]us  1 a 8 40 ]
 "166
-[v arm_fsm_update@moveup_angles_2846 moveup_angles `[4]us  1 a 8 32 ]
+[v arm_fsm_update@moveup_angles_2831 moveup_angles `[4]us  1 a 8 32 ]
 "148
-[v arm_fsm_update@moveup_angles_2844 moveup_angles `[4]us  1 a 8 24 ]
+[v arm_fsm_update@moveup_angles_2829 moveup_angles `[4]us  1 a 8 24 ]
 "127
-[v arm_fsm_update@angles_2842 angles `*.32Cuc  1 a 2 14 ]
+[v arm_fsm_update@angles_2827 angles `*.32Cuc  1 a 2 14 ]
 "114
 [v arm_fsm_update@angles angles `*.32Cuc  1 a 2 12 ]
 "93
 [v arm_fsm_update@moveup_angles moveup_angles `[4]us  1 a 8 16 ]
-"240
+"238
 [v arm_fsm_update@F300 F300 `[4]uc  1 s 4 F300 ]
-"254
+"252
 } 0
 "78
 [v _start_fsm_delay start_fsm_delay `(v  1 e 1 0 ]
