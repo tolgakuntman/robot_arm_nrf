@@ -1516,9 +1516,9 @@ REMOVE 1
 "86 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [v _arm_fsm_update arm_fsm_update `(v  1 e 1 0 ]
 {
-"239
+"241
 [v arm_fsm_update@idle_angles idle_angles `[4]uc  1 a 4 0 ]
-"210
+"212
 [v arm_fsm_update@angles_2852 angles `[4]uc  1 a 4 8 ]
 "189
 [v arm_fsm_update@angles_2851 angles `[4]uc  1 a 4 4 ]
@@ -1536,9 +1536,9 @@ REMOVE 1
 [v arm_fsm_update@angles angles `*.32Cuc  1 a 2 12 ]
 "93
 [v arm_fsm_update@moveup_angles moveup_angles `[4]us  1 a 8 16 ]
-"238
+"240
 [v arm_fsm_update@F300 F300 `[4]uc  1 s 4 F300 ]
-"252
+"254
 } 0
 "78
 [v _start_fsm_delay start_fsm_delay `(v  1 e 1 0 ]
