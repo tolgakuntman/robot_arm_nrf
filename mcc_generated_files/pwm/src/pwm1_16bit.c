@@ -11,7 +11,7 @@
 */
 
 /*
-© [2025] Microchip Technology Inc. and its subsidiaries.
+? [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -58,11 +58,11 @@ void PWM1_16BIT_Initialize(void)
     //PWMLDS Autoload disabled; 
     PWM1LDS = 0x0;
 
-    //PWMPRL 255; 
-    PWM1PRL = 0xFF;
+    //PWMPRL 127; 
+    PWM1PRL = 0x7F;
 
-    //PWMPRH 249; 
-    PWM1PRH = 0xF9;
+    //PWMPRH 0; 
+    PWM1PRH = 0x0;
 
     //PWMCPRE Prescale by 20; 
     PWM1CPRE = 0x13;
@@ -79,17 +79,17 @@ void PWM1_16BIT_Initialize(void)
     //PWMPOL1 disabled; PWMPOL2 disabled; PWMPPEN disabled; PWMMODE Left aligned mode; 
     PWM1S1CFG = 0x0;
 
-    //PWMS1P1L 0; 
-    PWM1S1P1L = 0x0;
+    //PWMS1P1L 44; 
+    PWM1S1P1L = 0x2C;
 
-    //PWMS1P1H 125; 
-    PWM1S1P1H = 0x7D;
+    //PWMS1P1H 0; 
+    PWM1S1P1H = 0x0;
 
     //PWMS1P2L 0; 
     PWM1S1P2L = 0x0;
 
-    //PWMS1P2H 125; 
-    PWM1S1P2H = 0x7D;
+    //PWMS1P2H 0; 
+    PWM1S1P2H = 0x0;
     
     //Clear PWM1_16BIT period interrupt flag
     PIR4bits.PWM1PIF = 0;

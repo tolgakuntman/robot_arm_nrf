@@ -10,6 +10,9 @@
 #include "mirf.h"
 #include <stdbool.h>
 #include "servo.h"
+#include "arm_fsm.h"
+#include "message_parser.h"
+#include "audio.h"
 
 #define CONFIG_RECEIVER 0
 #define CONFIG_SENDER 0
@@ -46,65 +49,52 @@ void slave(void *pvParameters){
 	uint8_t payload = 32;
 	uint8_t channel = CONFIG_RADIO_CHANNEL;
 	Nrf24_config(&dev, channel, payload);
-    int ret = Nrf24_setRADDR(&dev, (uint8_t *)"2RECV");
+    int ret = Nrf24_setRADDR(&dev, (uint8_t *)"4RECV");
 	while (ret != NRF_OK) {
-		ret = Nrf24_setRADDR(&dev, (uint8_t *)"2RECV");
+		ret = Nrf24_setRADDR(&dev, (uint8_t *)"4RECV");
 	}
 
 	// Set destination address using 5 characters
-	ret = Nrf24_setTADDR(&dev, (uint8_t *)"2RECV");
+	ret = Nrf24_setTADDR(&dev, (uint8_t *)"4RECV");
 	while (ret != NRF_OK) {
-		ret = Nrf24_setTADDR(&dev, (uint8_t *)"2RECV");
+		ret = Nrf24_setTADDR(&dev, (uint8_t *)"4RECV");
 	}
 #if CONFIG_ADVANCED
 	AdvancedSettings(&dev);
 #endif // CONFIG_ADVANCED
     Nrf24_configRegister(NRF_STATUS, (1 << RX_DR) | (1 << TX_DS) | (1 << MAX_RT));
 
+    enablePWM();
+    TMR2_Start();
+    arm_fsm_init();
+    //arm_set_target(3,4,0,0,RETURN);
+    audio_init();
+
     //main loop
     while(1){
-        if(nrf_flag){
-            if (Nrf24_dataReady(&dev)) {
-			Nrf24_getData(&dev, buf);
-            buf[31]='\0';
-            if (strcmp((char*)buf, "PING") == 0) {  // Check if it's a "PING"
-            uint8_t response[] = "PING";
-            Nrf24_send(&dev, response);  // Send back "OK"
+        arm_fsm_update();
+       if(nrf_flag){
+           if (Nrf24_dataReady(&dev)) {
+            Nrf24_getData(&dev, buf);
+            if(strncmp((char *)buf, "SOUND",8)==0){
+                if(buf[8]){
+                    sound->length=MISS_SOUND_LENGTH;
+                    sound->sound_array=MissSound;
+                }else{
+                    sound->length=HIT_SOUND_LENGTH;
+                    sound->sound_array=HitSound;                    
+                }
+                TMR1_Start();
+            }else{
+            robot_command_t rob;
+            parse_robot_message(buf, &rob);
+            arm_set_target(rob.ship_id,rob.row,rob.col,rob.horizontal,rob.place);
+            
             }
-            while(Nrf24_isSending(&dev)){
-                DELAY_milliseconds(1);  
+
             }
             nrf_flag=false;
 		}
-        }
-        uint8_t buf[32] = "PING";
-        
-            Nrf24_send(&dev, buf);
-            Nrf24_isSend(&dev, 1000);
-//            DELAY_milliseconds(1);
-        
-        
-        __delay_ms(200);  // Delay for 1 second
-//        //servos[0].nextAngle = calculateAngle(100); //mid angle P6
-//        servos[1].nextAngle = calculateAngle(90); //wrist P5
-//        servos[2].nextAngle = calculateAngle(100); //bot rotate P8
-//        servos[3].nextAngle = calculateAngle(80); //bot angle P7
-//        //enableMagnet();
-//        __delay_ms(200);  // Delay for 1 second
-//        __delay_ms(200);  // Delay for 1 second
-//        servos[0].nextAngle = calculateAngle(70); //mid angle
-//        servos[1].nextAngle = calculateAngle(90); //wrist
-//        servos[2].nextAngle = calculateAngle(120); //bot rotate
-//        servos[3].nextAngle = calculateAngle(20); //bot angle
-//        //disableMagnet();
-//        __delay_ms(200);  // Delay for 1 second
-//        servos[0].nextAngle = calculateAngle(45); //mid angle
-//        servos[1].nextAngle = calculateAngle(0); //wrist
-//        servos[2].nextAngle = calculateAngle(140); //bot rotate
-//        servos[3].nextAngle = calculateAngle(10); //bot angle
-//        //disableMagnet();
-//        __delay_ms(200);  // Delay for 1 second
-//        Nrf24_configRegister(NRF_STATUS, (1 << RX_DR) | (1 << TX_DS) | (1 << MAX_RT));
 
 		DELAY_milliseconds(1);
         }
@@ -189,39 +179,49 @@ void sender(void *pvParameters)
 void nrf_irq(){
     nrf_flag=true;
 }
-uint8_t counter=0;
-void servo_steps(){
-    if(counter==0){
-        counter++;
-        servos[0].nextAngle = calculateAngle(100); //mid angle P6
-        servos[1].nextAngle = calculateAngle(90); //wrist P5
-        servos[2].nextAngle = calculateAngle(100); //bot rotate P8
-        servos[3].nextAngle = calculateAngle(80); //bot angle P7
-    }else if(counter==1){
-        counter++;
-        servos[0].nextAngle = calculateAngle(70); //mid angle
-        servos[1].nextAngle = calculateAngle(90); //wrist
-        servos[2].nextAngle = calculateAngle(120); //bot rotate
-        servos[3].nextAngle = calculateAngle(20);
-    }else{
-        counter=0;
-        servos[0].nextAngle = calculateAngle(45); //mid angle
-        servos[1].nextAngle = calculateAngle(0); //wrist
-        servos[2].nextAngle = calculateAngle(140); //bot rotate
-        servos[3].nextAngle = calculateAngle(10);
-    }
-}
+//uint8_t counter=0;
+//void servo_steps(){
+//    if(counter==0){
+//        counter++;
+//        servos[0].nextAngle = calculateAngle(100); //mid angle P6
+//        servos[1].nextAngle = calculateAngle(90); //wrist P5
+//        servos[2].nextAngle = calculateAngle(100); //bot rotate P8
+//        servos[3].nextAngle = calculateAngle(80); //bot angle P7
+//    }else if(counter==1){
+//        counter++;
+//        servos[0].nextAngle = calculateAngle(70); //mid angle
+//        servos[1].nextAngle = calculateAngle(90); //wrist
+//        servos[2].nextAngle = calculateAngle(120); //bot rotate
+//        servos[3].nextAngle = calculateAngle(20);
+//    }else{
+//        counter=0;
+//        servos[0].nextAngle = calculateAngle(45); //mid angle
+//        servos[1].nextAngle = calculateAngle(0); //wrist
+//        servos[2].nextAngle = calculateAngle(140); //bot rotate
+//        servos[3].nextAngle = calculateAngle(10);
+//    }
+//}
 void main(void)
 {
+    
+
+    // Disable the Global Interrupts 
+    //INTERRUPT_GlobalInterruptDisable(); 
+    //servo0->nextAngle = 9000;
+        
     SYSTEM_Initialize();
-    INTERRUPT_GlobalInterruptEnable();
     //TMR0_OverflowCallbackRegister(Buttoncheck);
-    TMR2_Start();
+    //TMR2_Start();
     nRF24_IRQ_SetInterruptHandler(nrf_irq);
+    INTERRUPT_GlobalInterruptEnable();
+
     TMR0_Stop();  
-        TMR2_Stop();  
-    enablePWM();
+    TMR2_Stop();  
     PWM1_16BIT_Disable();
+    //initServo();
+    //enableMagnet();
+
+
 //    TMR0_OverflowCallbackRegister(servo_steps);
 //    initServo();
 //    TMR0_Start();

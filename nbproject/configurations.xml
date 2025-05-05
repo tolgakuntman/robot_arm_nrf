@@ -7,6 +7,9 @@
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
+        <logicalFolder name="dac" displayName="dac" projectFiles="true">
+          <itemPath>mcc_generated_files/dac/dac1.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="pwm" displayName="pwm" projectFiles="true">
           <itemPath>mcc_generated_files/pwm/pwm3_16bit.h</itemPath>
           <itemPath>mcc_generated_files/pwm/pwm2_16bit.h</itemPath>
@@ -30,10 +33,17 @@
           <itemPath>mcc_generated_files/timer/tmr0_deprecated.h</itemPath>
           <itemPath>mcc_generated_files/timer/tmr2.h</itemPath>
           <itemPath>mcc_generated_files/timer/timer_interface.h</itemPath>
+          <itemPath>mcc_generated_files/timer/tmr1_deprecated.h</itemPath>
+          <itemPath>mcc_generated_files/timer/tmr1.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>mirf.h</itemPath>
       <itemPath>servo.h</itemPath>
+      <itemPath>arm_fsm.h</itemPath>
+      <itemPath>boat_control.h</itemPath>
+      <itemPath>grid_lookup.h</itemPath>
+      <itemPath>message_parser.h</itemPath>
+      <itemPath>audio.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -51,6 +61,11 @@
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
+        <logicalFolder name="dac" displayName="dac" projectFiles="true">
+          <logicalFolder name="src" displayName="src" projectFiles="true">
+            <itemPath>mcc_generated_files/dac/src/dac1.c</itemPath>
+          </logicalFolder>
+        </logicalFolder>
         <logicalFolder name="pwm" displayName="pwm" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/pwm/src/pwm1_16bit.c</itemPath>
@@ -77,12 +92,18 @@
             <itemPath>mcc_generated_files/timer/src/tmr0.c</itemPath>
             <itemPath>mcc_generated_files/timer/src/delay.c</itemPath>
             <itemPath>mcc_generated_files/timer/src/tmr2.c</itemPath>
+            <itemPath>mcc_generated_files/timer/src/tmr1.c</itemPath>
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>mirf.c</itemPath>
       <itemPath>servo.c</itemPath>
+      <itemPath>arm_fsm.c</itemPath>
+      <itemPath>boat_control.c</itemPath>
+      <itemPath>grid_lookup.c</itemPath>
+      <itemPath>message_parser.c</itemPath>
+      <itemPath>audio.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -96,7 +117,7 @@
         <platformTool>nEdbgTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.50</languageToolchainVersion>
-        <platform>4</platform>
+        <platform>2</platform>
       </toolsSet>
       <packs>
         <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.25.433"/>

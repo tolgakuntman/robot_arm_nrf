@@ -13,7 +13,7 @@
 */
 
 /*
-© [2025] Microchip Technology Inc. and its subsidiaries.
+? [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -41,6 +41,7 @@
 #include <stdbool.h>
 #include "../system/config_bits.h"
 #include "../system/pins.h"
+#include "../dac/dac1.h"
 #include "../pwm/pwm1_16bit.h"
 #include "../pwm/pwm2_16bit.h"
 #include "../pwm/pwm3_16bit.h"
@@ -49,6 +50,7 @@
 #include "../system/interrupt.h"
 #include "../system/clock.h"
 #include "../timer/tmr0.h"
+#include "../timer/tmr1.h"
 
 /**
  * @ingroup systemdriver

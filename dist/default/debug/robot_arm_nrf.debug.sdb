@@ -1,0 +1,2170 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F57Q43 ]
+[d frameptr 1249 ]
+"82 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+[e E17133 . `uc
+TMR2_ROP_STARTS_TMRON 0
+TMR2_ROP_STARTS_TMRON_ERSHIGH 1
+TMR2_ROP_STARTS_TMRON_ERSLOW 2
+TMR2_ROP_RESETS_ERSBOTHEDGE 3
+TMR2_ROP_RESETS_ERSRISINGEDGE 4
+TMR2_ROP_RESETS_ERSFALLINGEDGE 5
+TMR2_ROP_RESETS_ERSLOW 6
+TMR2_ROP_RESETS_ERSHIGH 7
+TMR2_OS_STARTS_TMRON 8
+TMR2_OS_STARTS_ERSRISINGEDGE 9
+TMR2_OS_STARTS_ERSFALLINGEDGE 10
+TMR2_OS_STARTS_ERSBOTHEDGE 11
+TMR2_OS_STARTS_ERSFIRSTRISINGEDGE 12
+TMR2_OS_STARTS_ERSFIRSTFALLINGEDGE 13
+TMR2_OS_STARTS_ERSRISINGEDGEDETECT 14
+TMR2_OS_STARTS_ERSFALLINGEDGEDETECT 15
+TMR2_OS_STARTS_TMRON_ERSHIGH 22
+TMR2_OS_STARTS_TMRON_ERSLOW 23
+TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT 17
+TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT 18
+TMR2_MS_STARTS_TMRON_ERSBOTHEDGE 19
+]
+"88
+[e E17156 . `uc
+TMR2_T2CKIPPS_PIN 0
+TMR2_TMR4_POSTSCALED 2
+TMR2_TMR6_POSTSCALED 3
+TMR2_CCP1OUT 4
+TMR2_CCP2OUT 5
+TMR2_CCP3OUT 6
+TMR2_PWM1_OUT1 7
+TMR2_PWM1_OUT2 8
+TMR2_PWM2_OUT1 9
+TMR2_PWM2_OUT2 10
+TMR2_PWM3_OUT1 11
+TMR2_PWM3_OUT2 12
+TMR2_CMP1OUT 15
+TMR2_CMP2OUT 16
+TMR2_ZCDOUT 17
+TMR2_CLC1_OUT 18
+TMR2_CLC2_OUT 19
+TMR2_CLC3_OUT 20
+TMR2_CLC4_OUT 21
+TMR2_CLC5_OUT 22
+TMR2_CLC6_OUT 23
+TMR2_CLC7_OUT 24
+TMR2_CLC8_OUT 25
+TMR2_UART1_RX_EDGE 26
+TMR2_UART1_TX_EDGE 27
+TMR2_UART2_RX_EDGE 28
+TMR2_UART2_TX_EDGE 29
+TMR2_UART3_RX_EDGE 30
+TMR2_UART3_TX_EDGE 31
+TMR2_UART4_RX_EDGE 32
+TMR2_UART4_TX_EDGE 33
+TMR2_UART5_RX_EDGE 34
+TMR2_UART5_TX_EDGE 35
+]
+"91 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+[e E18106 . `uc
+PLACE 0
+REMOVE 1
+]
+"437 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+[e E17640 . `uc
+RF24_1MBPS 0
+RF24_2MBPS 1
+RF24_250KBPS 2
+]
+"463
+[e E17645 . `uc
+RF24_CRC_DISABLED 0
+RF24_CRC_8 1
+RF24_CRC_16 2
+]
+"16 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+[e E36 . `uc
+IDLE 0
+ROTATE_DOCK 1
+PICKUP 2
+MAGNET_ON 3
+MOVE_UP_DOCK 4
+STILL 5
+ROTATE_BOARD 6
+BOAT_ROTATE 7
+MOVE_UP_BOARD 8
+PLACEMENT 9
+MAGNET_OFF 10
+WAIT 11
+RETURN 12
+]
+"17
+[e E51 . `uc
+PLACE 0
+REMOVE 1
+]
+"14 /opt/microchip/xc8/v2.50/pic/sources/c99/common/expand_heap.c
+[v ___expand_heap __expand_heap `(*.39v  1 e 3 0 ]
+"4 /opt/microchip/xc8/v2.50/pic/sources/c99/common/fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 /opt/microchip/xc8/v2.50/pic/sources/c99/common/float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 /opt/microchip/xc8/v2.50/pic/sources/c99/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 /opt/microchip/xc8/v2.50/pic/sources/c99/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 /opt/microchip/xc8/v2.50/pic/sources/c99/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 /opt/microchip/xc8/v2.50/pic/sources/c99/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"19 /opt/microchip/xc8/v2.50/pic/sources/c99/common/lite_free.c
+[v ___simple_search_fl __simple_search_fl `(*.39v  1 e 3 0 ]
+"16 /opt/microchip/xc8/v2.50/pic/sources/c99/common/lite_malloc.c
+[v _malloc malloc `(*.39v  1 e 3 0 ]
+"4 /opt/microchip/xc8/v2.50/pic/sources/c99/common/memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 3 0 ]
+"3 /opt/microchip/xc8/v2.50/pic/sources/c99/common/memset.c
+[v _memset memset `(*.39v  1 e 3 0 ]
+"5 /opt/microchip/xc8/v2.50/pic/sources/c99/common/printf.c
+[v _printf printf `(i  1 e 2 0 ]
+"10 /opt/microchip/xc8/v2.50/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 /opt/microchip/xc8/v2.50/pic/sources/c99/common/sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 /opt/microchip/xc8/v2.50/pic/sources/c99/common/sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"3 /opt/microchip/xc8/v2.50/pic/sources/c99/common/strncmp.c
+[v _strncmp strncmp `(i  1 e 2 0 ]
+"15 /opt/microchip/xc8/v2.50/pic/sources/c99/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 /opt/microchip/xc8/v2.50/pic/sources/c99/common/Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"25 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+[v _arm_fsm_init arm_fsm_init `(v  1 e 1 0 ]
+"34
+[v _set_magnet_strength set_magnet_strength `(v  1 e 1 0 ]
+"56
+[v _arm_set_target arm_set_target `(v  1 e 1 0 ]
+"73
+[v _delay delay `(v  1 e 1 0 ]
+"78
+[v _start_fsm_delay start_fsm_delay `(v  1 e 1 0 ]
+"86
+[v _arm_fsm_update arm_fsm_update `(v  1 e 1 0 ]
+"52 /home/aevern/Documents/KULeuven/robot_arm_nrf/audio.c
+[v _tim_1_irs tim_1_irs `(v  1 e 1 0 ]
+"61
+[v _audio_init audio_init `(i  1 e 2 0 ]
+"27 /home/aevern/Documents/KULeuven/robot_arm_nrf/boat_control.c
+[v _get_docking_servo_angles get_docking_servo_angles `(*.32Cuc  1 e 3 0 ]
+"31
+[v _get_docking_servo_angles_up get_docking_servo_angles_up `(*.32Cuc  1 e 3 0 ]
+"54 /home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+[v _get_grid_servo_angles get_grid_servo_angles `(*.32Cuc  1 e 3 0 ]
+"60
+[v _get_dependent_servo_angle get_dependent_servo_angle `(uc  1 e 1 0 ]
+"67
+[v _get_adjusted_servo_angles get_adjusted_servo_angles `(v  1 e 1 0 ]
+"76
+[v _get_adjusted_servo_angles_up get_adjusted_servo_angles_up `(v  1 e 1 0 ]
+"28 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+[v _AdvancedSettings AdvancedSettings `(v  1 e 1 0 ]
+"46
+[v _slave slave `(v  1 e 1 0 ]
+"179
+[v _nrf_irq nrf_irq `(v  1 e 1 0 ]
+"204
+[v _main main `(v  1 e 1 0 ]
+"44 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/dac/src/dac1.c
+[v _DAC1_Initialize DAC1_Initialize `(v  1 e 1 0 ]
+"50 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+[v _PWM1_16BIT_Initialize PWM1_16BIT_Initialize `(v  1 e 1 0 ]
+"121
+[v _PWM1_16BIT_Enable PWM1_16BIT_Enable `(v  1 e 1 0 ]
+"126
+[v _PWM1_16BIT_Disable PWM1_16BIT_Disable `(v  1 e 1 0 ]
+"137
+[v _PWM1_16BIT_SetSlice1Output1DutyCycleRegister PWM1_16BIT_SetSlice1Output1DutyCycleRegister `(v  1 e 1 0 ]
+"149
+[v _PWM1_16BIT_LoadBufferRegisters PWM1_16BIT_LoadBufferRegisters `(v  1 e 1 0 ]
+"189
+[v _PWM1_16BIT_Slice1Output1_SetInterruptHandler PWM1_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+"194
+[v _PWM1_16BIT_Slice1Output2_SetInterruptHandler PWM1_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+"199
+[v _PWM1_16BIT_Period_SetInterruptHandler PWM1_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+"204
+[v _PWM1_16BIT_Slice1Output1_DefaultInterruptHandler PWM1_16BIT_Slice1Output1_DefaultInterruptHandler `(v  1 s 1 PWM1_16BIT_Slice1Output1_DefaultInterruptHandler ]
+"210
+[v _PWM1_16BIT_Slice1Output2_DefaultInterruptHandler PWM1_16BIT_Slice1Output2_DefaultInterruptHandler `(v  1 s 1 PWM1_16BIT_Slice1Output2_DefaultInterruptHandler ]
+"216
+[v _PWM1_16BIT_Period_DefaultInterruptHandler PWM1_16BIT_Period_DefaultInterruptHandler `(v  1 s 1 PWM1_16BIT_Period_DefaultInterruptHandler ]
+"50 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+[v _PWM2_16BIT_Initialize PWM2_16BIT_Initialize `(v  1 e 1 0 ]
+"121
+[v _PWM2_16BIT_Enable PWM2_16BIT_Enable `(v  1 e 1 0 ]
+"137
+[v _PWM2_16BIT_SetSlice1Output1DutyCycleRegister PWM2_16BIT_SetSlice1Output1DutyCycleRegister `(v  1 e 1 0 ]
+"143
+[v _PWM2_16BIT_SetSlice1Output2DutyCycleRegister PWM2_16BIT_SetSlice1Output2DutyCycleRegister `(v  1 e 1 0 ]
+"149
+[v _PWM2_16BIT_LoadBufferRegisters PWM2_16BIT_LoadBufferRegisters `(v  1 e 1 0 ]
+"189
+[v _PWM2_16BIT_Slice1Output1_SetInterruptHandler PWM2_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+"194
+[v _PWM2_16BIT_Slice1Output2_SetInterruptHandler PWM2_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+"199
+[v _PWM2_16BIT_Period_SetInterruptHandler PWM2_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+"204
+[v _PWM2_16BIT_Slice1Output1_DefaultInterruptHandler PWM2_16BIT_Slice1Output1_DefaultInterruptHandler `(v  1 s 1 PWM2_16BIT_Slice1Output1_DefaultInterruptHandler ]
+"210
+[v _PWM2_16BIT_Slice1Output2_DefaultInterruptHandler PWM2_16BIT_Slice1Output2_DefaultInterruptHandler `(v  1 s 1 PWM2_16BIT_Slice1Output2_DefaultInterruptHandler ]
+"216
+[v _PWM2_16BIT_Period_DefaultInterruptHandler PWM2_16BIT_Period_DefaultInterruptHandler `(v  1 s 1 PWM2_16BIT_Period_DefaultInterruptHandler ]
+"50 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+[v _PWM3_16BIT_Initialize PWM3_16BIT_Initialize `(v  1 e 1 0 ]
+"121
+[v _PWM3_16BIT_Enable PWM3_16BIT_Enable `(v  1 e 1 0 ]
+"137
+[v _PWM3_16BIT_SetSlice1Output1DutyCycleRegister PWM3_16BIT_SetSlice1Output1DutyCycleRegister `(v  1 e 1 0 ]
+"143
+[v _PWM3_16BIT_SetSlice1Output2DutyCycleRegister PWM3_16BIT_SetSlice1Output2DutyCycleRegister `(v  1 e 1 0 ]
+"149
+[v _PWM3_16BIT_LoadBufferRegisters PWM3_16BIT_LoadBufferRegisters `(v  1 e 1 0 ]
+"189
+[v _PWM3_16BIT_Slice1Output1_SetInterruptHandler PWM3_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+"194
+[v _PWM3_16BIT_Slice1Output2_SetInterruptHandler PWM3_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+"199
+[v _PWM3_16BIT_Period_SetInterruptHandler PWM3_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+"204
+[v _PWM3_16BIT_Slice1Output1_DefaultInterruptHandler PWM3_16BIT_Slice1Output1_DefaultInterruptHandler `(v  1 s 1 PWM3_16BIT_Slice1Output1_DefaultInterruptHandler ]
+"210
+[v _PWM3_16BIT_Slice1Output2_DefaultInterruptHandler PWM3_16BIT_Slice1Output2_DefaultInterruptHandler `(v  1 s 1 PWM3_16BIT_Slice1Output2_DefaultInterruptHandler ]
+"216
+[v _PWM3_16BIT_Period_DefaultInterruptHandler PWM3_16BIT_Period_DefaultInterruptHandler `(v  1 s 1 PWM3_16BIT_Period_DefaultInterruptHandler ]
+"69 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+"86
+[v _SPI1_Deinitialize SPI1_Deinitialize `(v  1 e 1 0 ]
+"91
+[v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
+"112
+[v _SPI1_Close SPI1_Close `(v  1 e 1 0 ]
+"120
+[v _SPI1_BufferExchange SPI1_BufferExchange `(v  1 e 1 0 ]
+"151
+[v _SPI1_BufferWrite SPI1_BufferWrite `(v  1 e 1 0 ]
+"180
+[v _SPI1_BufferRead SPI1_BufferRead `(v  1 e 1 0 ]
+"209
+[v _SPI1_ByteExchange SPI1_ByteExchange `(uc  1 e 1 0 ]
+"232
+[v _SPI1_ByteWrite SPI1_ByteWrite `(v  1 e 1 0 ]
+"244
+[v _SPI1_ByteRead SPI1_ByteRead `(uc  1 e 1 0 ]
+"257
+[v _SPI1_IsTxReady SPI1_IsTxReady `(a  1 e 1 0 ]
+"271
+[v _SPI1_IsRxReady SPI1_IsRxReady `(a  1 e 1 0 ]
+"39 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+"42 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"80
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
+"114
+[v _INT0_CallBack INT0_CallBack `(v  1 e 1 0 ]
+"123
+[v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+"127
+[v _INT0_DefaultInterruptHandler INT0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"140
+[v _INT1_CallBack INT1_CallBack `(v  1 e 1 0 ]
+"149
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+"153
+[v _INT1_DefaultInterruptHandler INT1_DefaultInterruptHandler `(v  1 e 1 0 ]
+"166
+[v _INT2_CallBack INT2_CallBack `(v  1 e 1 0 ]
+"175
+[v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
+"179
+[v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
+"39 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"153
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+"165
+[v _nRF24_IRQ_ISR nRF24_IRQ_ISR `(v  1 e 1 0 ]
+"180
+[v _nRF24_IRQ_SetInterruptHandler nRF24_IRQ_SetInterruptHandler `(v  1 e 1 0 ]
+"187
+[v _nRF24_IRQ_DefaultInterruptHandler nRF24_IRQ_DefaultInterruptHandler `(v  1 e 1 0 ]
+"38 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"37 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
+[v _DELAY_milliseconds DELAY_milliseconds `(v  1 e 1 0 ]
+"43
+[v _DELAY_microseconds DELAY_microseconds `(v  1 e 1 0 ]
+"46 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"79
+[v _TMR0_Start TMR0_Start `(v  1 e 1 0 ]
+"84
+[v _TMR0_Stop TMR0_Stop `(v  1 e 1 0 ]
+[v i2_TMR0_Stop TMR0_Stop `(v  1 e 1 0 ]
+"139
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+"151
+[v _TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
+"156
+[v _TMR0_DefaultCallback TMR0_DefaultCallback `(v  1 s 1 TMR0_DefaultCallback ]
+"49 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"96
+[v _TMR1_Start TMR1_Start `(v  1 e 1 0 ]
+"101
+[v _TMR1_Stop TMR1_Stop `(v  1 e 1 0 ]
+[v i2_TMR1_Stop TMR1_Stop `(v  1 e 1 0 ]
+"120
+[v _TMR1_CounterSet TMR1_CounterSet `(v  1 e 1 0 ]
+"179
+[v _TMR1_OverflowISR TMR1_OverflowISR `(v  1 e 1 0 ]
+"192
+[v _TMR1_OverflowCallbackRegister TMR1_OverflowCallbackRegister `(v  1 e 1 0 ]
+"202
+[v _TMR1_DefaultOverflowCallback TMR1_DefaultOverflowCallback `(v  1 s 1 TMR1_DefaultOverflowCallback ]
+"207
+[v _TMR1_DefaultGateCallback TMR1_DefaultGateCallback `(v  1 s 1 TMR1_DefaultGateCallback ]
+"57 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"94
+[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+"100
+[v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
+"119
+[v _TMR2_PeriodCountSet TMR2_PeriodCountSet `(v  1 e 1 0 ]
+"124
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+"134
+[v _TMR2_OverflowCallbackRegister TMR2_OverflowCallbackRegister `(v  1 e 1 0 ]
+"139
+[v _TMR2_DefaultOverflowCallback TMR2_DefaultOverflowCallback `(v  1 s 1 TMR2_DefaultOverflowCallback ]
+"4 /home/aevern/Documents/KULeuven/robot_arm_nrf/message_parser.c
+[v _parse_robot_message parse_robot_message `(a  1 e 1 0 ]
+"45 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+[v _SPI_read_buff SPI_read_buff `(v  1 e 1 0 ]
+"55
+[v _SPI_write_buff SPI_write_buff `(v  1 e 1 0 ]
+"71
+[v _Nrf24_init Nrf24_init `(v  1 e 1 0 ]
+"90
+[v _Nrf24_config Nrf24_config `(v  1 e 1 0 ]
+"103
+[v _Nrf24_setRADDR Nrf24_setRADDR `(i  1 e 2 0 ]
+"116
+[v _Nrf24_setTADDR Nrf24_setTADDR `(i  1 e 2 0 ]
+"159
+[v _Nrf24_dataReady Nrf24_dataReady `(a  1 e 1 0 ]
+"181
+[v _Nrf24_getData Nrf24_getData `(v  1 e 1 0 ]
+"199
+[v _Nrf24_configRegister Nrf24_configRegister `(v  1 e 1 0 ]
+"208
+[v _Nrf24_readRegister Nrf24_readRegister `(v  1 e 1 0 ]
+"219
+[v _Nrf24_writeRegister Nrf24_writeRegister `(v  1 e 1 0 ]
+"298
+[v _Nrf24_getStatus Nrf24_getStatus `(uc  1 e 1 0 ]
+"304
+[v _Nrf24_powerUpRx Nrf24_powerUpRx `(v  1 e 1 0 ]
+"312
+[v _Nrf24_flushRx Nrf24_flushRx `(v  1 e 1 0 ]
+"319
+[v _Nrf24_powerUpTx Nrf24_powerUpTx `(v  1 e 1 0 ]
+"344
+[v _Nrf24_SetSpeedDataRates Nrf24_SetSpeedDataRates `(v  1 e 1 0 ]
+"365
+[v _Nrf24_setRetransmitDelay Nrf24_setRetransmitDelay `(v  1 e 1 0 ]
+"402
+[v _Nrf24_print_status Nrf24_print_status `(v  1 e 1 0 ]
+"408
+[v _Nrf24_print_address_register Nrf24_print_address_register `(v  1 e 1 0 ]
+"424
+[v _Nrf24_print_byte_register Nrf24_print_byte_register `(v  1 e 1 0 ]
+"435
+[v _Nrf24_getDataRate Nrf24_getDataRate `(uc  1 e 1 0 ]
+"461
+[v _Nrf24_getCRCLength Nrf24_getCRCLength `(uc  1 e 1 0 ]
+"482
+[v _Nrf24_getPALevel Nrf24_getPALevel `(uc  1 e 1 0 ]
+"495
+[v _Nrf24_getRetransmitDelay Nrf24_getRetransmitDelay `(uc  1 e 1 0 ]
+"7 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+[v _isrTim0 isrTim0 `(v  1 e 1 0 ]
+"30
+[v _enableMagnet enableMagnet `(v  1 e 1 0 ]
+"35
+[v _disableMagnet disableMagnet `(v  1 e 1 0 ]
+"40
+[v _calculateAngle calculateAngle `(us  1 e 2 0 ]
+"44
+[v _initServo initServo `(v  1 e 1 0 ]
+"62
+[v _enablePWM enablePWM `(v  1 e 1 0 ]
+"69
+[v _move_servo_to_angles move_servo_to_angles `(v  1 e 1 0 ]
+"77
+[v _move_servo_to_int move_servo_to_int `(v  1 e 1 0 ]
+"86
+[v _servoMovement servoMovement `(a  1 e 1 0 ]
+"95
+[v _getAngle getAngle `(us  1 e 2 0 ]
+"18 /home/aevern/Documents/KULeuven/robot_arm_nrf/audio.h
+[v _HitSound HitSound `C[5603]us  1 e 11206 0 ]
+"24
+[v _MissSound MissSound `C[2044]us  1 e 4088 0 ]
+[s S2141 . 4 `*.32us 1 sound_array 2 0 `us 1 length 2 2 ]
+"36
+[v _sound sound `*.39S2141  1 e 2 0 ]
+"3150 /home/aevern/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h
+[v _DAC1DAT DAC1DAT `VEuc  1 e 1 @125 ]
+"3157
+[v _DAC1DATL DAC1DATL `VEuc  1 e 1 @125 ]
+"3235
+[v _DAC1CON DAC1CON `VEuc  1 e 1 @127 ]
+"3338
+[v _SPI1RXB SPI1RXB `VEuc  1 e 1 @128 ]
+"3408
+[v _SPI1TXB SPI1TXB `VEuc  1 e 1 @129 ]
+"3485
+[v _SPI1TCNTL SPI1TCNTL `VEuc  1 e 1 @130 ]
+"3505
+[v _SPI1TCNTH SPI1TCNTH `VEuc  1 e 1 @131 ]
+"3525
+[v _SPI1CON0 SPI1CON0 `VEuc  1 e 1 @132 ]
+[s S776 . 1 `uc 1 BMODE 1 0 :1:0 
+`uc 1 MST 1 0 :1:1 
+`uc 1 LSBF 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 EN 1 0 :1:7 
+]
+"3546
+[s S782 . 1 `uc 1 SPI1BMODE 1 0 :1:0 
+`uc 1 SPI1MST 1 0 :1:1 
+`uc 1 SPI1LSBF 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 SPI1SPIEN 1 0 :1:7 
+]
+[u S788 . 1 `S776 1 . 1 0 `S782 1 . 1 0 ]
+[v _SPI1CON0bits SPI1CON0bits `VES788  1 e 1 @132 ]
+"3591
+[v _SPI1CON1 SPI1CON1 `VEuc  1 e 1 @133 ]
+"3693
+[v _SPI1CON2 SPI1CON2 `VEuc  1 e 1 @134 ]
+[s S736 . 1 `uc 1 RXBF 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 CLRBF 1 0 :1:2 
+`uc 1 RXRE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 TXBE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 TXWE 1 0 :1:7 
+]
+"3798
+[s S745 . 1 `uc 1 SPI1RXBF 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 SPI1CLRBF 1 0 :1:2 
+`uc 1 SPI1RXRE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 SPI1TXBE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 SPI1TXWE 1 0 :1:7 
+]
+[u S754 . 1 `S736 1 . 1 0 `S745 1 . 1 0 ]
+[v _SPI1STATUSbits SPI1STATUSbits `VES754  1 e 1 @135 ]
+"3893
+[v _SPI1BAUD SPI1BAUD `VEuc  1 e 1 @137 ]
+[s S825 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TXUIF 1 0 :1:1 
+`uc 1 RXOIF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 EOSIF 1 0 :1:4 
+`uc 1 SOSIF 1 0 :1:5 
+`uc 1 TCZIF 1 0 :1:6 
+`uc 1 SRMTIF 1 0 :1:7 
+]
+"3990
+[s S834 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 SPI1TXUIF 1 0 :1:1 
+`uc 1 SPI1RXOIF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 SPI1EOSIF 1 0 :1:4 
+`uc 1 SPI1SOSIF 1 0 :1:5 
+`uc 1 SPI1TCZIF 1 0 :1:6 
+`uc 1 SPI1SRMTIF 1 0 :1:7 
+]
+[u S843 . 1 `S825 1 . 1 0 `S834 1 . 1 0 ]
+[v _SPI1INTFbits SPI1INTFbits `VES843  1 e 1 @138 ]
+"4147
+[v _SPI1CLK SPI1CLK `VEuc  1 e 1 @140 ]
+"5140
+[v _ACTCON ACTCON `VEuc  1 e 1 @172 ]
+"5210
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @173 ]
+"5350
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @175 ]
+"5390
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @176 ]
+"5448
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @177 ]
+"5650
+[v _OSCEN OSCEN `VEuc  1 e 1 @179 ]
+"9092
+[v _RB0PPS RB0PPS `VEuc  1 e 1 @521 ]
+"9148
+[v _RB1PPS RB1PPS `VEuc  1 e 1 @522 ]
+"9204
+[v _RB2PPS RB2PPS `VEuc  1 e 1 @523 ]
+"9260
+[v _RB3PPS RB3PPS `VEuc  1 e 1 @524 ]
+"9540
+[v _RC0PPS RC0PPS `VEuc  1 e 1 @529 ]
+"9708
+[v _RC3PPS RC3PPS `VEuc  1 e 1 @532 ]
+"9764
+[v _RC4PPS RC4PPS `VEuc  1 e 1 @533 ]
+"14250
+[v _SPI1SCKPPS SPI1SCKPPS `VEuc  1 e 1 @618 ]
+"14316
+[v _SPI1SDIPPS SPI1SDIPPS `VEuc  1 e 1 @619 ]
+"15474
+[v _RC4I2C RC4I2C `VEuc  1 e 1 @646 ]
+"15606
+[v _RC3I2C RC3I2C `VEuc  1 e 1 @647 ]
+"15738
+[v _RB2I2C RB2I2C `VEuc  1 e 1 @648 ]
+"15870
+[v _RB1I2C RB1I2C `VEuc  1 e 1 @649 ]
+"23298
+[v _TMR0L TMR0L `VEuc  1 e 1 @792 ]
+"23436
+[v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
+"23690
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @794 ]
+[s S1491 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 MD16 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"23724
+[s S1497 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T0MD16 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+[s S1503 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 T016BIT 1 0 :1:4 
+]
+[s S1509 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+`uc 1 T0OUTPS1 1 0 :1:1 
+`uc 1 T0OUTPS2 1 0 :1:2 
+`uc 1 T0OUTPS3 1 0 :1:3 
+]
+[u S1514 . 1 `S1491 1 . 1 0 `S1497 1 . 1 0 `S1503 1 . 1 0 `S1509 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES1514  1 e 1 @794 ]
+"23814
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @795 ]
+"23963
+[v _TMR1L TMR1L `VEuc  1 e 1 @796 ]
+"24083
+[v _TMR1H TMR1H `VEuc  1 e 1 @797 ]
+"24203
+[v _T1CON T1CON `VEuc  1 e 1 @798 ]
+[s S1916 . 1 `uc 1 ON 1 0 :1:0 
+`uc 1 RD16 1 0 :1:1 
+`uc 1 NOT_SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CKPS 1 0 :2:4 
+]
+"24245
+[s S1922 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 T1RD16 1 0 :1:1 
+`uc 1 NOT_T1SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+]
+[s S1929 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nSYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+]
+[s S1935 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RD161 1 0 :1:1 
+]
+[s S1938 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nT1SYNC 1 0 :1:2 
+]
+[u S1941 . 1 `S1916 1 . 1 0 `S1922 1 . 1 0 `S1929 1 . 1 0 `S1935 1 . 1 0 `S1938 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES1941  1 e 1 @798 ]
+"24425
+[v _T1GCON T1GCON `VEuc  1 e 1 @799 ]
+[s S2011 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GVAL 1 0 :1:2 
+`uc 1 GGO 1 0 :1:3 
+`uc 1 GSPM 1 0 :1:4 
+`uc 1 GTM 1 0 :1:5 
+`uc 1 GPOL 1 0 :1:6 
+`uc 1 GE 1 0 :1:7 
+]
+"24479
+[s S2019 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1GVAL 1 0 :1:2 
+`uc 1 T1GGO 1 0 :1:3 
+`uc 1 T1GSPM 1 0 :1:4 
+`uc 1 T1GTM 1 0 :1:5 
+`uc 1 T1GPOL 1 0 :1:6 
+`uc 1 T1GE 1 0 :1:7 
+]
+[s S2027 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_DONE 1 0 :1:3 
+]
+[s S2030 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_T1DONE 1 0 :1:3 
+]
+[s S2033 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 GGO_NOT_DONE 1 0 :1:3 
+]
+[s S2036 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 GGO_nDONE 1 0 :1:3 
+]
+[s S2039 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T1GGO_NOT_DONE 1 0 :1:3 
+]
+[s S2042 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T1GGO_nDONE 1 0 :1:3 
+]
+[u S2045 . 1 `S2011 1 . 1 0 `S2019 1 . 1 0 `S2027 1 . 1 0 `S2030 1 . 1 0 `S2033 1 . 1 0 `S2036 1 . 1 0 `S2039 1 . 1 0 `S2042 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES2045  1 e 1 @799 ]
+"24711
+[v _T1GATE T1GATE `VEuc  1 e 1 @800 ]
+"24901
+[v _T1CLK T1CLK `VEuc  1 e 1 @801 ]
+"25147
+[v _T2TMR T2TMR `VEuc  1 e 1 @802 ]
+"25152
+[v _TMR2 TMR2 `VEuc  1 e 1 @802 ]
+"25185
+[v _T2PR T2PR `VEuc  1 e 1 @803 ]
+"25190
+[v _PR2 PR2 `VEuc  1 e 1 @803 ]
+"25223
+[v _T2CON T2CON `VEuc  1 e 1 @804 ]
+[s S1815 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 CKPS 1 0 :3:4 
+`uc 1 ON 1 0 :1:7 
+]
+"25259
+[s S1819 . 1 `uc 1 T2OUTPS 1 0 :4:0 
+`uc 1 T2CKPS 1 0 :3:4 
+`uc 1 T2ON 1 0 :1:7 
+]
+[s S1823 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
+`uc 1 T2OUTPS1 1 0 :1:1 
+`uc 1 T2OUTPS2 1 0 :1:2 
+`uc 1 T2OUTPS3 1 0 :1:3 
+`uc 1 T2CKPS0 1 0 :1:4 
+`uc 1 T2CKPS1 1 0 :1:5 
+`uc 1 T2CKPS2 1 0 :1:6 
+]
+[s S1831 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+`uc 1 CKPS2 1 0 :1:6 
+`uc 1 TMR2ON 1 0 :1:7 
+]
+[u S1840 . 1 `S1815 1 . 1 0 `S1819 1 . 1 0 `S1823 1 . 1 0 `S1831 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES1840  1 e 1 @804 ]
+"25369
+[v _T2HLT T2HLT `VEuc  1 e 1 @805 ]
+[s S1685 . 1 `uc 1 MODE 1 0 :5:0 
+`uc 1 CKSYNC 1 0 :1:5 
+`uc 1 CKPOL 1 0 :1:6 
+`uc 1 PSYNC 1 0 :1:7 
+]
+"25402
+[s S1690 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+`uc 1 MODE4 1 0 :1:4 
+]
+[s S1696 . 1 `uc 1 T2MODE 1 0 :5:0 
+`uc 1 T2CKSYNC 1 0 :1:5 
+`uc 1 T2CKPOL 1 0 :1:6 
+`uc 1 T2PSYNC 1 0 :1:7 
+]
+[s S1701 . 1 `uc 1 T2MODE0 1 0 :1:0 
+`uc 1 T2MODE1 1 0 :1:1 
+`uc 1 T2MODE2 1 0 :1:2 
+`uc 1 T2MODE3 1 0 :1:3 
+`uc 1 T2MODE4 1 0 :1:4 
+]
+[u S1707 . 1 `S1685 1 . 1 0 `S1690 1 . 1 0 `S1696 1 . 1 0 `S1701 1 . 1 0 ]
+[v _T2HLTbits T2HLTbits `VES1707  1 e 1 @805 ]
+"25497
+[v _T2CLKCON T2CLKCON `VEuc  1 e 1 @806 ]
+"25703
+[v _T2RST T2RST `VEuc  1 e 1 @807 ]
+[s S1769 . 1 `uc 1 RSEL 1 0 :8:0 
+]
+"25734
+[s S1771 . 1 `uc 1 RSEL0 1 0 :1:0 
+`uc 1 RSEL1 1 0 :1:1 
+`uc 1 RSEL2 1 0 :1:2 
+`uc 1 RSEL3 1 0 :1:3 
+`uc 1 RSEL4 1 0 :1:4 
+`uc 1 RSEL5 1 0 :1:5 
+`uc 1 RSEL6 1 0 :1:6 
+]
+[s S1779 . 1 `uc 1 T2RSEL 1 0 :8:0 
+]
+[s S1781 . 1 `uc 1 T2RSEL0 1 0 :1:0 
+`uc 1 T2RSEL1 1 0 :1:1 
+`uc 1 T2RSEL2 1 0 :1:2 
+`uc 1 T2RSEL3 1 0 :1:3 
+`uc 1 T2RSEL4 1 0 :1:4 
+`uc 1 T2RSEL5 1 0 :1:5 
+`uc 1 T2RSEL6 1 0 :1:6 
+]
+[u S1789 . 1 `S1769 1 . 1 0 `S1771 1 . 1 0 `S1779 1 . 1 0 `S1781 1 . 1 0 ]
+[v _T2RSTbits T2RSTbits `VES1789  1 e 1 @807 ]
+"40015
+[v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
+"40077
+[v _WPUA WPUA `VEuc  1 e 1 @1025 ]
+"40139
+[v _ODCONA ODCONA `VEuc  1 e 1 @1026 ]
+"40201
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @1027 ]
+"40263
+[v _INLVLA INLVLA `VEuc  1 e 1 @1028 ]
+"40325
+[v _IOCAP IOCAP `VEuc  1 e 1 @1029 ]
+"40387
+[v _IOCAN IOCAN `VEuc  1 e 1 @1030 ]
+"40449
+[v _IOCAF IOCAF `VEuc  1 e 1 @1031 ]
+"40511
+[v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
+"40573
+[v _WPUB WPUB `VEuc  1 e 1 @1033 ]
+"40635
+[v _ODCONB ODCONB `VEuc  1 e 1 @1034 ]
+"40697
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @1035 ]
+"40759
+[v _INLVLB INLVLB `VEuc  1 e 1 @1036 ]
+"40821
+[v _IOCBP IOCBP `VEuc  1 e 1 @1037 ]
+"40883
+[v _IOCBN IOCBN `VEuc  1 e 1 @1038 ]
+"40945
+[v _IOCBF IOCBF `VEuc  1 e 1 @1039 ]
+"41007
+[v _ANSELC ANSELC `VEuc  1 e 1 @1040 ]
+"41069
+[v _WPUC WPUC `VEuc  1 e 1 @1041 ]
+"41131
+[v _ODCONC ODCONC `VEuc  1 e 1 @1042 ]
+"41193
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @1043 ]
+"41255
+[v _INLVLC INLVLC `VEuc  1 e 1 @1044 ]
+"41317
+[v _IOCCP IOCCP `VEuc  1 e 1 @1045 ]
+"41379
+[v _IOCCN IOCCN `VEuc  1 e 1 @1046 ]
+"41441
+[v _IOCCF IOCCF `VEuc  1 e 1 @1047 ]
+[s S1096 . 1 `uc 1 IOCCF0 1 0 :1:0 
+`uc 1 IOCCF1 1 0 :1:1 
+`uc 1 IOCCF2 1 0 :1:2 
+`uc 1 IOCCF3 1 0 :1:3 
+`uc 1 IOCCF4 1 0 :1:4 
+`uc 1 IOCCF5 1 0 :1:5 
+`uc 1 IOCCF6 1 0 :1:6 
+`uc 1 IOCCF7 1 0 :1:7 
+]
+"41458
+[u S1105 . 1 `S1096 1 . 1 0 ]
+"41458
+"41458
+[v _IOCCFbits IOCCFbits `VES1105  1 e 1 @1047 ]
+"41503
+[v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
+"41565
+[v _WPUD WPUD `VEuc  1 e 1 @1049 ]
+"41627
+[v _ODCOND ODCOND `VEuc  1 e 1 @1050 ]
+"41689
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @1051 ]
+"41751
+[v _INLVLD INLVLD `VEuc  1 e 1 @1052 ]
+"41813
+[v _ANSELE ANSELE `VEuc  1 e 1 @1056 ]
+"41845
+[v _WPUE WPUE `VEuc  1 e 1 @1057 ]
+"41883
+[v _ODCONE ODCONE `VEuc  1 e 1 @1058 ]
+"41915
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @1059 ]
+"41947
+[v _INLVLE INLVLE `VEuc  1 e 1 @1060 ]
+"41985
+[v _IOCEP IOCEP `VEuc  1 e 1 @1061 ]
+"42006
+[v _IOCEN IOCEN `VEuc  1 e 1 @1062 ]
+"42027
+[v _IOCEF IOCEF `VEuc  1 e 1 @1063 ]
+"42048
+[v _ANSELF ANSELF `VEuc  1 e 1 @1064 ]
+"42110
+[v _WPUF WPUF `VEuc  1 e 1 @1065 ]
+"42172
+[v _ODCONF ODCONF `VEuc  1 e 1 @1066 ]
+"42234
+[v _SLRCONF SLRCONF `VEuc  1 e 1 @1067 ]
+"42296
+[v _INLVLF INLVLF `VEuc  1 e 1 @1068 ]
+"45426
+[v _PWM1ERS PWM1ERS `VEuc  1 e 1 @1120 ]
+"45496
+[v _PWM1CLK PWM1CLK `VEuc  1 e 1 @1121 ]
+"45566
+[v _PWM1LDS PWM1LDS `VEuc  1 e 1 @1122 ]
+"45643
+[v _PWM1PRL PWM1PRL `VEuc  1 e 1 @1123 ]
+"45663
+[v _PWM1PRH PWM1PRH `VEuc  1 e 1 @1124 ]
+"45683
+[v _PWM1CPRE PWM1CPRE `VEuc  1 e 1 @1125 ]
+"45703
+[v _PWM1PIPOS PWM1PIPOS `VEuc  1 e 1 @1126 ]
+"45723
+[v _PWM1GIR PWM1GIR `VEuc  1 e 1 @1127 ]
+[s S66 . 1 `uc 1 S1P1IF 1 0 :1:0 
+`uc 1 S1P2IF 1 0 :1:1 
+]
+"45734
+[u S69 . 1 `S66 1 . 1 0 ]
+"45734
+"45734
+[v _PWM1GIRbits PWM1GIRbits `VES69  1 e 1 @1127 ]
+"45749
+[v _PWM1GIE PWM1GIE `VEuc  1 e 1 @1128 ]
+[s S140 . 1 `uc 1 S1P1IE 1 0 :1:0 
+`uc 1 S1P2IE 1 0 :1:1 
+]
+"45760
+[u S143 . 1 `S140 1 . 1 0 ]
+"45760
+"45760
+[v _PWM1GIEbits PWM1GIEbits `VES143  1 e 1 @1128 ]
+"45775
+[v _PWM1CON PWM1CON `VEuc  1 e 1 @1129 ]
+[s S125 . 1 `uc 1 ERSNOW 1 0 :1:0 
+`uc 1 ERSPOL 1 0 :1:1 
+`uc 1 LD 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 EN 1 0 :1:7 
+]
+"45789
+[u S131 . 1 `S125 1 . 1 0 ]
+"45789
+"45789
+[v _PWM1CONbits PWM1CONbits `VES131  1 e 1 @1129 ]
+"45814
+[v _PWM1S1CFG PWM1S1CFG `VEuc  1 e 1 @1130 ]
+"45880
+[v _PWM1S1P1L PWM1S1P1L `VEuc  1 e 1 @1131 ]
+"45900
+[v _PWM1S1P1H PWM1S1P1H `VEuc  1 e 1 @1132 ]
+"45927
+[v _PWM1S1P2L PWM1S1P2L `VEuc  1 e 1 @1133 ]
+"45947
+[v _PWM1S1P2H PWM1S1P2H `VEuc  1 e 1 @1134 ]
+"45967
+[v _PWM2ERS PWM2ERS `VEuc  1 e 1 @1135 ]
+"46037
+[v _PWM2CLK PWM2CLK `VEuc  1 e 1 @1136 ]
+"46107
+[v _PWM2LDS PWM2LDS `VEuc  1 e 1 @1137 ]
+"46184
+[v _PWM2PRL PWM2PRL `VEuc  1 e 1 @1138 ]
+"46204
+[v _PWM2PRH PWM2PRH `VEuc  1 e 1 @1139 ]
+"46224
+[v _PWM2CPRE PWM2CPRE `VEuc  1 e 1 @1140 ]
+"46244
+[v _PWM2PIPOS PWM2PIPOS `VEuc  1 e 1 @1141 ]
+"46264
+[v _PWM2GIR PWM2GIR `VEuc  1 e 1 @1142 ]
+"46275
+"46275
+[v _PWM2GIRbits PWM2GIRbits `VES69  1 e 1 @1142 ]
+"46290
+[v _PWM2GIE PWM2GIE `VEuc  1 e 1 @1143 ]
+"46301
+"46301
+[v _PWM2GIEbits PWM2GIEbits `VES143  1 e 1 @1143 ]
+"46316
+[v _PWM2CON PWM2CON `VEuc  1 e 1 @1144 ]
+"46330
+"46330
+[v _PWM2CONbits PWM2CONbits `VES131  1 e 1 @1144 ]
+"46355
+[v _PWM2S1CFG PWM2S1CFG `VEuc  1 e 1 @1145 ]
+"46421
+[v _PWM2S1P1L PWM2S1P1L `VEuc  1 e 1 @1146 ]
+"46441
+[v _PWM2S1P1H PWM2S1P1H `VEuc  1 e 1 @1147 ]
+"46468
+[v _PWM2S1P2L PWM2S1P2L `VEuc  1 e 1 @1148 ]
+"46488
+[v _PWM2S1P2H PWM2S1P2H `VEuc  1 e 1 @1149 ]
+"46508
+[v _PWM3ERS PWM3ERS `VEuc  1 e 1 @1150 ]
+"46578
+[v _PWM3CLK PWM3CLK `VEuc  1 e 1 @1151 ]
+"46648
+[v _PWM3LDS PWM3LDS `VEuc  1 e 1 @1152 ]
+"46725
+[v _PWM3PRL PWM3PRL `VEuc  1 e 1 @1153 ]
+"46745
+[v _PWM3PRH PWM3PRH `VEuc  1 e 1 @1154 ]
+"46765
+[v _PWM3CPRE PWM3CPRE `VEuc  1 e 1 @1155 ]
+"46785
+[v _PWM3PIPOS PWM3PIPOS `VEuc  1 e 1 @1156 ]
+"46805
+[v _PWM3GIR PWM3GIR `VEuc  1 e 1 @1157 ]
+"46816
+"46816
+[v _PWM3GIRbits PWM3GIRbits `VES69  1 e 1 @1157 ]
+"46831
+[v _PWM3GIE PWM3GIE `VEuc  1 e 1 @1158 ]
+"46842
+"46842
+[v _PWM3GIEbits PWM3GIEbits `VES143  1 e 1 @1158 ]
+"46857
+[v _PWM3CON PWM3CON `VEuc  1 e 1 @1159 ]
+"46871
+"46871
+[v _PWM3CONbits PWM3CONbits `VES131  1 e 1 @1159 ]
+"46896
+[v _PWM3S1CFG PWM3S1CFG `VEuc  1 e 1 @1160 ]
+"46962
+[v _PWM3S1P1L PWM3S1P1L `VEuc  1 e 1 @1161 ]
+"46982
+[v _PWM3S1P1H PWM3S1P1H `VEuc  1 e 1 @1162 ]
+"47009
+[v _PWM3S1P2L PWM3S1P2L `VEuc  1 e 1 @1163 ]
+"47029
+[v _PWM3S1P2H PWM3S1P2H `VEuc  1 e 1 @1164 ]
+[s S1075 . 1 `uc 1 SWIE 1 0 :1:0 
+`uc 1 HLVDIE 1 0 :1:1 
+`uc 1 OSFIE 1 0 :1:2 
+`uc 1 CSWIE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 CLC1IE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 IOCIE 1 0 :1:7 
+]
+"47130
+[u S1084 . 1 `S1075 1 . 1 0 ]
+"47130
+"47130
+[v _PIE0bits PIE0bits `VES1084  1 e 1 @1182 ]
+[s S710 . 1 `uc 1 SPI1RXIE 1 0 :1:0 
+`uc 1 SPI1TXIE 1 0 :1:1 
+`uc 1 SPI1IE 1 0 :1:2 
+`uc 1 TMR2IE 1 0 :1:3 
+`uc 1 TMR1IE 1 0 :1:4 
+`uc 1 TMR1GIE 1 0 :1:5 
+`uc 1 CCP1IE 1 0 :1:6 
+`uc 1 TMR0IE 1 0 :1:7 
+]
+"47289
+[u S719 . 1 `S710 1 . 1 0 ]
+"47289
+"47289
+[v _PIE3bits PIE3bits `VES719  1 e 1 @1185 ]
+[s S75 . 1 `uc 1 U1RXIE 1 0 :1:0 
+`uc 1 U1TXIE 1 0 :1:1 
+`uc 1 U1EIE 1 0 :1:2 
+`uc 1 U1IE 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 PWM1PIE 1 0 :1:6 
+`uc 1 PWM1IE 1 0 :1:7 
+]
+"47350
+[u S83 . 1 `S75 1 . 1 0 ]
+"47350
+"47350
+[v _PIE4bits PIE4bits `VES83  1 e 1 @1186 ]
+[s S256 . 1 `uc 1 SPI2RXIE 1 0 :1:0 
+`uc 1 SPI2TXIE 1 0 :1:1 
+`uc 1 SPI2IE 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 TMR3IE 1 0 :1:4 
+`uc 1 TMR3GIE 1 0 :1:5 
+`uc 1 PWM2PIE 1 0 :1:6 
+`uc 1 PWM2IE 1 0 :1:7 
+]
+"47402
+[u S265 . 1 `S256 1 . 1 0 ]
+"47402
+"47402
+[v _PIE5bits PIE5bits `VES265  1 e 1 @1187 ]
+[s S440 . 1 `uc 1 I2C1RXIE 1 0 :1:0 
+`uc 1 I2C1TXIE 1 0 :1:1 
+`uc 1 I2C1IE 1 0 :1:2 
+`uc 1 I2C1EIE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 CLC3IE 1 0 :1:5 
+`uc 1 PWM3PIE 1 0 :1:6 
+`uc 1 PWM3IE 1 0 :1:7 
+]
+"47521
+[u S449 . 1 `S440 1 . 1 0 ]
+"47521
+"47521
+[v _PIE7bits PIE7bits `VES449  1 e 1 @1189 ]
+[s S1312 . 1 `uc 1 SWIF 1 0 :1:0 
+`uc 1 HLVDIF 1 0 :1:1 
+`uc 1 OSFIF 1 0 :1:2 
+`uc 1 CSWIF 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 CLC1IF 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 IOCIF 1 0 :1:7 
+]
+"48004
+[u S1321 . 1 `S1312 1 . 1 0 ]
+"48004
+"48004
+[v _PIR0bits PIR0bits `VES1321  1 e 1 @1198 ]
+[s S1207 . 1 `uc 1 INT0IF 1 0 :1:0 
+`uc 1 ZCDIF 1 0 :1:1 
+`uc 1 ADIF 1 0 :1:2 
+`uc 1 ACTIF 1 0 :1:3 
+`uc 1 C1IF 1 0 :1:4 
+`uc 1 SMT1IF 1 0 :1:5 
+`uc 1 SMT1PRAIF 1 0 :1:6 
+`uc 1 SMT1PWAIF 1 0 :1:7 
+]
+"48056
+[u S1216 . 1 `S1207 1 . 1 0 ]
+"48056
+"48056
+[v _PIR1bits PIR1bits `VES1216  1 e 1 @1199 ]
+[s S868 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
+`uc 1 SPI1TXIF 1 0 :1:1 
+`uc 1 SPI1IF 1 0 :1:2 
+`uc 1 TMR2IF 1 0 :1:3 
+`uc 1 TMR1IF 1 0 :1:4 
+`uc 1 TMR1GIF 1 0 :1:5 
+`uc 1 CCP1IF 1 0 :1:6 
+`uc 1 TMR0IF 1 0 :1:7 
+]
+"48163
+[u S877 . 1 `S868 1 . 1 0 ]
+"48163
+"48163
+[v _PIR3bits PIR3bits `VES877  1 e 1 @1201 ]
+[s S47 . 1 `uc 1 U1RXIF 1 0 :1:0 
+`uc 1 U1TXIF 1 0 :1:1 
+`uc 1 U1EIF 1 0 :1:2 
+`uc 1 U1IF 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 PWM1PIF 1 0 :1:6 
+`uc 1 PWM1IF 1 0 :1:7 
+]
+"48224
+[u S55 . 1 `S47 1 . 1 0 ]
+"48224
+"48224
+[v _PIR4bits PIR4bits `VES55  1 e 1 @1202 ]
+[s S226 . 1 `uc 1 SPI2RXIF 1 0 :1:0 
+`uc 1 SPI2TXIF 1 0 :1:1 
+`uc 1 SPI2IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 TMR3IF 1 0 :1:4 
+`uc 1 TMR3GIF 1 0 :1:5 
+`uc 1 PWM2PIF 1 0 :1:6 
+`uc 1 PWM2IF 1 0 :1:7 
+]
+"48276
+[u S235 . 1 `S226 1 . 1 0 ]
+"48276
+"48276
+[v _PIR5bits PIR5bits `VES235  1 e 1 @1203 ]
+[s S1238 . 1 `uc 1 INT1IF 1 0 :1:0 
+`uc 1 CLC2IF 1 0 :1:1 
+`uc 1 CWG1IF 1 0 :1:2 
+`uc 1 NCO1IF 1 0 :1:3 
+`uc 1 DMA2SCNTIF 1 0 :1:4 
+`uc 1 DMA2DCNTIF 1 0 :1:5 
+`uc 1 DMA2ORIF 1 0 :1:6 
+`uc 1 DMA2AIF 1 0 :1:7 
+]
+"48333
+[u S1247 . 1 `S1238 1 . 1 0 ]
+"48333
+"48333
+[v _PIR6bits PIR6bits `VES1247  1 e 1 @1204 ]
+[s S410 . 1 `uc 1 I2C1RXIF 1 0 :1:0 
+`uc 1 I2C1TXIF 1 0 :1:1 
+`uc 1 I2C1IF 1 0 :1:2 
+`uc 1 I2C1EIF 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 CLC3IF 1 0 :1:5 
+`uc 1 PWM3PIF 1 0 :1:6 
+`uc 1 PWM3IF 1 0 :1:7 
+]
+"48395
+[u S419 . 1 `S410 1 . 1 0 ]
+"48395
+"48395
+[v _PIR7bits PIR7bits `VES419  1 e 1 @1205 ]
+[s S1269 . 1 `uc 1 INT2IF 1 0 :1:0 
+`uc 1 CLC5IF 1 0 :1:1 
+`uc 1 CWG2IF 1 0 :1:2 
+`uc 1 NCO2IF 1 0 :1:3 
+`uc 1 DMA3SCNTIF 1 0 :1:4 
+`uc 1 DMA3DCNTIF 1 0 :1:5 
+`uc 1 DMA3ORIF 1 0 :1:6 
+`uc 1 DMA3AIF 1 0 :1:7 
+]
+"48559
+[u S1278 . 1 `S1269 1 . 1 0 ]
+"48559
+"48559
+[v _PIR10bits PIR10bits `VES1278  1 e 1 @1208 ]
+"48861
+[v _LATA LATA `VEuc  1 e 1 @1214 ]
+"48923
+[v _LATB LATB `VEuc  1 e 1 @1215 ]
+"48985
+[v _LATC LATC `VEuc  1 e 1 @1216 ]
+[s S2317 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"49002
+[u S2326 . 1 `S2317 1 . 1 0 ]
+"49002
+"49002
+[v _LATCbits LATCbits `VES2326  1 e 1 @1216 ]
+"49047
+[v _LATD LATD `VEuc  1 e 1 @1217 ]
+"49109
+[v _LATE LATE `VEuc  1 e 1 @1218 ]
+"49141
+[v _LATF LATF `VEuc  1 e 1 @1219 ]
+"49203
+[v _TRISA TRISA `VEuc  1 e 1 @1222 ]
+"49265
+[v _TRISB TRISB `VEuc  1 e 1 @1223 ]
+"49327
+[v _TRISC TRISC `VEuc  1 e 1 @1224 ]
+[s S804 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"49344
+[u S813 . 1 `S804 1 . 1 0 ]
+"49344
+"49344
+[v _TRISCbits TRISCbits `VES813  1 e 1 @1224 ]
+"49389
+[v _TRISD TRISD `VEuc  1 e 1 @1225 ]
+"49451
+[v _TRISE TRISE `VEuc  1 e 1 @1226 ]
+"49483
+[v _TRISF TRISF `VEuc  1 e 1 @1227 ]
+[s S1181 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"49913
+[s S1189 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+"49913
+[u S1192 . 1 `S1181 1 . 1 0 `S1189 1 . 1 0 ]
+"49913
+"49913
+[v _INTCON0bits INTCON0bits `VES1192  1 e 1 @1238 ]
+"3 /opt/microchip/xc8/v2.50/pic/sources/c99/common/errno.c
+[v _errno errno `i  1 e 2 0 ]
+"7 /opt/microchip/xc8/v2.50/pic/sources/c99/common/expand_heap.c
+[v ___heap_hi __heap_hi `[0]uc  1 e 0 0 ]
+[v ___heap_lo __heap_lo `[0]uc  1 e 0 0 ]
+"12
+[v _brkp brkp `*.39uc  1 s 2 brkp ]
+"17 /opt/microchip/xc8/v2.50/pic/sources/c99/common/lite_free.c
+[u S3398 . 2 `*.39S3400 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S3400 chunk 4 `ui 1 size 2 0 `S3398 1 . 2 2 ]
+[v ___freelist __freelist `*.39S3400  1 e 2 0 ]
+"16 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+[v _current_state current_state `E36  1 s 1 current_state ]
+[v _next_state next_state `E36  1 s 1 next_state ]
+[v _previous_state previous_state `E36  1 s 1 previous_state ]
+"17
+[v _arm_mode arm_mode `E51  1 s 1 arm_mode ]
+"18
+[v _target_boat target_boat `uc  1 s 1 target_boat ]
+"19
+[v _target_x target_x `uc  1 s 1 target_x ]
+[v _target_y target_y `uc  1 s 1 target_y ]
+"20
+[v _target_orientation target_orientation `uc  1 s 1 target_orientation ]
+"21
+[v _process_fsm process_fsm `VEa  1 s 1 process_fsm ]
+"22
+[v _state_done state_done `VEa  1 s 1 state_done ]
+"23
+[v _delay_done delay_done `VEa  1 s 1 delay_done ]
+"51 /home/aevern/Documents/KULeuven/robot_arm_nrf/audio.c
+[v _index index `VEus  1 e 2 0 ]
+[s S2839 . 4 `[4]uc 1 angles 4 0 ]
+"13 /home/aevern/Documents/KULeuven/robot_arm_nrf/boat_control.c
+[v _docking_positions docking_positions `C[4]S2839  1 e 16 0 ]
+"20
+[v _docking_up docking_up `C[4]S2839  1 e 16 0 ]
+[s S2849 . 6 `[4]uc 1 angles 4 0 `uc 1 angle_h 1 4 `uc 1 angle_v 1 5 ]
+"10 /home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+[v _grid_angles grid_angles `C[5][5]S2849  1 e 150 0 ]
+"32
+[v _grid_angles_up grid_angles_up `C[5][5]S2849  1 e 150 0 ]
+"25 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+[v _buf buf `[32]uc  1 e 32 0 ]
+"26
+[v _nrf_flag nrf_flag `a  1 e 1 0 ]
+"43 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+[v _PWM1_16BIT_Slice1Output1_InterruptHandler PWM1_16BIT_Slice1Output1_InterruptHandler `*.38(v  1 s 3 PWM1_16BIT_Slice1Output1_InterruptHandler ]
+"44
+[v _PWM1_16BIT_Slice1Output2_InterruptHandler PWM1_16BIT_Slice1Output2_InterruptHandler `*.38(v  1 s 3 PWM1_16BIT_Slice1Output2_InterruptHandler ]
+"45
+[v _PWM1_16BIT_Period_InterruptHandler PWM1_16BIT_Period_InterruptHandler `*.38(v  1 s 3 PWM1_16BIT_Period_InterruptHandler ]
+"43 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+[v _PWM2_16BIT_Slice1Output1_InterruptHandler PWM2_16BIT_Slice1Output1_InterruptHandler `*.38(v  1 s 3 PWM2_16BIT_Slice1Output1_InterruptHandler ]
+"44
+[v _PWM2_16BIT_Slice1Output2_InterruptHandler PWM2_16BIT_Slice1Output2_InterruptHandler `*.38(v  1 s 3 PWM2_16BIT_Slice1Output2_InterruptHandler ]
+"45
+[v _PWM2_16BIT_Period_InterruptHandler PWM2_16BIT_Period_InterruptHandler `*.38(v  1 s 3 PWM2_16BIT_Period_InterruptHandler ]
+"43 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+[v _PWM3_16BIT_Slice1Output1_InterruptHandler PWM3_16BIT_Slice1Output1_InterruptHandler `*.38(v  1 s 3 PWM3_16BIT_Slice1Output1_InterruptHandler ]
+"44
+[v _PWM3_16BIT_Slice1Output2_InterruptHandler PWM3_16BIT_Slice1Output2_InterruptHandler `*.38(v  1 s 3 PWM3_16BIT_Slice1Output2_InterruptHandler ]
+"45
+[v _PWM3_16BIT_Period_InterruptHandler PWM3_16BIT_Period_InterruptHandler `*.38(v  1 s 3 PWM3_16BIT_Period_InterruptHandler ]
+[s S704 . 5 `uc 1 con0 1 0 `uc 1 con1 1 1 `uc 1 con2 1 2 `uc 1 baud 1 3 `uc 1 clksel 1 4 ]
+"63 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+[v _spi1_configuration spi1_configuration `C[3]S704  1 s 15 spi1_configuration ]
+"38 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+[v _INT0_InterruptHandler INT0_InterruptHandler `*.38(v  1 e 3 0 ]
+"39
+[v _INT1_InterruptHandler INT1_InterruptHandler `*.38(v  1 e 3 0 ]
+"40
+[v _INT2_InterruptHandler INT2_InterruptHandler `*.38(v  1 e 3 0 ]
+"37 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+[v _nRF24_IRQ_InterruptHandler nRF24_IRQ_InterruptHandler `*.38(v  1 e 3 0 ]
+"38 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+[v _tmr0PeriodCount tmr0PeriodCount `VEus  1 s 2 tmr0PeriodCount ]
+"39
+[v _TMR0_OverflowCallback TMR0_OverflowCallback `*.38(v  1 s 3 TMR0_OverflowCallback ]
+"43 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEus  1 s 2 timer1ReloadVal ]
+"44
+[v _TMR1_OverflowCallback TMR1_OverflowCallback `*.38(v  1 s 3 TMR1_OverflowCallback ]
+"45
+[v _TMR1_GateCallback TMR1_GateCallback `*.38(v  1 s 3 TMR1_GateCallback ]
+"50 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+[v _TMR2_OverflowCallback TMR2_OverflowCallback `*.38(v  1 s 3 TMR2_OverflowCallback ]
+"67 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+[v _rf24_datarates rf24_datarates `[3][8]uc  1 e 24 0 ]
+"68
+[v _rf24_crclength rf24_crclength `C[3][10]uc  1 e 30 0 ]
+"69
+[v _rf24_pa_dbm rf24_pa_dbm `[4][8]uc  1 e 32 0 ]
+[s S2666 . 4 `us 1 currAngle 2 0 `us 1 nextAngle 2 2 ]
+"5 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+[v _servos servos `[4]S2666  1 e 16 0 ]
+"204 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"240
+} 0
+"46
+[v _slave slave `(v  1 e 1 0 ]
+{
+[s S2226 . 13 `[8]uc 1 message_type 8 0 `uc 1 ship_id 1 8 `uc 1 row 1 9 `uc 1 col 1 10 `uc 1 horizontal 1 11 `uc 1 place 1 12 ]
+"89
+[v slave@rob rob `S2226  1 a 13 2 ]
+[s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
+"47
+[v slave@dev dev `S2144  1 a 3 15 ]
+"52
+[v slave@ret ret `i  1 a 2 0 ]
+"46
+[v slave@pvParameters pvParameters `*.39v  1 p 2 52 ]
+"101
+} 0
+"3 /opt/microchip/xc8/v2.50/pic/sources/c99/common/strncmp.c
+[v _strncmp strncmp `(i  1 e 2 0 ]
+{
+[v strncmp@l l `*.39Cuc  1 p 2 18 ]
+[v strncmp@r r `*.32Cuc  1 p 2 20 ]
+[v strncmp@n n `ui  1 p 2 22 ]
+"8
+} 0
+"4 /home/aevern/Documents/KULeuven/robot_arm_nrf/message_parser.c
+[v _parse_robot_message parse_robot_message `(a  1 e 1 0 ]
+{
+[v parse_robot_message@raw_data raw_data `*.39Cuc  1 p 2 29 ]
+[s S2226 . 13 `[8]uc 1 message_type 8 0 `uc 1 ship_id 1 8 `uc 1 row 1 9 `uc 1 col 1 10 `uc 1 horizontal 1 11 `uc 1 place 1 12 ]
+[v parse_robot_message@out out `*.39S2226  1 p 2 31 ]
+"17
+} 0
+"4 /opt/microchip/xc8/v2.50/pic/sources/c99/common/memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 3 0 ]
+{
+"8
+[v memcpy@s s `*.39Cuc  1 a 2 27 ]
+"7
+[v memcpy@d d `*.39uc  1 a 2 25 ]
+"9
+[v memcpy@tmp tmp `uc  1 a 1 24 ]
+"4
+[v memcpy@d1 d1 `*.39v  1 p 2 18 ]
+[v memcpy@s1 s1 `*.39Cv  1 p 2 20 ]
+[v memcpy@n n `ui  1 p 2 22 ]
+"18
+} 0
+"62 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+[v _enablePWM enablePWM `(v  1 e 1 0 ]
+{
+"67
+} 0
+"121 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+[v _PWM3_16BIT_Enable PWM3_16BIT_Enable `(v  1 e 1 0 ]
+{
+"124
+} 0
+"121 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+[v _PWM2_16BIT_Enable PWM2_16BIT_Enable `(v  1 e 1 0 ]
+{
+"124
+} 0
+"61 /home/aevern/Documents/KULeuven/robot_arm_nrf/audio.c
+[v _audio_init audio_init `(i  1 e 2 0 ]
+{
+"70
+} 0
+"16 /opt/microchip/xc8/v2.50/pic/sources/c99/common/lite_malloc.c
+[v _malloc malloc `(*.39v  1 e 3 0 ]
+{
+"54
+[v malloc@sz sz `*.39ui  1 a 2 46 ]
+"42
+[v malloc@new new `*.39uc  1 a 2 50 ]
+"41
+[v malloc@m m `ui  1 a 2 44 ]
+"20
+[v malloc@p p `*.39v  1 a 2 48 ]
+"16
+[v malloc@n n `ui  1 p 2 39 ]
+"18
+[v malloc@cur cur `*.39uc  1 s 2 cur ]
+[v malloc@end end `*.39uc  1 s 2 end ]
+"19
+[v malloc@lock lock `VE[2]i  1 s 4 lock ]
+"63
+} 0
+"19 /opt/microchip/xc8/v2.50/pic/sources/c99/common/lite_free.c
+[v ___simple_search_fl __simple_search_fl `(*.39v  1 e 3 0 ]
+{
+"50
+[u S3398 . 2 `*.39S3400 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S3400 chunk 4 `ui 1 size 2 0 `S3398 1 . 2 2 ]
+[v ___simple_search_fl@split split `*.39S3400  1 a 2 29 ]
+"53
+[v ___simple_search_fl@remaining_size remaining_size `ui  1 a 2 25 ]
+"45
+[u S3398 . 2 `*.39S3400 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S3400 chunk 4 `ui 1 size 2 0 `S3398 1 . 2 2 ]
+[v ___simple_search_fl@next next `*.39S3400  1 a 2 33 ]
+"20
+[u S3398 . 2 `*.39S3400 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S3400 chunk 4 `ui 1 size 2 0 `S3398 1 . 2 2 ]
+[v ___simple_search_fl@best best `*.39S3400  1 a 2 37 ]
+"23
+[v ___simple_search_fl@c c `*.39S3400  1 a 2 35 ]
+"22
+[v ___simple_search_fl@last last `*.39S3400  1 a 2 31 ]
+"21
+[v ___simple_search_fl@best_last best_last `*.39S3400  1 a 2 27 ]
+"19
+[v ___simple_search_fl@n n `ui  1 p 2 18 ]
+"65
+} 0
+"14 /opt/microchip/xc8/v2.50/pic/sources/c99/common/expand_heap.c
+[v ___expand_heap __expand_heap `(*.39v  1 e 3 0 ]
+{
+"17
+[v ___expand_heap@new_brkp new_brkp `*.39uc  1 a 2 25 ]
+"16
+[v ___expand_heap@n n `ui  1 a 2 23 ]
+"14
+[v ___expand_heap@pn pn `*.39ui  1 p 2 18 ]
+"32
+} 0
+"101 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_Stop TMR1_Stop `(v  1 e 1 0 ]
+{
+"104
+} 0
+"192
+[v _TMR1_OverflowCallbackRegister TMR1_OverflowCallbackRegister `(v  1 e 1 0 ]
+{
+[v TMR1_OverflowCallbackRegister@CallbackHandler CallbackHandler `*.38(v  1 p 3 18 ]
+"195
+} 0
+"56 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+[v _arm_set_target arm_set_target `(v  1 e 1 0 ]
+{
+[v arm_set_target@boat_id boat_id `uc  1 p 1 wreg ]
+[v arm_set_target@boat_id boat_id `uc  1 p 1 wreg ]
+[v arm_set_target@x x `uc  1 p 1 20 ]
+[v arm_set_target@y y `uc  1 p 1 21 ]
+[v arm_set_target@is_vertical is_vertical `uc  1 p 1 22 ]
+[v arm_set_target@mode mode `E51  1 p 1 23 ]
+[v arm_set_target@boat_id boat_id `uc  1 p 1 24 ]
+"67
+} 0
+"34
+[v _set_magnet_strength set_magnet_strength `(v  1 e 1 0 ]
+{
+"54
+} 0
+"137 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+[v _PWM1_16BIT_SetSlice1Output1DutyCycleRegister PWM1_16BIT_SetSlice1Output1DutyCycleRegister `(v  1 e 1 0 ]
+{
+[v PWM1_16BIT_SetSlice1Output1DutyCycleRegister@registerValue registerValue `us  1 p 2 18 ]
+"141
+} 0
+"149
+[v _PWM1_16BIT_LoadBufferRegisters PWM1_16BIT_LoadBufferRegisters `(v  1 e 1 0 ]
+{
+"153
+} 0
+"86 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+[v _arm_fsm_update arm_fsm_update `(v  1 e 1 0 ]
+{
+"231
+[v arm_fsm_update@idle_angles idle_angles `[4]uc  1 a 4 0 ]
+"202
+[v arm_fsm_update@angles_2834 angles `[4]uc  1 a 4 8 ]
+"181
+[v arm_fsm_update@angles_2833 angles `[4]uc  1 a 4 4 ]
+"174
+[v arm_fsm_update@angles_2832 angles `[4]us  1 a 8 40 ]
+"166
+[v arm_fsm_update@moveup_angles_2830 moveup_angles `[4]us  1 a 8 32 ]
+"148
+[v arm_fsm_update@moveup_angles_2828 moveup_angles `[4]us  1 a 8 24 ]
+"127
+[v arm_fsm_update@angles_2826 angles `*.32Cuc  1 a 2 14 ]
+"114
+[v arm_fsm_update@angles angles `*.32Cuc  1 a 2 12 ]
+"93
+[v arm_fsm_update@moveup_angles moveup_angles `[4]us  1 a 8 16 ]
+"230
+[v arm_fsm_update@F297 F297 `[4]uc  1 s 4 F297 ]
+"244
+} 0
+"78
+[v _start_fsm_delay start_fsm_delay `(v  1 e 1 0 ]
+{
+"83
+} 0
+"79 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_Start TMR0_Start `(v  1 e 1 0 ]
+{
+"82
+} 0
+"86 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+[v _servoMovement servoMovement `(a  1 e 1 0 ]
+{
+"87
+[v servoMovement@i i `i  1 a 2 26 ]
+"93
+} 0
+"77
+[v _move_servo_to_int move_servo_to_int `(v  1 e 1 0 ]
+{
+"79
+[v move_servo_to_int@i i `uc  1 a 1 22 ]
+"77
+[v move_servo_to_int@intAngles intAngles `*.39Cus  1 p 2 18 ]
+"83
+} 0
+"69
+[v _move_servo_to_angles move_servo_to_angles `(v  1 e 1 0 ]
+{
+"71
+[v move_servo_to_angles@i i `uc  1 a 1 27 ]
+"69
+[v move_servo_to_angles@angles angles `*.34Cuc  1 p 2 23 ]
+"75
+} 0
+"54 /home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+[v _get_grid_servo_angles get_grid_servo_angles `(*.32Cuc  1 e 3 0 ]
+{
+[v get_grid_servo_angles@x x `uc  1 p 1 wreg ]
+[v get_grid_servo_angles@x x `uc  1 p 1 wreg ]
+[v get_grid_servo_angles@y y `uc  1 p 1 18 ]
+[v get_grid_servo_angles@x x `uc  1 p 1 25 ]
+"58
+} 0
+"31 /home/aevern/Documents/KULeuven/robot_arm_nrf/boat_control.c
+[v _get_docking_servo_angles_up get_docking_servo_angles_up `(*.32Cuc  1 e 3 0 ]
+{
+[v get_docking_servo_angles_up@boat_id boat_id `uc  1 p 1 wreg ]
+[v get_docking_servo_angles_up@boat_id boat_id `uc  1 p 1 wreg ]
+[v get_docking_servo_angles_up@boat_id boat_id `uc  1 p 1 21 ]
+"33
+} 0
+"27
+[v _get_docking_servo_angles get_docking_servo_angles `(*.32Cuc  1 e 3 0 ]
+{
+[v get_docking_servo_angles@boat_id boat_id `uc  1 p 1 wreg ]
+[v get_docking_servo_angles@boat_id boat_id `uc  1 p 1 wreg ]
+[v get_docking_servo_angles@boat_id boat_id `uc  1 p 1 21 ]
+"29
+} 0
+"60 /home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
+[v _get_dependent_servo_angle get_dependent_servo_angle `(uc  1 e 1 0 ]
+{
+[v get_dependent_servo_angle@x x `uc  1 p 1 wreg ]
+[v get_dependent_servo_angle@x x `uc  1 p 1 wreg ]
+[v get_dependent_servo_angle@y y `uc  1 p 1 18 ]
+[v get_dependent_servo_angle@is_vertical is_vertical `uc  1 p 1 19 ]
+[v get_dependent_servo_angle@x x `uc  1 p 1 28 ]
+"65
+} 0
+"76
+[v _get_adjusted_servo_angles_up get_adjusted_servo_angles_up `(v  1 e 1 0 ]
+{
+[v get_adjusted_servo_angles_up@x x `uc  1 p 1 wreg ]
+"77
+[v get_adjusted_servo_angles_up@i i `i  1 a 2 31 ]
+"76
+[v get_adjusted_servo_angles_up@x x `uc  1 p 1 wreg ]
+[v get_adjusted_servo_angles_up@y y `uc  1 p 1 18 ]
+[v get_adjusted_servo_angles_up@is_vertical is_vertical `uc  1 p 1 19 ]
+[v get_adjusted_servo_angles_up@out_angles out_angles `*.39uc  1 p 2 20 ]
+[v get_adjusted_servo_angles_up@x x `uc  1 p 1 30 ]
+"83
+} 0
+"67
+[v _get_adjusted_servo_angles get_adjusted_servo_angles `(v  1 e 1 0 ]
+{
+[v get_adjusted_servo_angles@x x `uc  1 p 1 wreg ]
+"68
+[v get_adjusted_servo_angles@i i `i  1 a 2 31 ]
+"67
+[v get_adjusted_servo_angles@x x `uc  1 p 1 wreg ]
+[v get_adjusted_servo_angles@y y `uc  1 p 1 18 ]
+[v get_adjusted_servo_angles@is_vertical is_vertical `uc  1 p 1 19 ]
+[v get_adjusted_servo_angles@out_angles out_angles `*.39uc  1 p 2 20 ]
+[v get_adjusted_servo_angles@x x `uc  1 p 1 30 ]
+"74
+} 0
+"95 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+[v _getAngle getAngle `(us  1 e 2 0 ]
+{
+[v getAngle@i i `uc  1 p 1 wreg ]
+[v getAngle@i i `uc  1 p 1 wreg ]
+[v getAngle@i i `uc  1 p 1 20 ]
+"97
+} 0
+"30
+[v _enableMagnet enableMagnet `(v  1 e 1 0 ]
+{
+"33
+} 0
+"121 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+[v _PWM1_16BIT_Enable PWM1_16BIT_Enable `(v  1 e 1 0 ]
+{
+"124
+} 0
+"35 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+[v _disableMagnet disableMagnet `(v  1 e 1 0 ]
+{
+"38
+} 0
+"126 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+[v _PWM1_16BIT_Disable PWM1_16BIT_Disable `(v  1 e 1 0 ]
+{
+"129
+} 0
+"119 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+[v _TMR2_PeriodCountSet TMR2_PeriodCountSet `(v  1 e 1 0 ]
+{
+[v TMR2_PeriodCountSet@periodVal periodVal `ui  1 p 2 18 ]
+"122
+} 0
+"25 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+[v _arm_fsm_init arm_fsm_init `(v  1 e 1 0 ]
+{
+"32
+} 0
+"44 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+[v _initServo initServo `(v  1 e 1 0 ]
+{
+"60
+} 0
+"40
+[v _calculateAngle calculateAngle `(us  1 e 2 0 ]
+{
+[v calculateAngle@angleDeg angleDeg `uc  1 p 1 wreg ]
+[v calculateAngle@angleDeg angleDeg `uc  1 p 1 wreg ]
+[v calculateAngle@angleDeg angleDeg `uc  1 p 1 22 ]
+"42
+} 0
+"151 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
+{
+[v TMR0_OverflowCallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 18 ]
+"154
+} 0
+"94 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+{
+"98
+} 0
+"96 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_Start TMR1_Start `(v  1 e 1 0 ]
+{
+"99
+} 0
+"116 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+[v _Nrf24_setTADDR Nrf24_setTADDR `(i  1 e 2 0 ]
+{
+"123
+[v Nrf24_setTADDR@i i `i  1 a 2 42 ]
+"121
+[v Nrf24_setTADDR@buffer buffer `[5]uc  1 a 5 35 ]
+"118
+[v Nrf24_setTADDR@ret ret `i  1 a 2 40 ]
+[s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
+"116
+[v Nrf24_setTADDR@dev dev `*.39S2144  1 p 2 28 ]
+[v Nrf24_setTADDR@adr adr `*.32uc  1 p 2 30 ]
+"127
+} 0
+"103
+[v _Nrf24_setRADDR Nrf24_setRADDR `(i  1 e 2 0 ]
+{
+"109
+[v Nrf24_setRADDR@i i `i  1 a 2 42 ]
+"107
+[v Nrf24_setRADDR@buffer buffer `[5]uc  1 a 5 35 ]
+"105
+[v Nrf24_setRADDR@ret ret `i  1 a 2 40 ]
+[s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
+"103
+[v Nrf24_setRADDR@dev dev `*.39S2144  1 p 2 28 ]
+[v Nrf24_setRADDR@adr adr `*.32uc  1 p 2 30 ]
+"113
+} 0
+"219
+[v _Nrf24_writeRegister Nrf24_writeRegister `(v  1 e 1 0 ]
+{
+[v Nrf24_writeRegister@reg reg `uc  1 p 1 wreg ]
+[v Nrf24_writeRegister@reg reg `uc  1 p 1 wreg ]
+[v Nrf24_writeRegister@value value `*.32uc  1 p 2 24 ]
+[v Nrf24_writeRegister@len len `uc  1 p 1 26 ]
+"221
+[v Nrf24_writeRegister@reg reg `uc  1 p 1 27 ]
+"227
+} 0
+"55
+[v _SPI_write_buff SPI_write_buff `(v  1 e 1 0 ]
+{
+"57
+[v SPI_write_buff@i i `uc  1 a 1 23 ]
+"55
+[v SPI_write_buff@buffer buffer `*.32uc  1 p 2 20 ]
+[v SPI_write_buff@bytes bytes `uc  1 p 1 22 ]
+"64
+} 0
+"43 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
+[v _DELAY_microseconds DELAY_microseconds `(v  1 e 1 0 ]
+{
+[v DELAY_microseconds@microseconds microseconds `us  1 p 2 18 ]
+"54
+} 0
+"71 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+[v _Nrf24_init Nrf24_init `(v  1 e 1 0 ]
+{
+[s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
+[v Nrf24_init@dev dev `*.39S2144  1 p 2 19 ]
+"80
+} 0
+"91 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+[v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
+{
+[v SPI1_Open@spiConfigIndex spiConfigIndex `uc  1 p 1 wreg ]
+[v SPI1_Open@spiConfigIndex spiConfigIndex `uc  1 p 1 wreg ]
+"94
+[v SPI1_Open@spiConfigIndex spiConfigIndex `uc  1 p 1 18 ]
+"110
+} 0
+"181 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+[v _Nrf24_getData Nrf24_getData `(v  1 e 1 0 ]
+{
+[s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
+[v Nrf24_getData@dev dev `*.39S2144  1 p 2 24 ]
+[v Nrf24_getData@data data `*.39uc  1 p 2 26 ]
+"196
+} 0
+"159
+[v _Nrf24_dataReady Nrf24_dataReady `(a  1 e 1 0 ]
+{
+"161
+[v Nrf24_dataReady@status status `uc  1 a 1 33 ]
+[s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
+"159
+[v Nrf24_dataReady@dev dev `*.39S2144  1 p 2 31 ]
+"166
+} 0
+"90
+[v _Nrf24_config Nrf24_config `(v  1 e 1 0 ]
+{
+[s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
+[v Nrf24_config@dev dev `*.39S2144  1 p 2 31 ]
+[v Nrf24_config@channel channel `uc  1 p 1 33 ]
+[v Nrf24_config@payload payload `uc  1 p 1 34 ]
+"100
+} 0
+"304
+[v _Nrf24_powerUpRx Nrf24_powerUpRx `(v  1 e 1 0 ]
+{
+[s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
+[v Nrf24_powerUpRx@dev dev `*.39S2144  1 p 2 22 ]
+"310
+} 0
+"298
+[v _Nrf24_getStatus Nrf24_getStatus `(uc  1 e 1 0 ]
+{
+"299
+[v Nrf24_getStatus@rv rv `uc  1 a 1 30 ]
+[s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
+"298
+[v Nrf24_getStatus@dev dev `*.39S2144  1 p 2 28 ]
+"302
+} 0
+"312
+[v _Nrf24_flushRx Nrf24_flushRx `(v  1 e 1 0 ]
+{
+[s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
+[v Nrf24_flushRx@dev dev `*.39S2144  1 p 2 20 ]
+"317
+} 0
+"37 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
+[v _DELAY_milliseconds DELAY_milliseconds `(v  1 e 1 0 ]
+{
+[v DELAY_milliseconds@milliseconds milliseconds `us  1 p 2 18 ]
+"41
+} 0
+"28 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+[v _AdvancedSettings AdvancedSettings `(v  1 e 1 0 ]
+{
+[s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
+[v AdvancedSettings@dev dev `*.39S2144  1 p 2 32 ]
+"42
+} 0
+"365 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+[v _Nrf24_setRetransmitDelay Nrf24_setRetransmitDelay `(v  1 e 1 0 ]
+{
+"367
+[v Nrf24_setRetransmitDelay@value value `uc  1 a 1 31 ]
+[s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
+"365
+[v Nrf24_setRetransmitDelay@dev dev `*.39S2144  1 p 2 28 ]
+[v Nrf24_setRetransmitDelay@val val `uc  1 p 1 30 ]
+"372
+} 0
+"344
+[v _Nrf24_SetSpeedDataRates Nrf24_SetSpeedDataRates `(v  1 e 1 0 ]
+{
+"348
+[v Nrf24_SetSpeedDataRates@value value `uc  1 a 1 31 ]
+[s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
+"344
+[v Nrf24_SetSpeedDataRates@dev dev `*.39S2144  1 p 2 28 ]
+[v Nrf24_SetSpeedDataRates@val val `uc  1 p 1 30 ]
+"362
+} 0
+"208
+[v _Nrf24_readRegister Nrf24_readRegister `(v  1 e 1 0 ]
+{
+[v Nrf24_readRegister@reg reg `uc  1 p 1 wreg ]
+[v Nrf24_readRegister@reg reg `uc  1 p 1 wreg ]
+[v Nrf24_readRegister@value value `*.39uc  1 p 2 24 ]
+[v Nrf24_readRegister@len len `uc  1 p 1 26 ]
+"210
+[v Nrf24_readRegister@reg reg `uc  1 p 1 27 ]
+"216
+} 0
+"45
+[v _SPI_read_buff SPI_read_buff `(v  1 e 1 0 ]
+{
+"47
+[v SPI_read_buff@i i `uc  1 a 1 23 ]
+"45
+[v SPI_read_buff@buffer buffer `*.39uc  1 p 2 20 ]
+[v SPI_read_buff@bytes bytes `uc  1 p 1 22 ]
+"53
+} 0
+"199
+[v _Nrf24_configRegister Nrf24_configRegister `(v  1 e 1 0 ]
+{
+[v Nrf24_configRegister@reg reg `uc  1 p 1 wreg ]
+[v Nrf24_configRegister@reg reg `uc  1 p 1 wreg ]
+[v Nrf24_configRegister@value value `uc  1 p 1 20 ]
+"201
+[v Nrf24_configRegister@reg reg `uc  1 p 1 21 ]
+"205
+} 0
+"209 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+[v _SPI1_ByteExchange SPI1_ByteExchange `(uc  1 e 1 0 ]
+{
+[v SPI1_ByteExchange@byteData byteData `uc  1 p 1 wreg ]
+"211
+[v SPI1_ByteExchange@returnValue returnValue `uc  1 a 1 19 ]
+"209
+[v SPI1_ByteExchange@byteData byteData `uc  1 p 1 wreg ]
+"213
+[v SPI1_ByteExchange@byteData byteData `uc  1 p 1 18 ]
+"230
+} 0
+"100 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+[v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
+{
+"104
+} 0
+"84 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_Stop TMR0_Stop `(v  1 e 1 0 ]
+{
+"87
+} 0
+"38 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"51
+} 0
+"57 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"80
+} 0
+"134
+[v _TMR2_OverflowCallbackRegister TMR2_OverflowCallbackRegister `(v  1 e 1 0 ]
+{
+[v TMR2_OverflowCallbackRegister@InterruptHandler InterruptHandler `*.38(v  1 p 3 18 ]
+"137
+} 0
+"49 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"77
+} 0
+"46 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"64
+} 0
+"69 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+{
+"84
+} 0
+"50 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+[v _PWM3_16BIT_Initialize PWM3_16BIT_Initialize `(v  1 e 1 0 ]
+{
+"119
+} 0
+"194
+[v _PWM3_16BIT_Slice1Output2_SetInterruptHandler PWM3_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM3_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 18 ]
+"197
+} 0
+"189
+[v _PWM3_16BIT_Slice1Output1_SetInterruptHandler PWM3_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM3_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 18 ]
+"192
+} 0
+"199
+[v _PWM3_16BIT_Period_SetInterruptHandler PWM3_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM3_16BIT_Period_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 18 ]
+"202
+} 0
+"50 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+[v _PWM2_16BIT_Initialize PWM2_16BIT_Initialize `(v  1 e 1 0 ]
+{
+"119
+} 0
+"194
+[v _PWM2_16BIT_Slice1Output2_SetInterruptHandler PWM2_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM2_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 18 ]
+"197
+} 0
+"189
+[v _PWM2_16BIT_Slice1Output1_SetInterruptHandler PWM2_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM2_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 18 ]
+"192
+} 0
+"199
+[v _PWM2_16BIT_Period_SetInterruptHandler PWM2_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM2_16BIT_Period_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 18 ]
+"202
+} 0
+"50 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
+[v _PWM1_16BIT_Initialize PWM1_16BIT_Initialize `(v  1 e 1 0 ]
+{
+"119
+} 0
+"194
+[v _PWM1_16BIT_Slice1Output2_SetInterruptHandler PWM1_16BIT_Slice1Output2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM1_16BIT_Slice1Output2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 18 ]
+"197
+} 0
+"189
+[v _PWM1_16BIT_Slice1Output1_SetInterruptHandler PWM1_16BIT_Slice1Output1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM1_16BIT_Slice1Output1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 18 ]
+"192
+} 0
+"199
+[v _PWM1_16BIT_Period_SetInterruptHandler PWM1_16BIT_Period_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v PWM1_16BIT_Period_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 18 ]
+"202
+} 0
+"39 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"151
+} 0
+"180
+[v _nRF24_IRQ_SetInterruptHandler nRF24_IRQ_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v nRF24_IRQ_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 18 ]
+"182
+} 0
+"42 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"71
+} 0
+"175
+[v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 18 ]
+"177
+} 0
+"149
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 18 ]
+"151
+} 0
+"123
+[v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 18 ]
+"125
+} 0
+"44 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/dac/src/dac1.c
+[v _DAC1_Initialize DAC1_Initialize `(v  1 e 1 0 ]
+{
+"51
+} 0
+"39 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+{
+"58
+} 0
+"80 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
+{
+"103
+} 0
+"124 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+{
+"132
+} 0
+"139
+[v _TMR2_DefaultOverflowCallback TMR2_DefaultOverflowCallback `(v  1 s 1 TMR2_DefaultOverflowCallback ]
+{
+"143
+} 0
+"7 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
+[v _isrTim0 isrTim0 `(v  1 e 1 0 ]
+{
+"8
+[v isrTim0@i i `i  1 a 2 10 ]
+"28
+} 0
+"143 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm3_16bit.c
+[v _PWM3_16BIT_SetSlice1Output2DutyCycleRegister PWM3_16BIT_SetSlice1Output2DutyCycleRegister `(v  1 e 1 0 ]
+{
+[v PWM3_16BIT_SetSlice1Output2DutyCycleRegister@registerValue registerValue `us  1 p 2 0 ]
+"147
+} 0
+"137
+[v _PWM3_16BIT_SetSlice1Output1DutyCycleRegister PWM3_16BIT_SetSlice1Output1DutyCycleRegister `(v  1 e 1 0 ]
+{
+[v PWM3_16BIT_SetSlice1Output1DutyCycleRegister@registerValue registerValue `us  1 p 2 0 ]
+"141
+} 0
+"149
+[v _PWM3_16BIT_LoadBufferRegisters PWM3_16BIT_LoadBufferRegisters `(v  1 e 1 0 ]
+{
+"153
+} 0
+"143 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm2_16bit.c
+[v _PWM2_16BIT_SetSlice1Output2DutyCycleRegister PWM2_16BIT_SetSlice1Output2DutyCycleRegister `(v  1 e 1 0 ]
+{
+[v PWM2_16BIT_SetSlice1Output2DutyCycleRegister@registerValue registerValue `us  1 p 2 0 ]
+"147
+} 0
+"137
+[v _PWM2_16BIT_SetSlice1Output1DutyCycleRegister PWM2_16BIT_SetSlice1Output1DutyCycleRegister `(v  1 e 1 0 ]
+{
+[v PWM2_16BIT_SetSlice1Output1DutyCycleRegister@registerValue registerValue `us  1 p 2 0 ]
+"141
+} 0
+"149
+[v _PWM2_16BIT_LoadBufferRegisters PWM2_16BIT_LoadBufferRegisters `(v  1 e 1 0 ]
+{
+"153
+} 0
+"179 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_OverflowISR TMR1_OverflowISR `(v  1 e 1 0 ]
+{
+"190
+} 0
+"202
+[v _TMR1_DefaultOverflowCallback TMR1_DefaultOverflowCallback `(v  1 s 1 TMR1_DefaultOverflowCallback ]
+{
+"205
+} 0
+"52 /home/aevern/Documents/KULeuven/robot_arm_nrf/audio.c
+[v _tim_1_irs tim_1_irs `(v  1 e 1 0 ]
+{
+"59
+} 0
+"101 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr1.c
+[v i2_TMR1_Stop TMR1_Stop `(v  1 e 1 0 ]
+{
+"104
+} 0
+"120
+[v _TMR1_CounterSet TMR1_CounterSet `(v  1 e 1 0 ]
+{
+"124
+[v TMR1_CounterSet@onState onState `a  1 a 1 2 ]
+"120
+[v TMR1_CounterSet@timerVal timerVal `us  1 p 2 0 ]
+"136
+} 0
+"139 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+{
+"149
+} 0
+"156
+[v _TMR0_DefaultCallback TMR0_DefaultCallback `(v  1 s 1 TMR0_DefaultCallback ]
+{
+"159
+} 0
+"73 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+[v _delay delay `(v  1 e 1 0 ]
+{
+"76
+} 0
+"84 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
+[v i2_TMR0_Stop TMR0_Stop `(v  1 e 1 0 ]
+{
+"87
+} 0
+"153 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+{
+"160
+} 0
+"165
+[v _nRF24_IRQ_ISR nRF24_IRQ_ISR `(v  1 e 1 0 ]
+{
+"175
+} 0
+"187
+[v _nRF24_IRQ_DefaultInterruptHandler nRF24_IRQ_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"190
+} 0
+"179 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
+[v _nrf_irq nrf_irq `(v  1 e 1 0 ]
+{
+"181
+} 0

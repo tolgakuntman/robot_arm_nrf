@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/debug/robot_arm.X.debug.hex">
+  <executable name="dist/default/debug/robot_arm_nrf.debug.hex">
     <memory name="program">
       <units>bytes</units>
       <length>131072</length>
-      <used>5263</used>
-      <free>125809</free>
+      <used>25500</used>
+      <free>105572</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>8192</length>
-      <used>277</used>
-      <free>7915</free>
+      <used>345</used>
+      <free>7847</free>
     </memory>
   </executable>
 </project>
