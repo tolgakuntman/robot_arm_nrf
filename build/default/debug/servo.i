@@ -30260,8 +30260,8 @@ void initServo() {
     servos[1].nextAngle = calculateAngle(45);
 
 
-    servos[2].currAngle = calculateAngle(25);
-    servos[2].nextAngle = calculateAngle(25);
+    servos[2].currAngle = calculateAngle(28);
+    servos[2].nextAngle = calculateAngle(28);
 
 
     servos[3].currAngle = calculateAngle(45);

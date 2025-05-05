@@ -64,17 +64,17 @@ TMR2_UART5_RX_EDGE 34
 TMR2_UART5_TX_EDGE 35
 ]
 "91 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
-[e E18106 . `uc
+[e E18107 . `uc
 PLACE 0
 REMOVE 1
 ]
-"437 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+"441 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
 [e E17640 . `uc
 RF24_1MBPS 0
 RF24_2MBPS 1
 RF24_250KBPS 2
 ]
-"463
+"467
 [e E17645 . `uc
 RF24_CRC_DISABLED 0
 RF24_CRC_8 1
@@ -89,15 +89,16 @@ MAGNET_ON 3
 MOVE_UP_DOCK 4
 STILL 5
 ROTATE_BOARD 6
-BOAT_ROTATE 7
-MOVE_UP_BOARD 8
-PLACEMENT 9
-MAGNET_OFF 10
-WAIT 11
-RETURN 12
+BOAT_ROTATE_BOARD 7
+BOAT_ROTATE_DOCK 8
+MOVE_UP_BOARD 9
+PLACEMENT 10
+MAGNET_OFF 11
+WAIT 12
+RETURN 13
 ]
 "17
-[e E51 . `uc
+[e E52 . `uc
 PLACE 0
 REMOVE 1
 ]
@@ -141,15 +142,15 @@ REMOVE 1
 [v ___omul __omul `(uo  1 e 8 0 ]
 "25 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [v _arm_fsm_init arm_fsm_init `(v  1 e 1 0 ]
-"34
+"33
 [v _set_magnet_strength set_magnet_strength `(v  1 e 1 0 ]
-"56
+"55
 [v _arm_set_target arm_set_target `(v  1 e 1 0 ]
-"73
+"72
 [v _delay delay `(v  1 e 1 0 ]
-"78
+"77
 [v _start_fsm_delay start_fsm_delay `(v  1 e 1 0 ]
-"86
+"83
 [v _arm_fsm_update arm_fsm_update `(v  1 e 1 0 ]
 "52 /home/aevern/Documents/KULeuven/robot_arm_nrf/audio.c
 [v _tim_1_irs tim_1_irs `(v  1 e 1 0 ]
@@ -353,53 +354,53 @@ REMOVE 1
 [v _TMR2_DefaultOverflowCallback TMR2_DefaultOverflowCallback `(v  1 s 1 TMR2_DefaultOverflowCallback ]
 "4 /home/aevern/Documents/KULeuven/robot_arm_nrf/message_parser.c
 [v _parse_robot_message parse_robot_message `(a  1 e 1 0 ]
-"45 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+"49 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
 [v _SPI_read_buff SPI_read_buff `(v  1 e 1 0 ]
-"55
+"59
 [v _SPI_write_buff SPI_write_buff `(v  1 e 1 0 ]
-"71
+"75
 [v _Nrf24_init Nrf24_init `(v  1 e 1 0 ]
-"90
+"94
 [v _Nrf24_config Nrf24_config `(v  1 e 1 0 ]
-"103
+"107
 [v _Nrf24_setRADDR Nrf24_setRADDR `(i  1 e 2 0 ]
-"116
+"120
 [v _Nrf24_setTADDR Nrf24_setTADDR `(i  1 e 2 0 ]
-"159
+"163
 [v _Nrf24_dataReady Nrf24_dataReady `(a  1 e 1 0 ]
-"181
+"185
 [v _Nrf24_getData Nrf24_getData `(v  1 e 1 0 ]
-"199
+"203
 [v _Nrf24_configRegister Nrf24_configRegister `(v  1 e 1 0 ]
-"208
+"212
 [v _Nrf24_readRegister Nrf24_readRegister `(v  1 e 1 0 ]
-"219
+"223
 [v _Nrf24_writeRegister Nrf24_writeRegister `(v  1 e 1 0 ]
-"298
+"302
 [v _Nrf24_getStatus Nrf24_getStatus `(uc  1 e 1 0 ]
-"304
+"308
 [v _Nrf24_powerUpRx Nrf24_powerUpRx `(v  1 e 1 0 ]
-"312
+"316
 [v _Nrf24_flushRx Nrf24_flushRx `(v  1 e 1 0 ]
-"319
+"323
 [v _Nrf24_powerUpTx Nrf24_powerUpTx `(v  1 e 1 0 ]
-"344
+"348
 [v _Nrf24_SetSpeedDataRates Nrf24_SetSpeedDataRates `(v  1 e 1 0 ]
-"365
+"369
 [v _Nrf24_setRetransmitDelay Nrf24_setRetransmitDelay `(v  1 e 1 0 ]
-"402
+"406
 [v _Nrf24_print_status Nrf24_print_status `(v  1 e 1 0 ]
-"408
+"412
 [v _Nrf24_print_address_register Nrf24_print_address_register `(v  1 e 1 0 ]
-"424
+"428
 [v _Nrf24_print_byte_register Nrf24_print_byte_register `(v  1 e 1 0 ]
-"435
+"439
 [v _Nrf24_getDataRate Nrf24_getDataRate `(uc  1 e 1 0 ]
-"461
+"465
 [v _Nrf24_getCRCLength Nrf24_getCRCLength `(uc  1 e 1 0 ]
-"482
+"486
 [v _Nrf24_getPALevel Nrf24_getPALevel `(uc  1 e 1 0 ]
-"495
+"499
 [v _Nrf24_getRetransmitDelay Nrf24_getRetransmitDelay `(uc  1 e 1 0 ]
 "7 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
 [v _isrTim0 isrTim0 `(v  1 e 1 0 ]
@@ -1240,15 +1241,15 @@ REMOVE 1
 "12
 [v _brkp brkp `*.39uc  1 s 2 brkp ]
 "17 /opt/microchip/xc8/v2.50/pic/sources/c99/common/lite_free.c
-[u S3398 . 2 `*.39S3400 1 next 2 0 `[1]uc 1 space 1 0 ]
-[s S3400 chunk 4 `ui 1 size 2 0 `S3398 1 . 2 2 ]
-[v ___freelist __freelist `*.39S3400  1 e 2 0 ]
+[u S3401 . 2 `*.39S3403 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S3403 chunk 4 `ui 1 size 2 0 `S3401 1 . 2 2 ]
+[v ___freelist __freelist `*.39S3403  1 e 2 0 ]
 "16 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [v _current_state current_state `E36  1 s 1 current_state ]
 [v _next_state next_state `E36  1 s 1 next_state ]
 [v _previous_state previous_state `E36  1 s 1 previous_state ]
 "17
-[v _arm_mode arm_mode `E51  1 s 1 arm_mode ]
+[v _arm_mode arm_mode `E52  1 s 1 arm_mode ]
 "18
 [v _target_boat target_boat `uc  1 s 1 target_boat ]
 "19
@@ -1264,16 +1265,16 @@ REMOVE 1
 [v _delay_done delay_done `VEa  1 s 1 delay_done ]
 "51 /home/aevern/Documents/KULeuven/robot_arm_nrf/audio.c
 [v _index index `VEus  1 e 2 0 ]
-[s S2839 . 4 `[4]uc 1 angles 4 0 ]
+[s S2842 . 4 `[4]uc 1 angles 4 0 ]
 "13 /home/aevern/Documents/KULeuven/robot_arm_nrf/boat_control.c
-[v _docking_positions docking_positions `C[4]S2839  1 e 16 0 ]
+[v _docking_positions docking_positions `C[4]S2842  1 e 16 0 ]
 "20
-[v _docking_up docking_up `C[4]S2839  1 e 16 0 ]
-[s S2849 . 6 `[4]uc 1 angles 4 0 `uc 1 angle_h 1 4 `uc 1 angle_v 1 5 ]
+[v _docking_up docking_up `C[4]S2842  1 e 16 0 ]
+[s S2852 . 6 `[4]uc 1 angles 4 0 `uc 1 angle_h 1 4 `uc 1 angle_v 1 5 ]
 "10 /home/aevern/Documents/KULeuven/robot_arm_nrf/grid_lookup.c
-[v _grid_angles grid_angles `C[5][5]S2849  1 e 150 0 ]
+[v _grid_angles grid_angles `C[5][5]S2852  1 e 150 0 ]
 "32
-[v _grid_angles_up grid_angles_up `C[5][5]S2849  1 e 150 0 ]
+[v _grid_angles_up grid_angles_up `C[5][5]S2852  1 e 150 0 ]
 "25 /home/aevern/Documents/KULeuven/robot_arm_nrf/main.c
 [v _buf buf `[32]uc  1 e 32 0 ]
 "26
@@ -1319,11 +1320,11 @@ REMOVE 1
 [v _TMR1_GateCallback TMR1_GateCallback `*.38(v  1 s 3 TMR1_GateCallback ]
 "50 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr2.c
 [v _TMR2_OverflowCallback TMR2_OverflowCallback `*.38(v  1 s 3 TMR2_OverflowCallback ]
-"67 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+"71 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
 [v _rf24_datarates rf24_datarates `[3][8]uc  1 e 24 0 ]
-"68
+"72
 [v _rf24_crclength rf24_crclength `C[3][10]uc  1 e 30 0 ]
-"69
+"73
 [v _rf24_pa_dbm rf24_pa_dbm `[4][8]uc  1 e 32 0 ]
 [s S2666 . 4 `us 1 currAngle 2 0 `us 1 nextAngle 2 2 ]
 "5 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
@@ -1423,25 +1424,25 @@ REMOVE 1
 [v ___simple_search_fl __simple_search_fl `(*.39v  1 e 3 0 ]
 {
 "50
-[u S3398 . 2 `*.39S3400 1 next 2 0 `[1]uc 1 space 1 0 ]
-[s S3400 chunk 4 `ui 1 size 2 0 `S3398 1 . 2 2 ]
-[v ___simple_search_fl@split split `*.39S3400  1 a 2 29 ]
+[u S3401 . 2 `*.39S3403 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S3403 chunk 4 `ui 1 size 2 0 `S3401 1 . 2 2 ]
+[v ___simple_search_fl@split split `*.39S3403  1 a 2 29 ]
 "53
 [v ___simple_search_fl@remaining_size remaining_size `ui  1 a 2 25 ]
 "45
-[u S3398 . 2 `*.39S3400 1 next 2 0 `[1]uc 1 space 1 0 ]
-[s S3400 chunk 4 `ui 1 size 2 0 `S3398 1 . 2 2 ]
-[v ___simple_search_fl@next next `*.39S3400  1 a 2 33 ]
+[u S3401 . 2 `*.39S3403 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S3403 chunk 4 `ui 1 size 2 0 `S3401 1 . 2 2 ]
+[v ___simple_search_fl@next next `*.39S3403  1 a 2 33 ]
 "20
-[u S3398 . 2 `*.39S3400 1 next 2 0 `[1]uc 1 space 1 0 ]
-[s S3400 chunk 4 `ui 1 size 2 0 `S3398 1 . 2 2 ]
-[v ___simple_search_fl@best best `*.39S3400  1 a 2 37 ]
+[u S3401 . 2 `*.39S3403 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S3403 chunk 4 `ui 1 size 2 0 `S3401 1 . 2 2 ]
+[v ___simple_search_fl@best best `*.39S3403  1 a 2 37 ]
 "23
-[v ___simple_search_fl@c c `*.39S3400  1 a 2 35 ]
+[v ___simple_search_fl@c c `*.39S3403  1 a 2 35 ]
 "22
-[v ___simple_search_fl@last last `*.39S3400  1 a 2 31 ]
+[v ___simple_search_fl@last last `*.39S3403  1 a 2 31 ]
 "21
-[v ___simple_search_fl@best_last best_last `*.39S3400  1 a 2 27 ]
+[v ___simple_search_fl@best_last best_last `*.39S3403  1 a 2 27 ]
 "19
 [v ___simple_search_fl@n n `ui  1 p 2 18 ]
 "65
@@ -1468,7 +1469,7 @@ REMOVE 1
 [v TMR1_OverflowCallbackRegister@CallbackHandler CallbackHandler `*.38(v  1 p 3 18 ]
 "195
 } 0
-"56 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+"55 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [v _arm_set_target arm_set_target `(v  1 e 1 0 ]
 {
 [v arm_set_target@boat_id boat_id `uc  1 p 1 wreg ]
@@ -1476,14 +1477,14 @@ REMOVE 1
 [v arm_set_target@x x `uc  1 p 1 20 ]
 [v arm_set_target@y y `uc  1 p 1 21 ]
 [v arm_set_target@is_vertical is_vertical `uc  1 p 1 22 ]
-[v arm_set_target@mode mode `E51  1 p 1 23 ]
+[v arm_set_target@mode mode `E52  1 p 1 23 ]
 [v arm_set_target@boat_id boat_id `uc  1 p 1 24 ]
-"67
+"66
 } 0
-"34
+"33
 [v _set_magnet_strength set_magnet_strength `(v  1 e 1 0 ]
 {
-"54
+"53
 } 0
 "137 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/pwm/src/pwm1_16bit.c
 [v _PWM1_16BIT_SetSlice1Output1DutyCycleRegister PWM1_16BIT_SetSlice1Output1DutyCycleRegister `(v  1 e 1 0 ]
@@ -1496,35 +1497,37 @@ REMOVE 1
 {
 "153
 } 0
-"86 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+"83 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [v _arm_fsm_update arm_fsm_update `(v  1 e 1 0 ]
 {
-"231
-[v arm_fsm_update@idle_angles idle_angles `[4]uc  1 a 4 0 ]
-"202
-[v arm_fsm_update@angles_2834 angles `[4]uc  1 a 4 8 ]
-"181
-[v arm_fsm_update@angles_2833 angles `[4]uc  1 a 4 4 ]
-"174
-[v arm_fsm_update@angles_2832 angles `[4]us  1 a 8 40 ]
-"166
-[v arm_fsm_update@moveup_angles_2830 moveup_angles `[4]us  1 a 8 32 ]
-"148
-[v arm_fsm_update@moveup_angles_2828 moveup_angles `[4]us  1 a 8 24 ]
-"127
-[v arm_fsm_update@angles_2826 angles `*.32Cuc  1 a 2 14 ]
-"114
-[v arm_fsm_update@angles angles `*.32Cuc  1 a 2 12 ]
-"93
-[v arm_fsm_update@moveup_angles moveup_angles `[4]us  1 a 8 16 ]
 "230
-[v arm_fsm_update@F297 F297 `[4]uc  1 s 4 F297 ]
-"244
+[v arm_fsm_update@idle_angles idle_angles `[4]uc  1 a 4 0 ]
+"204
+[v arm_fsm_update@angles_2837 angles `[4]uc  1 a 4 8 ]
+"183
+[v arm_fsm_update@angles_2836 angles `[4]uc  1 a 4 4 ]
+"176
+[v arm_fsm_update@angles_2835 angles `[4]us  1 a 8 48 ]
+"168
+[v arm_fsm_update@angles_2833 angles `[4]us  1 a 8 40 ]
+"160
+[v arm_fsm_update@moveup_angles_2831 moveup_angles `[4]us  1 a 8 32 ]
+"143
+[v arm_fsm_update@moveup_angles_2829 moveup_angles `[4]us  1 a 8 24 ]
+"124
+[v arm_fsm_update@angles_2827 angles `*.32Cuc  1 a 2 14 ]
+"111
+[v arm_fsm_update@angles angles `*.32Cuc  1 a 2 12 ]
+"90
+[v arm_fsm_update@moveup_angles moveup_angles `[4]us  1 a 8 16 ]
+"229
+[v arm_fsm_update@F300 F300 `[4]uc  1 s 4 F300 ]
+"243
 } 0
-"78
+"77
 [v _start_fsm_delay start_fsm_delay `(v  1 e 1 0 ]
 {
-"83
+"80
 } 0
 "79 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_Start TMR0_Start `(v  1 e 1 0 ]
@@ -1656,7 +1659,7 @@ REMOVE 1
 "25 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [v _arm_fsm_init arm_fsm_init `(v  1 e 1 0 ]
 {
-"32
+"31
 } 0
 "44 /home/aevern/Documents/KULeuven/robot_arm_nrf/servo.c
 [v _initServo initServo `(v  1 e 1 0 ]
@@ -1687,56 +1690,56 @@ REMOVE 1
 {
 "99
 } 0
-"116 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+"120 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
 [v _Nrf24_setTADDR Nrf24_setTADDR `(i  1 e 2 0 ]
 {
-"123
+"127
 [v Nrf24_setTADDR@i i `i  1 a 2 42 ]
-"121
+"125
 [v Nrf24_setTADDR@buffer buffer `[5]uc  1 a 5 35 ]
-"118
+"122
 [v Nrf24_setTADDR@ret ret `i  1 a 2 40 ]
 [s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
-"116
+"120
 [v Nrf24_setTADDR@dev dev `*.39S2144  1 p 2 28 ]
 [v Nrf24_setTADDR@adr adr `*.32uc  1 p 2 30 ]
-"127
+"131
 } 0
-"103
+"107
 [v _Nrf24_setRADDR Nrf24_setRADDR `(i  1 e 2 0 ]
 {
-"109
+"113
 [v Nrf24_setRADDR@i i `i  1 a 2 42 ]
-"107
+"111
 [v Nrf24_setRADDR@buffer buffer `[5]uc  1 a 5 35 ]
-"105
+"109
 [v Nrf24_setRADDR@ret ret `i  1 a 2 40 ]
 [s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
-"103
+"107
 [v Nrf24_setRADDR@dev dev `*.39S2144  1 p 2 28 ]
 [v Nrf24_setRADDR@adr adr `*.32uc  1 p 2 30 ]
-"113
+"117
 } 0
-"219
+"223
 [v _Nrf24_writeRegister Nrf24_writeRegister `(v  1 e 1 0 ]
 {
 [v Nrf24_writeRegister@reg reg `uc  1 p 1 wreg ]
 [v Nrf24_writeRegister@reg reg `uc  1 p 1 wreg ]
 [v Nrf24_writeRegister@value value `*.32uc  1 p 2 24 ]
 [v Nrf24_writeRegister@len len `uc  1 p 1 26 ]
-"221
+"225
 [v Nrf24_writeRegister@reg reg `uc  1 p 1 27 ]
-"227
+"231
 } 0
-"55
+"59
 [v _SPI_write_buff SPI_write_buff `(v  1 e 1 0 ]
 {
-"57
+"61
 [v SPI_write_buff@i i `uc  1 a 1 23 ]
-"55
+"59
 [v SPI_write_buff@buffer buffer `*.32uc  1 p 2 20 ]
 [v SPI_write_buff@bytes bytes `uc  1 p 1 22 ]
-"64
+"68
 } 0
 "43 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
 [v _DELAY_microseconds DELAY_microseconds `(v  1 e 1 0 ]
@@ -1744,12 +1747,12 @@ REMOVE 1
 [v DELAY_microseconds@microseconds microseconds `us  1 p 2 18 ]
 "54
 } 0
-"71 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+"75 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
 [v _Nrf24_init Nrf24_init `(v  1 e 1 0 ]
 {
 [s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
 [v Nrf24_init@dev dev `*.39S2144  1 p 2 19 ]
-"80
+"84
 } 0
 "91 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
 [v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
@@ -1760,56 +1763,56 @@ REMOVE 1
 [v SPI1_Open@spiConfigIndex spiConfigIndex `uc  1 p 1 18 ]
 "110
 } 0
-"181 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+"185 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
 [v _Nrf24_getData Nrf24_getData `(v  1 e 1 0 ]
 {
 [s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
 [v Nrf24_getData@dev dev `*.39S2144  1 p 2 24 ]
 [v Nrf24_getData@data data `*.39uc  1 p 2 26 ]
-"196
+"200
 } 0
-"159
+"163
 [v _Nrf24_dataReady Nrf24_dataReady `(a  1 e 1 0 ]
 {
-"161
+"165
 [v Nrf24_dataReady@status status `uc  1 a 1 33 ]
 [s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
-"159
+"163
 [v Nrf24_dataReady@dev dev `*.39S2144  1 p 2 31 ]
-"166
+"170
 } 0
-"90
+"94
 [v _Nrf24_config Nrf24_config `(v  1 e 1 0 ]
 {
 [s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
 [v Nrf24_config@dev dev `*.39S2144  1 p 2 31 ]
 [v Nrf24_config@channel channel `uc  1 p 1 33 ]
 [v Nrf24_config@payload payload `uc  1 p 1 34 ]
-"100
+"104
 } 0
-"304
+"308
 [v _Nrf24_powerUpRx Nrf24_powerUpRx `(v  1 e 1 0 ]
 {
 [s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
 [v Nrf24_powerUpRx@dev dev `*.39S2144  1 p 2 22 ]
-"310
+"314
 } 0
-"298
+"302
 [v _Nrf24_getStatus Nrf24_getStatus `(uc  1 e 1 0 ]
 {
-"299
+"303
 [v Nrf24_getStatus@rv rv `uc  1 a 1 30 ]
 [s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
-"298
-[v Nrf24_getStatus@dev dev `*.39S2144  1 p 2 28 ]
 "302
+[v Nrf24_getStatus@dev dev `*.39S2144  1 p 2 28 ]
+"306
 } 0
-"312
+"316
 [v _Nrf24_flushRx Nrf24_flushRx `(v  1 e 1 0 ]
 {
 [s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
 [v Nrf24_flushRx@dev dev `*.39S2144  1 p 2 20 ]
-"317
+"321
 } 0
 "37 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/delay.c
 [v _DELAY_milliseconds DELAY_milliseconds `(v  1 e 1 0 ]
@@ -1824,58 +1827,58 @@ REMOVE 1
 [v AdvancedSettings@dev dev `*.39S2144  1 p 2 32 ]
 "42
 } 0
-"365 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
+"369 /home/aevern/Documents/KULeuven/robot_arm_nrf/mirf.c
 [v _Nrf24_setRetransmitDelay Nrf24_setRetransmitDelay `(v  1 e 1 0 ]
 {
-"367
+"371
 [v Nrf24_setRetransmitDelay@value value `uc  1 a 1 31 ]
 [s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
-"365
+"369
 [v Nrf24_setRetransmitDelay@dev dev `*.39S2144  1 p 2 28 ]
 [v Nrf24_setRetransmitDelay@val val `uc  1 p 1 30 ]
-"372
+"376
 } 0
-"344
+"348
 [v _Nrf24_SetSpeedDataRates Nrf24_SetSpeedDataRates `(v  1 e 1 0 ]
 {
-"348
+"352
 [v Nrf24_SetSpeedDataRates@value value `uc  1 a 1 31 ]
 [s S2144 . 3 `uc 1 PTX 1 0 `uc 1 channel 1 1 `uc 1 payload 1 2 ]
-"344
+"348
 [v Nrf24_SetSpeedDataRates@dev dev `*.39S2144  1 p 2 28 ]
 [v Nrf24_SetSpeedDataRates@val val `uc  1 p 1 30 ]
-"362
+"366
 } 0
-"208
+"212
 [v _Nrf24_readRegister Nrf24_readRegister `(v  1 e 1 0 ]
 {
 [v Nrf24_readRegister@reg reg `uc  1 p 1 wreg ]
 [v Nrf24_readRegister@reg reg `uc  1 p 1 wreg ]
 [v Nrf24_readRegister@value value `*.39uc  1 p 2 24 ]
 [v Nrf24_readRegister@len len `uc  1 p 1 26 ]
-"210
+"214
 [v Nrf24_readRegister@reg reg `uc  1 p 1 27 ]
-"216
+"220
 } 0
-"45
+"49
 [v _SPI_read_buff SPI_read_buff `(v  1 e 1 0 ]
 {
-"47
+"51
 [v SPI_read_buff@i i `uc  1 a 1 23 ]
-"45
+"49
 [v SPI_read_buff@buffer buffer `*.39uc  1 p 2 20 ]
 [v SPI_read_buff@bytes bytes `uc  1 p 1 22 ]
-"53
+"57
 } 0
-"199
+"203
 [v _Nrf24_configRegister Nrf24_configRegister `(v  1 e 1 0 ]
 {
 [v Nrf24_configRegister@reg reg `uc  1 p 1 wreg ]
 [v Nrf24_configRegister@reg reg `uc  1 p 1 wreg ]
 [v Nrf24_configRegister@value value `uc  1 p 1 20 ]
-"201
-[v Nrf24_configRegister@reg reg `uc  1 p 1 21 ]
 "205
+[v Nrf24_configRegister@reg reg `uc  1 p 1 21 ]
+"209
 } 0
 "209 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/spi/src/spi1.c
 [v _SPI1_ByteExchange SPI1_ByteExchange `(uc  1 e 1 0 ]
@@ -2138,10 +2141,10 @@ REMOVE 1
 {
 "159
 } 0
-"73 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
+"72 /home/aevern/Documents/KULeuven/robot_arm_nrf/arm_fsm.c
 [v _delay delay `(v  1 e 1 0 ]
 {
-"76
+"75
 } 0
 "84 /home/aevern/Documents/KULeuven/robot_arm_nrf/mcc_generated_files/timer/src/tmr0.c
 [v i2_TMR0_Stop TMR0_Stop `(v  1 e 1 0 ]

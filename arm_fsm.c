@@ -28,7 +28,6 @@ void arm_fsm_init() {
     process_fsm = false;
     state_done = true;
     TMR0_OverflowCallbackRegister(delay);
-    //init_boats();
 }
 
 void set_magnet_strength() {
@@ -72,19 +71,17 @@ bool arm_is_busy() {
 
 void delay() {
     delay_done = true;
-    TMR0_Stop();  // Optional: Stop the timer if you only want one-shot delay
+    TMR0_Stop();
 }
 
-void start_fsm_delay(){//ArmState next) {
+void start_fsm_delay(){
     delay_done = false;
-    //delay_next_state = next;
-
     TMR0_Start();
 }
 
 
 void arm_fsm_update() {
-    if (!process_fsm || servoMovement()) return;  // Only process when needed
+    if (!process_fsm || servoMovement()) return;  // Only process when received task + if servo's aren't moving anymore
     TMR2_PeriodCountSet(0xF);
     switch (current_state) {
         
@@ -119,7 +116,7 @@ void arm_fsm_update() {
             
         case MAGNET_ON: {
             enableMagnet();
-            next_state = (arm_mode == PLACE) ? MOVE_UP_DOCK/*IDLE*/ : MOVE_UP_BOARD;
+            next_state = (arm_mode == PLACE) ? MOVE_UP_DOCK : MOVE_UP_BOARD;
             break;
         }
         
@@ -129,8 +126,6 @@ void arm_fsm_update() {
             switch(previous_state) {
                 case MAGNET_ON: {
                     next_state = STILL;
-                                //process_fsm = false;  // FSM complete, reset flag
-
                     break;
                 }
                 case ROTATE_DOCK: {
@@ -158,7 +153,6 @@ void arm_fsm_update() {
                 }
             }
             break;
-
         }
         
         case ROTATE_BOARD: {
@@ -227,9 +221,6 @@ void arm_fsm_update() {
                 case MAGNET_OFF: {
                     next_state = (arm_mode == PLACE) ? MOVE_UP_BOARD : MOVE_UP_DOCK;
                     break;
-                }
-                case STILL: {
-                    
                 }
             }
             break;

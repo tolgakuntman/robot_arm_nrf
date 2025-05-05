@@ -39,7 +39,7 @@ void arm_fsm_update();
 void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, ArmMode mode);
 bool arm_is_busy();  // Check if FSM is still running
 void delay();
-void start_fsm_delay();//ArmState next);
+void start_fsm_delay();
 void set_magnet_strength();
 
 #endif	/* ARM_FSM_H */

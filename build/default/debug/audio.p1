@@ -19,7 +19,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "303
 [; ;./mcc_generated_files/system/../timer/tmr1.h: 303:  void TMR1_OverflowCallbackRegister(void (* CallbackHandler)(void));
 [v _TMR1_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F17437 ]
-[v F17479 `(v ~T0 @X0 0 tf ]
+[v F17480 `(v ~T0 @X0 0 tf ]
 "58 /opt/microchip/xc8/v2.50/pic/include/c99/stdlib.h
 [; ;/opt/microchip/xc8/v2.50/pic/include/c99/stdlib.h: 58: void *malloc (size_t);
 [v _malloc `(*v ~T0 @X0 0 ef1`ui ]
@@ -10305,7 +10305,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _TMR1_Initialize ..  ]
 "64
 [; ;audio.c: 64:     TMR1_OverflowCallbackRegister(tim_1_irs);
-[e ( _TMR1_OverflowCallbackRegister (1 -> &U _tim_1_irs `*F17479 ]
+[e ( _TMR1_OverflowCallbackRegister (1 -> &U _tim_1_irs `*F17480 ]
 "65
 [; ;audio.c: 65:     sound = malloc(sizeof(Sound));
 [e = _sound -> ( _malloc (1 -> # `S1 `ui `*S1 ]

@@ -11,6 +11,10 @@
 
 
 
+
+
+
+
 # 1 "/opt/microchip/xc8/v2.50/pic/include/c99/string.h" 1 3
 
 
@@ -86,7 +90,7 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 6 "mirf.c" 2
+# 10 "mirf.c" 2
 
 # 1 "./mcc_generated_files/system/system.h" 1
 # 39 "./mcc_generated_files/system/system.h"
@@ -30227,7 +30231,7 @@ void TMR1_OverflowISR(void);
 
 
 void SYSTEM_Initialize(void);
-# 8 "mirf.c" 2
+# 12 "mirf.c" 2
 # 1 "./mirf.h" 1
 
 
@@ -30325,7 +30329,7 @@ char * Nrf24_getPALevelString(NRF24_t * dev);
 uint8_t Nrf24_getRetransmitDelay(NRF24_t * dev);
 uint8_t Nrf24_getChannel(NRF24_t * dev);
 uint8_t Nrf24_getPayload(NRF24_t * dev);
-# 9 "mirf.c" 2
+# 13 "mirf.c" 2
 # 1 "/opt/microchip/xc8/v2.50/pic/include/c99/stdio.h" 1 3
 # 24 "/opt/microchip/xc8/v2.50/pic/include/c99/stdio.h" 3
 # 1 "/opt/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 1 3
@@ -30478,7 +30482,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 10 "mirf.c" 2
+# 14 "mirf.c" 2
 # 1 "./mcc_generated_files/timer/delay.h" 1
 # 44 "./mcc_generated_files/timer/delay.h"
 void DELAY_milliseconds(uint16_t milliseconds);
@@ -30490,8 +30494,8 @@ void DELAY_milliseconds(uint16_t milliseconds);
 
 
 void DELAY_microseconds(uint16_t microseconds);
-# 11 "mirf.c" 2
-# 45 "mirf.c"
+# 15 "mirf.c" 2
+# 49 "mirf.c"
 void SPI_read_buff(unsigned char* buffer, unsigned char bytes) {
     do { LATCbits.LATC6 = 0; } while(0);
     unsigned char i;
@@ -30634,7 +30638,7 @@ extern void Nrf24_getData(NRF24_t * dev, uint8_t * data)
  SPI1_ByteExchange(0x00 | 0x61);
  SPI_read_buff( data, dev->payload );
  do { LATCbits.LATC6 = 1; } while(0);
-# 195 "mirf.c"
+# 199 "mirf.c"
  Nrf24_configRegister(0x07, (1 << 6));
 }
 

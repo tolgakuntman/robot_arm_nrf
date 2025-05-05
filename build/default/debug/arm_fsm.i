@@ -134,7 +134,8 @@ typedef enum {
     MOVE_UP_DOCK,
     STILL,
     ROTATE_BOARD,
-    BOAT_ROTATE,
+    BOAT_ROTATE_BOARD,
+    BOAT_ROTATE_DOCK,
     MOVE_UP_BOARD,
     PLACEMENT,
     MAGNET_OFF,
@@ -690,25 +691,24 @@ void arm_fsm_init() {
     process_fsm = 0;
     state_done = 1;
     TMR0_OverflowCallbackRegister(delay);
-
 }
 
 void set_magnet_strength() {
     switch(target_boat) {
         case(0): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(23000);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(40000);
             break;
         }
         case(1): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(10000);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(60000);
             break;
         }
         case(2): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(2700);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(10000);
             break;
         }
         case(3): {
-            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(500);
+            PWM1_16BIT_SetSlice1Output1DutyCycleRegister(100);
             break;
         }
     }
@@ -739,8 +739,6 @@ void delay() {
 
 void start_fsm_delay(){
     delay_done = 0;
-
-
     TMR0_Start();
 }
 
@@ -751,7 +749,7 @@ void arm_fsm_update() {
     switch (current_state) {
 
         case ROTATE_DOCK: {
-            TMR2_PeriodCountSet(0x3);
+            TMR2_PeriodCountSet(0x4);
             uint16_t moveup_angles[4] = {getAngle(0), getAngle(1), calculateAngle(get_docking_servo_angles(target_boat)[2]), getAngle(3)};
             move_servo_to_int(moveup_angles);
             switch(previous_state) {
@@ -764,7 +762,7 @@ void arm_fsm_update() {
                     break;
                 }
                 default: {
-
+                    next_state = MOVE_UP_DOCK;
                     break;
                 }
             }
@@ -791,8 +789,6 @@ void arm_fsm_update() {
             switch(previous_state) {
                 case MAGNET_ON: {
                     next_state = STILL;
-
-
                     break;
                 }
                 case ROTATE_DOCK: {
@@ -814,28 +810,35 @@ void arm_fsm_update() {
                     next_state = (arm_mode == PLACE) ? ROTATE_BOARD : RETURN;
                     break;
                 }
-                case MOVE_UP_BOARD: {
+                default: {
                     next_state = ROTATE_DOCK;
                     break;
                 }
             }
             break;
-
         }
 
         case ROTATE_BOARD: {
-            TMR2_PeriodCountSet(0x3);
+            TMR2_PeriodCountSet(0x5);
             uint16_t moveup_angles[4] = {getAngle(0), getAngle(1), calculateAngle(get_grid_servo_angles(target_x, target_y)[2]), getAngle(3)};
             move_servo_to_int(moveup_angles);
             next_state = MOVE_UP_BOARD;
             break;
         }
 
-        case BOAT_ROTATE: {
+        case BOAT_ROTATE_BOARD: {
             TMR2_PeriodCountSet(0x7);
             uint16_t angles[4] = {getAngle(0), calculateAngle(get_dependent_servo_angle(target_x, target_y, target_orientation)), getAngle(2), getAngle(3)};
             move_servo_to_int(angles);
             next_state = PLACEMENT;
+            break;
+        }
+
+        case BOAT_ROTATE_DOCK: {
+            TMR2_PeriodCountSet(0x7);
+            uint16_t angles[4] = {getAngle(0), calculateAngle(get_docking_servo_angles(target_boat)[1]), getAngle(2), getAngle(3)};
+            move_servo_to_int(angles);
+            next_state = STILL;
             break;
         }
 
@@ -845,14 +848,14 @@ void arm_fsm_update() {
             move_servo_to_angles(angles);
             switch(previous_state) {
                 case ROTATE_BOARD: {
-                    next_state = BOAT_ROTATE;
+                    next_state = BOAT_ROTATE_BOARD;
                     break;
                 case WAIT: {
                     next_state = STILL;
                     break;
                     }
                 case MAGNET_ON: {
-                    next_state = STILL;
+                    next_state = BOAT_ROTATE_DOCK;
                     break;
                     }
                 }
@@ -882,15 +885,12 @@ void arm_fsm_update() {
                     next_state = (arm_mode == PLACE) ? MOVE_UP_BOARD : MOVE_UP_DOCK;
                     break;
                 }
-                case STILL: {
-
-                }
             }
             break;
         }
 
         case RETURN: {
-            uint8_t idle_angles[4] = {43, 45, 25, 45};
+            uint8_t idle_angles[4] = {43, 45, 28, 45};
             move_servo_to_angles(idle_angles);
             next_state = IDLE;
             process_fsm = 0;

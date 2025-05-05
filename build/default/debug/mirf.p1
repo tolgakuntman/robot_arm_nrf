@@ -88,12 +88,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "206
 [; ;./mirf.h: 206: uint8_t Nrf24_getRetransmitDelay(NRF24_t * dev);
 [v _Nrf24_getRetransmitDelay `(uc ~T0 @X0 0 ef1`*S2417 ]
-"437 mirf.c
-[; ;mirf.c: 437:  rf24_datarate_e result;
+"441 mirf.c
+[; ;mirf.c: 441:  rf24_datarate_e result;
 [c E17640 0 1 2 .. ]
 [n E17640 . RF24_1MBPS RF24_2MBPS RF24_250KBPS  ]
-"463
-[; ;mirf.c: 463:  rf24_crclength_e result = RF24_CRC_DISABLED;
+"467
+[; ;mirf.c: 467:  rf24_crclength_e result = RF24_CRC_DISABLED;
 [c E17645 0 1 2 .. ]
 [n E17645 . RF24_CRC_DISABLED RF24_CRC_8 RF24_CRC_16  ]
 "328 /home/aevern/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h
@@ -2667,112 +2667,112 @@ Version 4.0 HI-TECH Software Intermediate Code
 "51171
 [; ;/home/aevern/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8/pic/include/proc/pic18f57q43.h: 51171: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-"45 mirf.c
-[; ;mirf.c: 45: void SPI_read_buff(unsigned char* buffer, unsigned char bytes) {
+"49 mirf.c
+[; ;mirf.c: 49: void SPI_read_buff(unsigned char* buffer, unsigned char bytes) {
 [v _SPI_read_buff `(v ~T0 @X0 1 ef2`*uc`uc ]
 {
 [e :U _SPI_read_buff ]
 [v _buffer `*uc ~T0 @X0 1 r1 ]
 [v _bytes `uc ~T0 @X0 1 r2 ]
 [f ]
-"46
-[; ;mirf.c: 46:     do { LATCbits.LATC6 = 0; } while(0);
+"50
+[; ;mirf.c: 50:     do { LATCbits.LATC6 = 0; } while(0);
 [e :U 2423 ]
 {
 [e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
 }
 [e :U 2422 ]
-"47
-[; ;mirf.c: 47:     unsigned char i;
+"51
+[; ;mirf.c: 51:     unsigned char i;
 [v _i `uc ~T0 @X0 1 a ]
-"48
-[; ;mirf.c: 48:     for (i = 0; i < bytes; i++) {
+"52
+[; ;mirf.c: 52:     for (i = 0; i < bytes; i++) {
 {
 [e = _i -> -> 0 `i `uc ]
 [e $U 2427  ]
 [e :U 2424 ]
 {
-"49
-[; ;mirf.c: 49:         *buffer = SPI1_ByteExchange(0xFF);
+"53
+[; ;mirf.c: 53:         *buffer = SPI1_ByteExchange(0xFF);
 [e = *U _buffer ( _SPI1_ByteExchange (1 -> -> 255 `i `uc ]
-"50
-[; ;mirf.c: 50:         buffer++;
+"54
+[; ;mirf.c: 54:         buffer++;
 [e ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x ]
-"51
-[; ;mirf.c: 51:     }
+"55
+[; ;mirf.c: 55:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 2427 ]
 [e $ < -> _i `i -> _bytes `i 2424  ]
 [e :U 2425 ]
 }
-"52
-[; ;mirf.c: 52:     do { LATCbits.LATC6 = 1; } while(0);
+"56
+[; ;mirf.c: 56:     do { LATCbits.LATC6 = 1; } while(0);
 [e :U 2430 ]
 {
 [e = . . _LATCbits 0 6 -> -> 1 `i `uc ]
 }
 [e :U 2429 ]
-"53
-[; ;mirf.c: 53: }
+"57
+[; ;mirf.c: 57: }
 [e :UE 2420 ]
 }
-"55
-[; ;mirf.c: 55: void SPI_write_buff(unsigned char* buffer, unsigned char bytes) {
+"59
+[; ;mirf.c: 59: void SPI_write_buff(unsigned char* buffer, unsigned char bytes) {
 [v _SPI_write_buff `(v ~T0 @X0 1 ef2`*uc`uc ]
 {
 [e :U _SPI_write_buff ]
 [v _buffer `*uc ~T0 @X0 1 r1 ]
 [v _bytes `uc ~T0 @X0 1 r2 ]
 [f ]
-"56
-[; ;mirf.c: 56:     do { LATCbits.LATC6 = 0; } while(0);
+"60
+[; ;mirf.c: 60:     do { LATCbits.LATC6 = 0; } while(0);
 [e :U 2434 ]
 {
 [e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
 }
 [e :U 2433 ]
-"57
-[; ;mirf.c: 57:     unsigned char i;
+"61
+[; ;mirf.c: 61:     unsigned char i;
 [v _i `uc ~T0 @X0 1 a ]
-"58
-[; ;mirf.c: 58:     for (i = 0; i < bytes; i++) {
+"62
+[; ;mirf.c: 62:     for (i = 0; i < bytes; i++) {
 {
 [e = _i -> -> 0 `i `uc ]
 [e $U 2438  ]
 [e :U 2435 ]
 {
-"59
-[; ;mirf.c: 59:         SPI1_ByteExchange(*buffer);
+"63
+[; ;mirf.c: 63:         SPI1_ByteExchange(*buffer);
 [e ( _SPI1_ByteExchange (1 *U _buffer ]
-"60
-[; ;mirf.c: 60:         buffer++;
+"64
+[; ;mirf.c: 64:         buffer++;
 [e ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x ]
-"61
-[; ;mirf.c: 61:         DELAY_microseconds(10);
+"65
+[; ;mirf.c: 65:         DELAY_microseconds(10);
 [e ( _DELAY_microseconds (1 -> -> 10 `i `us ]
-"62
-[; ;mirf.c: 62:     }
+"66
+[; ;mirf.c: 66:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 2438 ]
 [e $ < -> _i `i -> _bytes `i 2435  ]
 [e :U 2436 ]
 }
-"63
-[; ;mirf.c: 63:     do { LATCbits.LATC6 = 1; } while(0);
+"67
+[; ;mirf.c: 67:     do { LATCbits.LATC6 = 1; } while(0);
 [e :U 2441 ]
 {
 [e = . . _LATCbits 0 6 -> -> 1 `i `uc ]
 }
 [e :U 2440 ]
-"64
-[; ;mirf.c: 64: }
+"68
+[; ;mirf.c: 68: }
 [e :UE 2431 ]
 }
 [v F18081 `uc ~T0 @X0 -> 8 `i t ]
-"67
-[; ;mirf.c: 67: char rf24_datarates[][8] = {"1Mbps", "2Mbps", "250Kbps"};
+"71
+[; ;mirf.c: 71: char rf24_datarates[][8] = {"1Mbps", "2Mbps", "250Kbps"};
 [v _rf24_datarates `F18081 ~T0 @X0 -> 3 `i e ]
 [i _rf24_datarates
 :U ..
@@ -2805,8 +2805,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v F18083 `Cuc ~T0 @X0 -> 10 `i t ]
-"68
-[; ;mirf.c: 68: const char rf24_crclength[][10] = {"Disabled", "8 bits", "16 bits"};
+"72
+[; ;mirf.c: 72: const char rf24_crclength[][10] = {"Disabled", "8 bits", "16 bits"};
 [v _rf24_crclength `F18083 ~T0 @X0 -> 3 `i e ]
 [i _rf24_crclength
 :U ..
@@ -2843,8 +2843,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v F18085 `uc ~T0 @X0 -> 8 `i t ]
-"69
-[; ;mirf.c: 69: char rf24_pa_dbm[][8] = {"PA_MIN", "PA_LOW", "PA_HIGH", "PA_MAX"};
+"73
+[; ;mirf.c: 73: char rf24_pa_dbm[][8] = {"PA_MIN", "PA_LOW", "PA_HIGH", "PA_MAX"};
 [v _rf24_pa_dbm `F18085 ~T0 @X0 -> 4 `i e ]
 [i _rf24_pa_dbm
 :U ..
@@ -2887,135 +2887,135 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"71
-[; ;mirf.c: 71: void Nrf24_init(NRF24_t * dev)
+"75
+[; ;mirf.c: 75: void Nrf24_init(NRF24_t * dev)
 [v _Nrf24_init `(v ~T0 @X0 1 ef1`*S2417 ]
-"72
-[; ;mirf.c: 72: {
+"76
+[; ;mirf.c: 76: {
 {
 [e :U _Nrf24_init ]
-"71
-[; ;mirf.c: 71: void Nrf24_init(NRF24_t * dev)
-[v _dev `*S2417 ~T0 @X0 1 r1 ]
-"72
-[; ;mirf.c: 72: {
-[f ]
-"73
-[; ;mirf.c: 73:     SPI1_Open(0);
-[e ( _SPI1_Open (1 -> -> 0 `i `uc ]
 "75
-[; ;mirf.c: 75:     dev->channel = 115;
-[e = . *U _dev 1 -> -> 115 `i `uc ]
+[; ;mirf.c: 75: void Nrf24_init(NRF24_t * dev)
+[v _dev `*S2417 ~T0 @X0 1 r1 ]
 "76
-[; ;mirf.c: 76:     dev->payload = 32;
+[; ;mirf.c: 76: {
+[f ]
+"77
+[; ;mirf.c: 77:     SPI1_Open(0);
+[e ( _SPI1_Open (1 -> -> 0 `i `uc ]
+"79
+[; ;mirf.c: 79:     dev->channel = 115;
+[e = . *U _dev 1 -> -> 115 `i `uc ]
+"80
+[; ;mirf.c: 80:     dev->payload = 32;
 [e = . *U _dev 2 -> -> 32 `i `uc ]
-"78
-[; ;mirf.c: 78:     do { TRISCbits.TRISC6 = 0; } while(0);
+"82
+[; ;mirf.c: 82:     do { TRISCbits.TRISC6 = 0; } while(0);
 [e :U 2445 ]
 {
 [e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
 }
 [e :U 2444 ]
-"79
-[; ;mirf.c: 79:     do { TRISCbits.TRISC5 = 0; } while(0);
+"83
+[; ;mirf.c: 83:     do { TRISCbits.TRISC5 = 0; } while(0);
 [e :U 2448 ]
 {
 [e = . . _TRISCbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 2447 ]
-"80
-[; ;mirf.c: 80: }
+"84
+[; ;mirf.c: 84: }
 [e :UE 2442 ]
 }
-"82
-[; ;mirf.c: 82: void Nrf24_deinit(NRF24_t *dev) {
+"86
+[; ;mirf.c: 86: void Nrf24_deinit(NRF24_t *dev) {
 [v _Nrf24_deinit `(v ~T0 @X0 1 ef1`*S2417 ]
 {
 [e :U _Nrf24_deinit ]
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [f ]
-"83
-[; ;mirf.c: 83:  memset(dev, 0, sizeof(NRF24_t));
+"87
+[; ;mirf.c: 87:  memset(dev, 0, sizeof(NRF24_t));
 [e ( _memset (3 , , -> _dev `*v -> 0 `i -> # `S2417 `ui ]
-"84
-[; ;mirf.c: 84:  SPI1_Close();
+"88
+[; ;mirf.c: 88:  SPI1_Close();
 [e ( _SPI1_Close ..  ]
-"85
-[; ;mirf.c: 85: }
+"89
+[; ;mirf.c: 89: }
 [e :UE 2449 ]
 }
-"90
-[; ;mirf.c: 90: void Nrf24_config(NRF24_t * dev, uint8_t channel, uint8_t payload)
+"94
+[; ;mirf.c: 94: void Nrf24_config(NRF24_t * dev, uint8_t channel, uint8_t payload)
 [v _Nrf24_config `(v ~T0 @X0 1 ef3`*S2417`uc`uc ]
-"91
-[; ;mirf.c: 91: {
+"95
+[; ;mirf.c: 95: {
 {
 [e :U _Nrf24_config ]
-"90
-[; ;mirf.c: 90: void Nrf24_config(NRF24_t * dev, uint8_t channel, uint8_t payload)
+"94
+[; ;mirf.c: 94: void Nrf24_config(NRF24_t * dev, uint8_t channel, uint8_t payload)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [v _channel `uc ~T0 @X0 1 r2 ]
 [v _payload `uc ~T0 @X0 1 r3 ]
-"91
-[; ;mirf.c: 91: {
-[f ]
-"92
-[; ;mirf.c: 92:  dev->channel = channel;
-[e = . *U _dev 1 _channel ]
-"93
-[; ;mirf.c: 93:  dev->payload = payload;
-[e = . *U _dev 2 _payload ]
-"94
-[; ;mirf.c: 94:     Nrf24_getStatus(dev);
-[e ( _Nrf24_getStatus (1 _dev ]
 "95
-[; ;mirf.c: 95:     Nrf24_configRegister(0x05, channel);
-[e ( _Nrf24_configRegister (2 , -> -> 5 `i `uc _channel ]
+[; ;mirf.c: 95: {
+[f ]
 "96
-[; ;mirf.c: 96:  Nrf24_configRegister(0x11, dev->payload);
-[e ( _Nrf24_configRegister (2 , -> -> 17 `i `uc . *U _dev 2 ]
+[; ;mirf.c: 96:  dev->channel = channel;
+[e = . *U _dev 1 _channel ]
 "97
-[; ;mirf.c: 97:  Nrf24_configRegister(0x12, dev->payload);
-[e ( _Nrf24_configRegister (2 , -> -> 18 `i `uc . *U _dev 2 ]
+[; ;mirf.c: 97:  dev->payload = payload;
+[e = . *U _dev 2 _payload ]
 "98
-[; ;mirf.c: 98:  Nrf24_powerUpRx(dev);
-[e ( _Nrf24_powerUpRx (1 _dev ]
+[; ;mirf.c: 98:     Nrf24_getStatus(dev);
+[e ( _Nrf24_getStatus (1 _dev ]
 "99
-[; ;mirf.c: 99:  Nrf24_flushRx(dev);
-[e ( _Nrf24_flushRx (1 _dev ]
+[; ;mirf.c: 99:     Nrf24_configRegister(0x05, channel);
+[e ( _Nrf24_configRegister (2 , -> -> 5 `i `uc _channel ]
 "100
-[; ;mirf.c: 100: }
+[; ;mirf.c: 100:  Nrf24_configRegister(0x11, dev->payload);
+[e ( _Nrf24_configRegister (2 , -> -> 17 `i `uc . *U _dev 2 ]
+"101
+[; ;mirf.c: 101:  Nrf24_configRegister(0x12, dev->payload);
+[e ( _Nrf24_configRegister (2 , -> -> 18 `i `uc . *U _dev 2 ]
+"102
+[; ;mirf.c: 102:  Nrf24_powerUpRx(dev);
+[e ( _Nrf24_powerUpRx (1 _dev ]
+"103
+[; ;mirf.c: 103:  Nrf24_flushRx(dev);
+[e ( _Nrf24_flushRx (1 _dev ]
+"104
+[; ;mirf.c: 104: }
 [e :UE 2450 ]
 }
-"103
-[; ;mirf.c: 103: int Nrf24_setRADDR(NRF24_t * dev, uint8_t * adr)
+"107
+[; ;mirf.c: 107: int Nrf24_setRADDR(NRF24_t * dev, uint8_t * adr)
 [v _Nrf24_setRADDR `(i ~T0 @X0 1 ef2`*S2417`*uc ]
-"104
-[; ;mirf.c: 104: {
+"108
+[; ;mirf.c: 108: {
 {
 [e :U _Nrf24_setRADDR ]
-"103
-[; ;mirf.c: 103: int Nrf24_setRADDR(NRF24_t * dev, uint8_t * adr)
+"107
+[; ;mirf.c: 107: int Nrf24_setRADDR(NRF24_t * dev, uint8_t * adr)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [v _adr `*uc ~T0 @X0 1 r2 ]
-"104
-[; ;mirf.c: 104: {
+"108
+[; ;mirf.c: 108: {
 [f ]
-"105
-[; ;mirf.c: 105:  int ret = 0;
+"109
+[; ;mirf.c: 109:  int ret = 0;
 [v _ret `i ~T0 @X0 1 a ]
 [e = _ret -> 0 `i ]
-"106
-[; ;mirf.c: 106:  Nrf24_writeRegister(0x0B, adr, 5);
+"110
+[; ;mirf.c: 110:  Nrf24_writeRegister(0x0B, adr, 5);
 [e ( _Nrf24_writeRegister (3 , , -> -> 11 `i `uc _adr -> -> 5 `i `uc ]
-"107
-[; ;mirf.c: 107:  uint8_t buffer[5];
+"111
+[; ;mirf.c: 111:  uint8_t buffer[5];
 [v _buffer `uc ~T0 @X0 -> 5 `i a ]
-"108
-[; ;mirf.c: 108:  Nrf24_readRegister(0x0B, buffer, sizeof(buffer));
+"112
+[; ;mirf.c: 112:  Nrf24_readRegister(0x0B, buffer, sizeof(buffer));
 [e ( _Nrf24_readRegister (3 , , -> -> 11 `i `uc &U _buffer -> -> # _buffer `ui `uc ]
-"109
-[; ;mirf.c: 109:  for (int i=0;i<5;i++) {
+"113
+[; ;mirf.c: 113:  for (int i=0;i<5;i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -3023,58 +3023,58 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 2453  ]
 [e :U 2452 ]
 {
-"110
-[; ;mirf.c: 110:   if (adr[i] != buffer[i]) ret = -1;
+"114
+[; ;mirf.c: 114:   if (adr[i] != buffer[i]) ret = -1;
 [e $ ! != -> *U + _adr * -> _i `x -> -> # *U _adr `i `x `i -> *U + &U _buffer * -> -> _i `ui `ux -> -> # *U &U _buffer `ui `ux `i 2455  ]
 [e = _ret -U -> 1 `i ]
 [e :U 2455 ]
-"111
-[; ;mirf.c: 111:  }
+"115
+[; ;mirf.c: 115:  }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 5 `i 2452  ]
 [e :U 2453 ]
 }
-"112
-[; ;mirf.c: 112:  return ret;
+"116
+[; ;mirf.c: 116:  return ret;
 [e ) _ret ]
 [e $UE 2451  ]
-"113
-[; ;mirf.c: 113: }
+"117
+[; ;mirf.c: 117: }
 [e :UE 2451 ]
 }
-"116
-[; ;mirf.c: 116: int Nrf24_setTADDR(NRF24_t * dev, uint8_t * adr)
+"120
+[; ;mirf.c: 120: int Nrf24_setTADDR(NRF24_t * dev, uint8_t * adr)
 [v _Nrf24_setTADDR `(i ~T0 @X0 1 ef2`*S2417`*uc ]
-"117
-[; ;mirf.c: 117: {
+"121
+[; ;mirf.c: 121: {
 {
 [e :U _Nrf24_setTADDR ]
-"116
-[; ;mirf.c: 116: int Nrf24_setTADDR(NRF24_t * dev, uint8_t * adr)
+"120
+[; ;mirf.c: 120: int Nrf24_setTADDR(NRF24_t * dev, uint8_t * adr)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [v _adr `*uc ~T0 @X0 1 r2 ]
-"117
-[; ;mirf.c: 117: {
+"121
+[; ;mirf.c: 121: {
 [f ]
-"118
-[; ;mirf.c: 118:  int ret = 0;
+"122
+[; ;mirf.c: 122:  int ret = 0;
 [v _ret `i ~T0 @X0 1 a ]
 [e = _ret -> 0 `i ]
-"119
-[; ;mirf.c: 119:  Nrf24_writeRegister(0x0A, adr, 5);
-[e ( _Nrf24_writeRegister (3 , , -> -> 10 `i `uc _adr -> -> 5 `i `uc ]
-"120
-[; ;mirf.c: 120:  Nrf24_writeRegister(0x10, adr, 5);
-[e ( _Nrf24_writeRegister (3 , , -> -> 16 `i `uc _adr -> -> 5 `i `uc ]
-"121
-[; ;mirf.c: 121:  uint8_t buffer[5];
-[v _buffer `uc ~T0 @X0 -> 5 `i a ]
-"122
-[; ;mirf.c: 122:  Nrf24_readRegister(0x0A, buffer, sizeof(buffer));
-[e ( _Nrf24_readRegister (3 , , -> -> 10 `i `uc &U _buffer -> -> # _buffer `ui `uc ]
 "123
-[; ;mirf.c: 123:  for (int i=0;i<5;i++) {
+[; ;mirf.c: 123:  Nrf24_writeRegister(0x0A, adr, 5);
+[e ( _Nrf24_writeRegister (3 , , -> -> 10 `i `uc _adr -> -> 5 `i `uc ]
+"124
+[; ;mirf.c: 124:  Nrf24_writeRegister(0x10, adr, 5);
+[e ( _Nrf24_writeRegister (3 , , -> -> 16 `i `uc _adr -> -> 5 `i `uc ]
+"125
+[; ;mirf.c: 125:  uint8_t buffer[5];
+[v _buffer `uc ~T0 @X0 -> 5 `i a ]
+"126
+[; ;mirf.c: 126:  Nrf24_readRegister(0x0A, buffer, sizeof(buffer));
+[e ( _Nrf24_readRegister (3 , , -> -> 10 `i `uc &U _buffer -> -> # _buffer `ui `uc ]
+"127
+[; ;mirf.c: 127:  for (int i=0;i<5;i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -3082,1026 +3082,1026 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 2458  ]
 [e :U 2457 ]
 {
-"124
-[; ;mirf.c: 124:   if (adr[i] != buffer[i]) ret = -1;
+"128
+[; ;mirf.c: 128:   if (adr[i] != buffer[i]) ret = -1;
 [e $ ! != -> *U + _adr * -> _i `x -> -> # *U _adr `i `x `i -> *U + &U _buffer * -> -> _i `ui `ux -> -> # *U &U _buffer `ui `ux `i 2460  ]
 [e = _ret -U -> 1 `i ]
 [e :U 2460 ]
-"125
-[; ;mirf.c: 125:  }
+"129
+[; ;mirf.c: 129:  }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 5 `i 2457  ]
 [e :U 2458 ]
 }
-"126
-[; ;mirf.c: 126:  return ret;
+"130
+[; ;mirf.c: 130:  return ret;
 [e ) _ret ]
 [e $UE 2456  ]
-"127
-[; ;mirf.c: 127: }
+"131
+[; ;mirf.c: 131: }
 [e :UE 2456 ]
 }
-"130
-[; ;mirf.c: 130: void Nrf24_addRADDR(NRF24_t * dev, uint8_t pipe, uint8_t adr)
+"134
+[; ;mirf.c: 134: void Nrf24_addRADDR(NRF24_t * dev, uint8_t pipe, uint8_t adr)
 [v _Nrf24_addRADDR `(v ~T0 @X0 1 ef3`*S2417`uc`uc ]
-"131
-[; ;mirf.c: 131: {
+"135
+[; ;mirf.c: 135: {
 {
 [e :U _Nrf24_addRADDR ]
-"130
-[; ;mirf.c: 130: void Nrf24_addRADDR(NRF24_t * dev, uint8_t pipe, uint8_t adr)
+"134
+[; ;mirf.c: 134: void Nrf24_addRADDR(NRF24_t * dev, uint8_t pipe, uint8_t adr)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [v _pipe `uc ~T0 @X0 1 r2 ]
 [v _adr `uc ~T0 @X0 1 r3 ]
-"131
-[; ;mirf.c: 131: {
-[f ]
-"132
-[; ;mirf.c: 132:  uint8_t value;
-[v _value `uc ~T0 @X0 1 a ]
-"133
-[; ;mirf.c: 133:  Nrf24_readRegister(0x02, &value, 1);
-[e ( _Nrf24_readRegister (3 , , -> -> 2 `i `uc &U _value -> -> 1 `i `uc ]
 "135
-[; ;mirf.c: 135:  if (pipe == 2) {
+[; ;mirf.c: 135: {
+[f ]
+"136
+[; ;mirf.c: 136:  uint8_t value;
+[v _value `uc ~T0 @X0 1 a ]
+"137
+[; ;mirf.c: 137:  Nrf24_readRegister(0x02, &value, 1);
+[e ( _Nrf24_readRegister (3 , , -> -> 2 `i `uc &U _value -> -> 1 `i `uc ]
+"139
+[; ;mirf.c: 139:  if (pipe == 2) {
 [e $ ! == -> _pipe `i -> 2 `i 2462  ]
 {
-"136
-[; ;mirf.c: 136:   Nrf24_configRegister(0x13, dev->payload);
-[e ( _Nrf24_configRegister (2 , -> -> 19 `i `uc . *U _dev 2 ]
-"137
-[; ;mirf.c: 137:   Nrf24_configRegister(0x0C, adr);
-[e ( _Nrf24_configRegister (2 , -> -> 12 `i `uc _adr ]
-"138
-[; ;mirf.c: 138:   value = value | 0x04;
-[e = _value -> | -> _value `i -> 4 `i `uc ]
-"139
-[; ;mirf.c: 139:   Nrf24_configRegister(0x02, value);
-[e ( _Nrf24_configRegister (2 , -> -> 2 `i `uc _value ]
 "140
-[; ;mirf.c: 140:  } else if (pipe == 3) {
+[; ;mirf.c: 140:   Nrf24_configRegister(0x13, dev->payload);
+[e ( _Nrf24_configRegister (2 , -> -> 19 `i `uc . *U _dev 2 ]
+"141
+[; ;mirf.c: 141:   Nrf24_configRegister(0x0C, adr);
+[e ( _Nrf24_configRegister (2 , -> -> 12 `i `uc _adr ]
+"142
+[; ;mirf.c: 142:   value = value | 0x04;
+[e = _value -> | -> _value `i -> 4 `i `uc ]
+"143
+[; ;mirf.c: 143:   Nrf24_configRegister(0x02, value);
+[e ( _Nrf24_configRegister (2 , -> -> 2 `i `uc _value ]
+"144
+[; ;mirf.c: 144:  } else if (pipe == 3) {
 }
 [e $U 2463  ]
 [e :U 2462 ]
 [e $ ! == -> _pipe `i -> 3 `i 2464  ]
 {
-"141
-[; ;mirf.c: 141:   Nrf24_configRegister(0x14, dev->payload);
-[e ( _Nrf24_configRegister (2 , -> -> 20 `i `uc . *U _dev 2 ]
-"142
-[; ;mirf.c: 142:   Nrf24_configRegister(0x0D, adr);
-[e ( _Nrf24_configRegister (2 , -> -> 13 `i `uc _adr ]
-"143
-[; ;mirf.c: 143:   value = value | 0x08;
-[e = _value -> | -> _value `i -> 8 `i `uc ]
-"144
-[; ;mirf.c: 144:   Nrf24_configRegister(0x02, value);
-[e ( _Nrf24_configRegister (2 , -> -> 2 `i `uc _value ]
 "145
-[; ;mirf.c: 145:  } else if (pipe == 4) {
+[; ;mirf.c: 145:   Nrf24_configRegister(0x14, dev->payload);
+[e ( _Nrf24_configRegister (2 , -> -> 20 `i `uc . *U _dev 2 ]
+"146
+[; ;mirf.c: 146:   Nrf24_configRegister(0x0D, adr);
+[e ( _Nrf24_configRegister (2 , -> -> 13 `i `uc _adr ]
+"147
+[; ;mirf.c: 147:   value = value | 0x08;
+[e = _value -> | -> _value `i -> 8 `i `uc ]
+"148
+[; ;mirf.c: 148:   Nrf24_configRegister(0x02, value);
+[e ( _Nrf24_configRegister (2 , -> -> 2 `i `uc _value ]
+"149
+[; ;mirf.c: 149:  } else if (pipe == 4) {
 }
 [e $U 2465  ]
 [e :U 2464 ]
 [e $ ! == -> _pipe `i -> 4 `i 2466  ]
 {
-"146
-[; ;mirf.c: 146:   Nrf24_configRegister(0x15, dev->payload);
-[e ( _Nrf24_configRegister (2 , -> -> 21 `i `uc . *U _dev 2 ]
-"147
-[; ;mirf.c: 147:   Nrf24_configRegister(0x0E, adr);
-[e ( _Nrf24_configRegister (2 , -> -> 14 `i `uc _adr ]
-"148
-[; ;mirf.c: 148:   value = value | 0x10;
-[e = _value -> | -> _value `i -> 16 `i `uc ]
-"149
-[; ;mirf.c: 149:   Nrf24_configRegister(0x02, value);
-[e ( _Nrf24_configRegister (2 , -> -> 2 `i `uc _value ]
 "150
-[; ;mirf.c: 150:  } else if (pipe == 5) {
+[; ;mirf.c: 150:   Nrf24_configRegister(0x15, dev->payload);
+[e ( _Nrf24_configRegister (2 , -> -> 21 `i `uc . *U _dev 2 ]
+"151
+[; ;mirf.c: 151:   Nrf24_configRegister(0x0E, adr);
+[e ( _Nrf24_configRegister (2 , -> -> 14 `i `uc _adr ]
+"152
+[; ;mirf.c: 152:   value = value | 0x10;
+[e = _value -> | -> _value `i -> 16 `i `uc ]
+"153
+[; ;mirf.c: 153:   Nrf24_configRegister(0x02, value);
+[e ( _Nrf24_configRegister (2 , -> -> 2 `i `uc _value ]
+"154
+[; ;mirf.c: 154:  } else if (pipe == 5) {
 }
 [e $U 2467  ]
 [e :U 2466 ]
 [e $ ! == -> _pipe `i -> 5 `i 2468  ]
 {
-"151
-[; ;mirf.c: 151:   Nrf24_configRegister(0x16, dev->payload);
-[e ( _Nrf24_configRegister (2 , -> -> 22 `i `uc . *U _dev 2 ]
-"152
-[; ;mirf.c: 152:   Nrf24_configRegister(0x0F, adr);
-[e ( _Nrf24_configRegister (2 , -> -> 15 `i `uc _adr ]
-"153
-[; ;mirf.c: 153:   value = value | 0x20;
-[e = _value -> | -> _value `i -> 32 `i `uc ]
-"154
-[; ;mirf.c: 154:   Nrf24_configRegister(0x02, value);
-[e ( _Nrf24_configRegister (2 , -> -> 2 `i `uc _value ]
 "155
-[; ;mirf.c: 155:  }
+[; ;mirf.c: 155:   Nrf24_configRegister(0x16, dev->payload);
+[e ( _Nrf24_configRegister (2 , -> -> 22 `i `uc . *U _dev 2 ]
+"156
+[; ;mirf.c: 156:   Nrf24_configRegister(0x0F, adr);
+[e ( _Nrf24_configRegister (2 , -> -> 15 `i `uc _adr ]
+"157
+[; ;mirf.c: 157:   value = value | 0x20;
+[e = _value -> | -> _value `i -> 32 `i `uc ]
+"158
+[; ;mirf.c: 158:   Nrf24_configRegister(0x02, value);
+[e ( _Nrf24_configRegister (2 , -> -> 2 `i `uc _value ]
+"159
+[; ;mirf.c: 159:  }
 }
 [e :U 2468 ]
 [e :U 2467 ]
 [e :U 2465 ]
 [e :U 2463 ]
-"156
-[; ;mirf.c: 156: }
+"160
+[; ;mirf.c: 160: }
 [e :UE 2461 ]
 }
-"159
-[; ;mirf.c: 159: extern _Bool Nrf24_dataReady(NRF24_t * dev)
+"163
+[; ;mirf.c: 163: extern _Bool Nrf24_dataReady(NRF24_t * dev)
 [v _Nrf24_dataReady `(a ~T0 @X0 1 ef1`*S2417 ]
-"160
-[; ;mirf.c: 160: {
+"164
+[; ;mirf.c: 164: {
 {
 [e :U _Nrf24_dataReady ]
-"159
-[; ;mirf.c: 159: extern _Bool Nrf24_dataReady(NRF24_t * dev)
+"163
+[; ;mirf.c: 163: extern _Bool Nrf24_dataReady(NRF24_t * dev)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
-"160
-[; ;mirf.c: 160: {
+"164
+[; ;mirf.c: 164: {
 [f ]
-"161
-[; ;mirf.c: 161:  uint8_t status = Nrf24_getStatus(dev);
+"165
+[; ;mirf.c: 165:  uint8_t status = Nrf24_getStatus(dev);
 [v _status `uc ~T0 @X0 1 a ]
 [e = _status ( _Nrf24_getStatus (1 _dev ]
-"162
-[; ;mirf.c: 162:  if ( status & (1 << 6) ) {
+"166
+[; ;mirf.c: 166:  if ( status & (1 << 6) ) {
 [e $ ! != & -> _status `i << -> 1 `i -> 6 `i -> 0 `i 2470  ]
 {
-"163
-[; ;mirf.c: 163:   return 1;
+"167
+[; ;mirf.c: 167:   return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 2469  ]
-"164
-[; ;mirf.c: 164:  }
+"168
+[; ;mirf.c: 168:  }
 }
 [e :U 2470 ]
-"165
-[; ;mirf.c: 165:  return 0;
+"169
+[; ;mirf.c: 169:  return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 2469  ]
-"166
-[; ;mirf.c: 166: }
+"170
+[; ;mirf.c: 170: }
 [e :UE 2469 ]
 }
-"169
-[; ;mirf.c: 169: uint8_t Nrf24_getDataPipe(NRF24_t * dev) {
+"173
+[; ;mirf.c: 173: uint8_t Nrf24_getDataPipe(NRF24_t * dev) {
 [v _Nrf24_getDataPipe `(uc ~T0 @X0 1 ef1`*S2417 ]
 {
 [e :U _Nrf24_getDataPipe ]
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [f ]
-"170
-[; ;mirf.c: 170:  return ((Nrf24_getStatus(dev) & 0x0E) >> 1);
+"174
+[; ;mirf.c: 174:  return ((Nrf24_getStatus(dev) & 0x0E) >> 1);
 [e ) -> >> & -> ( _Nrf24_getStatus (1 _dev `i -> 14 `i -> 1 `i `uc ]
 [e $UE 2471  ]
-"171
-[; ;mirf.c: 171: }
+"175
+[; ;mirf.c: 175: }
 [e :UE 2471 ]
 }
-"173
-[; ;mirf.c: 173: extern _Bool Nrf24_rxFifoEmpty(NRF24_t * dev)
+"177
+[; ;mirf.c: 177: extern _Bool Nrf24_rxFifoEmpty(NRF24_t * dev)
 [v _Nrf24_rxFifoEmpty `(a ~T0 @X0 1 ef1`*S2417 ]
-"174
-[; ;mirf.c: 174: {
+"178
+[; ;mirf.c: 178: {
 {
 [e :U _Nrf24_rxFifoEmpty ]
-"173
-[; ;mirf.c: 173: extern _Bool Nrf24_rxFifoEmpty(NRF24_t * dev)
-[v _dev `*S2417 ~T0 @X0 1 r1 ]
-"174
-[; ;mirf.c: 174: {
-[f ]
-"175
-[; ;mirf.c: 175:  uint8_t fifoStatus;
-[v _fifoStatus `uc ~T0 @X0 1 a ]
-"176
-[; ;mirf.c: 176:  Nrf24_readRegister(0x17, &fifoStatus, sizeof(fifoStatus));
-[e ( _Nrf24_readRegister (3 , , -> -> 23 `i `uc &U _fifoStatus -> -> # _fifoStatus `ui `uc ]
 "177
-[; ;mirf.c: 177:  return (fifoStatus & (1 << 0));
+[; ;mirf.c: 177: extern _Bool Nrf24_rxFifoEmpty(NRF24_t * dev)
+[v _dev `*S2417 ~T0 @X0 1 r1 ]
+"178
+[; ;mirf.c: 178: {
+[f ]
+"179
+[; ;mirf.c: 179:  uint8_t fifoStatus;
+[v _fifoStatus `uc ~T0 @X0 1 a ]
+"180
+[; ;mirf.c: 180:  Nrf24_readRegister(0x17, &fifoStatus, sizeof(fifoStatus));
+[e ( _Nrf24_readRegister (3 , , -> -> 23 `i `uc &U _fifoStatus -> -> # _fifoStatus `ui `uc ]
+"181
+[; ;mirf.c: 181:  return (fifoStatus & (1 << 0));
 [e ) -> & -> _fifoStatus `i << -> 1 `i -> 0 `i `a ]
 [e $UE 2472  ]
-"178
-[; ;mirf.c: 178: }
+"182
+[; ;mirf.c: 182: }
 [e :UE 2472 ]
 }
-"181
-[; ;mirf.c: 181: extern void Nrf24_getData(NRF24_t * dev, uint8_t * data)
+"185
+[; ;mirf.c: 185: extern void Nrf24_getData(NRF24_t * dev, uint8_t * data)
 [v _Nrf24_getData `(v ~T0 @X0 1 ef2`*S2417`*uc ]
-"182
-[; ;mirf.c: 182: {
+"186
+[; ;mirf.c: 186: {
 {
 [e :U _Nrf24_getData ]
-"181
-[; ;mirf.c: 181: extern void Nrf24_getData(NRF24_t * dev, uint8_t * data)
+"185
+[; ;mirf.c: 185: extern void Nrf24_getData(NRF24_t * dev, uint8_t * data)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [v _data `*uc ~T0 @X0 1 r2 ]
-"182
-[; ;mirf.c: 182: {
+"186
+[; ;mirf.c: 186: {
 [f ]
-"183
-[; ;mirf.c: 183:  do { LATCbits.LATC6 = 0; } while(0);
+"187
+[; ;mirf.c: 187:  do { LATCbits.LATC6 = 0; } while(0);
 [e :U 2476 ]
 {
 [e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
 }
 [e :U 2475 ]
-"184
-[; ;mirf.c: 184:  SPI1_ByteExchange(0x00 | 0x61);
+"188
+[; ;mirf.c: 188:  SPI1_ByteExchange(0x00 | 0x61);
 [e ( _SPI1_ByteExchange (1 -> | -> 0 `i -> 97 `i `uc ]
-"185
-[; ;mirf.c: 185:  SPI_read_buff( data, dev->payload );
+"189
+[; ;mirf.c: 189:  SPI_read_buff( data, dev->payload );
 [e ( _SPI_read_buff (2 , _data . *U _dev 2 ]
-"186
-[; ;mirf.c: 186:  do { LATCbits.LATC6 = 1; } while(0);
+"190
+[; ;mirf.c: 190:  do { LATCbits.LATC6 = 1; } while(0);
 [e :U 2479 ]
 {
 [e = . . _LATCbits 0 6 -> -> 1 `i `uc ]
 }
 [e :U 2478 ]
-"195
-[; ;mirf.c: 195:  Nrf24_configRegister(0x07, (1 << 6));
+"199
+[; ;mirf.c: 199:  Nrf24_configRegister(0x07, (1 << 6));
 [e ( _Nrf24_configRegister (2 , -> -> 7 `i `uc -> << -> 1 `i -> 6 `i `uc ]
-"196
-[; ;mirf.c: 196: }
+"200
+[; ;mirf.c: 200: }
 [e :UE 2473 ]
 }
-"199
-[; ;mirf.c: 199: void Nrf24_configRegister(uint8_t reg, uint8_t value)
+"203
+[; ;mirf.c: 203: void Nrf24_configRegister(uint8_t reg, uint8_t value)
 [v _Nrf24_configRegister `(v ~T0 @X0 1 ef2`uc`uc ]
-"200
-[; ;mirf.c: 200: {
+"204
+[; ;mirf.c: 204: {
 {
 [e :U _Nrf24_configRegister ]
-"199
-[; ;mirf.c: 199: void Nrf24_configRegister(uint8_t reg, uint8_t value)
+"203
+[; ;mirf.c: 203: void Nrf24_configRegister(uint8_t reg, uint8_t value)
 [v _reg `uc ~T0 @X0 1 r1 ]
 [v _value `uc ~T0 @X0 1 r2 ]
-"200
-[; ;mirf.c: 200: {
+"204
+[; ;mirf.c: 204: {
 [f ]
-"201
-[; ;mirf.c: 201:  do { LATCbits.LATC6 = 0; } while(0);
+"205
+[; ;mirf.c: 205:  do { LATCbits.LATC6 = 0; } while(0);
 [e :U 2483 ]
 {
 [e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
 }
 [e :U 2482 ]
-"202
-[; ;mirf.c: 202:  SPI1_ByteExchange(0x20 | (0x1F & reg));
+"206
+[; ;mirf.c: 206:  SPI1_ByteExchange(0x20 | (0x1F & reg));
 [e ( _SPI1_ByteExchange (1 -> | -> 32 `i & -> 31 `i -> _reg `i `uc ]
-"203
-[; ;mirf.c: 203:  SPI1_ByteExchange(value);
+"207
+[; ;mirf.c: 207:  SPI1_ByteExchange(value);
 [e ( _SPI1_ByteExchange (1 _value ]
-"204
-[; ;mirf.c: 204:  do { LATCbits.LATC6 = 1; } while(0);
+"208
+[; ;mirf.c: 208:  do { LATCbits.LATC6 = 1; } while(0);
 [e :U 2486 ]
 {
 [e = . . _LATCbits 0 6 -> -> 1 `i `uc ]
 }
 [e :U 2485 ]
-"205
-[; ;mirf.c: 205: }
+"209
+[; ;mirf.c: 209: }
 [e :UE 2480 ]
 }
-"208
-[; ;mirf.c: 208: void Nrf24_readRegister(uint8_t reg, uint8_t * value, uint8_t len)
+"212
+[; ;mirf.c: 212: void Nrf24_readRegister(uint8_t reg, uint8_t * value, uint8_t len)
 [v _Nrf24_readRegister `(v ~T0 @X0 1 ef3`uc`*uc`uc ]
-"209
-[; ;mirf.c: 209: {
+"213
+[; ;mirf.c: 213: {
 {
 [e :U _Nrf24_readRegister ]
-"208
-[; ;mirf.c: 208: void Nrf24_readRegister(uint8_t reg, uint8_t * value, uint8_t len)
+"212
+[; ;mirf.c: 212: void Nrf24_readRegister(uint8_t reg, uint8_t * value, uint8_t len)
 [v _reg `uc ~T0 @X0 1 r1 ]
 [v _value `*uc ~T0 @X0 1 r2 ]
 [v _len `uc ~T0 @X0 1 r3 ]
-"209
-[; ;mirf.c: 209: {
+"213
+[; ;mirf.c: 213: {
 [f ]
-"210
-[; ;mirf.c: 210:     if(len) {
+"214
+[; ;mirf.c: 214:     if(len) {
 [e $ ! != -> _len `i -> 0 `i 2488  ]
 {
-"211
-[; ;mirf.c: 211:         do { LATCbits.LATC6 = 0; } while(0);
+"215
+[; ;mirf.c: 215:         do { LATCbits.LATC6 = 0; } while(0);
 [e :U 2491 ]
 {
 [e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
 }
 [e :U 2490 ]
-"212
-[; ;mirf.c: 212:         SPI1_ByteExchange(0x00 | (0x1F & reg));
+"216
+[; ;mirf.c: 216:         SPI1_ByteExchange(0x00 | (0x1F & reg));
 [e ( _SPI1_ByteExchange (1 -> | -> 0 `i & -> 31 `i -> _reg `i `uc ]
-"213
-[; ;mirf.c: 213:         SPI_read_buff(value, len);
+"217
+[; ;mirf.c: 217:         SPI_read_buff(value, len);
 [e ( _SPI_read_buff (2 , _value _len ]
-"214
-[; ;mirf.c: 214:         do { LATCbits.LATC6 = 1; } while(0);
+"218
+[; ;mirf.c: 218:         do { LATCbits.LATC6 = 1; } while(0);
 [e :U 2494 ]
 {
 [e = . . _LATCbits 0 6 -> -> 1 `i `uc ]
 }
 [e :U 2493 ]
-"215
-[; ;mirf.c: 215:     }
+"219
+[; ;mirf.c: 219:     }
 }
 [e :U 2488 ]
-"216
-[; ;mirf.c: 216: }
+"220
+[; ;mirf.c: 220: }
 [e :UE 2487 ]
 }
-"219
-[; ;mirf.c: 219: void Nrf24_writeRegister(uint8_t reg, uint8_t * value, uint8_t len)
+"223
+[; ;mirf.c: 223: void Nrf24_writeRegister(uint8_t reg, uint8_t * value, uint8_t len)
 [v _Nrf24_writeRegister `(v ~T0 @X0 1 ef3`uc`*uc`uc ]
-"220
-[; ;mirf.c: 220: {
+"224
+[; ;mirf.c: 224: {
 {
 [e :U _Nrf24_writeRegister ]
-"219
-[; ;mirf.c: 219: void Nrf24_writeRegister(uint8_t reg, uint8_t * value, uint8_t len)
+"223
+[; ;mirf.c: 223: void Nrf24_writeRegister(uint8_t reg, uint8_t * value, uint8_t len)
 [v _reg `uc ~T0 @X0 1 r1 ]
 [v _value `*uc ~T0 @X0 1 r2 ]
 [v _len `uc ~T0 @X0 1 r3 ]
-"220
-[; ;mirf.c: 220: {
+"224
+[; ;mirf.c: 224: {
 [f ]
-"221
-[; ;mirf.c: 221:     if(len) {
+"225
+[; ;mirf.c: 225:     if(len) {
 [e $ ! != -> _len `i -> 0 `i 2496  ]
 {
-"222
-[; ;mirf.c: 222:         do { LATCbits.LATC6 = 0; } while(0);
+"226
+[; ;mirf.c: 226:         do { LATCbits.LATC6 = 0; } while(0);
 [e :U 2499 ]
 {
 [e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
 }
 [e :U 2498 ]
-"223
-[; ;mirf.c: 223:         SPI1_ByteExchange(0x20 | (0x1F & reg));
+"227
+[; ;mirf.c: 227:         SPI1_ByteExchange(0x20 | (0x1F & reg));
 [e ( _SPI1_ByteExchange (1 -> | -> 32 `i & -> 31 `i -> _reg `i `uc ]
-"224
-[; ;mirf.c: 224:         SPI_write_buff(value, len);
+"228
+[; ;mirf.c: 228:         SPI_write_buff(value, len);
 [e ( _SPI_write_buff (2 , _value _len ]
-"225
-[; ;mirf.c: 225:         do { LATCbits.LATC6 = 1; } while(0);
+"229
+[; ;mirf.c: 229:         do { LATCbits.LATC6 = 1; } while(0);
 [e :U 2502 ]
 {
 [e = . . _LATCbits 0 6 -> -> 1 `i `uc ]
 }
 [e :U 2501 ]
-"226
-[; ;mirf.c: 226:     }
+"230
+[; ;mirf.c: 230:     }
 }
 [e :U 2496 ]
-"227
-[; ;mirf.c: 227: }
+"231
+[; ;mirf.c: 231: }
 [e :UE 2495 ]
 }
-"231
-[; ;mirf.c: 231: void Nrf24_send(NRF24_t * dev, uint8_t * value)
+"235
+[; ;mirf.c: 235: void Nrf24_send(NRF24_t * dev, uint8_t * value)
 [v _Nrf24_send `(v ~T0 @X0 1 ef2`*S2417`*uc ]
-"232
-[; ;mirf.c: 232: {
+"236
+[; ;mirf.c: 236: {
 {
 [e :U _Nrf24_send ]
-"231
-[; ;mirf.c: 231: void Nrf24_send(NRF24_t * dev, uint8_t * value)
+"235
+[; ;mirf.c: 235: void Nrf24_send(NRF24_t * dev, uint8_t * value)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [v _value `*uc ~T0 @X0 1 r2 ]
-"232
-[; ;mirf.c: 232: {
+"236
+[; ;mirf.c: 236: {
 [f ]
-"233
-[; ;mirf.c: 233:  uint8_t status;
+"237
+[; ;mirf.c: 237:  uint8_t status;
 [v _status `uc ~T0 @X0 1 a ]
-"234
-[; ;mirf.c: 234:     status = Nrf24_getStatus(dev);
+"238
+[; ;mirf.c: 238:     status = Nrf24_getStatus(dev);
 [e = _status ( _Nrf24_getStatus (1 _dev ]
-"235
-[; ;mirf.c: 235:  while (dev->PTX)
+"239
+[; ;mirf.c: 239:  while (dev->PTX)
 [e $U 2504  ]
 [e :U 2505 ]
-"236
-[; ;mirf.c: 236:  {
-{
-"237
-[; ;mirf.c: 237:   status = Nrf24_getStatus(dev);
-[e = _status ( _Nrf24_getStatus (1 _dev ]
-"238
-[; ;mirf.c: 238:   if ((status & ((1 << 5) | (1 << 4))))
-[e $ ! != & -> _status `i | << -> 1 `i -> 5 `i << -> 1 `i -> 4 `i -> 0 `i 2507  ]
-"239
-[; ;mirf.c: 239:   {
-{
 "240
-[; ;mirf.c: 240:    dev->PTX = 0;
-[e = . *U _dev 0 -> -> 0 `i `uc ]
+[; ;mirf.c: 240:  {
+{
 "241
-[; ;mirf.c: 241:    break;
-[e $U 2506  ]
+[; ;mirf.c: 241:   status = Nrf24_getStatus(dev);
+[e = _status ( _Nrf24_getStatus (1 _dev ]
 "242
-[; ;mirf.c: 242:   }
+[; ;mirf.c: 242:   if ((status & ((1 << 5) | (1 << 4))))
+[e $ ! != & -> _status `i | << -> 1 `i -> 5 `i << -> 1 `i -> 4 `i -> 0 `i 2507  ]
+"243
+[; ;mirf.c: 243:   {
+{
+"244
+[; ;mirf.c: 244:    dev->PTX = 0;
+[e = . *U _dev 0 -> -> 0 `i `uc ]
+"245
+[; ;mirf.c: 245:    break;
+[e $U 2506  ]
+"246
+[; ;mirf.c: 246:   }
 }
 [e :U 2507 ]
-"243
-[; ;mirf.c: 243:  }
+"247
+[; ;mirf.c: 247:  }
 }
 [e :U 2504 ]
-"235
-[; ;mirf.c: 235:  while (dev->PTX)
+"239
+[; ;mirf.c: 239:  while (dev->PTX)
 [e $ != -> . *U _dev 0 `i -> 0 `i 2505  ]
 [e :U 2506 ]
-"244
-[; ;mirf.c: 244:  do { LATCbits.LATC5 = 0; } while(0);
+"248
+[; ;mirf.c: 248:  do { LATCbits.LATC5 = 0; } while(0);
 [e :U 2510 ]
 {
 [e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 2509 ]
-"245
-[; ;mirf.c: 245:  Nrf24_powerUpTx(dev);
+"249
+[; ;mirf.c: 249:  Nrf24_powerUpTx(dev);
 [e ( _Nrf24_powerUpTx (1 _dev ]
-"246
-[; ;mirf.c: 246:  do { LATCbits.LATC6 = 0; } while(0);
+"250
+[; ;mirf.c: 250:  do { LATCbits.LATC6 = 0; } while(0);
 [e :U 2513 ]
 {
 [e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
 }
 [e :U 2512 ]
-"247
-[; ;mirf.c: 247:  SPI1_ByteExchange(0xE1);
+"251
+[; ;mirf.c: 251:  SPI1_ByteExchange(0xE1);
 [e ( _SPI1_ByteExchange (1 -> -> 225 `i `uc ]
-"248
-[; ;mirf.c: 248:  do { LATCbits.LATC6 = 1; } while(0);
+"252
+[; ;mirf.c: 252:  do { LATCbits.LATC6 = 1; } while(0);
 [e :U 2516 ]
 {
 [e = . . _LATCbits 0 6 -> -> 1 `i `uc ]
 }
 [e :U 2515 ]
-"249
-[; ;mirf.c: 249:  do { LATCbits.LATC6 = 0; } while(0);
+"253
+[; ;mirf.c: 253:  do { LATCbits.LATC6 = 0; } while(0);
 [e :U 2519 ]
 {
 [e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
 }
 [e :U 2518 ]
-"250
-[; ;mirf.c: 250:  SPI1_ByteExchange(0xA0);
+"254
+[; ;mirf.c: 254:  SPI1_ByteExchange(0xA0);
 [e ( _SPI1_ByteExchange (1 -> -> 160 `i `uc ]
-"251
-[; ;mirf.c: 251:  SPI_write_buff(value, dev->payload);
+"255
+[; ;mirf.c: 255:  SPI_write_buff(value, dev->payload);
 [e ( _SPI_write_buff (2 , _value . *U _dev 2 ]
-"252
-[; ;mirf.c: 252:  do { LATCbits.LATC6 = 1; } while(0);
+"256
+[; ;mirf.c: 256:  do { LATCbits.LATC6 = 1; } while(0);
 [e :U 2522 ]
 {
 [e = . . _LATCbits 0 6 -> -> 1 `i `uc ]
 }
 [e :U 2521 ]
-"253
-[; ;mirf.c: 253:  do { LATCbits.LATC5 = 1; } while(0);
+"257
+[; ;mirf.c: 257:  do { LATCbits.LATC5 = 1; } while(0);
 [e :U 2525 ]
 {
 [e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
 }
 [e :U 2524 ]
-"254
-[; ;mirf.c: 254: }
+"258
+[; ;mirf.c: 258: }
 [e :UE 2503 ]
 }
-"258
-[; ;mirf.c: 258: _Bool Nrf24_isSending(NRF24_t * dev) {
+"262
+[; ;mirf.c: 262: _Bool Nrf24_isSending(NRF24_t * dev) {
 [v _Nrf24_isSending `(a ~T0 @X0 1 ef1`*S2417 ]
 {
 [e :U _Nrf24_isSending ]
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [f ]
-"259
-[; ;mirf.c: 259:  uint8_t status;
-[v _status `uc ~T0 @X0 1 a ]
-"260
-[; ;mirf.c: 260:  if (dev->PTX)
-[e $ ! != -> . *U _dev 0 `i -> 0 `i 2527  ]
-"261
-[; ;mirf.c: 261:  {
-{
-"262
-[; ;mirf.c: 262:   status = Nrf24_getStatus(dev);
-[e = _status ( _Nrf24_getStatus (1 _dev ]
 "263
-[; ;mirf.c: 263:   if ((status & ((1 << 5) | (1 << 4)))) {
+[; ;mirf.c: 263:  uint8_t status;
+[v _status `uc ~T0 @X0 1 a ]
+"264
+[; ;mirf.c: 264:  if (dev->PTX)
+[e $ ! != -> . *U _dev 0 `i -> 0 `i 2527  ]
+"265
+[; ;mirf.c: 265:  {
+{
+"266
+[; ;mirf.c: 266:   status = Nrf24_getStatus(dev);
+[e = _status ( _Nrf24_getStatus (1 _dev ]
+"267
+[; ;mirf.c: 267:   if ((status & ((1 << 5) | (1 << 4)))) {
 [e $ ! != & -> _status `i | << -> 1 `i -> 5 `i << -> 1 `i -> 4 `i -> 0 `i 2528  ]
 {
-"264
-[; ;mirf.c: 264:    Nrf24_powerUpRx(dev);
-[e ( _Nrf24_powerUpRx (1 _dev ]
-"265
-[; ;mirf.c: 265:    return 0;
-[e ) -> -> 0 `i `a ]
-[e $UE 2526  ]
-"266
-[; ;mirf.c: 266:   }
-}
-[e :U 2528 ]
-"267
-[; ;mirf.c: 267:   return 1;
-[e ) -> -> 1 `i `a ]
-[e $UE 2526  ]
 "268
-[; ;mirf.c: 268:  }
-}
-[e :U 2527 ]
+[; ;mirf.c: 268:    Nrf24_powerUpRx(dev);
+[e ( _Nrf24_powerUpRx (1 _dev ]
 "269
-[; ;mirf.c: 269:  return 0;
+[; ;mirf.c: 269:    return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 2526  ]
 "270
-[; ;mirf.c: 270: }
+[; ;mirf.c: 270:   }
+}
+[e :U 2528 ]
+"271
+[; ;mirf.c: 271:   return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 2526  ]
+"272
+[; ;mirf.c: 272:  }
+}
+[e :U 2527 ]
+"273
+[; ;mirf.c: 273:  return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 2526  ]
+"274
+[; ;mirf.c: 274: }
 [e :UE 2526 ]
 }
-"275
-[; ;mirf.c: 275: _Bool Nrf24_isSend(NRF24_t * dev, int timeout) {
+"279
+[; ;mirf.c: 279: _Bool Nrf24_isSend(NRF24_t * dev, int timeout) {
 [v _Nrf24_isSend `(a ~T0 @X0 1 ef2`*S2417`i ]
 {
 [e :U _Nrf24_isSend ]
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [v _timeout `i ~T0 @X0 1 r2 ]
 [f ]
-"276
-[; ;mirf.c: 276:  uint8_t status;
+"280
+[; ;mirf.c: 280:  uint8_t status;
 [v _status `uc ~T0 @X0 1 a ]
-"277
-[; ;mirf.c: 277:  if (dev->PTX) {
+"281
+[; ;mirf.c: 281:  if (dev->PTX) {
 [e $ ! != -> . *U _dev 0 `i -> 0 `i 2530  ]
 {
-"278
-[; ;mirf.c: 278:   for(unsigned long int i = 0; i < timeout; i++) {
+"282
+[; ;mirf.c: 282:   for(unsigned long int i = 0; i < timeout; i++) {
 {
 [v _i `ul ~T0 @X0 1 a ]
 [e = _i -> -> -> 0 `i `l `ul ]
 [e $U 2534  ]
 [e :U 2531 ]
 {
-"279
-[; ;mirf.c: 279:    status = Nrf24_getStatus(dev);
+"283
+[; ;mirf.c: 283:    status = Nrf24_getStatus(dev);
 [e = _status ( _Nrf24_getStatus (1 _dev ]
-"281
-[; ;mirf.c: 281:    if (status & (1 << 5)) {
+"285
+[; ;mirf.c: 285:    if (status & (1 << 5)) {
 [e $ ! != & -> _status `i << -> 1 `i -> 5 `i -> 0 `i 2535  ]
 {
-"282
-[; ;mirf.c: 282:     Nrf24_powerUpRx(dev);
+"286
+[; ;mirf.c: 286:     Nrf24_powerUpRx(dev);
 [e ( _Nrf24_powerUpRx (1 _dev ]
-"283
-[; ;mirf.c: 283:     return 1;
+"287
+[; ;mirf.c: 287:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 2529  ]
-"284
-[; ;mirf.c: 284:    }
+"288
+[; ;mirf.c: 288:    }
 }
 [e :U 2535 ]
-"286
-[; ;mirf.c: 286:    if (status & (1 << 4)) {
+"290
+[; ;mirf.c: 290:    if (status & (1 << 4)) {
 [e $ ! != & -> _status `i << -> 1 `i -> 4 `i -> 0 `i 2536  ]
 {
-"287
-[; ;mirf.c: 287:     Nrf24_powerUpRx(dev);
+"291
+[; ;mirf.c: 291:     Nrf24_powerUpRx(dev);
 [e ( _Nrf24_powerUpRx (1 _dev ]
-"288
-[; ;mirf.c: 288:     return 0;
+"292
+[; ;mirf.c: 292:     return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 2529  ]
-"289
-[; ;mirf.c: 289:    }
+"293
+[; ;mirf.c: 293:    }
 }
 [e :U 2536 ]
-"291
-[; ;mirf.c: 291:    DELAY_milliseconds(1);
+"295
+[; ;mirf.c: 295:    DELAY_milliseconds(1);
 [e ( _DELAY_milliseconds (1 -> -> 1 `i `us ]
-"292
-[; ;mirf.c: 292:   }
+"296
+[; ;mirf.c: 296:   }
 }
 [e ++ _i -> -> -> 1 `i `l `ul ]
 [e :U 2534 ]
 [e $ < _i -> -> _timeout `l `ul 2531  ]
 [e :U 2532 ]
 }
-"293
-[; ;mirf.c: 293:  }
+"297
+[; ;mirf.c: 297:  }
 }
 [e :U 2530 ]
-"294
-[; ;mirf.c: 294:  return 0;
+"298
+[; ;mirf.c: 298:  return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 2529  ]
-"295
-[; ;mirf.c: 295: }
+"299
+[; ;mirf.c: 299: }
 [e :UE 2529 ]
 }
-"298
-[; ;mirf.c: 298: uint8_t Nrf24_getStatus(NRF24_t * dev) {
+"302
+[; ;mirf.c: 302: uint8_t Nrf24_getStatus(NRF24_t * dev) {
 [v _Nrf24_getStatus `(uc ~T0 @X0 1 ef1`*S2417 ]
 {
 [e :U _Nrf24_getStatus ]
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [f ]
-"299
-[; ;mirf.c: 299:  uint8_t rv;
+"303
+[; ;mirf.c: 303:  uint8_t rv;
 [v _rv `uc ~T0 @X0 1 a ]
-"300
-[; ;mirf.c: 300:  Nrf24_readRegister(0x07, &rv, 1);
+"304
+[; ;mirf.c: 304:  Nrf24_readRegister(0x07, &rv, 1);
 [e ( _Nrf24_readRegister (3 , , -> -> 7 `i `uc &U _rv -> -> 1 `i `uc ]
-"301
-[; ;mirf.c: 301:  return rv;
+"305
+[; ;mirf.c: 305:  return rv;
 [e ) _rv ]
 [e $UE 2537  ]
-"302
-[; ;mirf.c: 302: }
+"306
+[; ;mirf.c: 306: }
 [e :UE 2537 ]
 }
-"304
-[; ;mirf.c: 304: void Nrf24_powerUpRx(NRF24_t * dev) {
+"308
+[; ;mirf.c: 308: void Nrf24_powerUpRx(NRF24_t * dev) {
 [v _Nrf24_powerUpRx `(v ~T0 @X0 1 ef1`*S2417 ]
 {
 [e :U _Nrf24_powerUpRx ]
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [f ]
-"305
-[; ;mirf.c: 305:  dev->PTX = 0;
+"309
+[; ;mirf.c: 309:  dev->PTX = 0;
 [e = . *U _dev 0 -> -> 0 `i `uc ]
-"306
-[; ;mirf.c: 306:  do { LATCbits.LATC5 = 0; } while(0);
+"310
+[; ;mirf.c: 310:  do { LATCbits.LATC5 = 0; } while(0);
 [e :U 2541 ]
 {
 [e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 2540 ]
-"307
-[; ;mirf.c: 307:  Nrf24_configRegister(0x00, ((1<<5) | (1<<3) | (0<<2) ) | ( (1 << 1) | (1 << 0) ) );
+"311
+[; ;mirf.c: 311:  Nrf24_configRegister(0x00, ((1<<5) | (1<<3) | (0<<2) ) | ( (1 << 1) | (1 << 0) ) );
 [e ( _Nrf24_configRegister (2 , -> -> 0 `i `uc -> | | | << -> 1 `i -> 5 `i << -> 1 `i -> 3 `i << -> 0 `i -> 2 `i | << -> 1 `i -> 1 `i << -> 1 `i -> 0 `i `uc ]
-"308
-[; ;mirf.c: 308:  do { LATCbits.LATC5 = 1; } while(0);
+"312
+[; ;mirf.c: 312:  do { LATCbits.LATC5 = 1; } while(0);
 [e :U 2544 ]
 {
 [e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
 }
 [e :U 2543 ]
-"309
-[; ;mirf.c: 309:  Nrf24_configRegister(0x07, (1 << 5) | (1 << 4));
+"313
+[; ;mirf.c: 313:  Nrf24_configRegister(0x07, (1 << 5) | (1 << 4));
 [e ( _Nrf24_configRegister (2 , -> -> 7 `i `uc -> | << -> 1 `i -> 5 `i << -> 1 `i -> 4 `i `uc ]
-"310
-[; ;mirf.c: 310: }
+"314
+[; ;mirf.c: 314: }
 [e :UE 2538 ]
 }
-"312
-[; ;mirf.c: 312: void Nrf24_flushRx(NRF24_t * dev)
+"316
+[; ;mirf.c: 316: void Nrf24_flushRx(NRF24_t * dev)
 [v _Nrf24_flushRx `(v ~T0 @X0 1 ef1`*S2417 ]
-"313
-[; ;mirf.c: 313: {
+"317
+[; ;mirf.c: 317: {
 {
 [e :U _Nrf24_flushRx ]
-"312
-[; ;mirf.c: 312: void Nrf24_flushRx(NRF24_t * dev)
+"316
+[; ;mirf.c: 316: void Nrf24_flushRx(NRF24_t * dev)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
-"313
-[; ;mirf.c: 313: {
+"317
+[; ;mirf.c: 317: {
 [f ]
-"314
-[; ;mirf.c: 314:  do { LATCbits.LATC6 = 0; } while(0);
+"318
+[; ;mirf.c: 318:  do { LATCbits.LATC6 = 0; } while(0);
 [e :U 2548 ]
 {
 [e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
 }
 [e :U 2547 ]
-"315
-[; ;mirf.c: 315:  SPI1_ByteExchange(0xE2);
+"319
+[; ;mirf.c: 319:  SPI1_ByteExchange(0xE2);
 [e ( _SPI1_ByteExchange (1 -> -> 226 `i `uc ]
-"316
-[; ;mirf.c: 316:  do { LATCbits.LATC6 = 1; } while(0);
+"320
+[; ;mirf.c: 320:  do { LATCbits.LATC6 = 1; } while(0);
 [e :U 2551 ]
 {
 [e = . . _LATCbits 0 6 -> -> 1 `i `uc ]
 }
 [e :U 2550 ]
-"317
-[; ;mirf.c: 317: }
+"321
+[; ;mirf.c: 321: }
 [e :UE 2545 ]
 }
-"319
-[; ;mirf.c: 319: void Nrf24_powerUpTx(NRF24_t * dev) {
+"323
+[; ;mirf.c: 323: void Nrf24_powerUpTx(NRF24_t * dev) {
 [v _Nrf24_powerUpTx `(v ~T0 @X0 1 ef1`*S2417 ]
 {
 [e :U _Nrf24_powerUpTx ]
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [f ]
-"320
-[; ;mirf.c: 320:  dev->PTX = 1;
+"324
+[; ;mirf.c: 324:  dev->PTX = 1;
 [e = . *U _dev 0 -> -> 1 `i `uc ]
-"321
-[; ;mirf.c: 321:  Nrf24_configRegister(0x00, ((1<<5) | (1<<3) | (0<<2) ) | ( (1 << 1) | (0 << 0) ) );
+"325
+[; ;mirf.c: 325:  Nrf24_configRegister(0x00, ((1<<5) | (1<<3) | (0<<2) ) | ( (1 << 1) | (0 << 0) ) );
 [e ( _Nrf24_configRegister (2 , -> -> 0 `i `uc -> | | | << -> 1 `i -> 5 `i << -> 1 `i -> 3 `i << -> 0 `i -> 2 `i | << -> 1 `i -> 1 `i << -> 0 `i -> 0 `i `uc ]
-"322
-[; ;mirf.c: 322:  Nrf24_configRegister(0x07, (1 << 5) | (1 << 4));
+"326
+[; ;mirf.c: 326:  Nrf24_configRegister(0x07, (1 << 5) | (1 << 4));
 [e ( _Nrf24_configRegister (2 , -> -> 7 `i `uc -> | << -> 1 `i -> 5 `i << -> 1 `i -> 4 `i `uc ]
-"323
-[; ;mirf.c: 323: }
+"327
+[; ;mirf.c: 327: }
 [e :UE 2552 ]
 }
-"325
-[; ;mirf.c: 325: void Nrf24_powerDown(NRF24_t * dev)
+"329
+[; ;mirf.c: 329: void Nrf24_powerDown(NRF24_t * dev)
 [v _Nrf24_powerDown `(v ~T0 @X0 1 ef1`*S2417 ]
-"326
-[; ;mirf.c: 326: {
+"330
+[; ;mirf.c: 330: {
 {
 [e :U _Nrf24_powerDown ]
-"325
-[; ;mirf.c: 325: void Nrf24_powerDown(NRF24_t * dev)
+"329
+[; ;mirf.c: 329: void Nrf24_powerDown(NRF24_t * dev)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
-"326
-[; ;mirf.c: 326: {
+"330
+[; ;mirf.c: 330: {
 [f ]
-"327
-[; ;mirf.c: 327:  do { LATCbits.LATC5 = 0; } while(0);
+"331
+[; ;mirf.c: 331:  do { LATCbits.LATC5 = 0; } while(0);
 [e :U 2556 ]
 {
 [e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 2555 ]
-"328
-[; ;mirf.c: 328:  Nrf24_configRegister(0x00, ((1<<5) | (1<<3) | (0<<2) ) );
+"332
+[; ;mirf.c: 332:  Nrf24_configRegister(0x00, ((1<<5) | (1<<3) | (0<<2) ) );
 [e ( _Nrf24_configRegister (2 , -> -> 0 `i `uc -> | | << -> 1 `i -> 5 `i << -> 1 `i -> 3 `i << -> 0 `i -> 2 `i `uc ]
-"329
-[; ;mirf.c: 329: }
+"333
+[; ;mirf.c: 333: }
 [e :UE 2553 ]
 }
-"332
-[; ;mirf.c: 332: void Nrf24_SetOutputRF_PWR(NRF24_t * dev, uint8_t val)
+"336
+[; ;mirf.c: 336: void Nrf24_SetOutputRF_PWR(NRF24_t * dev, uint8_t val)
 [v _Nrf24_SetOutputRF_PWR `(v ~T0 @X0 1 ef2`*S2417`uc ]
-"333
-[; ;mirf.c: 333: {
+"337
+[; ;mirf.c: 337: {
 {
 [e :U _Nrf24_SetOutputRF_PWR ]
-"332
-[; ;mirf.c: 332: void Nrf24_SetOutputRF_PWR(NRF24_t * dev, uint8_t val)
+"336
+[; ;mirf.c: 336: void Nrf24_SetOutputRF_PWR(NRF24_t * dev, uint8_t val)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [v _val `uc ~T0 @X0 1 r2 ]
-"333
-[; ;mirf.c: 333: {
+"337
+[; ;mirf.c: 337: {
 [f ]
-"334
-[; ;mirf.c: 334:  if (val > 3) return;
+"338
+[; ;mirf.c: 338:  if (val > 3) return;
 [e $ ! > -> _val `i -> 3 `i 2558  ]
 [e $UE 2557  ]
 [e :U 2558 ]
-"336
-[; ;mirf.c: 336:  uint8_t value;
-[v _value `uc ~T0 @X0 1 a ]
-"337
-[; ;mirf.c: 337:  Nrf24_readRegister(0x06, &value, 1);
-[e ( _Nrf24_readRegister (3 , , -> -> 6 `i `uc &U _value -> -> 1 `i `uc ]
-"338
-[; ;mirf.c: 338:  value = value & 0xF9;
-[e = _value -> & -> _value `i -> 249 `i `uc ]
-"339
-[; ;mirf.c: 339:  value = value | (val<< 1);
-[e = _value -> | -> _value `i << -> _val `i -> 1 `i `uc ]
 "340
-[; ;mirf.c: 340:  Nrf24_configRegister(0x06, value);
-[e ( _Nrf24_configRegister (2 , -> -> 6 `i `uc _value ]
+[; ;mirf.c: 340:  uint8_t value;
+[v _value `uc ~T0 @X0 1 a ]
 "341
-[; ;mirf.c: 341: }
+[; ;mirf.c: 341:  Nrf24_readRegister(0x06, &value, 1);
+[e ( _Nrf24_readRegister (3 , , -> -> 6 `i `uc &U _value -> -> 1 `i `uc ]
+"342
+[; ;mirf.c: 342:  value = value & 0xF9;
+[e = _value -> & -> _value `i -> 249 `i `uc ]
+"343
+[; ;mirf.c: 343:  value = value | (val<< 1);
+[e = _value -> | -> _value `i << -> _val `i -> 1 `i `uc ]
+"344
+[; ;mirf.c: 344:  Nrf24_configRegister(0x06, value);
+[e ( _Nrf24_configRegister (2 , -> -> 6 `i `uc _value ]
+"345
+[; ;mirf.c: 345: }
 [e :UE 2557 ]
 }
-"344
-[; ;mirf.c: 344: void Nrf24_SetSpeedDataRates(NRF24_t * dev, uint8_t val)
+"348
+[; ;mirf.c: 348: void Nrf24_SetSpeedDataRates(NRF24_t * dev, uint8_t val)
 [v _Nrf24_SetSpeedDataRates `(v ~T0 @X0 1 ef2`*S2417`uc ]
-"345
-[; ;mirf.c: 345: {
+"349
+[; ;mirf.c: 349: {
 {
 [e :U _Nrf24_SetSpeedDataRates ]
-"344
-[; ;mirf.c: 344: void Nrf24_SetSpeedDataRates(NRF24_t * dev, uint8_t val)
+"348
+[; ;mirf.c: 348: void Nrf24_SetSpeedDataRates(NRF24_t * dev, uint8_t val)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [v _val `uc ~T0 @X0 1 r2 ]
-"345
-[; ;mirf.c: 345: {
+"349
+[; ;mirf.c: 349: {
 [f ]
-"346
-[; ;mirf.c: 346:  if (val > 2) return;
+"350
+[; ;mirf.c: 350:  if (val > 2) return;
 [e $ ! > -> _val `i -> 2 `i 2560  ]
 [e $UE 2559  ]
 [e :U 2560 ]
-"348
-[; ;mirf.c: 348:  uint8_t value;
-[v _value `uc ~T0 @X0 1 a ]
-"349
-[; ;mirf.c: 349:  Nrf24_readRegister(0x06, &value, 1);
-[e ( _Nrf24_readRegister (3 , , -> -> 6 `i `uc &U _value -> -> 1 `i `uc ]
-"350
-[; ;mirf.c: 350:  if(val == 2)
-[e $ ! == -> _val `i -> 2 `i 2561  ]
-"351
-[; ;mirf.c: 351:  {
-{
 "352
-[; ;mirf.c: 352:   value = value | 0x20;
-[e = _value -> | -> _value `i -> 32 `i `uc ]
+[; ;mirf.c: 352:  uint8_t value;
+[v _value `uc ~T0 @X0 1 a ]
 "353
-[; ;mirf.c: 353:   value = value & 0xF7;
-[e = _value -> & -> _value `i -> 247 `i `uc ]
+[; ;mirf.c: 353:  Nrf24_readRegister(0x06, &value, 1);
+[e ( _Nrf24_readRegister (3 , , -> -> 6 `i `uc &U _value -> -> 1 `i `uc ]
 "354
-[; ;mirf.c: 354:      Nrf24_configRegister(0x06, value);
-[e ( _Nrf24_configRegister (2 , -> -> 6 `i `uc _value ]
+[; ;mirf.c: 354:  if(val == 2)
+[e $ ! == -> _val `i -> 2 `i 2561  ]
 "355
-[; ;mirf.c: 355:  }
+[; ;mirf.c: 355:  {
+{
+"356
+[; ;mirf.c: 356:   value = value | 0x20;
+[e = _value -> | -> _value `i -> 32 `i `uc ]
+"357
+[; ;mirf.c: 357:   value = value & 0xF7;
+[e = _value -> & -> _value `i -> 247 `i `uc ]
+"358
+[; ;mirf.c: 358:      Nrf24_configRegister(0x06, value);
+[e ( _Nrf24_configRegister (2 , -> -> 6 `i `uc _value ]
+"359
+[; ;mirf.c: 359:  }
 }
 [e $U 2562  ]
-"356
-[; ;mirf.c: 356:  else
-[e :U 2561 ]
-"357
-[; ;mirf.c: 357:  {
-{
-"358
-[; ;mirf.c: 358:   value = value & 0xD7;
-[e = _value -> & -> _value `i -> 215 `i `uc ]
-"359
-[; ;mirf.c: 359:   value = value | (val << 3);
-[e = _value -> | -> _value `i << -> _val `i -> 3 `i `uc ]
 "360
-[; ;mirf.c: 360:   Nrf24_configRegister(0x06, value);
-[e ( _Nrf24_configRegister (2 , -> -> 6 `i `uc _value ]
+[; ;mirf.c: 360:  else
+[e :U 2561 ]
 "361
-[; ;mirf.c: 361:  }
+[; ;mirf.c: 361:  {
+{
+"362
+[; ;mirf.c: 362:   value = value & 0xD7;
+[e = _value -> & -> _value `i -> 215 `i `uc ]
+"363
+[; ;mirf.c: 363:   value = value | (val << 3);
+[e = _value -> | -> _value `i << -> _val `i -> 3 `i `uc ]
+"364
+[; ;mirf.c: 364:   Nrf24_configRegister(0x06, value);
+[e ( _Nrf24_configRegister (2 , -> -> 6 `i `uc _value ]
+"365
+[; ;mirf.c: 365:  }
 }
 [e :U 2562 ]
-"362
-[; ;mirf.c: 362: }
+"366
+[; ;mirf.c: 366: }
 [e :UE 2559 ]
 }
-"365
-[; ;mirf.c: 365: void Nrf24_setRetransmitDelay(NRF24_t * dev, uint8_t val)
+"369
+[; ;mirf.c: 369: void Nrf24_setRetransmitDelay(NRF24_t * dev, uint8_t val)
 [v _Nrf24_setRetransmitDelay `(v ~T0 @X0 1 ef2`*S2417`uc ]
-"366
-[; ;mirf.c: 366: {
+"370
+[; ;mirf.c: 370: {
 {
 [e :U _Nrf24_setRetransmitDelay ]
-"365
-[; ;mirf.c: 365: void Nrf24_setRetransmitDelay(NRF24_t * dev, uint8_t val)
+"369
+[; ;mirf.c: 369: void Nrf24_setRetransmitDelay(NRF24_t * dev, uint8_t val)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [v _val `uc ~T0 @X0 1 r2 ]
-"366
-[; ;mirf.c: 366: {
-[f ]
-"367
-[; ;mirf.c: 367:  uint8_t value;
-[v _value `uc ~T0 @X0 1 a ]
-"368
-[; ;mirf.c: 368:  Nrf24_readRegister(0x04, &value, 1);
-[e ( _Nrf24_readRegister (3 , , -> -> 4 `i `uc &U _value -> -> 1 `i `uc ]
-"369
-[; ;mirf.c: 369:  value = value & 0x0F;
-[e = _value -> & -> _value `i -> 15 `i `uc ]
 "370
-[; ;mirf.c: 370:  value = value | (val << 4);
-[e = _value -> | -> _value `i << -> _val `i -> 4 `i `uc ]
+[; ;mirf.c: 370: {
+[f ]
 "371
-[; ;mirf.c: 371:  Nrf24_configRegister(0x04, value);
-[e ( _Nrf24_configRegister (2 , -> -> 4 `i `uc _value ]
+[; ;mirf.c: 371:  uint8_t value;
+[v _value `uc ~T0 @X0 1 a ]
 "372
-[; ;mirf.c: 372: }
+[; ;mirf.c: 372:  Nrf24_readRegister(0x04, &value, 1);
+[e ( _Nrf24_readRegister (3 , , -> -> 4 `i `uc &U _value -> -> 1 `i `uc ]
+"373
+[; ;mirf.c: 373:  value = value & 0x0F;
+[e = _value -> & -> _value `i -> 15 `i `uc ]
+"374
+[; ;mirf.c: 374:  value = value | (val << 4);
+[e = _value -> | -> _value `i << -> _val `i -> 4 `i `uc ]
+"375
+[; ;mirf.c: 375:  Nrf24_configRegister(0x04, value);
+[e ( _Nrf24_configRegister (2 , -> -> 4 `i `uc _value ]
+"376
+[; ;mirf.c: 376: }
 [e :UE 2563 ]
 }
-"375
-[; ;mirf.c: 375: void Nrf24_printDetails(NRF24_t * dev)
+"379
+[; ;mirf.c: 379: void Nrf24_printDetails(NRF24_t * dev)
 [v _Nrf24_printDetails `(v ~T0 @X0 1 ef1`*S2417 ]
-"376
-[; ;mirf.c: 376: {
+"380
+[; ;mirf.c: 380: {
 {
 [e :U _Nrf24_printDetails ]
-"375
-[; ;mirf.c: 375: void Nrf24_printDetails(NRF24_t * dev)
-[v _dev `*S2417 ~T0 @X0 1 r1 ]
-"376
-[; ;mirf.c: 376: {
-[f ]
-"377
-[; ;mirf.c: 377:  printf("================ NRF Configuration ================\n");
-[e ( _printf :s 1C ]
 "379
-[; ;mirf.c: 379:  Nrf24_print_status(Nrf24_getStatus(dev));
-[e ( _Nrf24_print_status (1 ( _Nrf24_getStatus (1 _dev ]
+[; ;mirf.c: 379: void Nrf24_printDetails(NRF24_t * dev)
+[v _dev `*S2417 ~T0 @X0 1 r1 ]
+"380
+[; ;mirf.c: 380: {
+[f ]
 "381
-[; ;mirf.c: 381:  Nrf24_print_address_register(dev, "RX_ADDR_P0-1", 0x0A, 2);
-[e ( _Nrf24_print_address_register (4 , , , _dev :s 2C -> -> 10 `i `uc -> -> 2 `i `uc ]
-"382
-[; ;mirf.c: 382:  Nrf24_print_byte_register(dev, "RX_ADDR_P2-5", 0x0C, 4);
-[e ( _Nrf24_print_byte_register (4 , , , _dev :s 3C -> -> 12 `i `uc -> -> 4 `i `uc ]
+[; ;mirf.c: 381:  printf("================ NRF Configuration ================\n");
+[e ( _printf :s 1C ]
 "383
-[; ;mirf.c: 383:  Nrf24_print_address_register(dev, "TX_ADDR\t", 0x10, 1);
-[e ( _Nrf24_print_address_register (4 , , , _dev :s 4C -> -> 16 `i `uc -> -> 1 `i `uc ]
+[; ;mirf.c: 383:  Nrf24_print_status(Nrf24_getStatus(dev));
+[e ( _Nrf24_print_status (1 ( _Nrf24_getStatus (1 _dev ]
 "385
-[; ;mirf.c: 385:  Nrf24_print_byte_register(dev, "RX_PW_P0-6", 0x11, 6);
-[e ( _Nrf24_print_byte_register (4 , , , _dev :s 5C -> -> 17 `i `uc -> -> 6 `i `uc ]
+[; ;mirf.c: 385:  Nrf24_print_address_register(dev, "RX_ADDR_P0-1", 0x0A, 2);
+[e ( _Nrf24_print_address_register (4 , , , _dev :s 2C -> -> 10 `i `uc -> -> 2 `i `uc ]
 "386
-[; ;mirf.c: 386:  Nrf24_print_byte_register(dev, "EN_AA\t", 0x01, 1);
-[e ( _Nrf24_print_byte_register (4 , , , _dev :s 6C -> -> 1 `i `uc -> -> 1 `i `uc ]
+[; ;mirf.c: 386:  Nrf24_print_byte_register(dev, "RX_ADDR_P2-5", 0x0C, 4);
+[e ( _Nrf24_print_byte_register (4 , , , _dev :s 3C -> -> 12 `i `uc -> -> 4 `i `uc ]
 "387
-[; ;mirf.c: 387:  Nrf24_print_byte_register(dev, "EN_RXADDR", 0x02, 1);
-[e ( _Nrf24_print_byte_register (4 , , , _dev :s 7C -> -> 2 `i `uc -> -> 1 `i `uc ]
-"388
-[; ;mirf.c: 388:  Nrf24_print_byte_register(dev, "RF_CH\t", 0x05, 1);
-[e ( _Nrf24_print_byte_register (4 , , , _dev :s 8C -> -> 5 `i `uc -> -> 1 `i `uc ]
+[; ;mirf.c: 387:  Nrf24_print_address_register(dev, "TX_ADDR\t", 0x10, 1);
+[e ( _Nrf24_print_address_register (4 , , , _dev :s 4C -> -> 16 `i `uc -> -> 1 `i `uc ]
 "389
-[; ;mirf.c: 389:  Nrf24_print_byte_register(dev, "RF_SETUP", 0x06, 1);
-[e ( _Nrf24_print_byte_register (4 , , , _dev :s 9C -> -> 6 `i `uc -> -> 1 `i `uc ]
+[; ;mirf.c: 389:  Nrf24_print_byte_register(dev, "RX_PW_P0-6", 0x11, 6);
+[e ( _Nrf24_print_byte_register (4 , , , _dev :s 5C -> -> 17 `i `uc -> -> 6 `i `uc ]
 "390
-[; ;mirf.c: 390:  Nrf24_print_byte_register(dev, "CONFIG\t", 0x00, 1);
-[e ( _Nrf24_print_byte_register (4 , , , _dev :s 10C -> -> 0 `i `uc -> -> 1 `i `uc ]
+[; ;mirf.c: 390:  Nrf24_print_byte_register(dev, "EN_AA\t", 0x01, 1);
+[e ( _Nrf24_print_byte_register (4 , , , _dev :s 6C -> -> 1 `i `uc -> -> 1 `i `uc ]
 "391
-[; ;mirf.c: 391:  Nrf24_print_byte_register(dev, "DYNPD/FEATURE", 0x1C, 2);
-[e ( _Nrf24_print_byte_register (4 , , , _dev :s 11C -> -> 28 `i `uc -> -> 2 `i `uc ]
+[; ;mirf.c: 391:  Nrf24_print_byte_register(dev, "EN_RXADDR", 0x02, 1);
+[e ( _Nrf24_print_byte_register (4 , , , _dev :s 7C -> -> 2 `i `uc -> -> 1 `i `uc ]
 "392
-[; ;mirf.c: 392:  printf("Data Rate\t = %s\n",rf24_datarates[Nrf24_getDataRate(dev)]);
-[e ( _printf , (. :s 12C &U *U + &U _rf24_datarates * -> ( _Nrf24_getDataRate (1 _dev `ux -> * -> # *U &U *U &U _rf24_datarates `ui -> -> 8 `i `ui `ux ]
+[; ;mirf.c: 392:  Nrf24_print_byte_register(dev, "RF_CH\t", 0x05, 1);
+[e ( _Nrf24_print_byte_register (4 , , , _dev :s 8C -> -> 5 `i `uc -> -> 1 `i `uc ]
 "393
-[; ;mirf.c: 393:  printf("CRC Length\t = %s\n", rf24_crclength[Nrf24_getCRCLength(dev)]);
-[e ( _printf , (. :s 13C &U *U + &U _rf24_crclength * -> ( _Nrf24_getCRCLength (1 _dev `ux -> * -> # *U &U *U &U _rf24_crclength `ui -> -> 10 `i `ui `ux ]
+[; ;mirf.c: 393:  Nrf24_print_byte_register(dev, "RF_SETUP", 0x06, 1);
+[e ( _Nrf24_print_byte_register (4 , , , _dev :s 9C -> -> 6 `i `uc -> -> 1 `i `uc ]
 "394
-[; ;mirf.c: 394:  printf("PA Power\t = %s\n", rf24_pa_dbm[Nrf24_getPALevel(dev)]);
-[e ( _printf , (. :s 14C &U *U + &U _rf24_pa_dbm * -> ( _Nrf24_getPALevel (1 _dev `ux -> * -> # *U &U *U &U _rf24_pa_dbm `ui -> -> 8 `i `ui `ux ]
+[; ;mirf.c: 394:  Nrf24_print_byte_register(dev, "CONFIG\t", 0x00, 1);
+[e ( _Nrf24_print_byte_register (4 , , , _dev :s 10C -> -> 0 `i `uc -> -> 1 `i `uc ]
 "395
-[; ;mirf.c: 395:  uint8_t retransmit = Nrf24_getRetransmitDelay(dev);
+[; ;mirf.c: 395:  Nrf24_print_byte_register(dev, "DYNPD/FEATURE", 0x1C, 2);
+[e ( _Nrf24_print_byte_register (4 , , , _dev :s 11C -> -> 28 `i `uc -> -> 2 `i `uc ]
+"396
+[; ;mirf.c: 396:  printf("Data Rate\t = %s\n",rf24_datarates[Nrf24_getDataRate(dev)]);
+[e ( _printf , (. :s 12C &U *U + &U _rf24_datarates * -> ( _Nrf24_getDataRate (1 _dev `ux -> * -> # *U &U *U &U _rf24_datarates `ui -> -> 8 `i `ui `ux ]
+"397
+[; ;mirf.c: 397:  printf("CRC Length\t = %s\n", rf24_crclength[Nrf24_getCRCLength(dev)]);
+[e ( _printf , (. :s 13C &U *U + &U _rf24_crclength * -> ( _Nrf24_getCRCLength (1 _dev `ux -> * -> # *U &U *U &U _rf24_crclength `ui -> -> 10 `i `ui `ux ]
+"398
+[; ;mirf.c: 398:  printf("PA Power\t = %s\n", rf24_pa_dbm[Nrf24_getPALevel(dev)]);
+[e ( _printf , (. :s 14C &U *U + &U _rf24_pa_dbm * -> ( _Nrf24_getPALevel (1 _dev `ux -> * -> # *U &U *U &U _rf24_pa_dbm `ui -> -> 8 `i `ui `ux ]
+"399
+[; ;mirf.c: 399:  uint8_t retransmit = Nrf24_getRetransmitDelay(dev);
 [v _retransmit `uc ~T0 @X0 1 a ]
 [e = _retransmit ( _Nrf24_getRetransmitDelay (1 _dev ]
-"396
-[; ;mirf.c: 396:  int16_t delay = (retransmit+1)*250;
+"400
+[; ;mirf.c: 400:  int16_t delay = (retransmit+1)*250;
 [v _delay `s ~T0 @X0 1 a ]
 [e = _delay -> * + -> _retransmit `i -> 1 `i -> 250 `i `s ]
-"397
-[; ;mirf.c: 397:  printf("Retransmit\t = %d us\n", delay);
+"401
+[; ;mirf.c: 401:  printf("Retransmit\t = %d us\n", delay);
 [e ( _printf , (. :s 15C -> _delay `i ]
-"398
-[; ;mirf.c: 398: }
+"402
+[; ;mirf.c: 402: }
 [e :UE 2564 ]
 }
-"402
-[; ;mirf.c: 402: void Nrf24_print_status(uint8_t status)
+"406
+[; ;mirf.c: 406: void Nrf24_print_status(uint8_t status)
 [v _Nrf24_print_status `(v ~T0 @X0 1 ef1`uc ]
-"403
-[; ;mirf.c: 403: {
+"407
+[; ;mirf.c: 407: {
 {
 [e :U _Nrf24_print_status ]
-"402
-[; ;mirf.c: 402: void Nrf24_print_status(uint8_t status)
-[v _status `uc ~T0 @X0 1 r1 ]
-"403
-[; ;mirf.c: 403: {
-[f ]
-"404
-[; ;mirf.c: 404:  printf("STATUS\t\t = 0x%02x RX_DR=%x TX_DS=%x MAX_RT=%x RX_P_NO=%x TX_FULL=%x\r\n", status, (status & (1<<(6))) ? 1 : 0,
-[e ( _printf , , , , , , (. :s 16C -> _status `i ? != & -> _status `i << -> 1 `i -> 6 `i -> 0 `i : -> 1 `i -> 0 `i ? != & -> _status `i << -> 1 `i -> 5 `i -> 0 `i : -> 1 `i -> 0 `i ? != & -> _status `i << -> 1 `i -> 4 `i -> 0 `i : -> 1 `i -> 0 `i & >> -> _status `i -> 1 `i -> 7 `i ? != & -> _status `i << -> 1 `i -> 0 `i -> 0 `i : -> 1 `i -> 0 `i ]
 "406
-[; ;mirf.c: 406: }
+[; ;mirf.c: 406: void Nrf24_print_status(uint8_t status)
+[v _status `uc ~T0 @X0 1 r1 ]
+"407
+[; ;mirf.c: 407: {
+[f ]
+"408
+[; ;mirf.c: 408:  printf("STATUS\t\t = 0x%02x RX_DR=%x TX_DS=%x MAX_RT=%x RX_P_NO=%x TX_FULL=%x\r\n", status, (status & (1<<(6))) ? 1 : 0,
+[e ( _printf , , , , , , (. :s 16C -> _status `i ? != & -> _status `i << -> 1 `i -> 6 `i -> 0 `i : -> 1 `i -> 0 `i ? != & -> _status `i << -> 1 `i -> 5 `i -> 0 `i : -> 1 `i -> 0 `i ? != & -> _status `i << -> 1 `i -> 4 `i -> 0 `i : -> 1 `i -> 0 `i & >> -> _status `i -> 1 `i -> 7 `i ? != & -> _status `i << -> 1 `i -> 0 `i -> 0 `i : -> 1 `i -> 0 `i ]
+"410
+[; ;mirf.c: 410: }
 [e :UE 2565 ]
 }
-"408
-[; ;mirf.c: 408: void Nrf24_print_address_register(NRF24_t * dev, const char* name, uint8_t reg, uint8_t qty)
+"412
+[; ;mirf.c: 412: void Nrf24_print_address_register(NRF24_t * dev, const char* name, uint8_t reg, uint8_t qty)
 [v _Nrf24_print_address_register `(v ~T0 @X0 1 ef4`*S2417`*Cuc`uc`uc ]
-"409
-[; ;mirf.c: 409: {
+"413
+[; ;mirf.c: 413: {
 {
 [e :U _Nrf24_print_address_register ]
-"408
-[; ;mirf.c: 408: void Nrf24_print_address_register(NRF24_t * dev, const char* name, uint8_t reg, uint8_t qty)
+"412
+[; ;mirf.c: 412: void Nrf24_print_address_register(NRF24_t * dev, const char* name, uint8_t reg, uint8_t qty)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [v _name `*Cuc ~T0 @X0 1 r2 ]
 [v _reg `uc ~T0 @X0 1 r3 ]
 [v _qty `uc ~T0 @X0 1 r4 ]
-"409
-[; ;mirf.c: 409: {
+"413
+[; ;mirf.c: 413: {
 [f ]
-"410
-[; ;mirf.c: 410:  printf("%s\t =",name);
+"414
+[; ;mirf.c: 414:  printf("%s\t =",name);
 [e ( _printf , (. :s 17C _name ]
-"411
-[; ;mirf.c: 411:  while (qty--) {
+"415
+[; ;mirf.c: 415:  while (qty--) {
 [e $U 2567  ]
 [e :U 2568 ]
 {
-"412
-[; ;mirf.c: 412:   uint8_t buffer[5];
+"416
+[; ;mirf.c: 416:   uint8_t buffer[5];
 [v _buffer `uc ~T0 @X0 -> 5 `i a ]
-"413
-[; ;mirf.c: 413:   Nrf24_readRegister(reg++, buffer, sizeof(buffer));
-[e ( _Nrf24_readRegister (3 , , ++ _reg -> -> 1 `i `uc &U _buffer -> -> # _buffer `ui `uc ]
-"415
-[; ;mirf.c: 415:   printf(" 0x");
-[e ( _printf :s 18C ]
 "417
-[; ;mirf.c: 417:   for(int i=0;i<5;i++) {
+[; ;mirf.c: 417:   Nrf24_readRegister(reg++, buffer, sizeof(buffer));
+[e ( _Nrf24_readRegister (3 , , ++ _reg -> -> 1 `i `uc &U _buffer -> -> # _buffer `ui `uc ]
+"419
+[; ;mirf.c: 419:   printf(" 0x");
+[e ( _printf :s 18C ]
+"421
+[; ;mirf.c: 421:   for(int i=0;i<5;i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -4109,350 +4109,350 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 2571  ]
 [e :U 2570 ]
 {
-"418
-[; ;mirf.c: 418:    printf("%02x", buffer[i]);
+"422
+[; ;mirf.c: 422:    printf("%02x", buffer[i]);
 [e ( _printf , (. :s 19C -> *U + &U _buffer * -> -> _i `ui `ux -> -> # *U &U _buffer `ui `ux `i ]
-"419
-[; ;mirf.c: 419:   }
+"423
+[; ;mirf.c: 423:   }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 5 `i 2570  ]
 [e :U 2571 ]
 }
-"420
-[; ;mirf.c: 420:  }
+"424
+[; ;mirf.c: 424:  }
 }
 [e :U 2567 ]
-"411
-[; ;mirf.c: 411:  while (qty--) {
+"415
+[; ;mirf.c: 415:  while (qty--) {
 [e $ != -> -- _qty -> -> 1 `i `uc `i -> 0 `i 2568  ]
 [e :U 2569 ]
-"421
-[; ;mirf.c: 421:  printf("\r\n");
+"425
+[; ;mirf.c: 425:  printf("\r\n");
 [e ( _printf :s 20C ]
-"422
-[; ;mirf.c: 422: }
+"426
+[; ;mirf.c: 426: }
 [e :UE 2566 ]
 }
-"424
-[; ;mirf.c: 424: void Nrf24_print_byte_register(NRF24_t * dev, const char* name, uint8_t reg, uint8_t qty)
+"428
+[; ;mirf.c: 428: void Nrf24_print_byte_register(NRF24_t * dev, const char* name, uint8_t reg, uint8_t qty)
 [v _Nrf24_print_byte_register `(v ~T0 @X0 1 ef4`*S2417`*Cuc`uc`uc ]
-"425
-[; ;mirf.c: 425: {
+"429
+[; ;mirf.c: 429: {
 {
 [e :U _Nrf24_print_byte_register ]
-"424
-[; ;mirf.c: 424: void Nrf24_print_byte_register(NRF24_t * dev, const char* name, uint8_t reg, uint8_t qty)
+"428
+[; ;mirf.c: 428: void Nrf24_print_byte_register(NRF24_t * dev, const char* name, uint8_t reg, uint8_t qty)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
 [v _name `*Cuc ~T0 @X0 1 r2 ]
 [v _reg `uc ~T0 @X0 1 r3 ]
 [v _qty `uc ~T0 @X0 1 r4 ]
-"425
-[; ;mirf.c: 425: {
+"429
+[; ;mirf.c: 429: {
 [f ]
-"426
-[; ;mirf.c: 426:  printf("%s\t =", name);
+"430
+[; ;mirf.c: 430:  printf("%s\t =", name);
 [e ( _printf , (. :s 21C _name ]
-"427
-[; ;mirf.c: 427:  while (qty--) {
+"431
+[; ;mirf.c: 431:  while (qty--) {
 [e $U 2574  ]
 [e :U 2575 ]
 {
-"428
-[; ;mirf.c: 428:   uint8_t buffer[1];
+"432
+[; ;mirf.c: 432:   uint8_t buffer[1];
 [v _buffer `uc ~T0 @X0 -> -> 1 `i `ux a ]
-"429
-[; ;mirf.c: 429:   Nrf24_readRegister(reg++, buffer, 1);
+"433
+[; ;mirf.c: 433:   Nrf24_readRegister(reg++, buffer, 1);
 [e ( _Nrf24_readRegister (3 , , ++ _reg -> -> 1 `i `uc &U _buffer -> -> 1 `i `uc ]
-"430
-[; ;mirf.c: 430:   printf(" 0x%02x", buffer[0]);
+"434
+[; ;mirf.c: 434:   printf(" 0x%02x", buffer[0]);
 [e ( _printf , (. :s 22C -> *U + &U _buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _buffer `ui `ux `i ]
-"431
-[; ;mirf.c: 431:  }
+"435
+[; ;mirf.c: 435:  }
 }
 [e :U 2574 ]
-"427
-[; ;mirf.c: 427:  while (qty--) {
+"431
+[; ;mirf.c: 431:  while (qty--) {
 [e $ != -> -- _qty -> -> 1 `i `uc `i -> 0 `i 2575  ]
 [e :U 2576 ]
-"432
-[; ;mirf.c: 432:  printf("\r\n");
+"436
+[; ;mirf.c: 436:  printf("\r\n");
 [e ( _printf :s 23C ]
-"433
-[; ;mirf.c: 433: }
+"437
+[; ;mirf.c: 437: }
 [e :UE 2573 ]
 }
-"435
-[; ;mirf.c: 435: uint8_t Nrf24_getDataRate(NRF24_t * dev)
+"439
+[; ;mirf.c: 439: uint8_t Nrf24_getDataRate(NRF24_t * dev)
 [v _Nrf24_getDataRate `(uc ~T0 @X0 1 ef1`*S2417 ]
-"436
-[; ;mirf.c: 436: {
+"440
+[; ;mirf.c: 440: {
 {
 [e :U _Nrf24_getDataRate ]
-"435
-[; ;mirf.c: 435: uint8_t Nrf24_getDataRate(NRF24_t * dev)
-[v _dev `*S2417 ~T0 @X0 1 r1 ]
-"436
-[; ;mirf.c: 436: {
-[f ]
-"437
-[; ;mirf.c: 437:  rf24_datarate_e result;
-[v _result `E17640 ~T0 @X0 1 a ]
-"438
-[; ;mirf.c: 438:  uint8_t dr;
-[v _dr `uc ~T0 @X0 1 a ]
 "439
-[; ;mirf.c: 439:  Nrf24_readRegister(0x06, &dr, sizeof(dr));
-[e ( _Nrf24_readRegister (3 , , -> -> 6 `i `uc &U _dr -> -> # _dr `ui `uc ]
+[; ;mirf.c: 439: uint8_t Nrf24_getDataRate(NRF24_t * dev)
+[v _dev `*S2417 ~T0 @X0 1 r1 ]
 "440
-[; ;mirf.c: 440:  dr = dr & ((1<<(5)) | (1<<(3)));
-[e = _dr -> & -> _dr `i | << -> 1 `i -> 5 `i << -> 1 `i -> 3 `i `uc ]
+[; ;mirf.c: 440: {
+[f ]
+"441
+[; ;mirf.c: 441:  rf24_datarate_e result;
+[v _result `E17640 ~T0 @X0 1 a ]
+"442
+[; ;mirf.c: 442:  uint8_t dr;
+[v _dr `uc ~T0 @X0 1 a ]
 "443
-[; ;mirf.c: 443:  if (dr == (1<<(5))) {
+[; ;mirf.c: 443:  Nrf24_readRegister(0x06, &dr, sizeof(dr));
+[e ( _Nrf24_readRegister (3 , , -> -> 6 `i `uc &U _dr -> -> # _dr `ui `uc ]
+"444
+[; ;mirf.c: 444:  dr = dr & ((1<<(5)) | (1<<(3)));
+[e = _dr -> & -> _dr `i | << -> 1 `i -> 5 `i << -> 1 `i -> 3 `i `uc ]
+"447
+[; ;mirf.c: 447:  if (dr == (1<<(5))) {
 [e $ ! == -> _dr `i << -> 1 `i -> 5 `i 2578  ]
 {
-"445
-[; ;mirf.c: 445:   result = RF24_250KBPS;
+"449
+[; ;mirf.c: 449:   result = RF24_250KBPS;
 [e = _result . `E17640 2 ]
-"446
-[; ;mirf.c: 446:  } else if (dr == (1<<(3))) {
+"450
+[; ;mirf.c: 450:  } else if (dr == (1<<(3))) {
 }
 [e $U 2579  ]
 [e :U 2578 ]
 [e $ ! == -> _dr `i << -> 1 `i -> 3 `i 2580  ]
 {
-"448
-[; ;mirf.c: 448:   result = RF24_2MBPS;
+"452
+[; ;mirf.c: 452:   result = RF24_2MBPS;
 [e = _result . `E17640 1 ]
-"449
-[; ;mirf.c: 449:  } else {
+"453
+[; ;mirf.c: 453:  } else {
 }
 [e $U 2581  ]
 [e :U 2580 ]
 {
-"451
-[; ;mirf.c: 451:   result = RF24_1MBPS;
+"455
+[; ;mirf.c: 455:   result = RF24_1MBPS;
 [e = _result . `E17640 0 ]
-"452
-[; ;mirf.c: 452:  }
+"456
+[; ;mirf.c: 456:  }
 }
 [e :U 2581 ]
 [e :U 2579 ]
-"453
-[; ;mirf.c: 453:  return result;
+"457
+[; ;mirf.c: 457:  return result;
 [e ) -> _result `uc ]
 [e $UE 2577  ]
-"454
-[; ;mirf.c: 454: }
+"458
+[; ;mirf.c: 458: }
 [e :UE 2577 ]
 }
-"456
-[; ;mirf.c: 456: char * Nrf24_getDataRateString(NRF24_t * dev)
+"460
+[; ;mirf.c: 460: char * Nrf24_getDataRateString(NRF24_t * dev)
 [v _Nrf24_getDataRateString `(*uc ~T0 @X0 1 ef1`*S2417 ]
-"457
-[; ;mirf.c: 457: {
+"461
+[; ;mirf.c: 461: {
 {
 [e :U _Nrf24_getDataRateString ]
-"456
-[; ;mirf.c: 456: char * Nrf24_getDataRateString(NRF24_t * dev)
+"460
+[; ;mirf.c: 460: char * Nrf24_getDataRateString(NRF24_t * dev)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
-"457
-[; ;mirf.c: 457: {
+"461
+[; ;mirf.c: 461: {
 [f ]
-"458
-[; ;mirf.c: 458:  return rf24_datarates[Nrf24_getDataRate(dev)];
+"462
+[; ;mirf.c: 462:  return rf24_datarates[Nrf24_getDataRate(dev)];
 [e ) &U *U + &U _rf24_datarates * -> ( _Nrf24_getDataRate (1 _dev `ux -> * -> # *U &U *U &U _rf24_datarates `ui -> -> 8 `i `ui `ux ]
 [e $UE 2582  ]
-"459
-[; ;mirf.c: 459: }
+"463
+[; ;mirf.c: 463: }
 [e :UE 2582 ]
 }
-"461
-[; ;mirf.c: 461: uint8_t Nrf24_getCRCLength(NRF24_t * dev)
+"465
+[; ;mirf.c: 465: uint8_t Nrf24_getCRCLength(NRF24_t * dev)
 [v _Nrf24_getCRCLength `(uc ~T0 @X0 1 ef1`*S2417 ]
-"462
-[; ;mirf.c: 462: {
+"466
+[; ;mirf.c: 466: {
 {
 [e :U _Nrf24_getCRCLength ]
-"461
-[; ;mirf.c: 461: uint8_t Nrf24_getCRCLength(NRF24_t * dev)
+"465
+[; ;mirf.c: 465: uint8_t Nrf24_getCRCLength(NRF24_t * dev)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
-"462
-[; ;mirf.c: 462: {
+"466
+[; ;mirf.c: 466: {
 [f ]
-"463
-[; ;mirf.c: 463:  rf24_crclength_e result = RF24_CRC_DISABLED;
+"467
+[; ;mirf.c: 467:  rf24_crclength_e result = RF24_CRC_DISABLED;
 [v _result `E17645 ~T0 @X0 1 a ]
 [e = _result . `E17645 0 ]
-"465
-[; ;mirf.c: 465:  uint8_t config;
-[v _config `uc ~T0 @X0 1 a ]
-"466
-[; ;mirf.c: 466:  Nrf24_readRegister(0x00, &config, sizeof(config));
-[e ( _Nrf24_readRegister (3 , , -> -> 0 `i `uc &U _config -> -> # _config `ui `uc ]
-"467
-[; ;mirf.c: 467:  config = config & ((1<<(2)) | (1<<(3)));
-[e = _config -> & -> _config `i | << -> 1 `i -> 2 `i << -> 1 `i -> 3 `i `uc ]
-"468
-[; ;mirf.c: 468:  uint8_t AA;
-[v _AA `uc ~T0 @X0 1 a ]
 "469
-[; ;mirf.c: 469:  Nrf24_readRegister(0x01, &AA, sizeof(AA));
-[e ( _Nrf24_readRegister (3 , , -> -> 1 `i `uc &U _AA -> -> # _AA `ui `uc ]
+[; ;mirf.c: 469:  uint8_t config;
+[v _config `uc ~T0 @X0 1 a ]
+"470
+[; ;mirf.c: 470:  Nrf24_readRegister(0x00, &config, sizeof(config));
+[e ( _Nrf24_readRegister (3 , , -> -> 0 `i `uc &U _config -> -> # _config `ui `uc ]
 "471
-[; ;mirf.c: 471:  if (config & (1<<(3)) || AA) {
+[; ;mirf.c: 471:  config = config & ((1<<(2)) | (1<<(3)));
+[e = _config -> & -> _config `i | << -> 1 `i -> 2 `i << -> 1 `i -> 3 `i `uc ]
+"472
+[; ;mirf.c: 472:  uint8_t AA;
+[v _AA `uc ~T0 @X0 1 a ]
+"473
+[; ;mirf.c: 473:  Nrf24_readRegister(0x01, &AA, sizeof(AA));
+[e ( _Nrf24_readRegister (3 , , -> -> 1 `i `uc &U _AA -> -> # _AA `ui `uc ]
+"475
+[; ;mirf.c: 475:  if (config & (1<<(3)) || AA) {
 [e $ ! || != & -> _config `i << -> 1 `i -> 3 `i -> 0 `i != -> _AA `i -> 0 `i 2584  ]
 {
-"472
-[; ;mirf.c: 472:   if (config & (1<<(2))) {
+"476
+[; ;mirf.c: 476:   if (config & (1<<(2))) {
 [e $ ! != & -> _config `i << -> 1 `i -> 2 `i -> 0 `i 2585  ]
 {
-"473
-[; ;mirf.c: 473:    result = RF24_CRC_16;
+"477
+[; ;mirf.c: 477:    result = RF24_CRC_16;
 [e = _result . `E17645 2 ]
-"474
-[; ;mirf.c: 474:   } else {
+"478
+[; ;mirf.c: 478:   } else {
 }
 [e $U 2586  ]
 [e :U 2585 ]
 {
-"475
-[; ;mirf.c: 475:    result = RF24_CRC_8;
+"479
+[; ;mirf.c: 479:    result = RF24_CRC_8;
 [e = _result . `E17645 1 ]
-"476
-[; ;mirf.c: 476:   }
+"480
+[; ;mirf.c: 480:   }
 }
 [e :U 2586 ]
-"477
-[; ;mirf.c: 477:  }
+"481
+[; ;mirf.c: 481:  }
 }
 [e :U 2584 ]
-"479
-[; ;mirf.c: 479:  return result;
+"483
+[; ;mirf.c: 483:  return result;
 [e ) -> _result `uc ]
 [e $UE 2583  ]
-"480
-[; ;mirf.c: 480: }
+"484
+[; ;mirf.c: 484: }
 [e :UE 2583 ]
 }
-"482
-[; ;mirf.c: 482: uint8_t Nrf24_getPALevel(NRF24_t * dev)
+"486
+[; ;mirf.c: 486: uint8_t Nrf24_getPALevel(NRF24_t * dev)
 [v _Nrf24_getPALevel `(uc ~T0 @X0 1 ef1`*S2417 ]
-"483
-[; ;mirf.c: 483: {
+"487
+[; ;mirf.c: 487: {
 {
 [e :U _Nrf24_getPALevel ]
-"482
-[; ;mirf.c: 482: uint8_t Nrf24_getPALevel(NRF24_t * dev)
-[v _dev `*S2417 ~T0 @X0 1 r1 ]
-"483
-[; ;mirf.c: 483: {
-[f ]
-"484
-[; ;mirf.c: 484:  uint8_t level;
-[v _level `uc ~T0 @X0 1 a ]
-"485
-[; ;mirf.c: 485:  Nrf24_readRegister(0x06, &level, sizeof(level));
-[e ( _Nrf24_readRegister (3 , , -> -> 6 `i `uc &U _level -> -> # _level `ui `uc ]
 "486
-[; ;mirf.c: 486:  level = (level & ((1<<(1)) | (1<<(2)))) >> 1;
-[e = _level -> >> & -> _level `i | << -> 1 `i -> 1 `i << -> 1 `i -> 2 `i -> 1 `i `uc ]
+[; ;mirf.c: 486: uint8_t Nrf24_getPALevel(NRF24_t * dev)
+[v _dev `*S2417 ~T0 @X0 1 r1 ]
 "487
-[; ;mirf.c: 487:  return (level);
+[; ;mirf.c: 487: {
+[f ]
+"488
+[; ;mirf.c: 488:  uint8_t level;
+[v _level `uc ~T0 @X0 1 a ]
+"489
+[; ;mirf.c: 489:  Nrf24_readRegister(0x06, &level, sizeof(level));
+[e ( _Nrf24_readRegister (3 , , -> -> 6 `i `uc &U _level -> -> # _level `ui `uc ]
+"490
+[; ;mirf.c: 490:  level = (level & ((1<<(1)) | (1<<(2)))) >> 1;
+[e = _level -> >> & -> _level `i | << -> 1 `i -> 1 `i << -> 1 `i -> 2 `i -> 1 `i `uc ]
+"491
+[; ;mirf.c: 491:  return (level);
 [e ) _level ]
 [e $UE 2587  ]
-"488
-[; ;mirf.c: 488: }
+"492
+[; ;mirf.c: 492: }
 [e :UE 2587 ]
 }
-"490
-[; ;mirf.c: 490: char * Nrf24_getPALevelString(NRF24_t * dev)
+"494
+[; ;mirf.c: 494: char * Nrf24_getPALevelString(NRF24_t * dev)
 [v _Nrf24_getPALevelString `(*uc ~T0 @X0 1 ef1`*S2417 ]
-"491
-[; ;mirf.c: 491: {
+"495
+[; ;mirf.c: 495: {
 {
 [e :U _Nrf24_getPALevelString ]
-"490
-[; ;mirf.c: 490: char * Nrf24_getPALevelString(NRF24_t * dev)
+"494
+[; ;mirf.c: 494: char * Nrf24_getPALevelString(NRF24_t * dev)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
-"491
-[; ;mirf.c: 491: {
+"495
+[; ;mirf.c: 495: {
 [f ]
-"492
-[; ;mirf.c: 492:  return rf24_pa_dbm[Nrf24_getPALevel(dev)];
+"496
+[; ;mirf.c: 496:  return rf24_pa_dbm[Nrf24_getPALevel(dev)];
 [e ) &U *U + &U _rf24_pa_dbm * -> ( _Nrf24_getPALevel (1 _dev `ux -> * -> # *U &U *U &U _rf24_pa_dbm `ui -> -> 8 `i `ui `ux ]
 [e $UE 2588  ]
-"493
-[; ;mirf.c: 493: }
+"497
+[; ;mirf.c: 497: }
 [e :UE 2588 ]
 }
-"495
-[; ;mirf.c: 495: uint8_t Nrf24_getRetransmitDelay(NRF24_t * dev)
+"499
+[; ;mirf.c: 499: uint8_t Nrf24_getRetransmitDelay(NRF24_t * dev)
 [v _Nrf24_getRetransmitDelay `(uc ~T0 @X0 1 ef1`*S2417 ]
-"496
-[; ;mirf.c: 496: {
+"500
+[; ;mirf.c: 500: {
 {
 [e :U _Nrf24_getRetransmitDelay ]
-"495
-[; ;mirf.c: 495: uint8_t Nrf24_getRetransmitDelay(NRF24_t * dev)
-[v _dev `*S2417 ~T0 @X0 1 r1 ]
-"496
-[; ;mirf.c: 496: {
-[f ]
-"497
-[; ;mirf.c: 497:  uint8_t value;
-[v _value `uc ~T0 @X0 1 a ]
-"498
-[; ;mirf.c: 498:  Nrf24_readRegister(0x04, &value, 1);
-[e ( _Nrf24_readRegister (3 , , -> -> 4 `i `uc &U _value -> -> 1 `i `uc ]
 "499
-[; ;mirf.c: 499:  return (value >> 4);
+[; ;mirf.c: 499: uint8_t Nrf24_getRetransmitDelay(NRF24_t * dev)
+[v _dev `*S2417 ~T0 @X0 1 r1 ]
+"500
+[; ;mirf.c: 500: {
+[f ]
+"501
+[; ;mirf.c: 501:  uint8_t value;
+[v _value `uc ~T0 @X0 1 a ]
+"502
+[; ;mirf.c: 502:  Nrf24_readRegister(0x04, &value, 1);
+[e ( _Nrf24_readRegister (3 , , -> -> 4 `i `uc &U _value -> -> 1 `i `uc ]
+"503
+[; ;mirf.c: 503:  return (value >> 4);
 [e ) -> >> -> _value `i -> 4 `i `uc ]
 [e $UE 2589  ]
-"500
-[; ;mirf.c: 500: }
+"504
+[; ;mirf.c: 504: }
 [e :UE 2589 ]
 }
-"502
-[; ;mirf.c: 502: uint8_t Nrf24_getChannel(NRF24_t * dev)
+"506
+[; ;mirf.c: 506: uint8_t Nrf24_getChannel(NRF24_t * dev)
 [v _Nrf24_getChannel `(uc ~T0 @X0 1 ef1`*S2417 ]
-"503
-[; ;mirf.c: 503: {
+"507
+[; ;mirf.c: 507: {
 {
 [e :U _Nrf24_getChannel ]
-"502
-[; ;mirf.c: 502: uint8_t Nrf24_getChannel(NRF24_t * dev)
+"506
+[; ;mirf.c: 506: uint8_t Nrf24_getChannel(NRF24_t * dev)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
-"503
-[; ;mirf.c: 503: {
+"507
+[; ;mirf.c: 507: {
 [f ]
-"504
-[; ;mirf.c: 504:  return dev->channel;
+"508
+[; ;mirf.c: 508:  return dev->channel;
 [e ) . *U _dev 1 ]
 [e $UE 2590  ]
-"505
-[; ;mirf.c: 505: }
+"509
+[; ;mirf.c: 509: }
 [e :UE 2590 ]
 }
-"507
-[; ;mirf.c: 507: uint8_t Nrf24_getPayload(NRF24_t * dev)
+"511
+[; ;mirf.c: 511: uint8_t Nrf24_getPayload(NRF24_t * dev)
 [v _Nrf24_getPayload `(uc ~T0 @X0 1 ef1`*S2417 ]
-"508
-[; ;mirf.c: 508: {
+"512
+[; ;mirf.c: 512: {
 {
 [e :U _Nrf24_getPayload ]
-"507
-[; ;mirf.c: 507: uint8_t Nrf24_getPayload(NRF24_t * dev)
+"511
+[; ;mirf.c: 511: uint8_t Nrf24_getPayload(NRF24_t * dev)
 [v _dev `*S2417 ~T0 @X0 1 r1 ]
-"508
-[; ;mirf.c: 508: {
+"512
+[; ;mirf.c: 512: {
 [f ]
-"509
-[; ;mirf.c: 509:  return dev->payload;
+"513
+[; ;mirf.c: 513:  return dev->payload;
 [e ) . *U _dev 2 ]
 [e $UE 2591  ]
-"510
-[; ;mirf.c: 510: }
+"514
+[; ;mirf.c: 514: }
 [e :UE 2591 ]
 }
 [p f _printf 12877956 ]
