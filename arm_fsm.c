@@ -59,7 +59,7 @@ void arm_set_target(uint8_t boat_id, uint8_t x, uint8_t y, uint8_t is_vertical, 
         target_y = y;
         target_orientation = is_vertical;
         arm_mode = mode;
-        current_state = (mode == PLACE) ? ROTATE_DOCK/* MAGNET_ON*/ : ROTATE_BOARD;
+        current_state = (mode == PLACE) ? ROTATE_DOCK : ROTATE_BOARD;
         process_fsm = true;
         set_magnet_strength();
     }

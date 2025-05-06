@@ -1,0 +1,48 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"6 ./message_parser.h
+[; ;./message_parser.h: 6: typedef struct {
+[s S1 `uc -> 8 `i `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S1 . message_type ship_id row col horizontal place ]
+"27 /opt/microchip/xc8/v2.50/pic/include/c99/string.h
+[; ;/opt/microchip/xc8/v2.50/pic/include/c99/string.h: 27: void *memcpy (void *restrict, const void *restrict, size_t);
+[v _memcpy `(*v ~T0 @X0 0 ef3`*v`*Cv`ui ]
+"4 message_parser.c
+[; ;message_parser.c: 4: _Bool parse_robot_message(const char *raw_data, robot_command_t *out) {
+[v _parse_robot_message `(a ~T0 @X0 1 ef2`*Cuc`*S1 ]
+{
+[e :U _parse_robot_message ]
+[v _raw_data `*Cuc ~T0 @X0 1 r1 ]
+[v _out `*S1 ~T0 @X0 1 r2 ]
+[f ]
+"5
+[; ;message_parser.c: 5:     if (!raw_data || !out) return 0;
+[e $ ! || ! != _raw_data -> -> 0 `i `*Cuc ! != _out -> -> 0 `i `*S1 4  ]
+[e ) -> -> 0 `i `a ]
+[e $UE 3  ]
+[e :U 4 ]
+"8
+[; ;message_parser.c: 8:     memcpy(out->message_type, raw_data, 8);
+[e ( _memcpy (3 , , -> &U . *U _out 0 `*v -> _raw_data `*Cv -> -> 8 `i `ui ]
+"11
+[; ;message_parser.c: 11:     out->ship_id = (uint8_t)raw_data[8];
+[e = . *U _out 1 -> *U + _raw_data * -> -> 8 `i `x -> -> # *U _raw_data `i `x `uc ]
+"12
+[; ;message_parser.c: 12:     out->row = (uint8_t)raw_data[9];
+[e = . *U _out 2 -> *U + _raw_data * -> -> 9 `i `x -> -> # *U _raw_data `i `x `uc ]
+"13
+[; ;message_parser.c: 13:     out->col = (uint8_t)raw_data[10];
+[e = . *U _out 3 -> *U + _raw_data * -> -> 10 `i `x -> -> # *U _raw_data `i `x `uc ]
+"14
+[; ;message_parser.c: 14:     out->horizontal = (raw_data[11] != 0);
+[e = . *U _out 4 -> -> != -> *U + _raw_data * -> -> 11 `i `x -> -> # *U _raw_data `i `x `i -> 0 `i `i `uc ]
+"15
+[; ;message_parser.c: 15:     out->place = (raw_data[12] != 0);
+[e = . *U _out 5 -> -> != -> *U + _raw_data * -> -> 12 `i `x -> -> # *U _raw_data `i `x `i -> 0 `i `i `uc ]
+"16
+[; ;message_parser.c: 16:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 3  ]
+"17
+[; ;message_parser.c: 17: }
+[e :UE 3 ]
+}
